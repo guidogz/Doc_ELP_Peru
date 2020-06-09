@@ -66,9 +66,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OSeMOSYS-CR'
-copyright = u'2020, EPERLab-UCR'
-author = u'EPERLab-UCR'
+project = u'ELP_Perú'
+copyright = u'2020, MINMA-UP'
+author = u'MINMA-UP'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -181,7 +181,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'eperdoc', u'eperdoc Documentation',
+    (master_doc, 'perudoc', u'eperdoc Documentation',
      author, 'eperdoc', 'One line description of project.',
      'Miscellaneous'),
 ]
