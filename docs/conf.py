@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# eperdoc documentation build configuration file, created by
+# peru_doc documentation build configuration file, created by
 # sphinx-quickstart on Wed Aug  1 11:44:55 2018.
 #
 # This file is execfile()d with the current directory set to its
@@ -31,7 +31,7 @@ html_show_sourcelink = False
 
 # If your documentation needs a minimal Sphinx version, state it here.
 #
-# needs_sphinx = 'EPERlab-UCR'
+# needs_sphinx = 'MINAM-Perú, UP, UCR, BIB, 2050 Pathways'
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
@@ -75,7 +75,7 @@ author = u'EPERLab-UCR'
 # built documents.
 #
 # The short X.Y version.
-version = u'EPERlab-UCR'
+version = u'MINAM-Perú, UP, UCR, BIB, 2050 Pathways'
 # The full version, including alpha/beta/rc tags.
 release = u'1.0.a'
 
@@ -133,7 +133,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'eperdoc'
+htmlhelp_basename = 'Peru_doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -170,7 +170,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'eperdoc', u'eperdoc Documentation',
+    (master_doc, 'Peru_doc', u'Peru_doc Documentation',
      [author], 1)
 ]
 
