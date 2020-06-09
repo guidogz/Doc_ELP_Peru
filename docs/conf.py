@@ -43,12 +43,15 @@ extensions = ['sphinx.ext.autodoc',
     'sphinx.ext.mathjax',
     'sphinx.ext.viewcode',
     'sphinx.ext.napoleon',
+    'sphinx.ext.imgmath',
     'sphinxcontrib.bibtex'] # Agregado napoleon extension
-
+    
 #Agregado
 napoleon_google_docstring = False
 napoleon_use_param = False
 napoleon_use_ivar = True
+
+imgmath_font_size = 12
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -64,8 +67,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'OSeMOSYS-CR'
-copyright = u'2018, Guido A. Godínez Zamora '
-author = u'Guido A. Godínez Zamora'
+copyright = u'2020, EPERLab-UCR'
+author = u'EPERLab-UCR'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the

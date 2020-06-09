@@ -8,16 +8,13 @@ The OSeMOSYS – CR model
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contenidos
+   :caption: Contents
 
+   00Abreviations
    01Introduction
-   02IAM_CR
-   03DataProcessing
+   02EnergyModelFramework
+   03EnergyModelDatabase
+   04Scenarios
+   05PythonModules
    99refs
-
-Índices y cuadros
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   999Annexes
