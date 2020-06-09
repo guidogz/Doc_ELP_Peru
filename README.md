@@ -1,4 +1,4 @@
-# OSeMOSYS-CR
+# ELP_Peru
 
 ## Contents
 
