@@ -27,7 +27,7 @@ The previously mentioned challenges are exacerbated by the international and nat
 
 The produced ESOM will support policymakers in Costa Rica understanding the most suitable strategies to achieve a deep decarbonization. It could also be used to decide what type of technologies (in the electricity and transport sector) should be incentivized for the different scenarios. In addition, the project aims to produce a scalable ESOM that will remain in the government for different energy related decisions. The project tries to understand the percentage of existing fossil-based taxis, buses, and light-duty vehicles that should be changed to other more efficient technologies (electric, biogas, etc.). While the previous example applies for the transport sector, similar conclusions are expected in terms of the electricity sector. The modeling tool chosen was the Open Source energy Modelling System (OSeMOSYS) :cite:`HOWELLS20115850`.
 
-1.3 POLYSYS-Peru and OSeMOSYS-Peru
+1.3 The Open Source energy Modelling System (OSeMOSYS)
 +++++++++
 
 OSeMOSYS is an optimization software for long-term energy planning. It is an open source model structured in blocks of functionality that allows easy modifications to the code, providing a great flexibility for the creative process of the solution. The models that are built in OSeMOSYS minimize the total cost of the system for a certain period of time, defining the configuration of the supply system, considering some restrictions on activity, capacity, and emissions of technologies :cite:`HOWELLS20115850`. This is shown in the following equation: 
