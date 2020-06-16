@@ -67,15 +67,15 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'OSeMOSYS-CR'
-copyright = u'2020, EPERLab-UCR'
-author = u'EPERLab-UCR'
+copyright = u'2020, MINAM-UP-UCR'
+author = u'MINAM-UP-UCR'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
 # The short X.Y version.
-version = u'EPERlab-UCR'
+version = u'MINAM-UP-UCR'
 # The full version, including alpha/beta/rc tags.
 release = u'1.0.a'
 
