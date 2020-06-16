@@ -7,7 +7,7 @@
 - [Quick start](#quick-start)
 - [Documentation](#documentation)
 - [Usage](#usage)
-- [Citing OSeMOSYS-CR](#citing-osemosys-cr)
+- [Citing ELP-Peru](#citing-osemosys-cr)
 - [License](#license)
 
 # About 
@@ -29,7 +29,7 @@
 # Releases
 * 2019-02-XX: First released version of OSeMOSYS-CR.
 
-## Citing OSMOSYS-CR
+## Citing ELP-CR
 (https://doi.org/XXX/XXX.XXX)
 
 
