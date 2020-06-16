@@ -29,7 +29,7 @@
 # Releases
 * 2019-02-XX: First released version of ELP-Peru.
 
-## Citing ELP-CR
+## Citing ELP-Peru
 (https://doi.org/XXX/XXX.XXX)
 
 
