@@ -66,7 +66,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'OSeMOSYS-CR'
+project = u'ELP-Perú'
 copyright = u'2020, MINAM-UP-UCR'
 author = u'MINAM-UP-UCR'
 
