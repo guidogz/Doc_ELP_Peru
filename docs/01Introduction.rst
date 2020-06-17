@@ -6,9 +6,9 @@
 1.1 Descripcción del proyecto 
 +++++++++
 
-DDP-1
+DDP-1: Perú participo AFOLU
 
-DDP-2 
+DDP-2: RMD 
 
 1.2 Motivación 
 +++++++++
