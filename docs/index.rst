@@ -14,7 +14,3 @@ Descarbonización - ELP – Peru
    01Introduction
    02EnergyModelFramework
    03EnergyModelDatabase
-   04Scenarios
-   05PythonModules
-   99refs
-   999Annexes
