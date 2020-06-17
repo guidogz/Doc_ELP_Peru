@@ -5,6 +5,8 @@
 2.1 Estructura
 +++++++++
 
+Diagrama....
+
 
 2.2 Datos e información
 +++++++++
