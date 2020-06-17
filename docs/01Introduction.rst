@@ -13,7 +13,7 @@ DDP-2
 1.2 Motivación 
 +++++++++
 
-.. figure:: img/Diagramas_MétodoGeneral.pdf
+.. figure:: img/General_Intro.png
    :align:   center
    :width:   700 px
 
