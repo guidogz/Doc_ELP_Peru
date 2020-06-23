@@ -29,7 +29,7 @@ Characterization of Energy Sectors
 
    *Figure 2.2: Precios del gas en MMUSD/MMBTU.*
    
-   
+  
 .. figure:: img/proyecciones de crudo y crabon.svg
    :align:   center
    :width:   700 px
