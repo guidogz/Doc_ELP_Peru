@@ -34,6 +34,11 @@
 
 3.2 Consideraciones del modelo 
 +++++++++
+.. figure:: img/Proyección DemandaTotal-Modelo de ajuste con PBI.jpg
+   :align:   center
+   :width:   700 px
+
+
 
 3.2.1 Construcción de scenarios 
 ---------
