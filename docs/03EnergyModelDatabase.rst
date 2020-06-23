@@ -34,7 +34,7 @@
 
 3.2 Consideraciones del modelo 
 +++++++++
-.. figure:: img/Proyección DemandaTotal-Modelo de ajuste con PBI.png
+.. figure:: img/Proyección_Demanda_Total-Modelo_de_ajuste_con_PBI.png
    :align:   center
    :width:   700 px
 
