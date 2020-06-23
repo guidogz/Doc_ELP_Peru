@@ -8,6 +8,14 @@
 3.2 Datos e información
 +++++++++
 
+
+.. figure:: img/General_Intro.png
+   :align:   center
+   :width:   700 px
+
+
+
+
 3.2.1 Sets
 ---------
 
