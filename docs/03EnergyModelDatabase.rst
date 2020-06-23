@@ -9,7 +9,7 @@
 +++++++++
 
 
-.. figure:: img/General_Intro.png
+.. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
 
