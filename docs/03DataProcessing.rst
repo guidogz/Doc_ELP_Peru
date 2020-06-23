@@ -7,6 +7,49 @@ Characterization of Energy Sectors
 -----------------------------------------------------
  Fitter Data and Outlier Correction
   blaa... 
+  
+  
+.. figure:: img/demanda electrcia en MW-h.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+   
+.. figure:: img/demanda maxima electrica.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+   
+.. figure:: img/precios del gas.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+   
+.. figure:: img/proyecciones de crudo y crabon.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+   
+.. figure:: img/proyecciones pbi.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+.. figure:: img/proyeciones renovables.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Simple diagram for fuel specification.*
+   
+   
  
  Clustering and Representative Networks
  
