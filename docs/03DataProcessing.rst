@@ -72,7 +72,7 @@ Characterization of Energy Sectors
    :align:   center
    :width:   700 px
 
-   *Figure 3.10: Proyeccione de precio por capacidad de la refinería .*
+   *Figure 3.10: Proyeccione de precio por capacidad de la refinería.*
    
 
  
