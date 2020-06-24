@@ -75,6 +75,13 @@ Characterization of Energy Sectors
 
    *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
    
+   
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.svg
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.11: Proyeccione de precio por capacidad de la refineria.*
+   
 
  
  Clustering and Representative Networks
