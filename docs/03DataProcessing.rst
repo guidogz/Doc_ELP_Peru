@@ -62,19 +62,17 @@ Characterization of Energy Sectors
 
    *Figure 3.8: Proyeccion del precio de vehiculos electricos.*
    
-.. figure:: img/Proyeccione _de_precio_por_capacidad_de_refineria.svg
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
-
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
    :align:   center
    :width:   700 px
 
    *Figure 3.9: Proyeccione de precio por capacidad de la planta de gas.*
    
+.. figure:: img/Proyeccione _de_precio_por_capacidad_de_refineria.svg
+   :align:   center
+   :width:   700 px
 
+   *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
    
 
  
