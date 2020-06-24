@@ -11,7 +11,7 @@ Characterization of Energy Sectors
   
 .. figure:: img/proyección del crecimiento del PBI anual.png
    :align:   center
-   :width:   700 px
+   :width:   500 px
 
    *Figure 2.2: Proyección del crecimiento del PBI anual.*
    
