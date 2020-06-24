@@ -69,7 +69,7 @@ Characterization of Energy Sectors
    *Figure 3.9: Proyeccione de precio por capacidad de la planta de gas.*
    
    
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.svg
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
 
