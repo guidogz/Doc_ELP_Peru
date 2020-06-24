@@ -8,7 +8,10 @@ Characterization of Energy Sectors
  Fitter Data and Outlier Correction
   blaa... 
   
-  
+.. figure:: img/General_Intro.png
+   :align:   center
+   :width:   700 px
+   
 .. figure:: img/proyección del crecimiento del PBI anual.png
    :align:   center
    :width:   700 px
