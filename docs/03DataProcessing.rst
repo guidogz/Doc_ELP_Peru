@@ -62,7 +62,7 @@ Characterization of Energy Sectors
 
    *Figure 3.8: Proyeccion del precio de vehiculos electricos.*
    
-.. figure:: img/Proyeccione_de_precio_por_capacidad de la planta de gas.png
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
    :align:   center
    :width:   700 px
 
