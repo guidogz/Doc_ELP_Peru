@@ -23,7 +23,7 @@ Characterization of Energy Sectors
    *Figure 3.2: Proyeccion del crecimiento CAPEX energias renovables.*
    
    
-.. figure:: img/Proyeccion_de_la_demanda _de_electricidad_anual.svg
+.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
 
