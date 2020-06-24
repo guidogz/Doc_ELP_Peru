@@ -9,47 +9,72 @@ Characterization of Energy Sectors
   blaa... 
   
   
-.. figure:: img/demanda electrcia en MW-h.svg
+.. figure:: img/proyección del crecimiento del PBI anual.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Demanda Electrica en MW-h.*
+   *Figure 2.2: Proyección del crecimiento del PBI anual.*
    
    
-.. figure:: img/demanda maxima electrica.svg
+.. figure:: img/proyeccion del crecimiento CAPEX energias renovables.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Máxima demanda electrica MW.*
+   *Figure 2.2: Proyeccion del crecimiento CAPEX energias renovables.*
    
    
-.. figure:: img/precios del gas.svg
+.. figure:: img/Proyeccion de la maxima demanda de electricidad anual.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Precios del gas en MMUSD/MMBTU.*
+   *Figure 2.2: Proyeccion de la maxima demanda de electricidad anual.*
    
   
-.. figure:: img/proyecciones de crudo y crabon.svg
+.. figure:: img/Proyección de la demanda de electricidad anual.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Precios del crudo en USD/barril.*
+   *Figure 2.2: Proyección de la demanda de electricidad anual.png*
    
    
-.. figure:: img/proyecciones pbi.svg
+.. figure:: img/Proyeccion del precio de carbon.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Proyecciones del PBI.*
+   *Figure 2.2: Proyeccion del precio de carbon.*
    
-.. figure:: img/proyeciones renovables.svg
+.. figure:: img/Proyeccion del precio del gas en la planta.png
    :align:   center
    :width:   700 px
 
-   *Figure 2.2: Simple diagram for fuel specification.*
+   *Figure 2.2: Proyeccion del precio del gas en la planta.*
    
    
+.. figure:: img/Proyeccion del precio promedio del crudo.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Proyeccion del precio promedio del crudo.*
+   
+.. figure:: img/Proyeccion del precio de vehiculos electricos.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Proyeccion del precio de vehiculos electricos.*
+   
+.. figure:: img/Proyeccione de precio por capacidad de la planta de gas.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Proyeccione de precio por capacidad de la planta de gas.*
+   
+.. figure:: img/Proyeccione de precio por capacidad de la refinería.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 2.2: Proyeccione de precio por capacidad de la refinería.*
+   
+
  
  Clustering and Representative Networks
  
