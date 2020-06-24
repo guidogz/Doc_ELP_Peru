@@ -30,7 +30,7 @@ Characterization of Energy Sectors
    *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
    
   
-.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
+.. figure:: img/Proyección_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
 
