@@ -30,7 +30,7 @@ Characterization of Energy Sectors
    *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
    
   
-.. figure:: img/Proyección_de_la_demanda_de_electricidad_anual.png
+.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
 
@@ -68,7 +68,7 @@ Characterization of Energy Sectors
 
    *Figure 3.9: Proyeccione de precio por capacidad de la planta de gas.*
    
-.. figure:: img/Proyeccione _de_precio_por_capacidad_de_la_refineria.png
+.. figure:: img/Proyeccione _de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
 
