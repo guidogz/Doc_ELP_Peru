@@ -82,8 +82,6 @@ Characterization of Energy Sectors
 
    *Figure 3.11: Proyeccione de precio por capacidad de la refineria.*
    
-
- 
  Clustering and Representative Networks
  
  Time-Series Analysis and Forecasting
