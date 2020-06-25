@@ -86,9 +86,9 @@ Abreviaturas
 | PNEPH	        | Plan Nacional de Exploración y Producción de Hidrocarburos                |
 +---------------+---------------------------------------------------------------------------+
 | ppm	          | Partes por millón                                                         |
-+---------------+---------------------------------------------------------------------------+---------+
-| Prosemer      |	Programa para la Gestión Eficiente y Sostenible de los Recursos Energéticos del Perú|
-+---------------+---------------------------------------------------------------------------+---------+
++---------------+---------------------------------------------------------------------------+
+| Prosemer      |	Programa para la Gestión Eficiente y Sostenible de los Recursos Energ.    |
++---------------+---------------------------------------------------------------------------+
 | RER	          | Recursos Energéticos Renovables                                           |
 +---------------+---------------------------------------------------------------------------+
 | SEIN          |	Sistema Eléctrico Interconectado Nacional                                 |
