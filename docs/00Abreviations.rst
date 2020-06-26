@@ -15,87 +15,87 @@ Abreviaturas
 +---------------+---------------------------------------------------------------------------+
 | 2050 Pathways | 2050 Pathways Platform                                                    |
 +---------------+---------------------------------------------------------------------------+
-| AFA           |	Annual Factor Availability                                                |
+| AFA           | Annual Factor Availability                                                |
 +---------------+---------------------------------------------------------------------------+
-| API	          | American Petroleum Institute                                              | 
+| API           | American Petroleum Institute                                              |
 +---------------+---------------------------------------------------------------------------+
 | ARAPER        | Asociación de Representantes Automotrices del Perú                        |
 +---------------+---------------------------------------------------------------------------+
-| BEU	          | Balance de Energía Útil                                                   |
+| BEU           | Balance de Energía Útil                                                   |
 +---------------+---------------------------------------------------------------------------+
-| BNE    	      | Balance Nacional de Energía                                               |
+| BNE           | Balance Nacional de Energía                                               |
 +---------------+---------------------------------------------------------------------------+
-| CEGH          |	Contenido Energético del Gas Húmedo                                       |
+| CEGH          | Contenido Energético del Gas Húmedo                                       |
 +---------------+---------------------------------------------------------------------------+
-| CFE      	    | Comisión Federal de Electricidad (México)                                 |
+| CFE           | Comisión Federal de Electricidad (México)                                 |
 +---------------+---------------------------------------------------------------------------+
-| CNPC	        | China National Petroleum Corporation                                      |
+| CNPC          | China National Petroleum Corporation                                      |
 +---------------+---------------------------------------------------------------------------+
-| COES          |	Comité de Operación Económica del Sistema Interconectado                  |
+| COES          | Comité de Operación Económica del Sistema Interconectado                  |
 +---------------+---------------------------------------------------------------------------+
-| CORPAC        |	Corporación Peruana de Aeropuertos y Aviación Comercial                   |
+| CORPAC        | Corporación Peruana de Aeropuertos y Aviación Comercial                   |
 +---------------+---------------------------------------------------------------------------+
-| cUS$          |	Centavos de dólar americano                                               |
+| cUS$          | Centavos de dólar americano                                               |
 +---------------+---------------------------------------------------------------------------+
-| DGEE          |	Dirección General de Eficiencia Energética                                |
+| DGEE          | Dirección General de Eficiencia Energética                                |
 +---------------+---------------------------------------------------------------------------+
-| DM            |	Disponibilidad Mecánica                                                   |
+| DM            | Disponibilidad Mecánica                                                   |
 +---------------+---------------------------------------------------------------------------+
-| E&P           |	Exploración y Producción                                                  |
+| E&P           | Exploración y Producción                                                  |
 +---------------+---------------------------------------------------------------------------+
-| EIU           |	Economist Intelligence Unit                                               |
+| EIU           | Economist Intelligence Unit                                               |
 +---------------+---------------------------------------------------------------------------+
-| gal           |	Galón                                                                     |
+| gal           | Galón                                                                     |
 +---------------+---------------------------------------------------------------------------+
-| GMP           |	Graña y Montero Petrolera S.A.                                            |
+| GMP           | Graña y Montero Petrolera S.A.                                            |
 +---------------+---------------------------------------------------------------------------+
-| INEI	        | Instituto Nacional de Estadística e Informática                           |
+| INEI          | Instituto Nacional de Estadística e Informática                           |
 +---------------+---------------------------------------------------------------------------+
-| INGEI         |	Inventario Nacional de Gases de Efecto Invernadero                        |
+| INGEI         | Inventario Nacional de Gases de Efecto Invernadero                        |
 +---------------+---------------------------------------------------------------------------+
-| IPCC          |	Intergovernmental Panel on Climate Change                                 |
+| IPCC          | Intergovernmental Panel on Climate Change                                 |
 +---------------+---------------------------------------------------------------------------+
-| kbbl          |	Miles de barriles                                                         | 
+| kbbl          | Miles de barriles                                                         |
 +---------------+---------------------------------------------------------------------------+
-| kpc	          | Millar de Pie Cúbico                                                      |
+| kpc           | Millar de Pie Cúbico                                                      |
 +---------------+---------------------------------------------------------------------------+
-| MBPD	        | Millones de Barriles de Petróleo por Día                                  |
+| MBPD          | Millones de Barriles de Petróleo por Día                                  |
 +---------------+---------------------------------------------------------------------------+
-| MINAM         |	Ministerio del Ambiente                                                   |
+| MINAM         | Ministerio del Ambiente                                                   |
 +---------------+---------------------------------------------------------------------------+
-| MINEM         |	Ministerio de Energía y Minas                                             |
+| MINEM         | Ministerio de Energía y Minas                                             |
 +---------------+---------------------------------------------------------------------------+
-| MMA	          | Ministério do Meio Ambiente                                               |
+| MMA           | Ministério do Meio Ambiente                                               |
 +---------------+---------------------------------------------------------------------------+
-| MMUS$/	      | Millones de dólares americanos                                            |
+| MMUS$/        | Millones de dólares americanos                                            |
 +---------------+---------------------------------------------------------------------------+
-| MTC           |	Ministerio de Transportes y Comunicaciones                                |
+| MTC           | Ministerio de Transportes y Comunicaciones                                |
 +---------------+---------------------------------------------------------------------------+
-| NAMA	        | Acciones Nacionales Apropiadas de Mitigación                              |
+| NAMA          | Acciones Nacionales Apropiadas de Mitigación                              |
 +---------------+---------------------------------------------------------------------------+
-| O&M           |	Operación y Mantenimiento                                                 |
+| O&M           | Operación y Mantenimiento                                                 |
 +---------------+---------------------------------------------------------------------------+
-| PIB           |	Producto Interno Bruto                                                    |
+| PIB           | Producto Interno Bruto                                                    |
 +---------------+---------------------------------------------------------------------------+
-| PJ            |	Peta-Joules                                                               |
+| PJ            | Peta-Joules                                                               |
 +---------------+---------------------------------------------------------------------------+
-| PJa           |	Peta-Joules per annum                                                     |
+| PJa           | Peta-Joules per annum                                                     |
 +---------------+---------------------------------------------------------------------------+
-| pkm	          | Pasajeros-Kilómetro                                                       |
+| pkm           | Pasajeros-Kilómetro                                                       |
 +---------------+---------------------------------------------------------------------------+
-| PNEPH	        | Plan Nacional de Exploración y Producción de Hidrocarburos                |
+| PNEPH         | Plan Nacional de Exploración y Producción de Hidrocarburos                |
 +---------------+---------------------------------------------------------------------------+
-| ppm	          | Partes por millón                                                         |
+| ppm           | Partes por millón                                                         |
 +---------------+---------------------------------------------------------------------------+
-| Prosemer      |	Programa para la Gestión Eficiente y Sostenible de los Recursos Energ.    |
+| Prosemer      | Programa para la Gestión Eficiente y Sostenible de los Recursos Energ.    |
 +---------------+---------------------------------------------------------------------------+
-| RER	          | Recursos Energéticos Renovables                                           |
+| RER           | Recursos Energéticos Renovables                                           |
 +---------------+---------------------------------------------------------------------------+
-| SEIN          |	Sistema Eléctrico Interconectado Nacional                                 |
+| SEIN          | Sistema Eléctrico Interconectado Nacional                                 |
 +---------------+---------------------------------------------------------------------------+
-| SIT GAS	      | Sistema Integrado de Transporte de Gas Zona Sur del Perú                  |
+| SIT GAS       | Sistema Integrado de Transporte de Gas Zona Sur del Perú                  |
 +---------------+---------------------------------------------------------------------------+
-| TCAC	        | Tasa de Crecimiento Anual Compuesto                                       |
+| TCAC          | Tasa de Crecimiento Anual Compuesto                                       |
 +---------------+---------------------------------------------------------------------------+
-| TG            |	Turbina a Gas                                                             |
+| TG            | Turbina a Gas                                                             |
 +---------------+---------------------------------------------------------------------------+
