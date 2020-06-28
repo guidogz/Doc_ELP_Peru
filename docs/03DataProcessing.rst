@@ -112,14 +112,14 @@ Characterization of Energy Sectors
    :align:   center
    :width:   700 px
 
-   *Figure 3.10: proyecion sector transporte carga.png.*
+   *Figure 3.12: proyecion sector transporte carga.png.*
    
    
 .. figure:: img/proyecion_sector_transporte.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.11: proyecion sector transporte.*
+   *Figure 3.13: proyecion sector transporte.*
 
 
 *____________________________________________________________________*
