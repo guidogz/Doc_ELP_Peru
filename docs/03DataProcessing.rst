@@ -102,11 +102,25 @@ Characterization of Energy Sectors
    *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
    
    
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.svg
+.. figure:: img/proyecion_sector_transporte_publico_privado.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.11: Proyeccione de precio por capacidad de la refineria.*
+   *Figure 3.11: proyecion sector transporte publico y privado.png.*
+
+.. figure:: img/proyecion_sector_transporte_carga.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.10: proyecion sector transporte carga.png.*
+   
+   
+.. figure:: img/proyecion_sector_transporte.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.11: proyecion sector transporte.*
+
 
 *____________________________________________________________________*
 
