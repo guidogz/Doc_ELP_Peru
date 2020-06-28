@@ -8,6 +8,32 @@ Characterization of Energy Sectors
  Fitter Data and Outlier Correction
   blaa... 
   
+.. figure:: img/RES_Energia.png
+   :align:   center
+   :width:   700 px
+
+
+
+
+3.2.1 Sets
+---------
+
+3.2.1 Procesos
+---------
+
+3.2.1 Comodities
+---------
+
+3.2.1 Costos 
+---------
+
+3.2.1 Emisiones
+---------  
+  
+ 3.2.1 Datos de entrada
+---------   
+  
+  
   
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
    :align:   center
