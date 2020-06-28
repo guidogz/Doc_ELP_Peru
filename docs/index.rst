@@ -13,6 +13,6 @@ Descarbonización - ELP – Peru
    00Abreviations
    01Introduction
    02EnergyModelFramework
-   03EnergyModelDatabase
+   03DataProcessing
    04Scenarios
    05PythonModules
