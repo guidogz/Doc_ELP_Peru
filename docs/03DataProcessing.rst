@@ -40,7 +40,9 @@ Characterization of Energy Sectors
    :width:   500 px
 
    *Figure 3.1: Proyección del crecimiento del PBI anual.*
-   
+Hola mundo, jajajajajajajaja
+
+
    
 .. figure:: img/proyeccion_del_crecimiento_CAPEX_energias_renovables.png
    :align:   center
