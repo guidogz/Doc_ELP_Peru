@@ -113,11 +113,8 @@ Electricity Sector Simulation
    :width:   700 px
 
    *Figure 3.4: Proyección de la demanda de electricidad anual.*
-   
-    
 
-
-
+*____________________________________________________________________*
 
  Electricity Power Flow and Efficiency
  
