@@ -99,7 +99,7 @@ Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
- 
+   
 
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
