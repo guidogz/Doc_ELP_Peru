@@ -40,8 +40,8 @@ Characterization of Energy Sectors
    :width:   500 px
 
    *Figure 3.1: Proyección del crecimiento del PBI anual.*
-Hola mundo, jajajajajajajaja
 
+Para los valores proyectados se utilizaron los valores proporcionados para el periodo 2016-2026 por la consultora APOYO, los valores para el periodo 2027-2040 se tomaron de los escenarios proporcionados por el MINEM y para el periodo 2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 10 años anteriores al 2040. 
 
    
 .. figure:: img/proyeccion_del_crecimiento_CAPEX_energias_renovables.png
@@ -49,15 +49,20 @@ Hola mundo, jajajajajajajaja
    :width:   700 px
 
    *Figure 3.2: Proyeccion del crecimiento CAPEX energias renovables.*
-   
-   
+
+Para la proyección del CAPEX (Capital expenditure) de las energías renovables se tomaron valores del "Evolución futura de costos de las energías renovables y almacenamiento en América Latina" para el periodo 2018-2030, para el periodo 2030-2055 se ha utilizado un ajuste lotgarítmico para poder proyectar los valores.
+
+
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
 
    *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
-   
-  
+
+
+
+
+
 .. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
