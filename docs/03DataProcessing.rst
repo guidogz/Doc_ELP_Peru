@@ -53,23 +53,6 @@ Para los valores proyectados se utilizaron los valores proporcionados para el pe
 Para la proyección del CAPEX (Capital expenditure) de las energías renovables se tomaron valores del "Evolución futura de costos de las energías renovables y almacenamiento en América Latina" para el periodo 2018-2030, para el periodo 2030-2055 se ha utilizado un ajuste lotgarítmico para poder proyectar los valores.
 
 
-.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
-
-
-
-
-
-.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.4: Proyección de la demanda de electricidad anual.*
-   
-   
 .. figure:: img/Proyeccion_del_precio_de_carbon.png
    :align:   center
    :width:   700 px
@@ -89,11 +72,6 @@ Para la proyección del CAPEX (Capital expenditure) de las energías renovables 
 
    *Figure 3.7: Proyeccion del precio promedio del crudo.*
    
-.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.8: Proyeccion del precio de vehiculos electricos.*
    
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
    :align:   center
@@ -109,6 +87,50 @@ Para la proyección del CAPEX (Capital expenditure) de las energías renovables 
    *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
    
    
+
+
+*____________________________________________________________________*
+
+ Clustering and Representative Networks
+ 
+ Time-Series Analysis and Forecasting
+
+Electricity Sector Simulation
+-----------------------------------------------------
+ Data Structure and Elements of Electric System
+  power..
+ 
+
+.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
+
+
+.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.4: Proyección de la demanda de electricidad anual.*
+   
+    
+
+
+
+
+ Electricity Power Flow and Efficiency
+ 
+ Emissions from Electricity Sector
+
+Transport Sector Simulation
+-----------------------------------------------------
+
+ Data Structure and Elements of Transport System
+ Traffic Flow Analysis and Efficiency of the System
+ Emissions and Air Pollution from Transport Sector
+
+
 .. figure:: img/proyecion_sector_transporte_publico_privado.png
    :align:   center
    :width:   700 px
@@ -128,26 +150,8 @@ Para la proyección del CAPEX (Capital expenditure) de las energías renovables 
 
    *Figure 3.13: proyecion sector transporte.*
 
+.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
+   :align:   center
+   :width:   700 px
 
-*____________________________________________________________________*
-
- Clustering and Representative Networks
- 
- Time-Series Analysis and Forecasting
-
-Electricity Sector Simulation
------------------------------------------------------
- Data Structure and Elements of Electric System
-  power..
- 
- Electricity Power Flow and Efficiency
- 
- Emissions from Electricity Sector
-
-Transport Sector Simulation
------------------------------------------------------
-
- Data Structure and Elements of Transport System
- Traffic Flow Analysis and Efficiency of the System
- Emissions and Air Pollution from Transport Sector
-
+   *Figure 3.8: Proyeccion del precio de vehiculos electricos.*
