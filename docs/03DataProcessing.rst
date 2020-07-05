@@ -83,7 +83,7 @@ Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI
    :align:   center
    :width:   700 px
 
-   *Figure 3.6: Proyecciones de precio por capacidad de la planta de gas.*
+   *Figure 3.6: Proyecciones del precio por capacidad de la planta de gas.*
 
 Los cálculos se hicieron con los datos de costos de capital y operación de plantas de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
@@ -91,7 +91,7 @@ Los cálculos se hicieron con los datos de costos de capital y operación de pla
    :align:   center
    :width:   700 px
 
-   *Figure 3.7: Proyecciones de precio por capacidad de la refineria.*
+   *Figure 3.7: Proyecciones del precio por capacidad de la refineria.*
 
 Los cálculos se hicieron con los datos de costos de capital, operación y variación de plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
@@ -143,20 +143,20 @@ Transport Sector Simulation
    :align:   center
    :width:   700 px
 
-   *Figure 3.10: proyección sector transporte publico y privado.png.*
+   *Figure 3.10: proyección del sector transporte publico y privado.png.*
 
 .. figure:: img/proyecion_sector_transporte_carga.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.11: proyección sector transporte carga.png.*
+   *Figure 3.11: proyección del sector transporte carga.png.*
    
    
 .. figure:: img/proyecion_sector_transporte.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.12: proyección sector transporte.*
+   *Figure 3.12: proyección del sector transporte.*
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
