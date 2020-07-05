@@ -58,21 +58,27 @@ Para la proyección del CAPEX (Capital expenditure) de las energías renovables 
    :width:   700 px
 
    *Figure 3.5: Proyeccion del precio de carbon.*
-   
+
+Para la proyección de los precios del carbón se utliza las proyección del carbon australia del banco mundial
+(octubre del 2018), todos los costos de internación son considerados e incluye flete y otros costos de transporte, el carbón tiene un costo de internación  de 18.6 US$/ton.
+
+
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
    :width:   700 px
 
    *Figure 3.6: Proyeccion del precio del gas en la planta.*
-   
-   
+
+Los precios del gas han utlizado como base los las proyeciones de "high oil and gas resource and technology" del EIA. 
+
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
    :align:   center
    :width:   700 px
 
    *Figure 3.7: Proyeccion del precio promedio del crudo.*
-   
-   
+
+Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
+
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
    :align:   center
    :width:   700 px
