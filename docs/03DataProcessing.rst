@@ -57,7 +57,7 @@ Para la proyección del CAPEX (Capital expenditure) de las energías renovables 
    :align:   center
    :width:   700 px
 
-   *Figure 3.5: Proyeccion del precio de carbon.*
+   *Figure 3.3: Proyeccion del precio de carbon.*
 
 Para la proyección de los precios del carbón se utliza las proyección del carbon australia del banco mundial
 (octubre del 2018), todos los costos de internación son considerados e incluye flete y otros costos de transporte, el carbón tiene un costo de internación  de 18.6 US$/ton.
@@ -67,15 +67,15 @@ Para la proyección de los precios del carbón se utliza las proyección del car
    :align:   center
    :width:   700 px
 
-   *Figure 3.6: Proyeccion del precio del gas en la planta.*
+   *Figure 3.4: Proyeccion del precio del gas en la planta.*
 
-Los precios del gas han utlizado como base los las proyeciones de "high oil and gas resource and technology" del EIA. 
+Los precios del gas han utilizado como base las proyeciones de "high oil and gas resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y como las proyeciones del caso de referencia EIA . 
 
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.7: Proyeccion del precio promedio del crudo.*
+   *Figure 3.5: Proyeccion del precio promedio del crudo.*
 
 Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
 
@@ -83,16 +83,20 @@ Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI
    :align:   center
    :width:   700 px
 
-   *Figure 3.9: Proyeccione de precio por capacidad de la planta de gas.*
-   
-   
+   *Figure 3.6: Proyecciones de precio por capacidad de la planta de gas.*
+
+Los cálculos se hicieron con los datos de costos de capital y operación de plantas de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.10: Proyeccione de precio por capacidad de la refineria.*
-   
-   
+   *Figure 3.7: Proyeccione de precio por capacidad de la refineria.*
+
+Los cálculos se hicieron con los datos de costos de capital, operación y variación de plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+
+
 
 
 *____________________________________________________________________*
@@ -111,14 +115,15 @@ Electricity Sector Simulation
    :align:   center
    :width:   700 px
 
-   *Figure 3.3: Proyeccion de la maxima demanda de electricidad anual.*
-
+   *Figure 3.8: Proyeccion de la maxima demanda de electricidad anual.*
 
 .. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.4: Proyección de la demanda de electricidad anual.*
+   *Figure 3.9: Proyección de la demanda de electricidad anual.*
+
+Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país conectadas al SEIN. Iquitos no se incluye en el modelaje.
 
 *____________________________________________________________________*
 
@@ -138,23 +143,23 @@ Transport Sector Simulation
    :align:   center
    :width:   700 px
 
-   *Figure 3.11: proyecion sector transporte publico y privado.png.*
+   *Figure 3.10: proyecion sector transporte publico y privado.png.*
 
 .. figure:: img/proyecion_sector_transporte_carga.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.12: proyecion sector transporte carga.png.*
+   *Figure 3.11: proyecion sector transporte carga.png.*
    
    
 .. figure:: img/proyecion_sector_transporte.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.13: proyecion sector transporte.*
+   *Figure 3.12: proyecion sector transporte.*
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.8: Proyeccion del precio de vehiculos electricos.*
+   *Figure 3.13: Proyeccion del precio de vehiculos electricos.*
