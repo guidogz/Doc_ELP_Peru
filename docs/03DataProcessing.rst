@@ -143,20 +143,20 @@ Transport Sector Simulation
    :align:   center
    :width:   700 px
 
-   *Figure 3.10: proyección del sector transporte publico y privado.png.*
+   *Figure 3.10: Proyección del sector transporte publico y privado.png.*
 
 .. figure:: img/proyecion_sector_transporte_carga.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.11: proyección del sector transporte carga.png.*
+   *Figure 3.11: Proyección del sector transporte carga.png.*
    
    
 .. figure:: img/proyecion_sector_transporte.png
    :align:   center
    :width:   700 px
 
-   *Figure 3.12: proyección del sector transporte.*
+   *Figure 3.12: Proyección del sector transporte.*
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
