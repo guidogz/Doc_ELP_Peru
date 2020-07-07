@@ -13,8 +13,8 @@ Characterization of Energy Sectors
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
-  *Figure 3.1: Diagrama del modelo desarrollado.*
 
+  *Figure 3.1: Diagrama del modelo desarrollado.*
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
@@ -53,10 +53,48 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 3.2.1 Procesos
 ---------
-Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las tecnologías para el peru se muestran a continuación.
+Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las principales tecnologías para el peru se muestran a continuación.
 
 
-  
++--------------------+----------------------------------------------------------------------+
+|Producción          | Backup Power Systems                                                 |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Importaciones       | Producción de combustibles actual                                    |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Refinería           | Producción de combustibles actual                                    |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Carboneras          | Importaciones de energia actual                                      |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Planta de gas       | Importaciones de energia futura                                      |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Plantas eléctricas  | Refinería actual                                                     |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Transmisión         | Refinería futura                                                     |
+|eléctrica           |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Distribución        | Carbonera actual                                                     |
+|eléctrica           |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Distribución        | Carbonera futura                                                     |
+|energética          |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Transporte          | Plantas de gas natural actual                                        |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Residencial, comer  | Plantas de gas natural futura                                        |
+|cial y carga        |                                                                      |   
++--------------------+----------------------------------------------------------------------+
+|Agropecuario, Pesqu | Planta eléctrica biomasa o biogas actual                             |
+|ero, industría      |                                                                      |
++--------------------+----------------------------------------------------------------------+
+
+
 +---------------+---------------------------------------------------------------------------+
 |A_BACKSTOP     | Backup Power Systems                                                      |
 +---------------+---------------------------------------------------------------------------+
