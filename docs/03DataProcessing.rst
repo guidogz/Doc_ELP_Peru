@@ -2,10 +2,10 @@
 
 
 
- Energy System Modeling: Data Analysis
+Energy System Modeling: Data Analysis
 =======================================
 
- Characterization of Energy Sectors
+Characterization of Energy Sectors
 -----------------------------------------------------
  Fitter Data and Outlier Correction
   blaa... 
@@ -34,32 +34,42 @@ carbón, plantas de generación, transmisión y distribución de energía eléct
 
 *____________________________________________________________________*
 
-3.1.1.1 Sets
+3.2.1 Sets
+---------
+Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
+son particulares por país y región, para su configuración se debe tener un análisis 
+del sistema a modelar, los sets se muestrana contiuación.
+
+-Región
+-Year
+-Timeslices
+-Emissions
+-Commodity
+-Technology
+-Mode of operation
+
+
+3.2.1 Procesos
+---------
+Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las tecnologías para el peru se muestran a continuación.
+
+
+
+3.2.1 Comodities
 ---------
 
 
 
-
-3.1.1.2 Procesos
+3.2.1 Costos 
 ---------
 
 
 
-3.1.1.3 Comodities
----------
-
-
-
-3.1.1.4 Costos 
----------
-
-
-
-3.1.1.5 Emisiones
+3.2.1 Emisiones
 ---------
 
  
- 3.2.1 Datos de entrada
+   3.2.1 Datos de entrada
 ---------
 
 
