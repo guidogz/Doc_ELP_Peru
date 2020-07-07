@@ -35,7 +35,7 @@ Las tecnologías de entrada son la importación y produción de los commodoties,
 tecnologías intermedias como refinación, procesasmiento de gas, producción de 
 carbón, plantas de generación, transmisión y distribución de energía eléctrica.
 
-  *Figure 3.1: Diagrama del modelo desarrollado.*
+  
 
 3.2.1 Sets
 ---------
@@ -95,8 +95,8 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 |ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
 
-Para una mejor idenficación de las tecnologías se puede ver a continuación los 
-procesos asociados a cada commdity.
+Para una mejor idenficación de las tecnologías se puede ver a continuación 
+las etiquetas de los procesos asociados a cada commdity.
 
 
 +---------------+---------------------------------------------------------------------------+
@@ -234,11 +234,115 @@ procesos asociados a cada commdity.
 
 3.2.1 Comodities
 ---------
+Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
+tecnología para ser transformados y procesados en otros comodities dentro de toda 
+la cadena energética, en el Perú contamos con una gran variedad de commodities desde
+insumos primarios como bosta y yesta para producción de carbón hasta la electricidad 
+generada por cada tecnología eléctrica y los combustibles consumidos por el sector
+transporte, las etiquetas para cada commodity considerados se muestran a continuación.
 
+
++---------------+---------------------------------------------------------------------------+
+|A_EP_BAGA      | Bagazo                                                                    |
++---------------+---------------------------------------------------------------------------+
+|A_EP_BOYA      | Bosta y yareta                                                            |
++---------------+---------------------------------------------------------------------------+
+|A_EP_CAMI      | Carbpon mineral                                                           |
++---------------+---------------------------------------------------------------------------+
+|A_EP_GANA      |  Gas natural                                                              |
++---------------+---------------------------------------------------------------------------+
+|A_EP_LENA      | Leña                                                                      |
++---------------+---------------------------------------------------------------------------+
+|A_EP_LIGN      | Licuado de gas natural                                                    |
++---------------+---------------------------------------------------------------------------+
+|A_EP_PETR      | Petróleo                                                                  |
++---------------+---------------------------------------------------------------------------+
+|B_BIDS         | Biodiesel                                                                 |
++---------------+---------------------------------------------------------------------------+
+|B_BIGA         | Biogas                                                                    |
++---------------+---------------------------------------------------------------------------+
+|B_CAVE         | Carbón vegetal                                                            |
++---------------+---------------------------------------------------------------------------+
+|B_COKE         | Coke                                                                      |
++---------------+---------------------------------------------------------------------------+
+|B_DISL         | Diesel                                                                    |
++---------------+---------------------------------------------------------------------------+
+|B_DREN         | Derivados de energia                                                      |
++---------------+---------------------------------------------------------------------------+
+|B_DRNE         | Derivados no energéticos                                                  |
++---------------+---------------------------------------------------------------------------+
+|B_ETHA         | Ethanol                                                                   |
++---------------+---------------------------------------------------------------------------+
+|B_FOIL         | Fuel oil                                                                  |
++---------------+---------------------------------------------------------------------------+
+|B_GALI         | Gas líquido                                                               |
++---------------+---------------------------------------------------------------------------+
+|B_GASO         | Gasohol                                                                   |
++---------------+---------------------------------------------------------------------------+
+|B_GSNA         | Gasolina                                                                  |
++---------------+---------------------------------------------------------------------------+
+|B_GSRF         | Gas Refinería                                                             |
++---------------+---------------------------------------------------------------------------+
+|B_GSSC         | Gas seco                                                                  |
++---------------+---------------------------------------------------------------------------+
+|B_TURB         | Turbo                                                                     |
++---------------+---------------------------------------------------------------------------+
+|C_EL_PTT       | Electricidad producida a transmisión                                      |
++---------------+---------------------------------------------------------------------------+
+|C_EL_TTD       | Electricidad para distribución                                            |
++---------------+---------------------------------------------------------------------------+
+|D_DECOM        | Demanda energía comercial y público                                       |
++---------------+---------------------------------------------------------------------------+
+|D_DEIND        | Demanda energía PAMI                                                      |
++---------------+---------------------------------------------------------------------------+
+|D_DERES        | Demanda energía residencial                                               |
++---------------+---------------------------------------------------------------------------+
+|E_DTPASPB      | Demanda de pasajeros públicos                                             |
++---------------+---------------------------------------------------------------------------+
+|E_DTPASPR      | Demanda de pasajeros privados                                             |
++---------------+---------------------------------------------------------------------------+
+|E_DTPASSM      | Demanda de pasajeros no motorizada                                        |
++---------------+---------------------------------------------------------------------------+
+|F_DTCALI       | Demanda de carga liviana                                                  |
++---------------+---------------------------------------------------------------------------+
+|F_DTCAME       | Demanda de carga media                                                    |
++---------------+---------------------------------------------------------------------------+
+|F_DTCAPE       | Demanda de carga pesado                                                   |
++---------------+---------------------------------------------------------------------------+
+|G_EXPEL        | Exportación de electricidad                                               |
++---------------+---------------------------------------------------------------------------+
+|G_EXPGN        | Exportación de gas natural                                                |
++---------------+---------------------------------------------------------------------------+
 
 
 3.2.1 Costos 
 ---------
+
+Los procesos tienen involucrados costos como CAPEX(Capital Expenditure), OPEX 
+(Operacional Expenditure), LCOE, etc. Los costos examinados por capacidad para las 
+plantas de gas y refinerías has sido estudiadas para tener datos con los cuales
+poder suministrar al modelo. La proyeciones desde al 2055 de estos datos se han 
+obtenido del Informe 9 del PROSEMER. 
+
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas.*
+
+Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
+de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
+del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
+   :align:   center
+   :width:   700 px
+
+   *Figure 3.7: Proyecciones de los costos por capacidad de la refineria.*
+
+Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
+plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
+"Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
 
 
@@ -247,7 +351,16 @@ procesos asociados a cada commdity.
 
  
    3.2.1 Datos de entrada
----------
+-
+
+
+
+
+
+
+
+
+--------
 
 
     
@@ -308,25 +421,6 @@ Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
 incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
 
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.6: Proyecciones del precio por capacidad de la planta de gas.*
-
-Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
-de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
-del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
-
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
-   :align:   center
-   :width:   700 px
-
-   *Figure 3.7: Proyecciones del precio por capacidad de la refineria.*
-
-Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
-plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
-"Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
 
 
