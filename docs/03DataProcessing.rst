@@ -15,11 +15,22 @@ Characterization of Energy Sectors
    :width:   700 px
   *Figure 3.1: Diagrama del modelo desarrollado.*
 
-El sector de energía Peruano se divide ampliamente en los macrobloques de demanda y de oferta, las tecnologías son mostrados en bloques y estan asociados a los commodities que son mostradas como líneas verticales. De los commodities se toma una división, la cual va a la tecnología correspondiente para su transformación.    
+El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
+y de oferta, las tecnologías son mostrados en bloques y estan asociados a los 
+commodities que son mostradas como líneas verticales. De los commodities se toma 
+una división, la cual va a la tecnología correspondiente para su transformación.    
 
-La diversidad de la matriz energética en el Peru se muestra en una amplia cantidad de technologías y commodities, todo este conjunto de información para el sector energía han sido tomadas de los informes hechos por el PROSEMER en los cuales su principal objetivo es el desarrollo de un modelo para la optimización de la oferta del sistema energético basados en modelos de optimización TIMES que fue desarrollado como parte del IEA-ETSAP's metodología usada para escenarios de energía para conducir en un profundo análisis de la energía.
+La diversidad de la matriz energética en el Peru se muestra en una amplia cantidad 
+de technologías y commodities, todo este conjunto de información para el sector 
+energía han sido tomadas de los informes hechos por el PROSEMER en los cuales su 
+principal objetivo es el desarrollo de un modelo para la optimización de la oferta 
+del sistema energético basados en modelos de optimización TIMES que fue desarrollado 
+como parte del IEA-ETSAP's metodología usada para escenarios de energía para conducir 
+en un profundo análisis de la energía.
 
-Las tecnologías de entrada son la importación y produción de los commodoties, hay tecnologías intermedias como refinación, procesasmiento de gas, producción de carbón, plantas de generación, transmisión y distribución de energía eléctrica.
+Las tecnologías de entrada son la importación y produción de los commodoties, hay 
+tecnologías intermedias como refinación, procesasmiento de gas, producción de 
+carbón, plantas de generación, transmisión y distribución de energía eléctrica.
 
 
 3.1.1.1 Sets
