@@ -15,6 +15,8 @@ Characterization of Energy Sectors
    :width:   700 px
   *Figure 3.1: Diagrama del modelo desarrollado.*
 
+
+
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
 y de oferta, las tecnologías son mostrados en bloques y estan asociados a los 
 commodities que son mostradas como líneas verticales. De los commodities se toma 
@@ -65,7 +67,7 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 
 
 
-3.2.1 Emisiones
+3.1.1 Emisiones
 ---------
 
  
