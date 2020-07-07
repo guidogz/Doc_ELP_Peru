@@ -74,108 +74,108 @@ Los procesos son los siguientes:
 +---------------+---------------------------------------------------------------------------+
 |E_CARB_01      | Carbonera actual                                                          |+---------------+---------------------------------------------------------------------------+
 |E_CARB_02      | Carbonera futura                                                          |+---------------+---------------------------------------------------------------------------+
-|F_PGN_01       | Plantas de gas natural actual 
+|F_PGN_01       | Plantas de gas natural actual                                             |
 +---------------+---------------------------------------------------------------------------+
-|F_PGN_02       | Plantas de gas natural futura
+|F_PGN_02       | Plantas de gas natural futura                                             |
 +---------------+---------------------------------------------------------------------------+
-|G_PEBIO_01     | Planta eléctrica biomasa o biogas actual  +---------------+---------------------------------------------------------------------------+
-|G_PEBIO_02     | Planta eléctrica biomasa o biogafutura
+|G_PEBIO_01     | Planta eléctrica biomasa o biogas actual                                  |+---------------+---------------------------------------------------------------------------+
+|G_PEBIO_02     | Planta eléctrica biomasa o biogafutura                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PEGA_01      | Planta eléctrica de gas natural actual 
+|G_PEGA_01      | Planta eléctrica de gas natural actual                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PEGA_02      | Planta eléctrica de gas natural futura
+|G_PEGA_02      | Planta eléctrica de gas natural futura                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PEHI_01      | Planta hidroeléctrica actual 
+|G_PEHI_01      | Planta hidroeléctrica actual                                              | 
 +---------------+---------------------------------------------------------------------------+
-|G_PEHI_02      | Planta hidroeléctrica futura
+|G_PEHI_02      | Planta hidroeléctrica futura                                              |
 +---------------+---------------------------------------------------------------------------+
-|G_PEREN_01     | Planta eléctrica renovable actual
+|G_PEREN_01     | Planta eléctrica renovable actual                                         |
 +---------------+---------------------------------------------------------------------------+
-|G_PEREN_02     | Planta eléctrica renovable futura
+|G_PEREN_02     | Planta eléctrica renovable futura                                         |
 +---------------+---------------------------------------------------------------------------+
-|G_PETE_01      | Planta térmicas actual
+|G_PETE_01      | Planta térmicas actual                                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PETE_02      | Planta térmicas futura
+|G_PETE_02      | Planta térmicas futura                                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PGDS_02      | Plantas de generación distribuida solar 
+|G_PGDS_02      | Plantas de generación distribuida solar                                   |
 +---------------+---------------------------------------------------------------------------+
-|G_PGDV_02      | Plantas de generación distribuida eólica  
+|G_PGDV_02      | Plantas de generación distribuida eólica                                  |
 +---------------+---------------------------------------------------------------------------+
-|H_STDE_01      | Transmisión y distribución de electricidad actual 
+|H_STDE_01      | Transmisión y distribución de electricidad actual                         |
 +---------------+---------------------------------------------------------------------------+
-|H_STDE_02      | Transmisión y distribución de electricidad futura
+|H_STDE_02      | Transmisión y distribución de electricidad futura                         |
 +---------------+---------------------------------------------------------------------------+
-|I_DISTENECOMP_1| Distribución de energía comercio y público 
+|I_DISTENECOMP_1| Distribución de energía comercio y público                                |
 +---------------+---------------------------------------------------------------------------+
-|I_DISTENEPAMI_1| Distribución de energía pesca, agricola, minas e industria 
+|I_DISTENEPAMI_1| Distribución de energía pesca, agricola, minas e industria                |
 +---------------+---------------------------------------------------------------------------+
-|I_DISTENERESI_1| Distribución de energía residencial 
+|I_DISTENERESI_1| Distribución de energía residencial                                       |
 +---------------+---------------------------------------------------------------------------+
-|J_TPBUSE_02    | Transporte público bus eléctrico o hidrógeno futuro 
+|J_TPBUSE_02    | Transporte público bus eléctrico o hidrógeno futuro                       |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUBUSG_02   | Transporte público bus por gas natural futura
+|J_TPUBUSG_02   | Transporte público bus por gas natural futura                             |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUBUSHC_01  | Transporte público bus por hidrocarburo actual 
+|J_TPUBUSHC_01  | Transporte público bus por hidrocarburo actual                            |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUBUSHC_02  | Transporte público bus por hidrocarburo actual 
+|J_TPUBUSHC_02  | Transporte público bus por hidrocarburo actual                            |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUTXEL_02   | Transporte público taxi - app eléctrico futuro 
+|J_TPUTXEL_02   | Transporte público taxi - app eléctrico futuro                            |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUTXGN_02   | Transporte público taxi - app por gas natural futuro 
+|J_TPUTXGN_02   | Transporte público taxi - app por gas natural futuro                      |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUTXHC_01   | Transporte público taxi - app por hidrocarburo actual 
+|J_TPUTXHC_01   | Transporte público taxi - app por hidrocarburo actual                     |
 +---------------+---------------------------------------------------------------------------+
-|J_TPUTXHC_02   | Transporte público taxi - app por hidrocarburo actual 
+|J_TPUTXHC_02   | Transporte público taxi - app por hidrocarburo actual                     |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRMOEL_02   | Transporte privado motocleta eléctrico futuro 
+|K_TPRMOEL_02   | Transporte privado motocleta eléctrico futuro                             |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRMOHC_01   | Transporte privado motocicleta por hidrocarburo actual 
+|K_TPRMOHC_01   | Transporte privado motocicleta por hidrocarburo actual                    |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRMOHC_02   | Transporte privado motocicleta por hidrocarburo actual 
+|K_TPRMOHC_02   | Transporte privado motocicleta por hidrocarburo actual                    | 
 +---------------+---------------------------------------------------------------------------+
-|K_TPRVEEL_02   | Transporte privado vehículo eléctrico futuro 
+|K_TPRVEEL_02   | Transporte privado vehículo eléctrico futuro                              |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRVEGN_02   | Transporte privado vehículo por gas natural futuro
+|K_TPRVEGN_02   | Transporte privado vehículo por gas natural futuro                        |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRVEHC_01   | Transporte privado vehículo por hidrocarburo actual 
+|K_TPRVEHC_01   | Transporte privado vehículo por hidrocarburo actual                       |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRVEHC_02   | Transporte privado vehículo por hidrocarburo actual 
+|K_TPRVEHC_02   | Transporte privado vehículo por hidrocarburo actual                       |
 +---------------+---------------------------------------------------------------------------+
-|L_TPANOMO_01   | Transporte de pasajeros no motorizado actual 
+|L_TPANOMO_01   | Transporte de pasajeros no motorizado actual                              |
 +---------------+---------------------------------------------------------------------------+
-|L_TPANOMO_02   | Transporte de pasajeros no motorizado futuro
+|L_TPANOMO_02   | Transporte de pasajeros no motorizado futuro                              |
 +---------------+---------------------------------------------------------------------------+
-|M_TRENPAEL_01  | Transporte tren eléctrico actual 
+|M_TRENPAEL_01  | Transporte tren eléctrico actual                                          |
 +---------------+---------------------------------------------------------------------------+
-|M_TRENPAEL_02  | Transporte tren eléctrico futuro 
+|M_TRENPAEL_02  | Transporte tren eléctrico futuro                                          |
 +---------------+---------------------------------------------------------------------------+
-|M_TRENPAHC_01  | Transporte tren de diesel  actual 
+|M_TRENPAHC_01  | Transporte tren de diesel  actual                                         |
 +---------------+---------------------------------------------------------------------------+
-|N_TCCLEL_02    | Transporte de carga liviana por eléctricidad o H2 futura
+|N_TCCLEL_02    | Transporte de carga liviana por eléctricidad o H2 futura                  |
 +---------------+---------------------------------------------------------------------------+
-|N_TCCLGN_02    | Transporte de carga liviana por gas futura
+|N_TCCLGN_02    | Transporte de carga liviana por gas futura                                |
 +---------------+---------------------------------------------------------------------------+
-|N_TCCLHC_01    | Transporte de carga liviana por hidrocarburos actual 
+|N_TCCLHC_01    | Transporte de carga liviana por hidrocarburos actual                      |
 +---------------+---------------------------------------------------------------------------+
-|N_TCCLHC_02    | Transporte de carga liviana por hidrocarburos futura
+|N_TCCLHC_02    | Transporte de carga liviana por hidrocarburos futura                      |
 +---------------+---------------------------------------------------------------------------+
-|O_TCCMEL_02    | Transporte de carga mediana por eléctricidad o H2 futura
+|O_TCCMEL_02    | Transporte de carga mediana por eléctricidad o H2 futura                  |
 +---------------+---------------------------------------------------------------------------+
-|O_TCCMGN_02    | Transporte de carga mediana por gas futura
+|O_TCCMGN_02    | Transporte de carga mediana por gas futura                                |
 +---------------+---------------------------------------------------------------------------+
-|O_TCCMHC_01    | Transporte de carga mediana  por hidrocarburos actual 
+|O_TCCMHC_01    | Transporte de carga mediana  por hidrocarburos actual                     |
 +---------------+---------------------------------------------------------------------------+
-|O_TCCMHC_02    | Transporte de carga mediana por hidrocarburos futura
+|O_TCCMHC_02    | Transporte de carga mediana por hidrocarburos futura                      |
 +---------------+---------------------------------------------------------------------------+
-|P_TCCPEL_02    | Transporte de carga pesada por eléctricidad  futura
+|P_TCCPEL_02    | Transporte de carga pesada por eléctricidad  futura                       |
 +---------------+---------------------------------------------------------------------------+
-|P_TCCPGN_02    | Transporte de carga pesada por gas natural futura
+|P_TCCPGN_02    | Transporte de carga pesada por gas natural futura                         |
 +---------------+---------------------------------------------------------------------------+
-|P_TCCPHC_01    | Transporte de carga pesada por hidrocarburos actual 
+|P_TCCPHC_01    | Transporte de carga pesada por hidrocarburos actual                       | 
 +---------------+---------------------------------------------------------------------------+
-|P_TCCPHC_02    | Transporte de carga pesada por hidrocarburos futura
+|P_TCCPHC_02    | Transporte de carga pesada por hidrocarburos futura                       |
 +---------------+---------------------------------------------------------------------------+
-|Q_TRENCAEL_02  | Transporte tren de carga eléctrico futuro 
+|Q_TRENCAEL_02  | Transporte tren de carga eléctrico futuro                                 |
 +---------------+---------------------------------------------------------------------------+
 |Q_TRENCAHC_01  | Transportetren carga de diesel futuro                                     |
 +---------------+---------------------------------------------------------------------------+
