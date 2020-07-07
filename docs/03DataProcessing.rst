@@ -10,9 +10,11 @@ Characterization of Energy Sectors
  Fitter Data and Outlier Correction
   blaa... 
   
+
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
+
 
   *Figure 3.1: Diagrama del modelo desarrollado.*
 
@@ -94,6 +96,9 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 |Agropecuario, Pesqu | Estas tecnologías incluyen todos los procesos de ransformacion de    |
 |ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
+
+Para una mejor idenficación de las tecnologías se puede ver a continuación los 
+procesos asociados a cada commdity.
 
 
 +---------------+---------------------------------------------------------------------------+
