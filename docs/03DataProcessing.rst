@@ -1,4 +1,6 @@
-.. _docgen:
+   .. _docgen:
+
+## Hola aqui de nuevo
 
 Energy System Modeling: Data Analysis
 =======================================
@@ -11,6 +13,7 @@ Characterization of Energy Sectors
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
+  *Figure 3.1: Diagrama del modelo desarrollado.*
 
 
 
@@ -18,23 +21,29 @@ Characterization of Energy Sectors
 3.2.1 Sets
 ---------
 
+
+
 3.2.1 Procesos
 ---------
+
+
 
 3.2.1 Comodities
 ---------
 
+
+
 3.2.1 Costos 
 ---------
 
+
+
 3.2.1 Emisiones
 ---------  
-  
+ 
  3.2.1 Datos de entrada
 ---------   
-  
-  
-  
+    
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
    :align:   center
    :width:   500 px
