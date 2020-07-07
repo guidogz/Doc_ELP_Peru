@@ -32,6 +32,7 @@ Las tecnologías de entrada son la importación y produción de los commodoties,
 tecnologías intermedias como refinación, procesasmiento de gas, producción de 
 carbón, plantas de generación, transmisión y distribución de energía eléctrica.
 
+*____________________________________________________________________*
 
 3.1.1.1 Sets
 ---------
