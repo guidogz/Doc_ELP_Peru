@@ -56,8 +56,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las tecnologías para el peru se muestran a continuación.
 
 
-  Los procesos son los siguientes:
----------------------------------
+  
 +---------------+---------------------------------------------------------------------------+
 |A_BACKSTOP     | Backup Power Systems                                                      |
 +---------------+---------------------------------------------------------------------------+
