@@ -15,7 +15,7 @@ Characterization of Energy Sectors
    :align:   center
    :width:   700 px
 
-  *Figure 3.1: Diagrama del modelo desarrollado.*
+
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
@@ -35,6 +35,7 @@ Las tecnologías de entrada son la importación y produción de los commodoties,
 tecnologías intermedias como refinación, procesasmiento de gas, producción de 
 carbón, plantas de generación, transmisión y distribución de energía eléctrica.
 
+  *Figure 3.1: Diagrama del modelo desarrollado.*
 
 3.2.1 Sets
 ---------
