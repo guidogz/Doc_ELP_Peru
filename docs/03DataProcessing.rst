@@ -1,6 +1,6 @@
    .. _docgen:
 
-## Hola aqui de nuevo
+
 
 Energy System Modeling: Data Analysis
 =======================================
@@ -14,7 +14,7 @@ Characterization of Energy Sectors
    :align:   center
    :width:   700 px
   *Figure 3.1: Diagrama del modelo desarrollado.*
-
+   :align:   center
 
 
 
