@@ -40,26 +40,26 @@ carbón, plantas de generación, transmisión y distribución de energía eléct
 
 
 3.1.1.2 Procesos
- ---------
+---------
 
 
 
 3.1.1.3 Comodities
- ---------
+---------
 
 
 
 3.1.1.4 Costos 
- ---------
+---------
 
 
 
 3.1.1.5 Emisiones
- ---------
+---------
 
  
  3.2.1 Datos de entrada
-  ---------
+---------
 
 
     
