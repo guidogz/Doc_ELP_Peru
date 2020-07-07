@@ -2,10 +2,10 @@
 
 
 
- Energy System Modeling: Data Analysis
+Energy System Modeling: Data Analysis
 =======================================
 
- Characterization of Energy Sectors
+Characterization of Energy Sectors
 -----------------------------------------------------
  Fitter Data and Outlier Correction
   blaa... 
@@ -122,7 +122,7 @@ Los cálculos se hicieron con los datos de costos de capital, operación y varia
  
  Time-Series Analysis and Forecasting
 
- Electricity Sector Simulation
+Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
@@ -148,7 +148,7 @@ Para ambas tipos de proyecciones se va a considerar únicamente las zonas del pa
  
  Emissions from Electricity Sector
 
- Transport Sector Simulation
+Transport Sector Simulation
 -----------------------------------------------------
 
  Data Structure and Elements of Transport System
