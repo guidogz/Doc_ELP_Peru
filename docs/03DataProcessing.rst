@@ -401,7 +401,7 @@ se necesitan información acerca del PBI, consumo de energía por sector de peri
 pasados, parámetros propios de cada sector para poder hacer las proyecciones con 
 métodos autoregresivos.
 
-Los valores utilizados se han adquirido del Anexo 2 del Informe 9 del prosemer  
+Los valores utilizados se han adquirido del Anexo 2 del Informe 9 del prosemer   
     
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
    :align:   center
@@ -415,8 +415,14 @@ se tomaron de los escenarios proporcionados por el MINEM y para el periodo
 2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 
 10 años anteriores al 2040. 
 
-   
+Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
+la siguiente gráfica, en donde la participacion de sector agro es predominante.  
 
+.. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
+   :align:   center
+   :width:   500 px
+
+   *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
 
 
