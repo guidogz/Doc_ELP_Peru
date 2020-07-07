@@ -56,7 +56,8 @@ del sistema a modelar, los sets se muestrana contiuación.
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las tecnologías para el peru se muestran a continuación.
 
 
-Los procesos son los siguientes:
+  Los procesos son los siguientes:
+---------------------------------
 +---------------+---------------------------------------------------------------------------+
 |A_BACKSTOP     | Backup Power Systems                                                      |
 +---------------+---------------------------------------------------------------------------+
@@ -85,7 +86,7 @@ Los procesos son los siguientes:
 +---------------+---------------------------------------------------------------------------+
 |G_PEGA_02      | Planta eléctrica de gas natural futura                                    |
 +---------------+---------------------------------------------------------------------------+
-|G_PEHI_01      | Planta hidroeléctrica actual                                              | 
+|G_PEHI_01      | Planta hidroeléctrica actual                                              |
 +---------------+---------------------------------------------------------------------------+
 |G_PEHI_02      | Planta hidroeléctrica futura                                              |
 +---------------+---------------------------------------------------------------------------+
@@ -131,7 +132,7 @@ Los procesos son los siguientes:
 +---------------+---------------------------------------------------------------------------+
 |K_TPRMOHC_01   | Transporte privado motocicleta por hidrocarburo actual                    |
 +---------------+---------------------------------------------------------------------------+
-|K_TPRMOHC_02   | Transporte privado motocicleta por hidrocarburo actual                    | 
+|K_TPRMOHC_02   | Transporte privado motocicleta por hidrocarburo actual                    |
 +---------------+---------------------------------------------------------------------------+
 |K_TPRVEEL_02   | Transporte privado vehículo eléctrico futuro                              |
 +---------------+---------------------------------------------------------------------------+
@@ -171,7 +172,7 @@ Los procesos son los siguientes:
 +---------------+---------------------------------------------------------------------------+
 |P_TCCPGN_02    | Transporte de carga pesada por gas natural futura                         |
 +---------------+---------------------------------------------------------------------------+
-|P_TCCPHC_01    | Transporte de carga pesada por hidrocarburos actual                       | 
+|P_TCCPHC_01    | Transporte de carga pesada por hidrocarburos actual                       |
 +---------------+---------------------------------------------------------------------------+
 |P_TCCPHC_02    | Transporte de carga pesada por hidrocarburos futura                       |
 +---------------+---------------------------------------------------------------------------+
