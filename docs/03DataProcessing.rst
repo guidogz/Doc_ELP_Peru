@@ -1,6 +1,6 @@
    .. _docgen:
 
-## Hola aqui de nuevo
+
 
 Energy System Modeling: Data Analysis
 =======================================
@@ -13,8 +13,8 @@ Characterization of Energy Sectors
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
-  *Figure 3.1: Diagrama del modelo desarrollado.*
 
+*Figure 3.1: Diagrama del modelo desarrollado.*
 
 
 
