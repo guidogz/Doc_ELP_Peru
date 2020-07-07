@@ -2,10 +2,10 @@
 
 
 
-Energy System Modeling: Data Analysis
+3.1 Energy System Modeling: Data Analysis
 =======================================
 
-Characterization of Energy Sectors
+3.1.1 Characterization of Energy Sectors
 -----------------------------------------------------
  Fitter Data and Outlier Correction
   blaa... 
@@ -14,35 +14,43 @@ Characterization of Energy Sectors
    :align:   center
    :width:   700 px
   *Figure 3.1: Diagrama del modelo desarrollado.*
-   :align:   center
+
+El sector de energía Peruano se divide ampliamente en los macrobloques de demanda y de oferta, las tecnologías son mostrados en bloques y estan asociados a los commodities que son mostradas como líneas verticales. De los commodities se toma una división, la cual va a la tecnología correspondiente para su transformación.    
+
+La diversidad de la matriz energética en el Peru se muestra en una amplia cantidad de technologías y commodities, todo este conjunto de información para el sector energía han sido tomadas de los informes hechos por el PROSEMER en los cuales su principal objetivo es el desarrollo de un modelo para la optimización de la oferta del sistema energético basados en modelos de optimización TIMES que fue desarrollado como parte del IEA-ETSAP's metodología usada para escenarios de energía para conducir en un profundo análisis de la energía.
+
+Las tecnologías de entrada son la importación y produción de los commodoties, hay tecnologías intermedias como refinación, procesasmiento de gas, producción de carbón, plantas de generación, transmisión y distribución de energía eléctrica.
+
+
+3.1.1.1 Sets
+ ---------
 
 
 
-3.2.1 Sets
----------
+
+3.1.1.2 Procesos
+ ---------
 
 
 
-3.2.1 Procesos
----------
+3.1.1.3 Comodities
+ ---------
 
 
 
-3.2.1 Comodities
----------
+3.1.1.4 Costos 
+ ---------
 
 
 
-3.2.1 Costos 
----------
+3.1.1.5 Emisiones
+ ---------
 
-
-
-3.2.1 Emisiones
----------  
  
  3.2.1 Datos de entrada
----------   
+  ---------
+
+
     
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
    :align:   center
@@ -114,7 +122,7 @@ Los cálculos se hicieron con los datos de costos de capital, operación y varia
  
  Time-Series Analysis and Forecasting
 
-Electricity Sector Simulation
+3.1.2 Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
@@ -140,7 +148,7 @@ Para ambas tipos de proyecciones se va a considerar únicamente las zonas del pa
  
  Emissions from Electricity Sector
 
-Transport Sector Simulation
+3.1.3 Transport Sector Simulation
 -----------------------------------------------------
 
  Data Structure and Elements of Transport System
