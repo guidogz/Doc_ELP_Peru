@@ -16,6 +16,7 @@ Characterization of Energy Sectors
 
   *Figure 3.1: Diagrama del modelo desarrollado.*
 
+*____________________________________________________________________*
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
 y de oferta, las tecnologías son mostrados en bloques y estan asociados a los 
@@ -57,41 +58,41 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 
 
 +--------------------+----------------------------------------------------------------------+
-|Producción          | Backup Power Systems                                                 |
+|Producción          | La producción de commodities incluye extración, procesamiento,       |
+|                    | transformación de materia primaría hasta llegar a ser commodity.     |
++--------------------+----------------------------------------------------------------------+
+|Importaciones       | Importaciones incluyen todos los procesos y acciones comerciales para|
+|                    | lograr el suministro de commodities al país.                         |
++--------------------+----------------------------------------------------------------------+
+|Refinería           | Refinería incluye todo el procesamiento de crudo para la obtención   |
+|                    | de los subproductos como la gasolina o el diesel.                    |
++--------------------+----------------------------------------------------------------------+
+|Carboneras          | Carboneras incluye el proceso de extracción de una mina carbón       |
+|                    | mineral y trasnformación de en carbon vegetal.                       |
++--------------------+----------------------------------------------------------------------+
+|Planta de gas       | Las plantas de gas incluye la licuación, transporte de gas           |
 |                    |                                                                      |
 +--------------------+----------------------------------------------------------------------+
-|Importaciones       | Producción de combustibles actual                                    |
-|                    |                                                                      |
+|Plantas eléctricas  | En las plantas eléctricas se incluye todos las plantas de diversos   |
+|                    | tipos de tecnologías como las hidroelectricas, termoelectricas, etc. |
 +--------------------+----------------------------------------------------------------------+
-|Refinería           | Producción de combustibles actual                                    |
-|                    |                                                                      |
+|Transmisión         | La transmisión eléctrica incluye todos las formas de transmision en  |
+|eléctrica           | alta y media tensión.                                                |
 +--------------------+----------------------------------------------------------------------+
-|Carboneras          | Importaciones de energia actual                                      |
-|                    |                                                                      |
+|Distribución        | La distribución eléctrica incluye distribución en baja tensión       |
+|eléctrica           | hasta el usario final.                                               |
 +--------------------+----------------------------------------------------------------------+
-|Planta de gas       | Importaciones de energia futura                                      |
-|                    |                                                                      |
+|Distribución        | La distribución energética incluye todos los medios y procesos para  |
+|energética          | la repartición de los productos.                                     |
 +--------------------+----------------------------------------------------------------------+
-|Plantas eléctricas  | Refinería actual                                                     |
-|                    |                                                                      |
+|Transporte          | Transporte en el Perú  incluyen todos las formas de transporte tanto |
+|                    | aéreo, marítimo y terrestre, como privado, público y de carga.       |
 +--------------------+----------------------------------------------------------------------+
-|Transmisión         | Refinería futura                                                     |
-|eléctrica           |                                                                      |
+|Residencial, comer  | Esta tecnología incluye todos los procesos de transformación de      |
+|cial y carga        | energía para los sectores residencial, comercial y carga.            |   
 +--------------------+----------------------------------------------------------------------+
-|Distribución        | Carbonera actual                                                     |
-|eléctrica           |                                                                      |
-+--------------------+----------------------------------------------------------------------+
-|Distribución        | Carbonera futura                                                     |
-|energética          |                                                                      |
-+--------------------+----------------------------------------------------------------------+
-|Transporte          | Plantas de gas natural actual                                        |
-|                    |                                                                      |
-+--------------------+----------------------------------------------------------------------+
-|Residencial, comer  | Plantas de gas natural futura                                        |
-|cial y carga        |                                                                      |   
-+--------------------+----------------------------------------------------------------------+
-|Agropecuario, Pesqu | Planta eléctrica biomasa o biogas actual                             |
-|ero, industría      |                                                                      |
+|Agropecuario, Pesqu | Estas tecnologías incluyen todos los procesos de ransformacion de    |
+|ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
 
 
