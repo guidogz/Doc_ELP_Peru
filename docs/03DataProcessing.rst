@@ -2,10 +2,10 @@
 
 
 
-Energy System Modeling: Data Analysis
+3.1 Energy System Modeling: Data Analysis
 =======================================
 
-Characterization of Energy Sectors
+3.1.1 Characterization of Energy Sectors
 -----------------------------------------------------
  Fitter Data and Outlier Correction
   blaa... 
@@ -38,7 +38,7 @@ Las commodities inciales son por lo general insumos procesados por tecnologías
 o productos importados, estos pasan por tecnologías para su transformación a 
 comodities de mayor calidad. 
 
-``bueno ya es hora de divertirse``
+``bueno ya es hora de divertirse, como para poner lineas de código, esto se debe eliminar``
 
 Para mayor información del modelo TIMES_ 
 
@@ -56,7 +56,7 @@ __ http://www.python.org/
 
 `Python <http://www.python.org/>`_. 
 
-3.2.1 Sets
+3.1.2 Sets
 ---------
 Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
 son particulares por país y región, para su configuración se debe tener un análisis 
@@ -69,6 +69,9 @@ del sistema a modelar, los sets se muestrana contiuación.
 - *Commodity*
 - *Technology*
 - *Mode of operation*
+
+
+
 
 
 3.2.1 Procesos
