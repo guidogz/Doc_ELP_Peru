@@ -440,6 +440,96 @@ Las ecuaciones utilizadas para la proyección
 
 Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
 
+
+<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+  <mi>ln</mi>
+  <mo data-mjx-texclass="NONE">⁡</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>E</mi>
+      <mrow>
+        <mi>t</mi>
+        <mo>,</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>=</mo>
+  <msub>
+    <mi>α</mi>
+    <mrow>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mo>+</mo>
+  <msub>
+    <mi>β</mi>
+    <mrow>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mi>ln</mi>
+  <mo data-mjx-texclass="NONE">⁡</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <msub>
+      <mi>E</mi>
+      <mrow>
+        <mi>t</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+        <mo>,</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <msub>
+    <mi>γ</mi>
+    <mrow>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mi>ln</mi>
+  <mo data-mjx-texclass="NONE">⁡</mo>
+  <mrow data-mjx-texclass="INNER">
+    <mo data-mjx-texclass="OPEN">(</mo>
+    <mi>P</mi>
+    <mi>I</mi>
+    <mi>B</mi>
+    <mi>p</mi>
+    <msub>
+      <mi>c</mi>
+      <mrow>
+        <mi>t</mi>
+        <mo>−</mo>
+        <mn>1</mn>
+      </mrow>
+    </msub>
+    <mo data-mjx-texclass="CLOSE">)</mo>
+  </mrow>
+  <mo>+</mo>
+  <msub>
+    <mi>θ</mi>
+    <mrow>
+      <mn>1</mn>
+    </mrow>
+  </msub>
+  <mi>T</mi>
+  <mi>e</mi>
+  <mi>n</mi>
+  <msub>
+    <mi>d</mi>
+    <mrow>
+      <mi>t</mi>
+    </mrow>
+  </msub>
+</math>
+
+
 | Demanda Energía Total sectores=Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura   *(Ecuación 1)* 
 
 Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
