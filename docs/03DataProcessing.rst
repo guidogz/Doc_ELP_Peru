@@ -56,7 +56,7 @@ __ http://www.python.org/
 
 `Python <http://www.python.org/>`_. 
 
-3.1.2 Sets
+3.1.1.1 Sets
 ---------
 Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
 son particulares por país y región, para su configuración se debe tener un análisis 
@@ -74,7 +74,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 
 
-3.2.1 Procesos
+3.1.1.2 Procesos
 ---------
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las principales tecnologías para el peru se muestran a continuación.
 
@@ -254,7 +254,7 @@ las etiquetas de los procesos asociados a cada commdity.
 +---------------+---------------------------------------------------------------------------+
 
 
-3.2.1 Comodities
+3.1.1.3 Comodities
 ---------
 Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
 tecnología para ser transformados y procesados en otros comodities dentro de toda 
@@ -337,7 +337,7 @@ transporte, las etiquetas para cada commodity considerados se muestran a continu
 +---------------+---------------------------------------------------------------------------+
 
 
-3.2.1 Costos 
+3.1.1.4 Costos 
 ---------
 
 Los procesos tienen involucrados costos como CAPEX(Capital Expenditure), OPEX 
@@ -404,7 +404,7 @@ plantas de refinación y la actividad de las refinería que se encuentran en el 
 
 
 
-3.1.1 Emisiones
+3.1.1.5 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -415,7 +415,7 @@ planificado al 2050 lograr la carbononeutralidad.
 
  
 
-3.2.1 Datos de entrada para los modelos de optimización energética
+3.1.1.6 Proyecciones de los sectores económicos
 ---------
 
 Para determinar las proyecciones futuras de la demanda energética por sector de 
@@ -423,7 +423,8 @@ se necesitan información acerca del PBI, consumo de energía por sector de peri
 pasados, parámetros propios de cada sector para poder hacer las proyecciones con 
 métodos autoregresivos.
 
-Los valores utilizados se han adquirido del Anexo 2 del Informe 9 del prosemer   
+Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del prosemer   
+
     
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
       :align:   center
@@ -431,11 +432,14 @@ Los valores utilizados se han adquirido del Anexo 2 del Informe 9 del prosemer
 
    *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
+
 Para los valores proyectados se utilizaron los valores proporcionados para el 
 periodo 2016-2026 por la consultora APOYO, los valores para el periodo 2027-2040 
 se tomaron de los escenarios proporcionados por el MINEM y para el periodo 
 2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 
 10 años anteriores al 2040. 
+
+
 
 Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
 la siguiente gráfica, en donde la participacion de sector agro es predominante.  
