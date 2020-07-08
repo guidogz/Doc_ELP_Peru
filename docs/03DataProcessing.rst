@@ -430,7 +430,6 @@ Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del pr
       :align:   center
       :width:   500 px
 
-     -----------
 
  *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
