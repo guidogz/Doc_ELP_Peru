@@ -34,6 +34,9 @@ en un profundo análisis de la energía.
 Las tecnologías de entrada son la importación y produción de los commodoties, hay 
 tecnologías intermedias como refinación, procesasmiento de gas, producción de 
 carbón, plantas de generación, transmisión y distribución de energía eléctrica.
+Las commodities inciales son por lo general insumos procesados por tecnologías
+o productos importados, estos pasan por tecnologías para su transformación a 
+comodities de mayor calidad. 
 
   
 
@@ -43,13 +46,13 @@ Los sets son el conjunto de configuraciones que son establecidos para el modelo,
 son particulares por país y región, para su configuración se debe tener un análisis 
 del sistema a modelar, los sets se muestrana contiuación.
 
-*Región
-*Year
-*Timeslices
-*Emissions
-*Commodity
-*Technology
-*Mode of operation
+*Región*
+*Year*
+*Timeslices*
+*Emissions*
+*Commodity*
+*Technology*
+*Mode of operation*
 
 
 3.2.1 Procesos
@@ -88,10 +91,10 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 |Transporte          | Transporte en el Perú  incluyen todos las formas de transporte tanto |
 |                    | aéreo, marítimo y terrestre, como privado, público y de carga.       |
 +--------------------+----------------------------------------------------------------------+
-|Residencial, comer  | Esta tecnología incluye todos los procesos de transformación de      |
+|Residencial, comer- | Esta tecnología incluye todos los procesos de transformación de      |
 |cial y carga        | energía para los sectores residencial, comercial y carga.            |   
 +--------------------+----------------------------------------------------------------------+
-|Agropecuario, Pesqu | Estas tecnologías incluyen todos los procesos de ransformacion de    |
+|Agropecuario, Pesqu-| Estas tecnologías incluyen todos los procesos de ransformacion de    |
 |ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
 
@@ -404,7 +407,7 @@ métodos autoregresivos.
 Los valores utilizados se han adquirido del Anexo 2 del Informe 9 del prosemer   
     
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
-   :align:   center
+      :align:   center
    :width:   500 px
 
    *Figure 3.1: Proyección del crecimiento del PBI anual.*
@@ -438,6 +441,8 @@ Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
+
+
    
 
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
