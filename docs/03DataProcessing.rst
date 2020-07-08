@@ -38,7 +38,12 @@ Las commodities inciales son por lo general insumos procesados por tecnologías
 o productos importados, estos pasan por tecnologías para su transformación a 
 comodities de mayor calidad. 
 
-``juajuajuahahaha``
+``bueno ya es hora de divertirse``
+
+Para mayor información del modelo TIMES_ 
+
+.. _TIMES: https://iea-etsap.org/index.php/etsap-tools/model-generators/times/
+
 
 Una oración que enlaza a Wikipedia_ y al `Linux kernel archive`_.
 
