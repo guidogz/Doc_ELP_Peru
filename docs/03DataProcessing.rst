@@ -49,7 +49,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 - *Región*
 - *Year*
 - *Timeslices*
-- *Emissions*
+-*Emissions*
 - *Commodity*
 - *Technology*
 - *Mode of operation*
