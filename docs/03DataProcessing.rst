@@ -403,7 +403,7 @@ plantas de refinación y la actividad de las refinería que se encuentran en el 
 
 
 
-3.1.1.5 Emisiones
+ 3.1.1.5 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -420,17 +420,13 @@ planificado al 2050 lograr la carbononeutralidad.
 Para determinar las proyecciones futuras de la demanda energética por sector de 
 se necesitan información acerca del PBI, consumo de energía por sector de periodos 
 pasados, parámetros propios de cada sector para poder hacer las proyecciones con 
-métodos autoregresivos.
-
-Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del prosemer   
-
+métodos autoregresivos. Los valores utilizados del PBI se han adquirido del Anexo 2 
+del Informe 9 del prosemer.
     
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
       :align:   center
       :width:   500 px
 *Figure 3.1: Proyección del crecimiento del PBI anual.*
-
-
 
 Para los valores proyectados se utilizaron los valores proporcionados para el 
 periodo 2016-2026 por la consultora APOYO, los valores para el periodo 2027-2040 
@@ -439,6 +435,12 @@ se tomaron de los escenarios proporcionados por el MINEM y para el periodo
 10 años anteriores al 2040. 
 
 
+Las ecuaciones utilizadas para la proyección
+-----
+
+Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
+
+|Demanda Energía Total sectores=Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura   *(Ecuación 1)  
 
 Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
 la siguiente gráfica, en donde la participacion de sector agro es predominante.  
@@ -476,7 +478,8 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
    :width:   700 px
 *Figure 3.9: Proyección de la demanda de electricidad anual.*
 
-Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país conectadas al SEIN. Iquitos no se incluye en el modelaje.
+Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país 
+conectadas al SEIN. Iquitos no se incluye en el modelaje.
 
 *____________________________________________________________________*
 
@@ -491,6 +494,7 @@ Para ambas tipos de proyecciones se va a considerar únicamente las zonas del pa
  Traffic Flow Analysis and Efficiency of the System
  Emissions and Air Pollution from Transport Sector
 
+sds
 
 .. figure:: img/proyecion_sector_transporte_publico_privado.png
    :align:   center
