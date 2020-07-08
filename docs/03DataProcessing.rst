@@ -38,7 +38,8 @@ Las commodities inciales son por lo general insumos procesados por tecnologías
 o productos importados, estos pasan por tecnologías para su transformación a 
 comodities de mayor calidad. 
 
-  
+# Que fck
+# otro 
 
 3.2.1 Sets
 ---------
@@ -49,7 +50,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 - *Región*
 - *Year*
 - *Timeslices*
--*Emissions*
+- *Emissions*
 - *Commodity*
 - *Technology*
 - *Mode of operation*
