@@ -38,8 +38,17 @@ Las commodities inciales son por lo general insumos procesados por tecnologías
 o productos importados, estos pasan por tecnologías para su transformación a 
 comodities de mayor calidad. 
 
-# Que fck
-# otro 
+
+Una oración que enlaza a Wikipedia_ y al `Linux kernel archive`_.
+
+.. _Wikipedia: http://www.wikipedia.org/
+.. _Linux kernel archive: http://www.kernel.org/
+
+Otra oración con un `enlace anónimo al sitio de Python`__.
+
+__ http://www.python.org/
+
+`Python <http://www.python.org/>`_.
 
 3.2.1 Sets
 ---------
