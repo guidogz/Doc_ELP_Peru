@@ -14,8 +14,7 @@
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
-
-
+*Figure 3.1: Diagrama de referencía.*
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
@@ -429,7 +428,6 @@ Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del pr
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
       :align:   center
       :width:   500 px
-
 *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
 
@@ -448,8 +446,7 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
 .. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
    :align:   center
    :width:   500 px
-
-   *Figure 3.1: Proyección del crecimiento del PBI anual.*
+*Figure 3.1: Proyección del crecimiento del PBI anual.*
 
 
 
@@ -472,14 +469,12 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.8: Proyección de la maxima demanda de electricidad anual.*
+*Figure 3.8: Proyección de la maxima demanda de electricidad anual.*
 
 .. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.9: Proyección de la demanda de electricidad anual.*
+*Figure 3.9: Proyección de la demanda de electricidad anual.*
 
 Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país conectadas al SEIN. Iquitos no se incluye en el modelaje.
 
@@ -500,24 +495,20 @@ Para ambas tipos de proyecciones se va a considerar únicamente las zonas del pa
 .. figure:: img/proyecion_sector_transporte_publico_privado.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.10: Proyección del sector transporte publico y privado.png.*
+*Figure 3.10: Proyección del sector transporte publico y privado.png.*
 
 .. figure:: img/proyecion_sector_transporte_carga.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.11: Proyección del sector transporte carga.png.*
+*Figure 3.11: Proyección del sector transporte carga.png.*
    
    
 .. figure:: img/proyecion_sector_transporte.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.12: Proyección del sector transporte.*
+*Figure 3.12: Proyección del sector transporte.*
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.13: Proyección del precio de vehiculos electricos.*
+*Figure 3.13: Proyección del precio de vehiculos electricos.*
