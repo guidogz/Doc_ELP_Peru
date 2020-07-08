@@ -403,7 +403,7 @@ plantas de refinación y la actividad de las refinería que se encuentran en el 
 
 
 
- 3.1.1.5 Emisiones
+3.1.1.5 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -440,21 +440,23 @@ Las ecuaciones utilizadas para la proyección
 
 Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
 
+| **Demanda Energía Total sectores=Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura**  **(Ecuación 1)** 
 
 
-\ln \left(E_{t, 1}\right)=\alpha_{1}+\beta_{1} \ln \left(E_{t-1,1}\right)+\gamma_{1} \ln \left(P I B p c_{t-1}\right)+\theta_{1} T e n d_{t}
+Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 presenta el modelo estimado para la demanda total de energía en PJ y el valor de los coeficientes es presentado en la tabla 1. 
 
 
-$\ln \left(E_{t, 1}\right)=\alpha_{1}+\beta_{1} \ln \left(E_{t-1,1}\right)+\gamma_{1} \ln \left(P I B p c_{t-1}\right)+\theta_{1} T e n d_{t}$
 
 
-$$\ln \left(E_{t, 1}\right)=\alpha_{1}+\beta_{1} \ln \left(E_{t-1,1}\right)+\gamma_{1} \ln \left(P I B p c_{t-1}\right)+\theta_{1} T e n d_{t}$$
 
 
-\begin{equation}\ln \left(E_{t, 1}\right)=\alpha_{1}+\beta_{1} \ln \left(E_{t-1,1}\right)+\gamma_{1} \ln \left(P I B p c_{t-1}\right)+\theta_{1} T e n d_{t}\end{equation}
 
 
-| Demanda Energía Total sectores=Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura   *(Ecuación 1)* 
+
+
+
+
+
 
 Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
 la siguiente gráfica, en donde la participacion de sector agro es predominante.  
