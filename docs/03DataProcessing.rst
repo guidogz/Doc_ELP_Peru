@@ -430,6 +430,7 @@ Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del pr
       :align:   center
    :width:   500 px
 
+      
    *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
 
@@ -460,7 +461,7 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
  
  Time-Series Analysis and Forecasting
 
-Electricity Sector Simulation
+3.1.2 Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
@@ -488,7 +489,7 @@ Para ambas tipos de proyecciones se va a considerar únicamente las zonas del pa
  
  Emissions from Electricity Sector
 
-Transport Sector Simulation
+3.1.3 Transport Sector Simulation
 -----------------------------------------------------
 
  Data Structure and Elements of Transport System
