@@ -429,9 +429,8 @@ Los valores utilizados del PBI se han adquirido del Anexo 2 del Informe 9 del pr
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
       :align:   center
       :width:   500 px
-  
-      
-   *Figure 3.1: Proyección del crecimiento del PBI anual.*
+-----------
+ *Figure 3.1: Proyección del crecimiento del PBI anual.*
 
 
 Para los valores proyectados se utilizaron los valores proporcionados para el 
