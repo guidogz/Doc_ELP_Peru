@@ -439,10 +439,14 @@ Las ecuaciones utilizadas para la proyección
 
 Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
 
-| **Demanda Energía Total =Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura**  *(Ecuación 1)* 
+| **Demanda Energía Total Sectores = Dem.Sec.Comercial + Dem.Sec.Público + Dem.Sec.Agro + Dem.Sec.Pesca + Dem.Sec.Minero + Dem.Sec.Industria Manofactura**  *(Ecuación 1)* 
 
 Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 presenta el modelo estimado para la demanda total de energía en PJ y el valor de los coeficientes es presentado en la tabla 1. 
    
+
+.. math::
+
+  α_t(i) = P(O_1, O_2, … O_t, q_t = S_i λ)
 
 | **(〖Dem.E.Total〗_t ) ̂=α*〖Dem.E.Total〗_(t-1)+β*〖PBI〗_t+γ*〖PBI〗_(t-1)+ε** 
 
