@@ -488,7 +488,7 @@ correspondiente al año :math:`i`, :math:`〖Min〗_X` es el valor mínimo del v
 total para estos sectores en PJ y la curva de ajuste obtenida con el modelo regresivo. 
 Este modelo presenta un MAPE de :math:`=0.6%`.
 
-.. figure:: Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
+.. figure:: img/Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
    :align:   center
    :width:   500 px
 *Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda.*
