@@ -457,7 +457,7 @@ coeficientes es presentado en la tabla 1.
 
  \text { Dem. E.Total }_{t}=\alpha * \text { Dem. E.Total}_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon
 
-* Tabla 1 – Coeficientes del modelo *
+*Tabla 1 – Coeficientes del modelo*
 
 +----------------+----------------------------+
 | Coeficiente    |  Valor                     |
@@ -481,15 +481,17 @@ integrado (proceso inverso) para obtener el valor real de demanda de energía to
  $Y_{i}=\frac{X_{i}-0.75 \operatorname{Min}_{X}}{1.25 \operatorname{Max}_{X}-0.75 \operatorname{Min}_{X}}$
 
 
-Donde Y_i es el valor normalizado de la demanda, X_i es un valor del vector de demandas
-correspondiente al año i, 〖Min〗_X es el valor mínimo del vector de demanda 
-(5 para este caso) y 〖Max〗_X es el valor máximo del vector de demanda
+Donde :math:`Y_i`  es el valor normalizado de la demanda, :math:`X_i` es un valor del vector de demandas
+correspondiente al año :math:`i`, :math:`〖Min〗_X` es el valor mínimo del vector de demanda 
+(5 para este caso) y :math:`〖Max〗_X` es el valor máximo del vector de demanda
 (14 para este caso). La figura 1 presenta la curva de la proyección demanda de energía 
 total para estos sectores en PJ y la curva de ajuste obtenida con el modelo regresivo. 
-Este modelo presenta un MAPE de =0.6%.
+Este modelo presenta un MAPE de :math:`=0.6%`.
 
-
-
+.. figure:: Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
+   :align:   center
+   :width:   500 px
+*Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda.*
 
 
 
@@ -517,8 +519,6 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
   power..
 
 
-   
-
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
@@ -545,7 +545,9 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  Traffic Flow Analysis and Efficiency of the System
  Emissions and Air Pollution from Transport Sector
 
-sds
+
+
+
 
 .. figure:: img/proyecion_sector_transporte_publico_privado.png
    :align:   center
