@@ -351,7 +351,7 @@ obtenido del Informe 9 del PROSEMER.
    :align:   center
    :width:   700 px
 
-   *Figure 3.3: Proyección del precio de carbon.*
+*Figure 3.3: Proyección del precio de carbon.*
 
 Para la proyección de los precios del carbón se utliza las proyección del carbon 
 australia del banco mundial (octubre del 2018), todos los costos de internación 
@@ -363,7 +363,7 @@ un costo de internación  de 18.6 US$/ton.
    :align:   center
    :width:   700 px
 
-   *Figure 3.4: Proyección del precio del gas en la planta.*
+*Figure 3.4: Proyección del precio del gas en la planta.*
 
 Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
 resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
@@ -373,7 +373,7 @@ como las proyeciones del caso de referencia EIA .
    :align:   center
    :width:   700 px
 
-   *Figure 3.5: Proyección del precio promedio del crudo.*
+*Figure 3.5: Proyección del precio promedio del crudo.*
 
 Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
@@ -384,7 +384,7 @@ incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bb
    :align:   center
    :width:   700 px
 
-   *Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas.*
+*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas.*
 
 Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
 de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
@@ -393,8 +393,7 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
-
-   *Figure 3.7: Proyecciones de los costos por capacidad de la refineria.*
+*Figure 3.7: Proyecciones de los costos por capacidad de la refineria.*
 
 Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
 plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
@@ -439,14 +438,14 @@ Las ecuaciones utilizadas para la proyección
 -----
 
 Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
-
-| **Demanda Energía Total sectores=Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura**  ***(Ecuación 1)*** 
-
-
+|
+| **Demanda Energía Total =Dem.S.Comercial+ Dem.S.Público+Dem.S.Agro+Dem.S.Pesca+Dem.S.Minero+Dem.S.Industria Manofactura**  
+*(Ecuación 1)* 
+|
 Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 presenta el modelo estimado para la demanda total de energía en PJ y el valor de los coeficientes es presentado en la tabla 1. 
+   
 
-
-
+| **(〖Dem.E.Total〗_t ) ̂=α*〖Dem.E.Total〗_(t-1)+β*〖PBI〗_t+γ*〖PBI〗_(t-1)+ε** 
 
 
 
