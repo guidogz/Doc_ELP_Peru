@@ -490,7 +490,7 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
 
 .. figure:: img/Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
    :align:   center
-   :width:   500 px
+   :width:   300 px
 *Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda.*
 
 
