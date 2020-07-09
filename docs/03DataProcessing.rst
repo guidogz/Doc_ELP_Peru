@@ -14,7 +14,7 @@
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
-*Figure 3.1: Diagrama de referencía.*
+*Figure 3.1: Diagrama de referencía*
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
@@ -351,7 +351,7 @@ obtenido del Informe 9 del PROSEMER.
    :align:   center
    :width:   700 px
 
-*Figure 3.3: Proyección del precio de carbon.*
+*Figure 3.3: Proyección del precio de carbon*
 
 Para la proyección de los precios del carbón se utliza las proyección del carbon 
 australia del banco mundial (octubre del 2018), todos los costos de internación 
@@ -363,7 +363,7 @@ un costo de internación  de 18.6 US$/ton.
    :align:   center
    :width:   700 px
 
-*Figure 3.4: Proyección del precio del gas en la planta.*
+*Figure 3.4: Proyección del precio del gas en la planta*
 
 Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
 resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
@@ -373,7 +373,7 @@ como las proyeciones del caso de referencia EIA .
    :align:   center
    :width:   700 px
 
-*Figure 3.5: Proyección del precio promedio del crudo.*
+*Figure 3.5: Proyección del precio promedio del crudo*
 
 Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
@@ -384,7 +384,7 @@ incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bb
    :align:   center
    :width:   700 px
 
-*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas.*
+*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas*
 
 Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
 de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
@@ -393,7 +393,7 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
-*Figure 3.7: Proyecciones de los costos por capacidad de la refineria.*
+*Figure 3.7: Proyecciones de los costos por capacidad de la refineria*
 
 Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
 plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
@@ -425,7 +425,7 @@ del Informe 9 del prosemer.
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
       :align:   center
       :width:   500 px
-*Figure 3.1: Proyección del crecimiento del PBI anual.*
+*Figure 3.1: Proyección del crecimiento del PBI anual*
 
 Para los valores proyectados se utilizaron los valores proporcionados para el 
 periodo 2016-2026 por la consultora APOYO, los valores para el periodo 2027-2040 
@@ -490,8 +490,8 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
 
 .. figure:: img/Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
    :align:   center
-   :width:   300 px
-*Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda.*
+   :width:   500 px
+*Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda*
 
 
 
@@ -501,7 +501,7 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
 .. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
    :align:   center
    :width:   500 px
-*Figure 3.1: Proyección del crecimiento del PBI anual.*
+*Figure 3.1: Proyección del crecimiento del PBI anual*
 
 
 
@@ -519,15 +519,64 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
   power..
 
 
+Modelo para ajustar el Demanda de electricidad anual para un escenario base *(PBI demanda media)(GW.h/año)
+-----
+
+Con el pasado de la Demanda de electricidad anual y con el Escenarios de crecimiento 
+del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener 
+escenarios para las proyecciones de la Demanda de electricidad anual a partir de las 
+variaciones del PBI. La ecuación 9 presenta el modelo estimado para la Demanda de electricidad 
+anual en GW.h/año y el valor de los coeficientes es presentado en la tabla 7. 
+
+.. math::
+
+ Total TransPúbluco$_{t}=\alpha *$Total TransPúblico$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
+
+*Tabla 7 – Coeficientes del modelo*
+
+
+ 
++----------------+----------------------------+ 
+| Coeficiente    | Valor                      |
++----------------+----------------------------+ 
+| α              | 0.890001711404907          |
++----------------+----------------------------+ 
+| β              | 16.4520781345043           |
++----------------+----------------------------+ 
+| γ              | -15.7613956384226          |
++----------------+----------------------------+ 
+| ε              | 0.000200331856878383       |
++----------------+----------------------------+ 
+
+
+Siendo que, para el uso eficiente del modelo, la Demanda de electricidad anual debe 
+ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
+a utilizar con valor mínimo de 394.949999999999 y valor máximo de 6201.25. Obtenido 
+el valor de la Demanda de electricidad anual con el modelo este debe desnormalizado 
+e integrado (proceso inverso) para obtener el valor real del total del transporte carretero 
+público.
+La figura 7 presenta la curva de la proyección de la Demanda de electricidad anual 
+en GW.h/año y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta 
+un MAPE de =0.54%.
+
+.. figure:: img/proyeccion_de_la_demanda_de_electrcidad_anual_para_un_escenario_base_modelo_de_ajuste.png
+   :align:   center
+   :width:   500 px
+*Figura 7 - Proyección de la Demanda de electricidad anual para un escenario base *(PBI demanda media)(GW.h/año) y modelo de ajuste*
+
+
+
+
+
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
-*Figure 3.8: Proyección de la maxima demanda de electricidad anual.*
+*Figure 3.8: Proyección de la maxima demanda de electricidad anual*
 
 .. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
    :align:   center
    :width:   700 px
-*Figure 3.9: Proyección de la demanda de electricidad anual.*
+*Figure 3.9: Proyección de la demanda de electricidad anual*
 
 Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país 
 conectadas al SEIN. Iquitos no se incluye en el modelaje.
@@ -545,8 +594,220 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  Traffic Flow Analysis and Efficiency of the System
  Emissions and Air Pollution from Transport Sector
 
+Modelo para ajustar el Total Transporte carretero BAU Privado (millones de pkm)
+-----
+
+Con el pasado del total del transporte carretero privado y con el Escenarios de 
+crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
+permita obtener escenarios para las proyecciones del total del transporte carretero 
+privado a partir de las variaciones del PBI. La ecuación 4 presenta el modelo estimado 
+para el total del transporte carretero privado en pkm y el valor de los coeficientes 
+es presentado en la tabla 2. 
+
+.. math::
+
+ Total TransPruvado$_{t}=\alpha *$Total TransPrivado$_{x-1}+\beta * P B I_{r}+\gamma * P B I_{t-1}+\varepsilon \mathfrak{d}$
+
+*Tabla 2 – Coeficientes del modelo*
+
++----------------+----------------------------+ 
+| Coeficiente    | Valor                      |
++----------------+----------------------------+ 
+| α              | 1.33896846210498           |
++----------------+----------------------------+ 
+| β              | 0.731435263977805          |
++----------------+----------------------------+ 
+| γ              | 2.49036074323663           |
++----------------+----------------------------+ 
+| ε              | -0.16321268315623          |
++----------------+----------------------------+ 
+
+Siendo que, para el uso eficiente del modelo, el total del transporte carretero privado  
+debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
+a utilizar con valor mínimo de 2793.75 y valor máximo de 5986.25. Obtenido el valor del 
+total del transporte carretero privado con el modelo este debe desnormalizado e integrado 
+(proceso inverso) para obtener el valor real del total del transporte carretero privado.
+La figura 2 presenta la curva de la proyección del total del transporte carretero privado 
+en millones de pkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo 
+presenta un MAPE de =0.12%.
 
 
+.. figure:: img/proyeccion_de_total_trasporte_carretero_BAU_privado_modelo_ajuste.png
+   :align:   center
+   :width:   700 px
+*Figura 2 - Proyección de Total Transporte carretero BAU Privado (millones de pkm) y modelo de ajuste*
+
+Modelo para ajustar el Total Transporte carretero BAU Público (millones de pkm)
+-----
+
+Con el pasado del total del transporte carretero público y con el Escenarios de 
+crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
+permita obtener escenarios para las proyecciones del total del transporte carretero 
+público a partir de las variaciones del PBI. La ecuación 5 presenta el modelo estimado 
+para el total del transporte carretero público en millones de pkm y el valor de los 
+coeficientes es presentado en la tabla 3. 
+
+.. math::
+
+ Total TransPúbluco$_{t}=\alpha *$Total TransPúblico$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
+
+*Tabla 3 – Coeficientes del modelo*
+
++----------------+----------------------------+
+| Coeficiente    | Valor                      | 
++----------------+----------------------------+
+| α              | 1.02861287957132           |
++----------------+----------------------------+
+| β              | 17.9849248681619           |
++----------------+----------------------------+
+| γ              | -9.78122826729             |
++----------------+----------------------------+
+| ε              | -0.287449588573921         |
++----------------+----------------------------+
+
+Siendo que, para el uso eficiente del modelo, el total del transporte carretero público 
+debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
+a utilizar con valor mínimo de -1591.5 y valor máximo de 11445. Obtenido el valor del 
+total del transporte carretero público con el modelo este debe desnormalizado e integrado 
+(proceso inverso) para obtener el valor real del total del transporte carretero público. 
+La figura 3 presenta la curva de la proyección del total del transporte carretero público 
+en millones de pkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo 
+presenta un MAPE de =0.32 %.
+
+.. figure:: img/proyeccion_total_transporte_carretero_BAU_publico_modelo_ajuste.png
+   :align:   center
+   :width:   700 px
+*Figura 3 - Proyección de Total Transporte carretero BAU Público (millones de pkm) y modelo de ajuste*
+
+Modelo para ajustar el Total Transporte Carga BAU (millones de tkm)
+-----
+
+Con el pasado del Total Transporte Carga y con el Escenarios de crecimiento del PIB 
+(% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios 
+para las proyecciones del Total Transporte Carga a partir de las variaciones del PBI. 
+La ecuación 6 presenta el modelo estimado para el Total Transporte Carga en millones 
+de tkm y el valor de los coeficientes es presentado en la tabla 4. 
+
+.. math::
+
+ Total Trans Carga$_{t}=\alpha *$Total TransCarga$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
+
+*Tabla 4 – Coeficientes del modelo*
+
++----------------+----------------------------+
+| Coeficiente    | Valor                      |
++----------------+----------------------------+
+| α              | 0.988472104474276          |
++----------------+----------------------------+
+| β              | -0.680978873404703         |
++----------------+----------------------------+
+| γ              | 2.44354241913634           |
++----------------+----------------------------+
+| ε              | -0.0515638493334117        |
++----------------+----------------------------+
+
+Siendo que, para el uso eficiente del modelo, el Total Transporte Carga debe ser 
+previamente diferenciado y normalizado, la ecuación 3 presenta la normalización a 
+utilizar con valor mínimo de 8703 y valor máximo de 26475. Obtenido el valor del 
+Total Transporte Carga con el modelo este debe desnormalizado e integrado (proceso inverso) 
+para obtener el valor real del Total Transporte Carga.
+La figura 3 presenta la curva de la proyección del Total Transporte Carga en millones de 
+tkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta un MAPE 
+de =0.089 %.
+
+.. figure:: img/proyeccion_total_transporte_carga_bau_y_modelo_de_ajuste.png
+   :align:   center
+   :width:   700 px
+*Figura 4 - Proyección de Total Transporte Carga BAU (millones de tkm) y modelo de ajuste*
+
+Modelo para ajustar la Demanda de Todo el Sector Transporte (PJ)
+-----
+
+Con el pasado de la Demanda de todo el sector transporte y con el Escenarios de 
+crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
+permita obtener escenarios para las proyecciones de la Demanda de todo el sector 
+transporte a partir de las variaciones del PBI. La ecuación 7 presenta el modelo 
+estimado para la Demanda de todo el sector transporte en PJ y el valor de los 
+coeficientes es presentado en la tabla 5.
+
+.. math::
+
+ DemandaTodo\widehat{SectorTransporte} _ { r } = \alpha * \text {DemandaTodoSectorTransporte} _ { r - 1 } + \beta * P B I _ { t } + \gamma * P B I _ { t - 1 } + \varepsilon
+
+*Tabla 5 – Coeficientes del modelo*
+
++----------------+----------------------------+
+| Coeficiente    | Valor                      |
++----------------+----------------------------+
+| α              | 0.864566772420374          |
++----------------+----------------------------+
+| β              | 9.48914951322106           |
++----------------+----------------------------+
+| γ              | -8.08298015317043          |
++----------------+----------------------------+
+| ε              | 0.0000175341565728362      |
++----------------+----------------------------+
+
+Siendo que, para el uso eficiente del modelo, la Demanda de todo el sector transporte 
+debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
+a utilizar con valor mínimo de 3.08423913043498  y valor máximo de 62.5. Obtenido el valor 
+de la Demanda de todo el sector transporte con el modelo este debe desnormalizado e 
+integrado (proceso inverso) para obtener el valor real de la Demanda de todo el sector transporte.
+La figura 5 presenta la curva de la proyección de la Demanda de todo el sector transporte 
+en PJ y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta un 
+MAPE de =0.87%.
+
+.. figure:: img/Proyeccion_de_la_demanda_total_del_transporte_publico_privado_de_carga_ajuste.png
+   :align:   center
+   :width:   700 px
+*Figura 5 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
+
+Modelo para ajustar la Demanda Total Transporte Público, Privado y Carga (PJ)
+-----
+Con el pasado de la Demanda total del transporte público, privado y de carga, y con el 
+Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, 
+que permita obtener escenarios para las proyecciones de la Demanda total del transporte 
+público, privado y de carga a partir de las variaciones del PBI. La ecuación 8 presenta 
+el modelo estimado para la Demanda total del transporte público, privado y de carga en 
+PJ y el valor de los coeficientes es presentado en la tabla 6. 
+
+.. math::
+
+ DemandaTotal Públuco, prevado y Carga$_{t}=\alpha *$ DemandaTotal Público, privado y Carga$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
+
+*Tabla 6 – Coeficientes del modelo*
+
++----------------+----------------------------+
+| Coeficiente    | Valor                      |
++----------------+----------------------------+
+| α              | 0.865089399594506          |
++----------------+----------------------------+
+| β              | -12.3555964907002          |
++----------------+----------------------------+
+| γ              | 13.5364206205921           |
++----------------+----------------------------+
+| ε              | 0.000212450663645337       |
++----------------+----------------------------+
+
+Siendo que, para el uso eficiente del modelo, la Demanda total del transporte público, 
+privado y de carga debe ser previamente diferenciado y normalizado, la ecuación 3 
+presenta la normalización a utilizar con valor mínimo de 1.5 y valor máximo de 56.25. 
+Obtenido el valor de la Demanda total del transporte público, privado y de carga con 
+el modelo este debe desnormalizado e integrado (proceso inverso) para obtener el valor 
+real de la Demanda total del transporte público, privado y de carga.
+La figura 6 presenta la curva de la proyección de la Demanda total del transporte público, 
+privado y de carga en PJ y la curva de ajuste obtenida con el modelo regresivo. Este 
+modelo presenta un MAPE de =0.91 %.
+
+.. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_ajuste.png
+   :align:   center
+   :width:   700 px
+*Figura 6 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
+
+
+
+
+ *_______________________________________*
 
 
 .. figure:: img/proyecion_sector_transporte_publico_privado.png
