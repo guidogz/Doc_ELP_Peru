@@ -433,39 +433,60 @@ se tomaron de los escenarios proporcionados por el MINEM y para el periodo
 2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 
 10 años anteriores al 2040. 
 
-
 Las ecuaciones utilizadas para la proyección
 -----
 
-Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero e Industria Manofactura, se calculó la proyección demanda de energía total para estos sectores en PJ, *(Ecuación 1)*.
-
-
-.. math::
-
- Demanda Energía Total Sectores = Dem.Sec.Comercial + Dem.Sec.Público + Dem.Sec.Agro + Dem.Sec.Pesca + Dem.Sec.Minero + Dem.Sec.Industria Manofactura 
- 
-
-  
-
-Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 presenta el modelo estimado para la demanda total de energía en PJ y el valor de los coeficientes es presentado en la tabla 1. 
- 
- The area of a circle is :math:`A_\text{c} = (\pi/4) d^2`.  
+Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda 
+de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero 
+e Industria Manofactura, se calculó la proyección demanda de energía total para estos
+sectores en PJ, *(Ecuación 1)*.
 
 .. math::
 
- $\ln \left(E_{t, 1}\right)=\alpha_{1}+\beta_{1} \ln \left(E_{t-1,1}\right)+\gamma_{1} \ln \left(P I B p c_{t-1}\right)+\theta_{1} T e n d_{t}$
+ Demanda Energia Total sectores $=$ Dem. S. Comercial $+$ Dem. S. Público $+$ Dem. S. Agro $+$ Dem. S. Pesca + Dem. S. Minero $+$ Dem. S. Industria Manofactura
+ 
+Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda
+Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección 
+de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 
+presenta el modelo estimado para la demanda total de energía en PJ y el valor de los 
+coeficientes es presentado en la tabla 1. 
+ 
+..  The area of a circle is :math:`A_\text{c} = (\pi/4) d^2`.  
+
+.. math::
+
+ \text { Dem. E.Total }_{t}=\alpha * \text { Dem. E.Total}_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon
+
+*Tabla 1 – Coeficientes del modelo *
++----------------+----------------------------+
+| Coeficiente    |  Valor                     |
++----------------+----------------------------+
+| α              |  0.683612583511262         |
++----------------+----------------------------+
+| β              |  3.98953737951962          |
++----------------+----------------------------+
+| γ              |  -0.272134255254439        |
++----------------+----------------------------+
+| ε              |  -0.009138684795543        |
++----------------+----------------------------+
+   
+
+Siendo que, para el uso eficiente del modelo, la demanda de energía total debe ser 
+previamente diferenciada y normalizada, la ecuación 3 presenta la normalización a 
+utilizar. Obtenido el valor de demanda con el modelo este debe desnormalizado e 
+integrado (proceso inverso) para obtener el valor real de demanda de energía total.
+
+.. math::
+
+ $Y_{i}=\frac{X_{i}-0.75 \operatorname{Min}_{X}}{1.25 \operatorname{Max}_{X}-0.75 \operatorname{Min}_{X}}$
 
 
-
-
-
-
-| **(〖Dem.E.Total〗_t ) ̂=α*〖Dem.E.Total〗_(t-1)+β*〖PBI〗_t+γ*〖PBI〗_(t-1)+ε** 
-
-
-
-
-
+Donde Y_i es el valor normalizado de la demanda, X_i es un valor del vector de demandas
+correspondiente al año i, 〖Min〗_X es el valor mínimo del vector de demanda 
+(5 para este caso) y 〖Max〗_X es el valor máximo del vector de demanda
+(14 para este caso). La figura 1 presenta la curva de la proyección demanda de energía 
+total para estos sectores en PJ y la curva de ajuste obtenida con el modelo regresivo. 
+Este modelo presenta un MAPE de =0.6%.
 
 
 
