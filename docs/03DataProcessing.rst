@@ -457,7 +457,7 @@ coeficientes es presentado en la tabla 1.
 
  \text { Dem. E.Total }_{t}=\alpha * \text { Dem. E.Total}_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon
 
-*Tabla 1 – Coeficientes del modelo *
+* Tabla 1 – Coeficientes del modelo *
 
 +----------------+----------------------------+
 | Coeficiente    |  Valor                     |
@@ -469,7 +469,7 @@ coeficientes es presentado en la tabla 1.
 | γ              |  -0.272134255254439        |
 +----------------+----------------------------+
 | ε              |  -0.009138684795543        |
-+----------------+----------------------------+
++----------------+----------------------------+ 
 
 Siendo que, para el uso eficiente del modelo, la demanda de energía total debe ser 
 previamente diferenciada y normalizada, la ecuación 3 presenta la normalización a 
