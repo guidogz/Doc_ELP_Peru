@@ -830,3 +830,14 @@ modelo presenta un MAPE de =0.91 %.
    :align:   center
    :width:   700 px
 *Figure 3.13: Proyección del precio de vehiculos electricos.*
+
+
+
+
+
+
+
+
+
+
+
