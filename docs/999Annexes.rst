@@ -6,6 +6,10 @@ Annexes
 A1. Fuels
 +++++++++
 
+.. _example:
+
+This is an example crossreference target.
+
 .. _Fuels:
 The following table shows the fuels included in OSeMOSYS-CR. 
 
