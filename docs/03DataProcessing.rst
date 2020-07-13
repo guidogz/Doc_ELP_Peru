@@ -55,25 +55,9 @@ __ http://www.python.org/
 
 `Python <http://www.python.org/>`_. 
 
-3.1.1.1 Sets
----------
-Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
-son particulares por país y región, para su configuración se debe tener un análisis 
-del sistema a modelar, los sets se muestrana contiuación.
-
-.. - *Región*
-.. - *Year*
-.. - *Timeslices*
-.. - *Emissions*
-.. - *Commodity*
-.. - *Technology*
-.. - *Mode of operation*
 
 
-
-
-
-3.1.1.2 Procesos
+3.1.1.1 Procesos
 ---------
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las principales tecnologías para el peru se muestran a continuación.
 
@@ -124,7 +108,7 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 
 
 
-3.1.1.3 Comodities
+3.1.1.2 Comodities
 ---------
 Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
 tecnología para ser transformados y procesados en otros comodities dentro de toda 
@@ -136,13 +120,33 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 
 .. _Fuels: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
 
-3.1.1.4 Costos 
+
++--------------------+----------------------------------------------------------------------+
+| Combustibles       | La producción de commodities incluye extración, procesamiento,       |
+| Fósiles            | transformación de materia primaría hasta llegar a ser commodity.     |
++--------------------+----------------------------------------------------------------------+
+| Biocombustibles    | Importaciones incluyen todos los procesos y acciones comerciales para|
+|                    | lograr el suministro de commodities al país.                         |
++--------------------+----------------------------------------------------------------------+
+| Electricidad       | Refinería incluye todo el procesamiento de crudo para la obtención   |
+|                    | de los subproductos como la gasolina o el diesel.                    |
++--------------------+----------------------------------------------------------------------+
+| Demandas de        | Carboneras incluye el proceso de extracción de una mina carbón       |
+| Transporte         | mineral y trasnformación de en carbon vegetal.                       |
++--------------------+----------------------------------------------------------------------+
+| Productos de       | Las plantas de gas incluye la licuación, transporte de gas           |
+| Exportación        |                                                                      |
++--------------------+----------------------------------------------------------------------+
+
+
+
+3.1.2 Costos 
 ---------
 
 Los procesos tienen involucrados costos como CAPEX(Capital Expenditure), OPEX 
-(Operacional Expenditure), LCOE, etc. Los costos examinados por capacidad para las 
+(Operacional Expenditure), los costos examinados por capacidad para las 
 plantas de gas y refinerías has sido estudiadas para tener datos con los cuales
-poder suministrar al modelo. La proyeciones desde al 2055 de estos datos se han 
+poder suministrar al modelo. La proyeciones desde 2015 al 2055 de estos datos se han 
 obtenido del Informe 9 del PROSEMER. 
 
 
@@ -202,7 +206,7 @@ plantas de refinación y la actividad de las refinería que se encuentran en el 
 
 
 
-3.1.1.5 Emisiones
+3.1.3 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -213,7 +217,7 @@ planificado al 2050 lograr la carbononeutralidad.
 
  
 
-3.1.1.6 Proyecciones de los sectores económicos
+3.1.4 Proyecciones de los sectores económicos
 ---------
 
 Para determinar las proyecciones futuras de la demanda energética por sector de 
@@ -313,7 +317,7 @@ la siguiente gráfica, en donde la participacion de sector agro es predominante.
  
  Time-Series Analysis and Forecasting
 
-3.1.2 Electricity Sector Simulation
+3.1.5 Electricity Sector Simulation
 -----------------------------------------------------
  Data Structure and Elements of Electric System
   power..
@@ -387,7 +391,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  
  Emissions from Electricity Sector
 
-3.1.3 Transport Sector Simulation
+3.1.6 Transport Sector Simulation
 -----------------------------------------------------
 
  Data Structure and Elements of Transport System
