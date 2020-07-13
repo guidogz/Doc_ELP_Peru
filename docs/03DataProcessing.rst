@@ -133,6 +133,7 @@ generada por cada tecnología eléctrica y los combustibles consumidos por el se
 transporte, las etiquetas para cada commodity considerados se muestran a continuación.
 Los commodities se pueden encontrar en Anexos Fuels_. 
 
+Internal crossreferences, like example_.
 
 
 3.1.1.4 Costos 
@@ -640,3 +641,6 @@ modelo presenta un MAPE de =0.91 %.
 
 
 
+.. _example:
+
+This is an example crossreference target.
