@@ -140,6 +140,43 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 
 
 
+Demandas
+---------
+
+Plantas de genración 
+---------
+
+Plantas de gas 
+---------
+
+Refinerias 
+---------
+
+Carbnoneras 
+---------
+
+Distribución de energía
+---------
+
+importaciones 
+---------
+
+Exportaciones
+---------
+
+Producción
+---------
+
+Transporte de pasajeros 
+---------
+
+Transporte de carga
+---------
+
+Otros consumos energéticos 
+---------
+
+
 3.1.2 Costos 
 ---------
 
