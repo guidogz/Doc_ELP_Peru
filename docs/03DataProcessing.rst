@@ -122,7 +122,7 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 
 .. _Tecnologías: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
-..               :Tech_
+               :Tech_
 
 
 
