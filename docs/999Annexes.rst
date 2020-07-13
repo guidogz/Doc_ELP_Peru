@@ -339,13 +339,13 @@ Años    Eólica  Eó. Ma. solarPV  almacenamiento
 A5. Renovables
 +++++++++
 
-Time	Demanda de electricidad anual para un escenario bajo *(PBI demanda bajo)(GW.h/año) 	Demanda de electricidad anual para un escenario base *(PBI demanda media)(GW.h/año) 	Demanda de electricidad anual para un escenario alto *(PBI demanda media)(GW.h/año) 	Máxima Demanda_Potencia de electricidad anual para un escenario bajo *(PBI demanda bajo)(MW/año) 	Máxima Demanda_Potencia de electricidad anual para un escenario base *(PBI demanda media)(MW/año) 	Máxima Demanda_Potencia de electricidad anual para un escenario alto *(PBI demanda alto)(MW/año) 
+
 ====== ======== ======= ======= ======= ======= =========
 Tiempo Demanda de electricidad  Máxima Demanda (Potencia)
        anual (GW.h/año)         de electricidad anual 
                                 (MW/año)
 ------ ------------------------ -------------------------
-Años    Bajo    Base     Alto    Bajo    Base    Alto
+Años    Bajo    Base     Alto    Bajo    Base 	  Alto
 ====== ======== ======= ======= ======= ======= =========
 2015	44540	44540	44540	6274.6	6274.6	6274.6
 2016	46576	48326	48326	6305.9	6492.4	6492.4
