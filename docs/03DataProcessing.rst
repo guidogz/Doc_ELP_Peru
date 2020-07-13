@@ -61,13 +61,13 @@ Los sets son el conjunto de configuraciones que son establecidos para el modelo,
 son particulares por país y región, para su configuración se debe tener un análisis 
 del sistema a modelar, los sets se muestrana contiuación.
 
-- *Región*
-- *Year*
-- *Timeslices*
-- *Emissions*
-- *Commodity*
-- *Technology*
-- *Mode of operation*
+.. - *Región*
+.. - *Year*
+.. - *Timeslices*
+.. - *Emissions*
+.. - *Commodity*
+.. - *Technology*
+.. - *Mode of operation*
 
 
 
@@ -116,10 +116,9 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 |ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
 
-Para una mejor idenficación de las tecnologías se puede ver a continuación 
-las etiquetas de los procesos asociados a cada commdity.
+ Todas las tecnologías se puede ver a en Anexos Tecnologías_.
 
-
+.. _Tecnologías: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
 
 
 
@@ -133,9 +132,7 @@ generada por cada tecnología eléctrica y los combustibles consumidos por el se
 transporte, las etiquetas para cada commodity considerados se muestran a continuación.
 Los commodities se pueden encontrar en Anexos Fuels_. 
 
-Internal crossreferences, like example_
-
-.. _example: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
+.. _Fuels: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
 
 3.1.1.4 Costos 
 ---------

@@ -11,7 +11,7 @@ A1. Fuels
 This is an example crossreference target.
 
 .. _Fuels:
-The following table shows the fuels included in OSeMOSYS-CR. 
+La siguiente tabla se muestra los Fuels incluidos en OSeMOSYS-Perú. 
 
 +---------------+---------------------------------------+-----------------------------------+
 |Name           | Description                           |  Group                            |
@@ -90,7 +90,7 @@ The following table shows the fuels included in OSeMOSYS-CR.
 A2. Technologies
 +++++++++
 
-The following table shows the technologies included in OSeMOSYS-CR. 
+La siguiente tabla se muestra las tecnologías incluidas en OSeMOSYS-Perú. 
 
 +---------------+-------------------------------------------------------------+---------------------------+
 |Name           | Description                                                 | Group                     |
