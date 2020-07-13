@@ -290,7 +290,8 @@ A4. Renovables
 ====== ======== ======= ======= ===============
 Tiempo	       CAPEX de energía (USD/kW)
 ------ ----------------------------------------
-Años    Eólica  Eó. Ma. solarPV  almacenamiento
+Años    Eólica  Eólica  solarPV  almacenamiento
+                Marina     
 ====== ======== ======= ======= ===============
 2015	1111.55	5784.25	1299.35	1659.3
 2016	1092.32	5733.2	1262.64	1593.92
