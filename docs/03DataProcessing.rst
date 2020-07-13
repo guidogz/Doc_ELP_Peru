@@ -134,7 +134,7 @@ transporte, las etiquetas para cada commodity considerados se muestran a continu
 Los commodities se pueden encontrar en Anexos Fuels_. 
 
 Internal crossreferences, like example_.
-
+.. _example: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
 
 3.1.1.4 Costos 
 ---------
