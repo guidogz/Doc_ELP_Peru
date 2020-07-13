@@ -228,3 +228,6 @@ La siguiente tabla se muestra las tecnologías incluidas en OSeMOSYS-Perú.
 |R_TAVMAR_02    | Transporte por aviación o mar futuro                        |                           |
 +---------------+-------------------------------------------------------------+---------------------------+
   
+
+
+  

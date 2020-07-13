@@ -19,6 +19,22 @@
 3.2.1 Sets
 ---------
 
+Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
+son particulares por país y región, para su configuración se debe tener un análisis 
+del sistema a modelar, los sets se muestrana contiuación.
+
+ - *Región*
+ - *Year*
+ - *Timeslices*
+ - *Emissions*
+ - *Commodity*
+ - *Technology*
+ - *Mode of operation*
+
+
+
+
+
 3.2.1 Procesos
 ---------
 
