@@ -641,6 +641,3 @@ modelo presenta un MAPE de =0.91 %.
 
 
 
-.. _example:
-
-This is an example crossreference target.
