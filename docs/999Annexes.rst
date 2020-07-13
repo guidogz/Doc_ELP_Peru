@@ -290,7 +290,7 @@ A3. Renovables
 ====== ======== ======= ======= ===========
 Time	  CAPEX de energía (USD/kW)
 ------ ------------------------------------
-Años    Onshore Offshor solarPV 
+Años    Onshore Offshore solarPV almacenamiento
 ====== ======== ======= ======= ===========
 2015	1111.55	5784.25	1299.35	1659.3
 2016	1092.32	5733.2	1262.64	1593.92
