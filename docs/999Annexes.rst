@@ -90,6 +90,8 @@ La siguiente tabla se muestra los Fuels incluidos en OSeMOSYS-Perú.
 A2. Technologies
 +++++++++
 
+.. _Tech:
+
 La siguiente tabla se muestra las tecnologías incluidas en OSeMOSYS-Perú. 
 
 +---------------+-------------------------------------------------------------+---------------------------+
