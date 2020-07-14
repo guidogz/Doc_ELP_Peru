@@ -395,7 +395,7 @@ Años    Bajo    Base     Alto    Bajo    Base 	  Alto
 A6. Gas Natural en planta
 +++++++++
 
-====== ======== =======
+====== ======= ========
 Tiempo  REF-Precio 
         promedio gas 
         en planta
@@ -505,7 +505,7 @@ A8. Precios Carbón
 Tiempo  Carbón 
         Australia 
         (USD/Ton)
------- ----------------
+------ ---------------
 Años   Refere.  Alta 
 ====== ======= =======
 2015	75.7	75.7
