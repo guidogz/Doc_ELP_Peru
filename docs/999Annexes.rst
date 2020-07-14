@@ -338,7 +338,7 @@ Años    Eólica  Eólica  solar    almacenamiento
 ====== ======== ======= ======= ===============
 
 
-A5. Renovables
+A5. Sector eléctrico
 +++++++++
 
 
@@ -392,6 +392,9 @@ Años    Bajo    Base     Alto    Bajo    Base 	  Alto
 2055	98293	128251	161214	12897	16827	21241.8
 ====== ======== ======= ======= ======= ======= =========
 
+A6. Gas Natural en planta
++++++++++
+
 ====== ======== =======
 Tiempo  REF-Precio 
         promedio gas 
@@ -443,6 +446,8 @@ Años   Refere.   Alta
 2055	3.07	3.17
 ====== ======= ========
 
+A7. Precios WTI ( West Texas Intermediate)
++++++++++
 
 ====== ======= =======
 Tiempo  WTI 
@@ -492,6 +497,9 @@ Años   Refere.  Alta
 2054	97.8	117.9
 2055	98.5	119.1
 ====== ======= =======
+
+A8. Precios Carbón 
++++++++++
 
 ====== ======= =======
 Tiempo  Carbón 
@@ -543,6 +551,9 @@ Años   Refere.  Alta
 2055	12.2	12.2
 ====== ======= =======
 
+A9. Precios vehículos eléctricos 
++++++++++
+
 ====== ======= ======= ================
 Tiempo  Costo de la inversión de 
         vehículos eléctricos  
@@ -591,6 +602,9 @@ Años   Privado Público Participación(%)
 2054	15.9	94.82	91.4
 2055	15.5	88.23	94.93
 ====== ======= ======= ================
+
+A10. Costos de las refinerías general 
++++++++++
 
 ====== ======= ======= ==== =========
 Tiempo Costos de las refinerías, 
@@ -641,6 +655,10 @@ Años    CAPEX   OPEX   Disp Capacidad
 2054	1.734	9.969	90	347.3
 2055	1.774	10.093	90	347.3
 ====== ======= ======= ==== =========
+
+
+A11. Costos de las plantas de gas
++++++++++
 
 ====== ======= ======= ========== ======== ========
 Tiempo    Costos de las plantas de gas, 
