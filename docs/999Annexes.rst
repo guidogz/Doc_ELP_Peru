@@ -772,8 +772,8 @@ A13. Demanda por sectores
 ====== ============ ========= ======== ======= ====== ======= ============
 Tiempo        Proyecciones de la demanda de energía por sectores 
 ------ -------------------------------------------------------------------
-Años    Capacidad   Comercial Público   Agro   Pesca  Minero  Manofactura
-        instalada                                                     
+Años    Residencial   Comercial Público   Agro   Pesca  Minero  Manofactura
+                                                         
           (PJ)        (PJ)     (PJ)     (PJ)    (PJ)     (PJ)     (PJ)
 ====== ============ ========= ======== ======= ====== ======= ============
 2015    156.0        43.0      15.0    145.0    6.0    10.0    57.0
@@ -881,7 +881,7 @@ Tiempo  Modelo econométrico     PBI       Modelo elaborado
        Transporte  Transporte           Trasnporte Transporte
 Años    Privado     Público    Crecimi  Privado    Público    
                                ento
-          (pkm)       (pkm)     (pkm)     (pkm)       (pkm) 
+          (pkm)       (pkm)     (%)     (pkm)       (pkm) 
 ====== =========== =========== ======== ========== ============
 2015    71873.0     154443.0     0.03    73324.0     152420.3
 2016    76199.0     158282.0     0.04    77143.2     155646.6
@@ -930,9 +930,9 @@ Años    Privado     Público    Crecimi  Privado    Público
 ====== =========== =========== ======== ========== ============
 Tiempo   Modelo econométrico     PBI       Modelo elaborado   
 ------ ----------------------- -------- -----------------------
-Años   Transporte    Total     Crecimi    Carga     Total    
-        Carga      transporte                      transporte
-          (tkm)        (PJ)       (PJ)     (PJ)        (PJ) 
+Años   Transporte    Total     Crecimi  Transporte     Total    
+        Carga      transporte             Carga    transporte
+          (tkm)        (PJ)       (%)     (PJ)        (PJ) 
 ====== =========== =========== ======== ========== ============
 2015    288037.0    337.4         0.03   282850.0    310.8
 2016    299641.0    354.5         0.04   296055.8    332.4
@@ -986,7 +986,7 @@ Años    Transport.   Demanda            Transport.  Demanda
          Público     anual     Crecimi   Público     anual    
          Privado    electrici.           Privado    electrici.  
          Carga                           Carga
-          (PJ)     (GW.h/año)             (PJ) 
+          (PJ)     (GW.h/año)    (%)      (PJ) 
 ====== =========== =========== ======== ========== ============
 2015    315.6        44540.0    0.03     338.5      40915.2
 2016    336.5        48326.4    0.04     357.1      44379.4
