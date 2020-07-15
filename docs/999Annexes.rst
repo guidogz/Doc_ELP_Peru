@@ -825,7 +825,7 @@ A11. Demanda por sectores
 Tiempo        Proyecciones de la demanda de energía por sectores 
 ------ --------------------------------------------------------------
 Años   Capacidad Comercial Público  Agro   Pesca  Minero Manofactura
-       instalada                                                       
+       instalada                                                      
           (PJ)     (PJ)      (PJ)   (PJ)   (PJ)     (PJ)     (PJ)
 ====== ========= ========= ======= ====== ======= ======= ===========
 2015	156.0   	43.0	15.0	145.0	6.0 	10.0	57.0
@@ -870,3 +870,12 @@ Años   Capacidad Comercial Público  Agro   Pesca  Minero Manofactura
 2054	125.2   	148.6	28.9	362.7	4.0 	14.1	153.0
 2055	124.5   	151.5	29.3	368.7	4.0 	14.2	155.6
 ====== ========= ========= ======= ====== ======= ======= ===========
+
+
+
+
+
+
+
+
+
