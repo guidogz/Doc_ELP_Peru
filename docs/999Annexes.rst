@@ -876,11 +876,9 @@ Años   Modelo       Modelo
 
 
 ====== =========== =========== ======== ========== ============
-Tiempo        Proyecciones del sector transportes
------- --------------------------------------------------------
-         Modelo econométrico     PBI       Modelo elaborado   
-
+Tiempo  Modelo econométrico     PBI       Modelo elaborado   
 ------ ----------------------- -------- -----------------------
+       Transporte  Transporte           Trasnporte Transporte
 Años    Privado     Público    Crecimi  Privado    Público    
                                ento
           (pkm)       (pkm)     (pkm)     (pkm)       (pkm) 
@@ -930,13 +928,10 @@ Años    Privado     Público    Crecimi  Privado    Público
 
 
 ====== =========== =========== ======== ========== ============
-Tiempo        Proyecciones del sector transportes
------- --------------------------------------------------------
-         Modelo econométrico     PBI       Modelo elaborado   
-
+Tiempo   Modelo econométrico     PBI       Modelo elaborado   
 ------ ----------------------- -------- -----------------------
-Años    Carga        Total     Crecimi    Carga     Total    
-                   transporte                      transporte
+Años   Transporte    Total     Crecimi    Carga     Total    
+        Carga      transporte                      transporte
           (tkm)        (PJ)       (PJ)     (PJ)        (PJ) 
 ====== =========== =========== ======== ========== ============
 2015    288037.0    337.4         0.03   282850.0    310.8
@@ -1031,7 +1026,7 @@ Años    Transport.   Demanda            Transport.  Demanda
 2050    1079.5       119715.0   0.03     1076.8     119717.6
 2051    1100.9       121422.3   0.03     1097.7     121427.7
 2052    1122.3       123129.6   0.03     1118.7     123137.7
-2053    1143.8       124836.9   0.03     1139.6     124847.8
+2053    1143.8       124836.9   0.03     1139.6     124847.8	
 2054    1165.2       126544.2   0.03     1160.6     126557.8
 2055    1186.7       128251.5   0.03     1181.5     128267.9
 ====== =========== =========== ======== ========== ============
