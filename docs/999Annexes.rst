@@ -825,7 +825,7 @@ A14. Proyecciones Modelo de demanda económetrico vs Modelo autoregresivo elabor
 
 ====== ============ =============
 Tiempo    Energía total
------- -------------------------
+------ --------------------------
 Años   Modelo       Modelo
        demanda      autoregresivo
        ecomonométri elaborado
