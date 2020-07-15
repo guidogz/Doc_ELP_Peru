@@ -450,7 +450,7 @@ A7. Precios WTI ( West Texas Intermediate)
 +++++++++
 
 ====== ======= =======
-Tiempo  WTI 
+Tiempo       WTI 
         (US$/barril)
 ------ ----------------
 Años   Refere.  Alta  
@@ -557,7 +557,7 @@ A9. Precios vehículos eléctricos
 ====== ======= ======= ================
 Tiempo  Costo de la inversión de 
         vehículos eléctricos  
-        (M-USD/vehículo)        
+              (MUSD/vehículo)        
 ------ --------------------------------
 Años   Privado Público Participación(%)
 ====== ======= ======= ================
@@ -611,7 +611,7 @@ Tiempo Costos de las refinerías,
        disponibilidad y capacidad
 ------ ------------------------------
 Años    CAPEX   OPEX   Disp Capacidad
-                        (%)  (PJ)
+        MM$/PJ  MM$/PJ (%)   (PJ)
 ====== ======= ======= ==== =========
 2015	0.148	5.153		
 2016	0.189	5.276		
@@ -665,7 +665,7 @@ Tiempo    Costos de las plantas de gas,
           disponibilidad y capacidad.
 ------ --------------------------------------------
 Años    CAPEX   OPEX   Capacidad  Disponi. Capacity
-                         (PJ-a)     (%)     Factor
+       MM$/PJ  MM$/PJ    (PJ-a)     (%)     Factor
 ====== ======= ======= ========== ======== ========
 2015	0.062	6.628	1333.000   92.000	47.937
 2016	0.062	6.628	1333.000   92.000   47.937
@@ -824,7 +824,7 @@ A14. Proyecciones Modelo de demanda económetrico vs Modelo autoregresivo elabor
 +++++++++
 
 ====== ============ =============
-Tiempo    Energía total
+Tiempo    Energía total (PJ)
 ------ --------------------------
 Años   Modelo       Modelo
        demanda      autoregresivo
@@ -931,8 +931,8 @@ Años    Privado     Público    Crecimi  Privado    Público
 Tiempo   Modelo econométrico     PBI       Modelo elaborado   
 ------ ----------------------- -------- -----------------------
 Años   Transporte    Total     Crecimi  Transporte     Total    
-        Carga      transporte             Carga    transporte
-          (tkm)        (PJ)       (%)     (PJ)        (PJ) 
+        Carga      transporte   to        Carga    transporte
+          (tkm)        (PJ)       (%)     (tkm)        (PJ) 
 ====== =========== =========== ======== ========== ============
 2015    288037.0    337.4         0.03   282850.0    310.8
 2016    299641.0    354.5         0.04   296055.8    332.4
@@ -984,7 +984,7 @@ Tiempo   Modelo econométrico     PBI       Modelo elaborado
 ------ ----------------------- -------- -----------------------
 Años    Transport.   Demanda            Transport.  Demanda
          Público     anual     Crecimi   Público     anual    
-         Privado    electrici.           Privado    electrici.  
+         Privado    electrici.  to       Privado    electrici.  
          Carga                           Carga
           (PJ)     (GW.h/año)    (%)      (PJ)      (GW.h/año)
 ====== =========== =========== ======== ========== ============
