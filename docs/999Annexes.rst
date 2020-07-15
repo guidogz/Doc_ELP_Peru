@@ -879,7 +879,7 @@ A15. Proyecciones Modelo de demanda económetrico vs Modelo autoregresivo elabor
 
 ====== =========== =========== ======== ========== ============
 Tiempo        Proyecciones del sector transportes
------- --------------------------------------------------------
+------ ----------------------- -------- -----------------------
         Modelo econométrico     PBI       Modelo elaborado   
 ------ ----------------------- -------- -----------------------
 Años    Privado     Público    Crecimi  Privado    Público    
