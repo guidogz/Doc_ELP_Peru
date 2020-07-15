@@ -711,7 +711,7 @@ Años    CAPEX   OPEX   Capacidad  Disponi. Capacity
 ====== ======= ======= ========== ======== ========
 
 
-A11. Transporte
+A12. Transporte
 +++++++++
 
 ====== ======== ======= =========
@@ -763,8 +763,10 @@ Años   Privado  Público Carga
 2055	240,010	420,144	968,251
 ====== ======== ======= =========
 
+
 A11. Transporte
 +++++++++
+
 
 ====== ========= ========= ========= ======== ======= ======= ===========
 Tiempo   Proyecciones de la demanda de energía por sectores 
