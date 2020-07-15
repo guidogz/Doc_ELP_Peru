@@ -986,7 +986,7 @@ Años    Transport.   Demanda            Transport.  Demanda
          Público     anual     Crecimi   Público     anual    
          Privado    electrici.           Privado    electrici.  
          Carga                           Carga
-          (PJ)     (GW.h/año)    (%)      (PJ) 
+          (PJ)     (GW.h/año)    (%)      (PJ)      (GW.h/año)
 ====== =========== =========== ======== ========== ============
 2015    315.6        44540.0    0.03     338.5      40915.2
 2016    336.5        48326.4    0.04     357.1      44379.4
