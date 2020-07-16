@@ -167,8 +167,8 @@ la refinería de talara, su capacidad será de 245.3 miles de barriles diarios. 
 cifras se pueden ver a continuación en la siguiente tabla.
 
 =========== ============================ ===================================== ==========
-  Refinería   Capacidad instalada (2018)  Tipo de combustible refinado       Región
------------ -----------------------------------------------------------------------------
+  Refinería   Capacidad instalada (2018)  Tipo de combustible refinado          Región
+----------- ---------------------------- ------------------------------------- ----------
                   Miles de barriles de
                    petróleo día (MBPD)
 =========== ============================ ===================================== ==========
