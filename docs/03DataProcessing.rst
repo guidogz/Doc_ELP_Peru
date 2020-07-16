@@ -295,7 +295,9 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 *Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.7*
 
 
-**Las proyecciones de la demanda de energía y máxima demanda eléctrica**
+|
+|**Las proyecciones de la demanda de energía y máxima demanda eléctrica**
+|
 
 
 .. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
@@ -364,11 +366,10 @@ Total         639
 *Informe 9 pag. 303*
 
 
+|
+|          **Las proyecciones del precio del gas natural y cotos por capacidad**
+|
 
-** **
-** **
-
-          **Las proyecciones del precio del gas natural y cotos por capacidad**
 
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
@@ -454,9 +455,9 @@ REFINERIAS    TOTAL   492,6
 ============ ======= ============
 *Informe 9 PROSEMER, pag. 302*
 
-** **
-
-                  **Las proyecciones del precio del crudo y cotos por capacidad**
+|
+|                  **Las proyecciones del precio del crudo y cotos por capacidad**
+|
 
 
 
@@ -515,8 +516,9 @@ CARBONERAS    TOTAL     2.71
 CARBONERAS    TOTAL     2.71
 ============ ======= ================
 
-                  **Las proyecciones del precio del crudo y cotos por capacidad**
-
+|
+|                  **Las proyecciones del precio del crudo y cotos por capacidad**
+|
 
 .. figure:: img/Proyeccion_del_precio_de_carbon.png
    :align:   center
@@ -701,7 +703,7 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
  
  Time-Series Analysis and Forecasting
 
-3.1.5 Modelo de ajuste del sector eléctrico
+3.1.3 Modelo de ajuste del sector eléctrico
 ----------
  Data Structure and Elements of Electric System
   power..
@@ -761,7 +763,7 @@ un MAPE de =0.54%.
  
  Emissions from Electricity Sector
 
-3.1.6 Modelo de ajuste del sector transporte
+3.1.4 Modelo de ajuste del sector transporte
 --------
 
  Data Structure and Elements of Transport System
