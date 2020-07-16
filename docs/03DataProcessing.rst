@@ -251,9 +251,9 @@ TOTAL                        12,636.89
 
 
 ============================== ========================== =============
-"POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019"       
+POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019       
 ------------------- ---------------------------------------------------
-"TIPO DE RECURSO ENERGÉTICO"    "POTENCIA EFECTIVA (MW)"        (%)    
+TIPO DE RECURSO ENERGÉTICO     POTENCIA EFECTIVA (MW)        (%)    
 ============================== ========================== =============
 AGUA                                  4,748.37               37.58 
 RENOVABLES                            1,041.01                8.24 
