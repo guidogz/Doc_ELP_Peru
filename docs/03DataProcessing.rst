@@ -250,11 +250,11 @@ TOTAL                        12,636.89
 *Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.3*
 
 
-============================== ========================== ============= 
-    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019 (MW)"             
+============================== ========================== =============
+    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019 (MW)"        
 ------------------- ---------------------------------------------------
- "TIPO DE RECURSOE NERGÉTICO"  "POTENCIA EFECTIVA  (MW)"        (%)                
-============================== ========================== =============   
+ "TIPO DE RECURSOE NERGÉTICO"  "POTENCIA EFECTIVA  (MW)"        (%)     
+============================== ========================== =============
 AGUA                                  4,748.37               37.58 
 RENOVABLES                            1,041.01                8.24 
 GAS NATURAL DE CAMISEA                3,775.21               29.87 
@@ -284,7 +284,7 @@ TOTAL    5,067.66         6,908.75     285.02  375.46   12,636.89
 
 ====== ================ ================ ====== ========== =========================== ==========
                PRODUCCIÓN DE ENERGÍA Y MÁXIMA DEMANDA - 2019  (GWh)  
-----------------------------------------------------------------------------------------                         
+------------------------------------------------------------------------------------------------- 
 ÁREA    HIDROELÉCTRICA   TERMOELÉCTRICA  SOLAR    EÓLICA   "IMPORTACIÓN DESDE ECUADOR"   TOTAL
 ====== ================ ================ ====== ========== =========================== ==========
 NORTE     3,370.54           757.83                443.68          60.05                 4,632.10 
@@ -363,7 +363,7 @@ Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina      O
 Pucallpa       3.3                       Diesel, Turbo, Gasolina               Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      Norte
 =========== ============================ ===================================== ==========
-*Anexo 2 - informe 9 prosemer, página 91 *
+*Anexo 2 - informe 9 prosemer, página 91*
 
 
 La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
