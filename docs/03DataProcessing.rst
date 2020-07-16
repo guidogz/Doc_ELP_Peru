@@ -251,9 +251,9 @@ TOTAL                        12,636.89
 
 
 ============================== ========================== =============
-    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019 (MW)"        
+    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019     "       
 ------------------- ---------------------------------------------------
-"TIPO DE RECURSOE NERGÉTICO"   "POTENCIA EFECTIVA  (MW)"        (%)     
+"TIPO DE RECURSO ENERGÉTICO"    "POTENCIA EFECTIVA (MW)"        (%)    
 ============================== ========================== =============
 AGUA                                  4,748.37               37.58 
 RENOVABLES                            1,041.01                8.24 
@@ -263,8 +263,9 @@ GAS NATURAL DE MALACAS                  343.61                2.72
 DIESEL 2                              2,334.21               18.47 
 RESIDUAL                                 77.73                0.62 
 CARBÓN                                  140.71                1.11 
+------------------------------ -------------------------- -------------
 TOTAL                                12,636.89              100.00 
-============================== ========================== ============= 
+============================== ========================== =============
 *Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
 
 
@@ -296,7 +297,7 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 
 
 |
-|**Las proyecciones de la demanda de energía y máxima demanda eléctrica**
+|        **Las proyecciones de la demanda de energía y máxima demanda eléctrica**
 |
 
 
@@ -605,7 +606,7 @@ un costo de internación  de 18.6 US$/ton.
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
-sino existencial, ahora nos embarcamos en una lucha por reducir las productos de 
+sino existencial, ahora nos embarcamos en una lucha por reducir los productos de 
 contaminación y la principal acción del sector energía y transportes es sustituir
 los insumos que podrucen contaminación, las políticas climáticas hoy en día han 
 planificado al 2050 lograr la carbononeutralidad.   
