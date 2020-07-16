@@ -295,12 +295,28 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 *Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.7*
 
 
+**Las proyecciones de la demanda de energía y máxima demanda eléctrica**
+
+
+.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
+   :align:   center
+   :width:   700 px
+*Figure 3.8: Proyección de la maxima demanda de electricidad anual*
+
+.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
+   :align:   center
+   :width:   700 px
+*Figure 3.9: Proyección de la demanda de electricidad anual*
+
+Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país 
+conectadas al SEIN. Iquitos no se incluye en el modelaje.
+
 
 
 3.1.1.5 Plantas de gas 
 ---------
 
-Las plantas de gas en el peru suman 8 en las cuuales tenemos que 3 son exclusivamente de 
+Las plantas de gas en el peru suman 8 en las cuales tenemos que 3 son exclusivamente de 
 procesamiento, 3 son únicamente de fraccionamiento, 1 de procesamiento y fracionamiento y 
 finalmente 1 de licuación, en conjunto suman una capacidad instalada de 1333 PJ con una 
 disponibilidad promedio de 92% y un factor de capacidad promedio de 48%. Los costos de 
@@ -323,7 +339,7 @@ Pampa Melchorita          238            Licuefacción                    Centro
 ------------------- -------------------- ------------------------------- -------
 Total                    1333
 =================== ==================== =============================== =======    
-
+*Anexo 2 - informe 9 prosemer, página 101 *
 
 ================== ================ =======
 Sector                Costo          2013
@@ -346,8 +362,6 @@ LGN           182
 Total         639
 ========== =============
 *Informe 9 pag. 303*
-
-
 
 
 
@@ -441,7 +455,7 @@ REFINERIAS    TOTAL   492,6
 *Informe 9 PROSEMER, pag. 302*
 
 ** **
-** **
+
                   **Las proyecciones del precio del crudo y cotos por capacidad**
 
 
@@ -474,8 +488,34 @@ plantas de refinación y la actividad de las refinería que se encuentran en el 
 
 3.1.1.7 Carboneras 
 ---------
+Para el 2013 la capacidad instalada de procesamiento de carbon es de 5.08 PJ, 2.97 para 
+la región centro y 2.11 para la región norte, además se asume un costo de producción de 
+2.71 MMUSD/PJ que incluye todos lo contos de extración, mina, transporte y acopio. Tambien
+se consideró un costo de inversión 2,76 MMUSD/PJ para incrementar la capacidad existente y 
+disminuir los costos existentes, cabe mencionar que los valores de transporte para la región 
+norte y centro son de 0.69 MMUSD/PJ.
 
 
+=========== ===========================
+Carboneras  Capacidad instalada (2013)
+                      PJ-año
+=========== ===========================
+Norte                  2.11
+Centro                 2.97
+----------- ---------------------------
+Total                  5.08
+=========== ===========================
+
+
+============ ======= ================
+Sector        Costo  2017 (MMUSD/PJa)
+============ ======= ================
+CARBONERAS    TOTAL     2.71
+------------ ------- ----------------
+CARBONERAS    TOTAL     2.71
+============ ======= ================
+
+                  **Las proyecciones del precio del crudo y cotos por capacidad**
 
 
 .. figure:: img/Proyeccion_del_precio_de_carbon.png
@@ -495,6 +535,7 @@ un costo de internación  de 18.6 US$/ton.
 
 3.1.1.8 Distribución de energía
 ---------
+
 
 
 3.1.1.9 Importaciones 
@@ -519,12 +560,35 @@ un costo de internación  de 18.6 US$/ton.
 ---------
 
 
+.. figure:: img/proyecion_sector_transporte_publico_privado.png
+   :align:   center
+   :width:   700 px
+*Figure 3.10: Proyección del sector transporte publico y privado.png.*
+
+
+   
+.. figure:: img/proyecion_sector_transporte.png
+   :align:   center
+   :width:   700 px
+*Figure 3.12: Proyección del sector transporte.*
+
+.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección del precio de vehiculos electricos.*
+
+
+
 
 
 3.1.1.13 Transporte de carga
 ---------
 
-
+.. figure:: img/proyecion_sector_transporte_carga.png
+   :align:   center
+   :width:   700 px
+*Figure 3.11: Proyección del sector transporte carga.png.*
+   
 
 
 3.1.1.14 Otros consumos energéticos 
@@ -546,7 +610,7 @@ planificado al 2050 lograr la carbononeutralidad.
 
  
 
-3.1.4 Proyecciones de los sector energía
+3.1.2 Modelos de ajuste del sector energía
 ---------
 
 Para determinar las proyecciones futuras de la demanda energética por sector de 
@@ -637,14 +701,14 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
  
  Time-Series Analysis and Forecasting
 
-3.1.5 Electricity Sector Simulation
+3.1.5 Modelo de ajuste del sector eléctrico
 ----------
  Data Structure and Elements of Electric System
   power..
 
 
-Modelo para ajustar el Demanda de electricidad anual para un escenario base *(PBI demanda media)(GW.h/año)
------
+**Modelo para ajustar el Demanda de electricidad anual para un escenario base (PBI demanda media)(GW.h/año)**
+
 
 Con el pasado de la Demanda de electricidad anual y con el Escenarios de crecimiento 
 del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener 
@@ -691,35 +755,21 @@ un MAPE de =0.54%.
 
 
 
-
-.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
-   :align:   center
-   :width:   700 px
-*Figure 3.8: Proyección de la maxima demanda de electricidad anual*
-
-.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
-   :align:   center
-   :width:   700 px
-*Figure 3.9: Proyección de la demanda de electricidad anual*
-
-Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país 
-conectadas al SEIN. Iquitos no se incluye en el modelaje.
-
 *____________________________________________________________________*
 
  Electricity Power Flow and Efficiency
  
  Emissions from Electricity Sector
 
-3.1.6 Transport Sector Simulation
+3.1.6 Modelo de ajuste del sector transporte
 --------
 
  Data Structure and Elements of Transport System
  Traffic Flow Analysis and Efficiency of the System
  Emissions and Air Pollution from Transport Sector
 
-Modelo para ajustar el Total Transporte carretero BAU Privado (millones de pkm)
------
+**Modelo para ajustar el Total Transporte carretero BAU Privado (millones de pkm)**
+
 
 Con el pasado del total del transporte carretero privado y con el Escenarios de 
 crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
@@ -761,8 +811,9 @@ presenta un MAPE de =0.12%.
    :width:   700 px
 *Figura 2 - Proyección de Total Transporte carretero BAU Privado (millones de pkm) y modelo de ajuste*
 
-Modelo para ajustar el Total Transporte carretero BAU Público (millones de pkm)
------
+
+**Modelo para ajustar el Total Transporte carretero BAU Público (millones de pkm)**
+
 
 Con el pasado del total del transporte carretero público y con el Escenarios de 
 crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
@@ -803,8 +854,9 @@ presenta un MAPE de =0.32 %.
    :width:   700 px
 *Figura 3 - Proyección de Total Transporte carretero BAU Público (millones de pkm) y modelo de ajuste*
 
-Modelo para ajustar el Total Transporte Carga BAU (millones de tkm)
------
+
+**Modelo para ajustar el Total Transporte Carga BAU (millones de tkm)**
+
 
 Con el pasado del Total Transporte Carga y con el Escenarios de crecimiento del PIB 
 (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios 
@@ -844,8 +896,9 @@ de =0.089 %.
    :width:   700 px
 *Figura 4 - Proyección de Total Transporte Carga BAU (millones de tkm) y modelo de ajuste*
 
-Modelo para ajustar la Demanda de Todo el Sector Transporte (PJ)
------
+
+**Modelo para ajustar la Demanda de Todo el Sector Transporte (PJ)**
+
 
 Con el pasado de la Demanda de todo el sector transporte y con el Escenarios de 
 crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
@@ -886,8 +939,10 @@ MAPE de =0.87%.
    :width:   700 px
 *Figura 5 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
 
-Modelo para ajustar la Demanda Total Transporte Público, Privado y Carga (PJ)
------
+
+**Modelo para ajustar la Demanda Total Transporte Público, Privado y Carga (PJ)**
+
+
 Con el pasado de la Demanda total del transporte público, privado y de carga, y con el 
 Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, 
 que permita obtener escenarios para las proyecciones de la Demanda total del transporte 
@@ -928,33 +983,7 @@ modelo presenta un MAPE de =0.91 %.
    :width:   700 px
 *Figura 6 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
 
-
-
-
  *_______________________________________*
-
-
-.. figure:: img/proyecion_sector_transporte_publico_privado.png
-   :align:   center
-   :width:   700 px
-*Figure 3.10: Proyección del sector transporte publico y privado.png.*
-
-.. figure:: img/proyecion_sector_transporte_carga.png
-   :align:   center
-   :width:   700 px
-*Figure 3.11: Proyección del sector transporte carga.png.*
-   
-   
-.. figure:: img/proyecion_sector_transporte.png
-   :align:   center
-   :width:   700 px
-*Figure 3.12: Proyección del sector transporte.*
-
-.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
-   :align:   center
-   :width:   700 px
-*Figure 3.13: Proyección del precio de vehiculos electricos.*
-
 
 
 
