@@ -61,6 +61,105 @@ El modelo considera por el lado del consumo las elasticidades, tanto precio, com
 
 La dinámica del POLYSYS consiste en utilizar funciones de oferta constantes en cada año pero que varían de periodo a periodo, adaptándose a las condiciones de mercado, basados en los resultados de mercado del año anterior. Para ello el POLYSYSIS busca simular como un agricultor representativo en una determinada región toma la decisión de cultivar determinada canasta de productos agrícolas. Esta simulación implica representar una función de beneficios sujeta a restricciones de capacidad y flexibilidad. Para ejemplificar mejor la dinámica del modelo consideremos que en una región solo se cultivan dos productos a y b; luego un agricultor asentado en dicha región tendrá la siguiente función de beneficios de cultivar los dos productos:
 
+.. math::
+
+ \begin{equation}\pi=\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{t, b} \ldots(1)\end{equation}
+
+Donde :math:`P_(t,a)` representa el precio del cultivo a, :math:`R_(t,a)` representa el rendimiento (número de kg producidos en una hectárea del producto a), :math:`C_(t,a)` representa el costo por hectárea de cultivar el producto a y :math:`H_(t,a)` representa el total de hectáreas cultivadas del producto a. El caso para el producto b es análogo, y como se puede observar el beneficio del agricultor se constituye por la venta de los dos cultivos disponibles. Claramente el total de tierra del que dispone el agricultor es la suma :math:`H_(t,a)+H_(t,b)` y no podrá cultivar más allá de este nivel. En todos los casos el subíndice t representa el tiempo y está indicando que nos encontramos en el periodo actual t.
+
+Se tiene entonces que un agricultor recibirá como beneficio el margen neto, por hectárea, de cada cultivo multiplicado por el número de hectáreas cultivadas de cada cultivo. Si se piensa en este agricultor como el agricultor representativo o promedio de una región y posteriormente se agregan todos los agricultores en dicha región entonces podremos observar que la ecuación (1) también puede representar la función de beneficios de las actividades agrícolas en la región. Los agricultores tomarán en consideración la función (1) cuando decidan como asignarán la tierra entre los cultivos disponibles y por tanto lo que harán será optar por cultivar los más rentables.
+
+
+.. entrenado en la academia. Así, ambos elementos juegan un papel fundamental en el uso, mejoramiento y actualización de cualquier modelo.eeee
+
+La forma funcional de la ecuación (1) es un problema de programación lineal (LP).  En general los problemas de LP, sinrestricciones, tendrán una solución de esquina, esto implicaría que solo se cultivase un producto. Intuitivamente esto es lógico toda vez que el agricultor preferirá cultivar el producto que le deje la mayor ganancia, y por ende, en general la región, se especializaría en un solo producto. En ausencia de alguna restricción sobre la función (1) el resultado de esquina previamente mencionado tomaría lugar sin importar el número de productos que se oferten en una región. Esto sería contra intuitivo ya que reduciría la oferta de todos los productos a 0 con excepción de un producto, o grupo de productos en caso existan varios con la mayor rentabilidad, algo que no se observa en la realidad.
+
+Para solucionar el problema de los resultados de esquina es necesario incluir restricciones en las capacidades de variación de la tierra asignada a cultivar los diversos productos a analizar. Es decir que hay que limitar 
+:math:`H_(t,a)` y :math:`H_(t,b)` en la optimización de forma tal que ninguno pueda tomar el valor de 0. Para solucionar este problema se propone la siguiente forma del problema de LP:
+
+
+.. math::
+
+ \begin{equation}\max _{H_{a} H_{b}}\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{b t} \ldots(2)\end{equation}
+
+sujeto a
+
+.. math::
+
+ \begin{equation}\begin{array}{l}
+ \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a} \\
+ \left(1-\delta_{b}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{b}\right) H_{t-1, a}
+ \end{array}\end{equation}	
+
+
+Se puede observar que las restricciones de tierra están determinadas por valores de asignaciones previas de la tierra. Intuitivamente estas restricciones lo que muestran es que una región tiene cierto grado de capacidad de cambio en la asignación de cultivos de un periodo a otro, indirectamente lo que se está modelando es una flexibilidad de oferta en la cual una variación en el precio, y por ende en la rentabilidad, genera una variación en la producción.
+
+Usualmente la dinámica agrícola replica el comportamiento de una inversión de corto plazo donde se realiza un desembolso al inicio de un periodo y se tienen resultados al final de este. En este sentido los ciclos vegetativos suelen conllevar meses o hasta un año desde la adecuación de la tierra hasta la etapa de cosecha. En este sentido si bien es cierto la función de beneficios (2) indica que la decisión de cultivar algún producto agrícola depende del precio, lo cierto es que al momento de realizar de decidir qué productos cultivar, los agricultores no saben a cuanto lo podrán vender y por tanto los valores P_(t,a) y P_(t,b) en realidad son valores esperados.
+
+Existen muchas formas de considerar los precios esperados, usualmente se toma un valor ponderado de los últimos periodos, dándole un mayor peso al precio del periodo anterior. Otra forma puede ser utilizando alguna función que genere una expectativa lógica de cómo pueden ser los precios en el periodo t. Luego el problema de optimización se presenta de la siguiente manera:
+
+.. math::
+
+ \begin{equation}\max _{H_{a}, H_{b}}\left(E\left[P_{t, a}\right] R_{t, a}-C_{t, a}\right) H_{t, a}+\left(E\left[P_{t, b}\right] R_{t, b}-C_{t, b}\right) H_{b t} \ldots(3)\end{equation}
+
+sujeto a
+
+.. math::
+
+ \begin{equation}\begin{array}{l}
+ \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a} \\
+ \left(1-\delta_{b}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{b}\right) H_{t-1, a}
+ \end{array}\end{equation}
+
+
+Finalmente los resultados para cada región permiten determinar la asignación de tierra entre la canasta de 	cultivos y por ende se puede determinar la oferta de los productos. En este sentido es posible hallar como varían las ofertas de los distintos cultivos, estas se denotan como :math:`∆%Q_(t,a)^S` y :math:`∆%Q_(t,b)^S`.
+
+
+2.2 La Demanda Agrícola
+
+En el modelo POLYSYS la demanda toma una posición más pasiva en el sentido que a diferencia de generar una demanda diferente para cada periodo, se utiliza una única demanda nacional que se adapta, en el tiempo, a las condiciones de la oferta. En este sentido la demanda está representada por una matriz de elasticidades precio y  elasticidades cruzadas entre productos que permiten entender como variaciones de la oferta de productos generará variaciones en el equilibrio de mercado.
+
+Para entender mejor esto regresemos sobre el ejemplo de la sección previa donde solo existen dos productos agrícolas en una región determinada se tiene que la matriz de elasticidades toma la siguiente forma:
+
+.. math::
+
+ \begin{equation}E=\left(\begin{array}{ll}
+ \varepsilon_{a a} & \varepsilon_{a b} \\
+ \varepsilon_{b a} & \varepsilon_{b b}
+ \end{array}\right)\end{equation}
+
+Luego se puede generar la siguiente ecuación de variaciones en la demanda:
+
+.. math::
+
+ \begin{equation}\left(\begin{array}{cc}
+ \Delta \% Q_{t, a}^{D} \\
+ \Delta \% Q_{t, b}^{D}
+ \end{array}\right)=\left(\begin{array}{cc}
+ \varepsilon_{a a} & \varepsilon_{a b} \\
+ \varepsilon_{b a} & \varepsilon_{b b}
+ \end{array}\right)\left(\begin{array}{c}
+ \Delta \% P_{t, a} \\
+ \Delta \% P_{t, b}
+ \end{array}\right) \ldots(4)\end{equation}
+
+Donde el vector del lado izquierdo de la ecuación representa cambios porcentuales de la cantidad demandada de los productos a y b. Como se puede observar, las variaciones porcentuales en la demanda dependen de las variaciones porcentuales en los precios ajustadas por las elasticidades.
+
+**2.3 El Equilibrio Agrícola **
+
+El equilibrio en este mercado toma lugar cuando se intersectan la oferta y la demanda. Ademas, existen dos casos, el primero, cuando un producto agrícola es transable y, el segundo,cuando no lo es. Por ejemplo, en el caso previo, donde solo hay dos productos :math:`a` y :math:`b`, supongamos que ambos son no transables. Luego la limpieza del mercado implica que:
+
+.. math::
+
+ \begin{equation}\Delta \% Q_{t, a}^{S}=\Delta \% Q_{t, a}^{D}\end{equation}
+
+
+Por lo tanto en cada iteración, cuando el agricultor decida la asignación de tierra, está decidiendo cuanto va a producir lo cual al mismo tiempo está indicando cuanto se va a demandar y consumir.
+
+
+
+
+
 
 
 

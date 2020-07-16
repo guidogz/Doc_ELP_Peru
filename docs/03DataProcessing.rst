@@ -172,7 +172,7 @@ sector agro es predominante.
 3.1.1.4 Plantas de generación 
 ---------
 Las empresas de generación en el Perú suman un total de 58 al 2018, las cuales en conjunto
-tienen una capacidas instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
+tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
 2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
 demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
 participación de fue el agua con 37.58% seguido del gas natural de camisea 29.87%, la 
@@ -251,7 +251,7 @@ TOTAL                        12,636.89
 
 
 ============================== ========================== =============
-    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019     "       
+    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019"       
 ------------------- ---------------------------------------------------
 "TIPO DE RECURSO ENERGÉTICO"    "POTENCIA EFECTIVA (MW)"        (%)    
 ============================== ========================== =============
@@ -266,6 +266,7 @@ CARBÓN                                  140.71                1.11
 ------------------------------ -------------------------- -------------
 TOTAL                                12,636.89              100.00 
 ============================== ========================== =============
+
 *Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
 
 
@@ -913,6 +914,7 @@ coeficientes es presentado en la tabla 5.
 .. math::
 
  DemandaTodo\widehat{SectorTransporte} _ { r } = \alpha * \text {DemandaTodoSectorTransporte} _ { r - 1 } + \beta * P B I _ { t } + \gamma * P B I _ { t - 1 } + \varepsilon
+
 
 *Tabla 5 – Coeficientes del modelo*
 
