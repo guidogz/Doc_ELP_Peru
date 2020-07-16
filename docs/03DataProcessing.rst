@@ -253,7 +253,7 @@ TOTAL                        12,636.89
 ============================== ========================== =============
     "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019 (MW)"        
 ------------------- ---------------------------------------------------
- "TIPO DE RECURSOE NERGÉTICO"  "POTENCIA EFECTIVA  (MW)"        (%)     
+"TIPO DE RECURSOE NERGÉTICO"   "POTENCIA EFECTIVA  (MW)"        (%)     
 ============================== ========================== =============
 AGUA                                  4,748.37               37.58 
 RENOVABLES                            1,041.01                8.24 
@@ -400,7 +400,6 @@ Las proyecciones del precio del crudo y cotos por capacidad
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
    :align:   center
    :width:   700 px
-
 
 
 *Figure 3.5: Proyección del precio promedio del crudo*
