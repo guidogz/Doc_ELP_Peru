@@ -300,11 +300,16 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 3.1.1.5 Plantas de gas 
 ---------
 
+Las plantas de gas en el peru suman 8 en las cuuales tenemos que 3 son exclusivamente de 
+procesamiento, 3 son únicamente de fraccionamiento, 1 de procesamiento y fracionamiento y 
+finalmente 1 de licuación, en conjunto suman una capacidad instalada de 1333 PJ con una 
+disponibilidad promedio de 92% y un factor de capacidad promedio de 48%. Los costos de 
+tratamiento de gas en las plantas se valorizan en 4228.2 MMUSD en el 2013 y tuvo una 
+actividad de 639 PJ. En las siguientes tablas se muestra la información.
 
 
 
-
-**Las proyecciones del precio del gas natural y cotos por capacidad**
+          **Las proyecciones del precio del gas natural y cotos por capacidad**
 
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
@@ -315,8 +320,6 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
 resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
 como las proyeciones del caso de referencia EIA . 
-
-
 
 
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
@@ -330,7 +333,7 @@ de gas y la actividad de las refinería que se encuentran en el informe 9 "Desar
 del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
 
-
+   
 
 
 
@@ -346,8 +349,11 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 Las refinerías en el Perú suman un total de 6, las cuales en conjunto tienen una 
 capacidad de prodcucción de 215.8 miles de barriles diarios, con una disponibilidad 
 en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
-de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios. Las
-cifras se pueden ver a continuación en la siguiente tabla.
+de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios.
+La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
+de 91459.9 barriles, y tambien para el mismo año los costos operativos se valorizaron en 
+492.6 MMUSD, en la siguinetes tablas se puedes apreciar estas cifras.
+
 
 =========== ============================ ===================================== ==========
 Refinería    Capacidad instalada (2018)  Tipo de combustible refinado          Región
@@ -365,10 +371,6 @@ El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      N
 *Anexo 2 - informe 9 prosemer, página 91*
 
 
-La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
-de 91459.9 barriles, y tambien para el mismo año los costos operativos se valorizaron en 
-492.6 MMUSD, en la siguinete tablas se puedes apreciar estas cifras.
-
 ========== ==========
 Producto    2017 (PJ)
 ========== ==========
@@ -381,18 +383,19 @@ Total       350,5
 ========== ==========
 *Informe 9 PROSEMER, pag. 302* 
 
+
 ============ ======= ============
 Sector        Costo  2017 (MMUSD)
 ============ ======= ============
-EXTRACCIÓN    OPEX    369,9
 REFINERIAS    OPEX    412,4
 REFINERIAS    CAPEX    80,1
 REFINERIAS    TOTAL   492,6
 ============ ======= ============
 *Informe 9 PROSEMER, pag. 302*
 
-
-**Las proyecciones del precio del crudo y cotos por capacidad**
+** **
+** **
+                  **Las proyecciones del precio del crudo y cotos por capacidad**
 
 
 
@@ -588,7 +591,7 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
  Time-Series Analysis and Forecasting
 
 3.1.5 Electricity Sector Simulation
------------------------------------------------------
+----------
  Data Structure and Elements of Electric System
   power..
 
@@ -662,7 +665,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  Emissions from Electricity Sector
 
 3.1.6 Transport Sector Simulation
------------------------------------------------------
+--------
 
  Data Structure and Elements of Transport System
  Traffic Flow Analysis and Efficiency of the System
