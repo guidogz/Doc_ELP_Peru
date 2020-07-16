@@ -304,8 +304,7 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 
 
 
-Las proyecciones del precio del gas natural y cotos por capacidad
------
+**Las proyecciones del precio del gas natural y cotos por capacidad**
 
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
@@ -393,8 +392,8 @@ REFINERIAS    TOTAL   492,6
 *Informe 9 PROSEMER, pag. 302*
 
 
-Las proyecciones del precio del crudo y cotos por capacidad
------
+**Las proyecciones del precio del crudo y cotos por capacidad**
+
 
 
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
@@ -484,21 +483,9 @@ un costo de internación  de 18.6 US$/ton.
 
 
 
-3.1.2 Costos 
----------
 
 
-
-
-
-
-
-
-
-
-
-
-3.1.3 Emisiones
+3.1.1.15 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -509,7 +496,7 @@ planificado al 2050 lograr la carbononeutralidad.
 
  
 
-3.1.4 Proyecciones de los sectores económicos
+3.1.4 Proyecciones de los sector energía
 ---------
 
 Para determinar las proyecciones futuras de la demanda energética por sector de 
@@ -529,8 +516,8 @@ se tomaron de los escenarios proporcionados por el MINEM y para el periodo
 2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 
 10 años anteriores al 2040. 
 
-Las ecuaciones utilizadas para la proyección
------
+**Las ecuaciones utilizadas para la proyección**
+
 
 Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda 
 de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero 
