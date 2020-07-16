@@ -308,6 +308,49 @@ tratamiento de gas en las plantas se valorizan en 4228.2 MMUSD en el 2013 y tuvo
 actividad de 639 PJ. En las siguientes tablas se muestra la información.
 
 
+=================== ==================== =============================== =======
+Plantas de gas      Capacidad instalada   Tipo de tratamiento            Región
+                         PJ (2018)   
+=================== ==================== =============================== =======         
+Malvinas                  804            Procesamiento                   Sur
+Curimaná                   29            Procesamiento                   Oriente
+GMP-procesamiento          18            Procesamiento                   Norte
+GMP-fraccionamiento        5             Fraccionamiento                 Norte
+Pisco                      215           Fraccionamiento                 Sur
+Yarinacocha                8             Fraccionamiento                 Oriente
+Pariñas                   16             Procesamiento y Fraccionamiento Norte
+Pampa Melchorita          238            Licuefacción                    Centro
+------------------- -------------------- ------------------------------- -------
+Total                    1333
+=================== ==================== =============================== =======    
+
+
+================== ================ =======
+Sector                Costo          2013
+================== ================ =======
+TRATAMIENTO - GAS   OPEX VARIABLE    981,4
+TRATAMIENTO - GAS   OPEX FIJO       3246,7
+TRATAMIENTO - GAS   CAPEX 
+------------------ ---------------- -------
+TRATAMIENTO - GAS   TOTAL           4228,2
+================== ================ =======
+*Imforme 9, página 303*
+
+
+========== =============
+Producto    PJ (2013)
+========== =============
+Gas seco**    457
+LGN           182
+========== =============
+*Informe 9 pag. 303*
+
+
+
+
+
+** **
+** **
 
           **Las proyecciones del precio del gas natural y cotos por capacidad**
 

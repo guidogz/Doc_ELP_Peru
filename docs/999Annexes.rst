@@ -772,8 +772,7 @@ A13. Demanda por sectores
 ====== ============ ========= ======== ======= ====== ======= ============
 Tiempo        Proyecciones de la demanda de energía por sectores 
 ------ -------------------------------------------------------------------
-Años    Residencial   Comercial Público   Agro   Pesca  Minero  Manofactura
-                                                         
+Años    Residencial Comercial Público  Agro    Pesca  Minero  Manofactura
           (PJ)        (PJ)     (PJ)     (PJ)    (PJ)     (PJ)     (PJ)
 ====== ============ ========= ======== ======= ====== ======= ============
 2015    156.0        43.0      15.0    145.0    6.0    10.0    57.0
