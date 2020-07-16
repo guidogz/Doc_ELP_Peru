@@ -110,6 +110,7 @@ Los procesos o tecnologías son representados en forma de bloque y pueden tener 
 
 3.1.1.2 Comodities
 ---------
+
 Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
 tecnología para ser transformados y procesados en otros comodities dentro de toda 
 la cadena energética, en el Perú contamos con una gran variedad de commodities desde
@@ -148,6 +149,124 @@ Demandas
 
 Plantas de generación 
 ---------
+Las empresas de generación en el Perú suman un total de 58 al 2018, las cuales en conjunto
+tienen una capacidas instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
+2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
+demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
+participación de fue el agua con 37.58% seguido del gas natural de camisea 29.87%, la 
+potencia efectiva por tipo de generación que tuvo mayor partcipaión fueron las 
+termoeléctricas. A continuación se presentará las tablas de las empresas con sus respectivas 
+potencias efectivas, seguido del tipo de la participación por tipo de recurso, tipo de 
+generación y finalmente la energía ejecutada. 
+
+========================== =====================
+EMPRESAS                     "POTENCIA EFECTIVA 
+                                   (MW)"
+========================== =====================
+ENGIE                         2,484.8
+KALLPA GENERACIÓN             1,615.8
+ENEL GENERACIÓN PERÚ          1,481.6
+ELECTROPERÚ                     914.7
+SAMAY I                         708.3
+FÉNIX POWER                     567.2
+HUALLAGA                        476.7
+STATKRAFT                       448.0
+ORAZUL ENERGY PERÚ              375.8
+ENEL GENERACIÓN PIURA           343.6
+TERMOCHILCA                     303.3
+ENEL GREEN POWER PERÚ           276.8
+PLANTA RF ETEN                  223.9
+EGASA                           223.3
+CELEPSA                         222.5
+CHINANGO                        195.5
+MINERA CERRO VERDE              178.0
+TERMOSELVA                      176.0
+EGEMSA                          168.8
+SAN GABÁN                       115.7
+ENERGÍA EÓLICA                  114.0
+HUANZA                           98.3
+TRES HERMANAS                    97.2
+INLAND ENERGY                    89.8
+EGEJUNÍN                         73.1
+SHOUGESA                         62.4
+IYEPSA                           58.5
+EGESUR                           55.1
+MARCONA                          32.0
+SINERSA                          29.6
+SDF ENERGÍA                      28.4
+GENERACIÓN ANDINA                27.4
+GEPSA                            27.0
+AGROAURORA                       20.4
+ANDEAN POWER                     20.4
+AGUA AZUL                        20.2
+GTS MAJES                        20.0
+GTS REPARTICIÓN                  20.0
+PANAMERICANA                     20.0
+RÍO BAÑOS                        20.0
+TACNA SOLAR                      20.0
+CELEPSA RENOVABLES               19.9
+HUANCHOR                         19.8
+SANTA ANA                        19.6
+RÍO DOBLE                        19.2
+MOQUEGUA FV                      16.0
+HUAURA POWER                     15.0
+ELECTRO ZAÑA                     13.2
+AIPSA                            12.7
+BIOENERGÍA DEL CHIRA             12.0
+PETRAMÁS                          9.3
+AGROINDUSTRIAS SAN JACINTO        6.8
+EGECSAC                           5.2
+HIDROCAÑETE                       4.0
+ELÉCTRICA YANAPAMPA               3.9
+MAJA ENERGÍA                      3.5
+ATRIA ENERGÍA                     1.7
+HYDRO PATAPO                      1.0
+-------------------------- ---------------------
+TOTAL                        12,636.89
+========================== =====================
+
+
+"POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO
+(MW)"    
+      
+      
+"TIPO DE RECURSO
+ENERGÉTICO" "POTENCIA EFECTIVA 
+(MW)" (%)
+AGUA   4,748.37    37.58 
+RENOVABLES   1,041.01    8.24 
+GAS NATURAL DE CAMISEA   3,775.21    29.87 
+GAS NATURAL DE AGUAYTIA  176.05   1.39 
+GAS NATURAL DE MALACAS   343.61   2.72 
+DIESEL 2  2,334.21    18.47 
+RESIDUAL  77.73    0.62 
+CARBÓN    140.71   1.11 
+TOTAL  12,636.89   100.00 
+
+
+
+
+
+
+
+====== =============== ============== ======= ======== ============
+POTENCIA EFECTIVA POR TIPO DE GENERACIÓN A DICIEMBRE 2019 (MW)             
+-------------------------------------------------------------------               
+ÁREA   HIDROELÉCTRICA  TERMOELÉCTRICA  SOLAR   EÓLICA    TOTAL
+====== =============== ============== ======= ======== ============
+NORTE      610.07           801.24             114.01    1,525.32 
+CENTRO   3,839.10         4,075.82             261.45    8,176.38 
+SUR        618.48         2,031.69     285.02            2,935.20 
+------ --------------- -------------- ------- -------- ------------
+TOTAL    5,067.66         6,908.75     285.02  375.46   12,636.89 
+====== =============== ============== ======= ======== ============
+
+
+
+
+
+
+
 
 
 
@@ -160,30 +279,56 @@ Plantas de gas
 
 Refinerías 
 ---------
+
 Las refinerías en el Perú suman un total de 6, las cuales en conjunto tienen una 
-capacidad de prodcucción de 215.8 miles de barriles diarios, con una disponibilidad
-del 90%, esta capacidad de procesamiento cambiará después de la modernización de 
-la refinería de talara, su capacidad será de 245.3 miles de barriles diarios. Las
+capacidad de prodcucción de 215.8 miles de barriles diarios, con una disponibilidad 
+en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
+de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios. Las
 cifras se pueden ver a continuación en la siguiente tabla.
 
 =========== ============================ ===================================== ==========
-  Refinería   Capacidad instalada (2018)  Tipo de combustible refinado          Región
+Refinería    Capacidad instalada (2018)  Tipo de combustible refinado          Región
 ----------- ---------------------------- ------------------------------------- ----------
-                  Miles de barriles de
-                   petróleo día (MBPD)
+Nombre         Miles de barriles de
+               petróleo día (MBPD)
 =========== ============================ ===================================== ==========
 Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina Norte
 Conchán       15.5                       Diesel, Fueloil, Gasolina             Centro
-Pampilla      102-117                    Diesel, Turbo, GLP, Fueloil, Gasolina Centro
+Pampilla      117                        Diesel, Turbo, GLP, Fueloil, Gasolina Centro
 Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina      Oriente
 Pucallpa       3.3                       Diesel, Turbo, Gasolina               Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      Norte
 =========== ============================ ===================================== ==========
+*página 91 Anexo 2 - informe 9 prosemer*
 
 
+La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
+de 91459.9 barriles, y tambien para el mismo año los costos operativos se valorizaron en 
+492.6 MMUSD, en la siguinete tablas se puedes apreciar estas cifras.
 
+========== ==========
+Producto    2017 (PJ)
+========== ==========
+Diesel      103,9
+Fueloil     119,0
+Gasolina     88,6
+GLP           9,4
+Turbo        29,5
+Total       350,5
+========== ==========
+*informe 9 pag. 302* 
 
-Carbnoneras 
+============ ======= ============
+Sector        Costo  2017 (MMUSD)
+============ ======= ============
+EXTRACCIÓN    OPEX    369,9
+REFINERIAS    OPEX    412,4
+REFINERIAS    CAPEX    80,1
+REFINERIAS    TOTAL   492,6
+============ ======= ============
+*informe 9 pag. 302*
+
+Carboneras 
 ---------
 
 
