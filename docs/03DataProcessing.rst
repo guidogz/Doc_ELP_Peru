@@ -18,7 +18,7 @@
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
-y de oferta, las tecnologías son mostrados en bloques y estan asociados a los 
+y de oferta, las tecnologías son mostradas en bloques y estan asociados a los 
 commodities que son mostradas como líneas verticales. De los commodities se toma 
 una división, la cual va a la tecnología correspondiente para su transformación.    
 
@@ -37,11 +37,15 @@ Las commodities inciales son por lo general insumos procesados por tecnologías
 o productos importados, estos pasan por tecnologías para su transformación a 
 comodities de mayor calidad. 
 
+
+
 .. ``bueno ya es hora de divertirse, como para poner lineas de código, esto se debe eliminar``
 
 Para mayor información del modelo TIMES_ 
 
 .. _TIMES: https://iea-etsap.org/index.php/etsap-tools/model-generators/times/
+
+
 
 
 Una oración que enlaza a Wikipedia_ y al `Linux kernel archive`_.
@@ -59,8 +63,13 @@ __ http://www.python.org/
 
 3.1.1.1 Procesos
 ---------
-Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una entrada de commodities, sin embargo, siempre tienen una salida de commodities, las principales tecnologías para el peru se muestran a continuación.
-
+Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una 
+entrada de commodities, sin embargo, siempre tienen una salida de commodities, las 
+principales tecnologías para el peru se muestran a continuación. Los procesos tienen 
+involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
+costos examinados por capacidad para las plantas de gas y refinerías han sido estudiadas 
+para tener datos con los cuales poder suministrar al modelo. La proyeciones desde 2015 al 
+2055 de estos datos se han obtenido del Informe 9 del PROSEMER. 
 
 +--------------------+----------------------------------------------------------------------+
 |Producción          | La producción de commodities incluye extración, procesamiento,       |
@@ -141,13 +150,26 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 
 
 
-Demandas
+3.1.1.3 Demandas
 ---------
+Las demandas energética en el Perú son actualmente proyectadas en base a premisas 
+macroeconómicas poblacionales y de eficiencia energética, los resultados atienden a 
+la necesidad de otros modelos de optimización dentro de la cadena de planifición 
+energética, como OPTGEN y TIMES, para luego ser parte de un bucle de optimización 
+con la integración del modelo TIMES-CGE. Los resulatdos obtenidos pueden variarse 
+al escenario suspuesto, con la finalidad de situarse y analizarlos, además los 
+resulatdos estan desagregados en región, tipo de combustible, escenario, etc. A modo 
+de resumen podemos poner en bruto las proyecciones al 2050 de la demanda para los 
+sectores económicos se muestran la siguiente gráfica, en donde la participacion de 
+sector agro es predominante.  
+
+.. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
+   :align:   center
+   :width:   500 px
+*Figure 3.1: Proyección del crecimiento del PBI anual*
 
 
-
-
-Plantas de generación 
+3.1.1.4 Plantas de generación 
 ---------
 Las empresas de generación en el Perú suman un total de 58 al 2018, las cuales en conjunto
 tienen una capacidas instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
@@ -155,9 +177,10 @@ tienen una capacidas instalada de 13179.53 MW y capacidad efectiva de 12636.89 M
 demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
 participación de fue el agua con 37.58% seguido del gas natural de camisea 29.87%, la 
 potencia efectiva por tipo de generación que tuvo mayor partcipaión fueron las 
-termoeléctricas. A continuación se presentará las tablas de las empresas con sus respectivas 
-potencias efectivas, seguido del tipo de la participación por tipo de recurso, tipo de 
-generación y finalmente la energía ejecutada. 
+termoeléctricas con un 54.67 %. A continuación se presentará las tablas de las empresas 
+con sus respectivas potencias efectivas, seguido del tipo de la participación por tipo de 
+recurso, tipo de generación y finalmente la energía ejecutada. 
+
 
 ========================== =====================
 EMPRESAS                     "POTENCIA EFECTIVA 
@@ -224,29 +247,25 @@ HYDRO PATAPO                      1.0
 -------------------------- ---------------------
 TOTAL                        12,636.89
 ========================== =====================
+*Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.3*
 
 
-"POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO
-(MW)"    
-      
-      
-"TIPO DE RECURSO
-ENERGÉTICO" "POTENCIA EFECTIVA 
-(MW)" (%)
-AGUA   4,748.37    37.58 
-RENOVABLES   1,041.01    8.24 
-GAS NATURAL DE CAMISEA   3,775.21    29.87 
-GAS NATURAL DE AGUAYTIA  176.05   1.39 
-GAS NATURAL DE MALACAS   343.61   2.72 
-DIESEL 2  2,334.21    18.47 
-RESIDUAL  77.73    0.62 
-CARBÓN    140.71   1.11 
-TOTAL  12,636.89   100.00 
-
-
-
-
-
+============================== ========================== ============= 
+    "POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019 (MW)"             
+------------------- ---------------------------------------------------
+ "TIPO DE RECURSOE NERGÉTICO"  "POTENCIA EFECTIVA  (MW)"        (%)                
+============================== ========================== =============   
+AGUA                                  4,748.37               37.58 
+RENOVABLES                            1,041.01                8.24 
+GAS NATURAL DE CAMISEA                3,775.21               29.87 
+GAS NATURAL DE AGUAYTIA                 176.05                1.39 
+GAS NATURAL DE MALACAS                  343.61                2.72 
+DIESEL 2                              2,334.21               18.47 
+RESIDUAL                                 77.73                0.62 
+CARBÓN                                  140.71                1.11 
+TOTAL                                12,636.89              100.00 
+============================== ========================== ============= 
+*Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
 
 
 ====== =============== ============== ======= ======== ============
@@ -260,24 +279,69 @@ SUR        618.48         2,031.69     285.02            2,935.20
 ------ --------------- -------------- ------- -------- ------------
 TOTAL    5,067.66         6,908.75     285.02  375.46   12,636.89 
 ====== =============== ============== ======= ======== ============
+*Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.5*
+
+
+====== ================ ================ ====== ========== =========================== ==========
+               PRODUCCIÓN DE ENERGÍA Y MÁXIMA DEMANDA - 2019  (GWh)  
+----------------------------------------------------------------------------------------                         
+ÁREA    HIDROELÉCTRICA   TERMOELÉCTRICA  SOLAR    EÓLICA   "IMPORTACIÓN DESDE ECUADOR"   TOTAL
+====== ================ ================ ====== ========== =========================== ==========
+NORTE     3,370.54           757.83                443.68          60.05                 4,632.10 
+CENTRO   22,735.89        19,504.41              1,202.48                               43,442.79 
+SUR       4,061.99            50.59      761.73                                          4,874.31 
+TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05                52,949.19 
+====== ================ ================ ====== ========== =========================== ==========
+*Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.7*
 
 
 
 
-
-
-
-
-
-
-
-Plantas de gas 
+3.1.1.5 Plantas de gas 
 ---------
 
 
 
 
-Refinerías 
+
+Las proyecciones del precio del gas natural y cotos por capacidad
+-----
+
+.. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
+   :align:   center
+   :width:   700 px
+
+*Figure 3.4: Proyección del precio del gas en la planta*
+
+Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
+resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
+como las proyeciones del caso de referencia EIA . 
+
+
+
+
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
+   :align:   center
+   :width:   700 px
+
+*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas*
+
+Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
+de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
+del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+
+
+
+
+
+
+
+
+
+
+
+3.1.1.6 Refinerías 
 ---------
 
 Las refinerías en el Perú suman un total de 6, las cuales en conjunto tienen una 
@@ -299,7 +363,7 @@ Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina      O
 Pucallpa       3.3                       Diesel, Turbo, Gasolina               Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      Norte
 =========== ============================ ===================================== ==========
-*página 91 Anexo 2 - informe 9 prosemer*
+*Anexo 2 - informe 9 prosemer, página 91 *
 
 
 La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
@@ -316,7 +380,7 @@ GLP           9,4
 Turbo        29,5
 Total       350,5
 ========== ==========
-*informe 9 pag. 302* 
+*Informe 9 PROSEMER, pag. 302* 
 
 ============ ======= ============
 Sector        Costo  2017 (MMUSD)
@@ -326,62 +390,43 @@ REFINERIAS    OPEX    412,4
 REFINERIAS    CAPEX    80,1
 REFINERIAS    TOTAL   492,6
 ============ ======= ============
-*informe 9 pag. 302*
+*Informe 9 PROSEMER, pag. 302*
 
-Carboneras 
+
+Las proyecciones del precio del crudo y cotos por capacidad
+-----
+
+
+.. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
+   :align:   center
+   :width:   700 px
+
+
+
+*Figure 3.5: Proyección del precio promedio del crudo*
+
+Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
+se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
+incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
+
+
+
+.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
+   :align:   center
+   :width:   700 px
+*Figure 3.7: Proyecciones de los costos por capacidad de la refineria*
+
+Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
+plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
+"Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+
+
+
+
+3.1.1.7 Carboneras 
 ---------
 
-
-
-
-Distribución de energía
----------
-
-
-Importaciones 
----------
-
-
-
-
-Exportaciones
----------
-
-
-
-
-Producción
----------
-
-
-
-
-Transporte de pasajeros 
----------
-
-
-
-
-Transporte de carga
----------
-
-
-
-
-Otros consumos energéticos 
----------
-
-
-
-
-3.1.2 Costos 
----------
-
-Los procesos tienen involucrados costos como CAPEX(Capital Expenditure), OPEX 
-(Operacional Expenditure), los costos examinados por capacidad para las 
-plantas de gas y refinerías has sido estudiadas para tener datos con los cuales
-poder suministrar al modelo. La proyeciones desde 2015 al 2055 de estos datos se han 
-obtenido del Informe 9 del PROSEMER. 
 
 
 
@@ -397,45 +442,59 @@ son considerados e incluye  flete y otros costos de transporte, el carbón tiene
 un costo de internación  de 18.6 US$/ton.
 
 
-.. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
-   :align:   center
-   :width:   700 px
-
-*Figure 3.4: Proyección del precio del gas en la planta*
-
-Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
-resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
-como las proyeciones del caso de referencia EIA . 
-
-.. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
-   :align:   center
-   :width:   700 px
-
-*Figure 3.5: Proyección del precio promedio del crudo*
-
-Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
-se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
-incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
 
 
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
-   :align:   center
-   :width:   700 px
 
-*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas*
+3.1.1.8 Distribución de energía
+---------
 
-Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
-de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
-del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
-   :align:   center
-   :width:   700 px
-*Figure 3.7: Proyecciones de los costos por capacidad de la refineria*
+3.1.1.9 Importaciones 
+---------
 
-Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
-plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
-"Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+
+
+3.1.1.10 Exportaciones
+---------
+
+
+
+
+3.1.1.11 Producción
+---------
+
+
+
+
+3.1.1.12 Transporte de pasajeros 
+---------
+
+
+
+
+3.1.1.13 Transporte de carga
+---------
+
+
+
+
+3.1.1.14 Otros consumos energéticos 
+---------
+
+
+
+
+3.1.2 Costos 
+---------
+
+
+
+
+
+
+
+
 
 
 
@@ -531,15 +590,6 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
    :width:   500 px
 *Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda*
 
-
-
-Las proyecciones al 2050 de la demanda para los sectores económicos se muestran 
-la siguiente gráfica, en donde la participacion de sector agro es predominante.  
-
-.. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
-   :align:   center
-   :width:   500 px
-*Figure 3.1: Proyección del crecimiento del PBI anual*
 
 
 
