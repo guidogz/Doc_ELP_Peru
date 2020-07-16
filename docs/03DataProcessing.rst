@@ -121,60 +121,112 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 .. _Fuels: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
 
 
-+--------------------+----------------------------------------------------------------------+
-| Combustibles       | La producción de commodities incluye extración, procesamiento,       |
-| Fósiles            | transformación de materia primaría hasta llegar a ser commodity.     |
-+--------------------+----------------------------------------------------------------------+
-| Biocombustibles    | Importaciones incluyen todos los procesos y acciones comerciales para|
-|                    | lograr el suministro de commodities al país.                         |
-+--------------------+----------------------------------------------------------------------+
-| Electricidad       | Refinería incluye todo el procesamiento de crudo para la obtención   |
-|                    | de los subproductos como la gasolina o el diesel.                    |
-+--------------------+----------------------------------------------------------------------+
-| Demandas de        | Carboneras incluye el proceso de extracción de una mina carbón       |
-| Transporte         | mineral y trasnformación de en carbon vegetal.                       |
-+--------------------+----------------------------------------------------------------------+
-| Productos de       | Las plantas de gas incluye la licuación, transporte de gas           |
-| Exportación        |                                                                      |
-+--------------------+----------------------------------------------------------------------+
++--------------------+-----------------------------------------------------------------------+
+| Combustibles       | Los combustibles fósiles son residuos de materia orgánica obtenidos   |
+| Fósiles            | de forma extrativas, estas son hidrocarburos, gas natural y carbón.   |
++--------------------+-----------------------------------------------------------------------+
+| Biocombustibles    | Son los combustibles que son sintetizados a partir de materia organica|
+|                    | tales como la cañade azucar, oleaginosas y microalgas                 |
++--------------------+-----------------------------------------------------------------------+
+| Electricidad       | La electricidad como commodity, es un producto de la generación de    |
+|                    | diferentes tipos de tecnología como la combustión, fotovoltaico.      |
++--------------------+-----------------------------------------------------------------------+
+| Demandas de        | Para las demandas de trasnporte puede ser de pasajeros públicos y     |
+| Transporte         | privados y carga, falta aún poner esta parte.                         |
++--------------------+-----------------------------------------------------------------------+
+| Productos de       | Actualmente se exporta una parte de hidrocarburos y gas natural.      |
+| Exportación        |                                                                       |
++--------------------+-----------------------------------------------------------------------+
 
 
 
 Demandas
 ---------
 
-Plantas de genración 
+
+
+
+Plantas de generación 
 ---------
+
+
+
 
 Plantas de gas 
 ---------
 
-Refinerias 
+
+
+
+Refinerías 
 ---------
+Las refinerías en el Perú suman un total de 6, las cuales en conjunto tienen una 
+capacidad de prodcucción de 215.8 miles de barriles diarios, con una disponibilidad
+del 90%, esta capacidad de procesamiento cambiará después de la modernización de 
+la refinería de talara, su capacidad será de 245.3 miles de barriles diarios. Las
+cifras se pueden ver a continuación en la siguiente tabla.
+
+=========== ============================ ===================================== ==========
+  Refinería   Capacidad instalada (2018)  Tipo de combustible refinado       Región
+----------- -----------------------------------------------------------------------------
+                  Miles de barriles de
+                   petróleo día (MBPD)
+=========== ============================ ===================================== ==========
+Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina Norte
+Conchán       15.5                       Diesel, Fueloil, Gasolina             Centro
+Pampilla      102-117                    Diesel, Turbo, GLP, Fueloil, Gasolina Centro
+Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina      Oriente
+Pucallpa       3.3                       Diesel, Turbo, Gasolina               Oriente
+El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      Norte
+=========== ============================ ===================================== ==========
+
+
+
 
 Carbnoneras 
 ---------
 
+
+
+
 Distribución de energía
 ---------
 
-importaciones 
+
+Importaciones 
 ---------
+
+
+
 
 Exportaciones
 ---------
 
+
+
+
 Producción
 ---------
+
+
+
 
 Transporte de pasajeros 
 ---------
 
+
+
+
 Transporte de carga
 ---------
 
+
+
+
 Otros consumos energéticos 
 ---------
+
+
 
 
 3.1.2 Costos 

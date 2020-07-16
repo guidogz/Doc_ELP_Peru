@@ -820,7 +820,7 @@ Años    Residencial   Comercial Público   Agro   Pesca  Minero  Manofactura
 ====== ============ ========= ======== ======= ====== ======= ============
 
 
-A14. Proyecciones Modelo de demanda económetrico vs Modelo autoregresivo elaborado 
+A14. Proyecciones Modelos de demanda económetrico vs Modelos autoregresivos elaborados 
 +++++++++
 
 ====== ============ =============
