@@ -342,6 +342,8 @@ Producto    PJ (2013)
 ========== =============
 Gas seco**    457
 LGN           182
+---------- -------------
+Total         639
 ========== =============
 *Informe 9 pag. 303*
 
@@ -422,6 +424,7 @@ Fueloil     119,0
 Gasolina     88,6
 GLP           9,4
 Turbo        29,5
+---------- ----------
 Total       350,5
 ========== ==========
 *Informe 9 PROSEMER, pag. 302* 
@@ -432,6 +435,7 @@ Sector        Costo  2017 (MMUSD)
 ============ ======= ============
 REFINERIAS    OPEX    412,4
 REFINERIAS    CAPEX    80,1
+------------ ------- ------------ 
 REFINERIAS    TOTAL   492,6
 ============ ======= ============
 *Informe 9 PROSEMER, pag. 302*
