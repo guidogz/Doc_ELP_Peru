@@ -840,7 +840,7 @@ Para la ganadería se utiliza el modelo mencionado en la sección teórica basad
 
 Las variaciones de precios (carne y leche) y costos (alfalfa y maíz amarillo duro) se obtienen dividiendo la senda de precios y costos del periodo actual respecto al periodo anterior:
 
-| ``%LSChangePrice=LSData(:,:,j+1,7)./LSData(:,:,j,7)-1;     ``
+| ``%LSChangePrice=LSData(:,:,j+1,7)./LSData(:,:,j,7)-1;``
 | ``%Change in  price``
 | ``%LSChangeCost(1,:)=AgriData(1,:,j+1,4)./AgriData(1,:,j,4)-1;``
 | ``%LSChangeCost(2,:)=AgriData(2,:,j+1,4)./AgriData(2,:,j,4)-1;``
@@ -881,6 +881,49 @@ La demanda consiste en multiplicar la matriz de elasticidades de consumo por las
 **3.3 Generación del Output**
 
 
+El ouput del modelo se escribe en tablas que son exportadas a archivos de texto. Esto se hace en la parte final de la modelación de la siguiente forma.
+1.	Primero se crean encuentran los datos nacionales para cada cultivo en cada año. Esto se hace, por ejemplo, sumando las hectáreas de cada cultivo en todas las regiones y agregándolas para obtener un valor nacional. Este valor se ajusta de acuerdo a la forma en que se quieren presentar los datos, por ejemplo, hectáreas cultivadas registradas en miles de ha por año. 
+2.	Una vez encontrados los valores nacionales estos se guardan en una tabla.
+3.	El paso final es exportar los datos a un archivo de texto.
+
+Los detalles de la programación se pueden ver a continuación:
+| ``%%%%%Land%%%%%%``
+| ``Y2016 = transpose(sum(transpose(AgriData(:,:,1,1))))/1000;``
+| ``Y2020 = transpose(sum(transpose(AgriData(:,:,5,1))))/1000;``
+| ``Y2030 = transpose(sum(transpose(AgriData(:,:,15,1))))/1000;``
+| ``Y2040 = transpose(sum(transpose(AgriData(:,:,25,1))))/1000;``
+| ``Y2050 = transpose(sum(transpose(AgriData(:,:,35,1))))/1000;``
+ 
+| ``CropNames = {'Alfalfa','Corn', 'Legumes', 'Tubers','DomesticConsumptionFruits', ``
+| ``'DomesticConsumptionVegetables' ...``
+| ``,'ExportFruits','ExportVegetables','CocoaandCoffee', 'YellowCorn', 'SugarCane', 'Rice',...``
+| ``'Cotton', 'CerealsandGrains'};``
+ 
+| ``TAgricultureLand = table(Y2016,Y2020,Y2030,Y2040,Y2050,'RowNames',CropNames);``
+ 
+| ``writetable(TAgricultureLand,'TAgricultureLand.txt'); type TAgricultureLand.txt``
+
+El ouput del modelo se escribe en tablas que son exportadas a archivos de texto. Esto se hace en la parte final de la modelación de la siguiente forma.
+1.	Primero se crean encuentran los datos nacionales para cada cultivo en cada año. Esto se hace, por ejemplo, sumando las hectáreas de cada cultivo en todas las regiones y agregándolas para obtener un valor nacional. Este valor se ajusta de acuerdo a la forma en que se quieren presentar los datos, por ejemplo, hectáreas cultivadas registradas en miles de ha por año. 
+2.	Una vez encontrados los valores nacionales estos se guardan en una tabla.
+3.	El paso final es exportar los datos a un archivo de texto.
+Los detalles de la programación se pueden ver a continuación:
+
+| ``%%%%%Land%%%%%%``
+| ``Y2016 = transpose(sum(transpose(AgriData(:,:,1,1))))/1000;``
+| ``Y2020 = transpose(sum(transpose(AgriData(:,:,5,1))))/1000;``
+| ``Y2030 = transpose(sum(transpose(AgriData(:,:,15,1))))/1000;``
+| ``Y2040 = transpose(sum(transpose(AgriData(:,:,25,1))))/1000;``
+| ``Y2050 = transpose(sum(transpose(AgriData(:,:,35,1))))/1000;``
+ 
+| ``CropNames = {'Alfalfa','Corn', 'Legumes', 'Tubers','DomesticConsumptionFruits',``
+| ``'DomesticConsumptionVegetables' ...``
+| ``,'ExportFruits','ExportVegetables','CocoaandCoffee', 'YellowCorn', 'SugarCane', 'Rice',...``
+| ``'Cotton', 'CerealsandGrains'};``
+ 
+| ``TAgricultureLand = table(Y2016,Y2020,Y2030,Y2040,Y2050,'RowNames',CropNames);``
+ 
+| ``writetable(TAgricultureLand,'TAgricultureLand.txt'); type TAgricultureLand.txt``
 
 
 
