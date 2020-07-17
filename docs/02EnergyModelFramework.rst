@@ -92,7 +92,7 @@ sujeto a
 
 Se puede observar que las restricciones de tierra están determinadas por valores de asignaciones previas de la tierra. Intuitivamente estas restricciones lo que muestran es que una región tiene cierto grado de capacidad de cambio en la asignación de cultivos de un periodo a otro, indirectamente lo que se está modelando es una flexibilidad de oferta en la cual una variación en el precio, y por ende en la rentabilidad, genera una variación en la producción.
 
-Usualmente la dinámica agrícola replica el comportamiento de una inversión de corto plazo donde se realiza un desembolso al inicio de un periodo y se tienen resultados al final de este. En este sentido los ciclos vegetativos suelen conllevar meses o hasta un año desde la adecuación de la tierra hasta la etapa de cosecha. En este sentido si bien es cierto la función de beneficios (2) indica que la decisión de cultivar algún producto agrícola depende del precio, lo cierto es que al momento de realizar de decidir qué productos cultivar, los agricultores no saben a cuanto lo podrán vender y por tanto los valores P_(t,a) y P_(t,b) en realidad son valores esperados.
+Usualmente la dinámica agrícola replica el comportamiento de una inversión de corto plazo donde se realiza un desembolso al inicio de un periodo y se tienen resultados al final de este. En este sentido los ciclos vegetativos suelen conllevar meses o hasta un año desde la adecuación de la tierra hasta la etapa de cosecha. En este sentido si bien es cierto la función de beneficios (2) indica que la decisión de cultivar algún producto agrícola depende del precio, lo cierto es que al momento de decidir qué productos cultivar, los agricultores no saben a cuanto lo podrán vender y por tanto los valores P_(t,a) y P_(t,b) en realidad son valores esperados.
 
 Existen muchas formas de considerar los precios esperados, usualmente se toma un valor ponderado de los últimos periodos, dándole un mayor peso al precio del periodo anterior. Otra forma puede ser utilizando alguna función que genere una expectativa lógica de cómo pueden ser los precios en el periodo t. Luego el problema de optimización se presenta de la siguiente manera:
 
@@ -152,14 +152,14 @@ El equilibrio en este mercado toma lugar cuando se intersectan la oferta y la de
  \begin{equation}\Delta \% Q_{t, a}^{S}=\Delta \% Q_{t, a}^{D}\end{equation}
 
 
-Por lo tanto en cada iteración, cuando el agricultor decida la asignación de tierra, está decidiendo cuanto va a producir lo cual al mismo tiempo está indicando cuanto se va a demandar y consumir.
+Por lo tanto, en cada iteración, cuando el agricultor decida la asignación de tierra, está decidiendo cuanto va a producir lo cual al mismo tiempo está indicando cuanto se va a demandar y consumir.
 
 .. figure:: img/imagen_1_polysys.png
    :align:   center
    :width:   500 px
 *Figura 1 - Imagen 1*
 
-Cuando un bien es transable, entonces, poder determinar cuanto se va a consumir depende de las variaciones del precio de dicho bien; dado que se trata de productos transados en el mercado internacional el equilibrio se determina por la interacción de la oferta y demanda agregadas del mundo en ese sentido el modelo requiere importar dichos resultados de mercado toda vez que el modelo no incorpora una metodología para predecir precios ni niveles de producción globales. 
+Cuando un bien es transable, entonces, poder determinar cuanto se va a consumir, depende de las variaciones del precio de dicho bien; dado que se trata de productos transados en el mercado internacional el equilibrio se determina por la interacción de la oferta y demanda agregadas del mundo en ese sentido el modelo requiere importar dichos resultados de mercado toda vez que el modelo no incorpora una metodología para predecir precios ni niveles de producción globales. 
 
 | **2.4 La población Ganadera**
 
