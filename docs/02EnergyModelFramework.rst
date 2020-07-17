@@ -704,8 +704,11 @@ En este caso por observar que el vector AgriData(:,i,j+1,1) es igual al resultad
 •	La función f (función a optimizar) es -1*transpose(AgriData(:,i,j+1,15)). El negativo es porque lo que queremos es realizar una maximización, y como la función está diseñada para una minimización la forma de adaptarla es multiplicando todo por -1.  Para fines expositivos tenemos lo siguiente:
 -1*transpose(AgriData(:,1,1,15))=-1*[59499.12 6586.37 17519.52 -5877.41 40215.23 265877.10 58709.67 247895.73 -19838.60 -3823.85 44397.96 83.94 10013.21 -18568.92]
 Aquí se puede observar claramente que se tiene una vector de dimensiones 1x14, cada valor representaría el ponderador de cada incógnita en una función lineal dentro de un problema de optimización lineal.
+
 •	El problema no tiene restricciones de desigualdad por eso los valores que están por notación de la función deben estar ocupados por A y b son reemplazados por [].
+
 •	Las restricciones de igualdad son AgriLandConstrains=[1 1 … 1] que es igual a AgricultureLandbyRegion, el vector (1x14) de tierra que denota el total de tierra para cada región. Esto indica que la suma de la tierra cultivada de todas las categorías dentro de una misma región no puede ser mayor a la tierra disponible en la región.
+
 •	Luego tenemos las restricciones de cambio propias de cada categoría de cultivo AgriData(:,i,j+1,10) y AgriData(:,i,j+1,11). Esto lo que indica es que la tierra cultivada de cada categoría no puede ser mayor ni menor del valor de la tierra multiplicada por uno más su tasa de flexibilidad.
 
 Los resultados de la optimización son la tierra cultivada y cosechada en el periodo j+1.
