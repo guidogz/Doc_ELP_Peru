@@ -437,6 +437,9 @@ número 16    Valor de la producción
 número 17    Resultados de mercado internacional en producción
 número 18    Resultados de mercado internacional en valor
 ========== ======================================================
+
+                  
+========== ======================================================
                    Emisiones
 ========== ======================================================
 Número 19    Factor agregado de emisiones
@@ -455,8 +458,61 @@ Número 31    Total de emisiones de quema de residuos
 Número 32    Total de emisiones de fertilizantes indirectos
 ========== ======================================================
 
+Para el sector ganadero tenemos:
 
+*Tabla 4 Índices Correspondientes a Variables del Sector Ganadero*
 
+========== ================================================
+número 1    Cabezas
+número 2    Incremento en el número de cabezas
+número 3    Costo
+número 4    Saca (oferta o matanza)
+número 5    Consumo
+número 6    Emisiones
+número 7    Precios
+número 8    Pastos
+número 9    Factores explicativos de los precios
+número 10   Factores explicativos de los costos
+número 11   Carga viva
+número 12   Capacidad natural para soportar una población
+========== ================================================
+
+**4.6 Otros Inputs**
+El modelo requiere ciertos inputs complementarios para la simulación:
+
+- Población: La población se define en base a los resultados predictivos del modelo T21. En el programa consiste en un vector de dimensión 1x35. La variable población se denomina: Population.
+- PBI: El PBI se define en base a los resultados predictivos del modelo T21. En el programa consiste en un vector de dimensión 1x35. La variable PBI se denomina: GDP.
+- Distribución de la población: Se tiene una distribución de la población entre las 7 regiones. La variable de distribución de la población se llama PopDistribution.
+
+**4.7 Inputs generados**
+
+Otras variables son elementos que ingresan al modelo pero que fueron calculados a partir de información que ingresada previamente. Tenemos:
+
+- RegionalPop: Se calcula la población para cada región mediante la función AssignPopulation. Lo que hace esta función es tomar como inputs la población total (Population) y multiplicarla por PopDistribution.
+- GDPperCapita: Representa el PBI per cápita en el modelo; se calcula usando como inputs el PBI (GDP) y la población (Population).
+- ConsumptionPerCapita: Representa el consumo por individuo en peso del producto de cada categoría de cultivo.
+- EnergyConsumption: Representa el consumo de energía por individuo de cada categoría de cultivo.
+- AggregatedEnergyConsumption: Es el consumo agregado de energía per cápita.
+
+**4.8 Diseño de la Simulación**
+
+La simulación se divide en tres subniveles:
+
+1.	Ingreso de información (inputs)
+2.	Tratamiento a la data (Solución del problema del problema de programación lineal y de la función logística).
+3.	Generación de output.
+
+**4.8.1 Ingreso de información**
+
+La transferencia de datos incluye dos secciones, la primera relacionada a información que no se almacena en las variables Agridata ni LSddata. La segunda a información que se almacena en las dos variables principales. La siguientes variables de carácter general se incluyen en la transferencia de datos inicial que no pertenece a Agridata ni LSddata. Tenemos:
+
+•	Population: La población proyectada hasta el 2050 del modelo T21.
+•	GDP: El PBI proyectado hasta el 2050 del modelo T21.
+•	DiscountFactor: El factor de descuento para traer a valor presente cualquier valor dentro del modelo. Este es estático y toma el valor de 0.92, siendo un input del modelo.
+•	AgriLandUseDomFruits, AgriLandUseExpFruits y AgriLandUseCandC: Estas variables indican la distribución de la tierra destinada a cultivos permanentes entre los 12 años del ciclo vegetativo. De esta forma se incorpora cuanta tierra está en su primer año, en su segundo año y así sucesivamente.  
+•	AgricultureLandbyRegion: Denota el máximo de tierra disponible para fines de agricultura para cada región
+•	AgriElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías agrícolas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 14x14.
+•	LSElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías ganaderas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 3x3.
 
 
 
