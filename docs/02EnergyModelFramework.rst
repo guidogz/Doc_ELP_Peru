@@ -752,7 +752,7 @@ La función AgriOuput (línea 442), encuentra el volumen de producción agrícol
 
 En esencia lo que hace esta función es multiplicar término a término las matrices de tierra (por cultivo y región) con la matriz de rendimiento (por cultivo y región).
 
-La demanda
+**La demanda**
 
 Dado que las variables de oferta han sido halladas en este punto es necesario hacerla interactuar con la demanda para obtener el resultado de equilibrio en el mercado. La interacción con la demanda se da a través de la función BAUFindEquilibrium. Esta función toma las variaciones de la oferta de los cultivos que se transan únicamente de manera interna y toma los precios internacionales y adapta el precio en el caso del primero y la demanda en el caso del segundo. La función tiene la siguiente notación:
 
@@ -760,43 +760,125 @@ Dado que las variables de oferta han sido halladas en este punto es necesario ha
 
 Sus inputs son, la variable principal del sector agrícola, la matriz de elasticidades, la elasticidad ingreso (que toma el valor de 0.3), el vector de población, el vector de PBI y el periodo que se está simulando. Se puede ver el detalle a continuación:
 
-function [VarQD, VarPD] = BAUFindEquilibrium(a,e,m,Pop,GDP,j,q,r)
-%a is the agriculture data
-%e is the elasticities matrix
-%m is the incom elasticity
-%Pop is the population
-%GDP is the GDP
-%j is the current period
+| ``function [VarQD, VarPD] = BAUFindEquilibrium(a,e,m,Pop,GDP,j,q,r)``
+| ``%a is the agriculture data``
+| ``%e is the elasticities matrix``
+| ``%m is the incom elasticity``
+| ``%Pop is the population``
+| ``%GDP is the GDP``
+| ``%j is the current period``
 
-VarP=zeros(14,1);
-b=a(:,:,j,14);
-b(12,1:3)=b(12,1:3)+q;
+| ``VarP=zeros(14,1);``
+| ``b=a(:,:,j,14);``
+| ``b(12,1:3)=b(12,1:3)+q;``
 
-c=a(:,:,j-1,14);
-c(12,1:3)=c(12,1:3)+r;
+| ``c=a(:,:,j-1,14);``
+| ``c(12,1:3)=c(12,1:3)+r;``
 
-VarQ = transpose(sum(transpose(b)))./transpose(sum(transpose(c)))-1;
+| ``VarQ = transpose(sum(transpose(b)))./transpose(sum(transpose(c)))-1;``
 
-VarP(5:14,1)=a(5:14,1,j,4)./a(5:14,1,j-1,4)-1;
+| ``VarP(5:14,1)=a(5:14,1,j,4)./a(5:14,1,j-1,4)-1;``
 
-CPop=Pop(1,j)/Pop(1,j-1)-1;
-CGDP=GDP(1,j)/GDP(1,j-1)-1;
+| ``CPop=Pop(1,j)/Pop(1,j-1)-1;``
+| ``CGDP=GDP(1,j)/GDP(1,j-1)-1;``
 
-%Matrix for the domestic price determinated products
+| ``%Matrix for the domestic price determinated products``
 
-A=e(1:4,5:14,j);
+| ``A=e(1:4,5:14,j);``
 
-VarNQ=VarQ(1:4,1);
+ ``|VarNQ=VarQ(1:4,1);``
 
-VarNQ = VarNQ-A*VarP(5:14,1)-CPop-m*CGDP;
+| ``VarNQ = VarNQ-A*VarP(5:14,1)-CPop-m*CGDP;``
 
-B=e(1:4,1:4,j);
-VarP(1:4,1) = linsolve(B,VarNQ);
-VarQD = e(:,:,j)*VarP + CPop + m*CGDP;
-VarPD = VarP;
-end
+| ``B=e(1:4,1:4,j);``
+| ``VarP(1:4,1) = linsolve(B,VarNQ);``
+| ``VarQD = e(:,:,j)*VarP + CPop + m*CGDP;``
+| ``VarPD = VarP;``
+| ``end``
 
+El detalle de lo que hace la función se presenta a continuación:
 
+1.	De la optimización y aplicación de la función AgriOuput sabemos cuánto es la producción de cada región. Dentro de esta función se agrega toda la producción por categoría de cultivo y posteriormente se obtiene cuanto ha sido la variación para el presente periodo.
+2.	Luego se encuentran los efectos (elasticidad multiplicada por variación de precio) que las variaciones de los precios internacionales generan sobre la demanda de los productos cuyos precios se determinan domésticamente.
+
+| ``VarNQ = VarNQ-A*VarP(5:14,1)-CPop-m*CGDP;``
+
+3.	Como se tiene la información de la variación de la oferta (producción) y del efecto de los precios internacional (que vendrían a ser constantes en esta sección) entonces se genera un sistema de ecuaciones a partir del cual se puede encontrar cuanto tienen que variar los precios para realizar el ajuste doméstico:
+
+| ``VarP(1:4,1) = linsolve(B,VarNQ);``
+
+4.	Una vez las variaciones de los precios domésticos se han encontrado, entonces es posible encontrar la variación de la demanda de productos transables. Esto se hace simplemente sumando la multiplicación de las elasticidades por las variaciones porcentuales de precios.
+
+| ``VarQD = e(:,:,j)*VarP + CPop + m*CGDP;``
+
+**El mercado Internacional**
+
+Una vez se ha hallado los resultados de producción y consumo entonces se procede a encontrar los resultados de mercado internacional,. E esencialmente encontrar cual es el resultado en cada categoría de producto agrícola. Esto se logra restando el consumo de la producción.
+
+:math:`AgriOuput(:,:,t,14) - AgriOuput(:,:,t,5)`	
+
+Estos resultados se guardan en AgriOuput(:,:,t,14). Propiamente es una resta simple de matrices. El resultado se interpreta como exportaciones si el resultado es positivo y como importaciones si el resultado es negativo.
+
+Emisiones
+
+Finalmente, en cuando a las emisiones se creó la función FindEmissions, la cual recibe como inputs la variable principal AgriData. Esta función multiplica los factores de emisión por la cantidad de tierra en cada año. Toma la siguiente sintaxis:
+
+| ``[AgriData(:,:,j+1,26), AgriData(:,:,j+1,27), AgriData(:,:,j+1,28), AgriData(:,:,j+1,29),``
+| ``AgriData(:,:,j+1,30), AgriData(:,:,j+1,31), AgriData(:,:,j+1,32)]= findEmissions(AgriData,j+1);``
+
+Los inputs de esta función son:
+1.	Factores de emisión (todos los tipos) AgriData, las variables del 19 al 25.
+2.	Total de tierra para cada región y para cada categoría de cultivo.
+
+Los resultados se guardan en AgriData, en las variables del 26 al 31.
+
+**3.2.2 Ganadería**
+
+Para la ganadería se utiliza el modelo mencionado en la sección teórica basado en una función de crecimiento poblacional logístico. Este modelo es ajustado por los pecios y costos del sctor de tal manera que se genera una senda de crecimiento poblacional con fluctuaciones dependiendo de los cambios en precios y costos.
+
+**Determinantes de las Fluctuaciones**
+
+Las variaciones de precios (carne y leche) y costos (alfalfa y maíz amarillo duro) se obtienen dividiendo la senda de precios y costos del periodo actual respecto al periodo anterior:
+
+| ``%LSChangePrice=LSData(:,:,j+1,7)./LSData(:,:,j,7)-1;     ``
+| ``%Change in  price``
+| ``%LSChangeCost(1,:)=AgriData(1,:,j+1,4)./AgriData(1,:,j,4)-1;``
+| ``%LSChangeCost(2,:)=AgriData(2,:,j+1,4)./AgriData(2,:,j,4)-1;``
+| ``%LSChangeCost(3,:)=AgriData(10,:,j+1,4)./AgriData(10,:,j,4)-1;``
+
+En este sentido, en cada iteración estos resultados dependen de los resultados del modelo de agricultura (la variable 4); AgriData(i,j,t,4).
+
+**Variación en Pastos**
+
+El modelo incluye los resultados de pastos de la simulación forestal, de esta manera se agregan dichos en la selva generando variaciones en el total de tierra disponible. 
+
+| ``LSData(1,7,j+1,8) = LSData(1,7,j,8)+LSShareGrassCows(1,7)*GrassResult(1,j);``
+| ``LSData(2,7,j+1,8) = LSData(2,7,j,8)+LSShareGrassDairyCows(1,7)*GrassResult(1,j); ``
+
+**Capacidad del hábitat**
+
+Sobre este nuevo total de pastos se agrega la tierra cultivada de alfalfa como pastos. Entonces se determina la máxima capacidad de soporte del hábitat. 
+
+|   ``LSData(1,:,j,12)=LSData(1,:,j,12)+LSShareGrassCows.*AgriData(1,:,j+1,1).*AgriData(1,:,j+1,2)/10950;``
+|   ``LSData(2,:,j,12)=LSData(2,:,j,12)+LSShareGrassDairyCows.*AgriData(1,:,j+1,1).*AgriData(1,:,j+1,2)/10950;``
+
+**Ecuación Logística**
+
+Posteriormente se incluyen todos los datos necesarios para el desarrollo de la ecuación logística:
+
+1.	El número de cabezas de ganado del periodo anterior (LSData(:,:,j,1))
+2.	Las tasas de crecimiento (LSData(:,:,j,2))
+3.	Las variaciones de precios y costos multiplicadas por sus ponderadores (LSChangePrice y LSChangeCost)
+
+| ``LSData(:,:,j+1,1)=LSData(:,:,j,1)+LSData(:,:,j,1).*((LSData(:,:,1,2).*(1-LSData(:,:,j,1)./LSData(:,:,j,12)))+LSData(:,:,1,9).*LSChangePrice+LSData(:,:,1,10).*LSChangeCost);``
+
+**La demanda**
+
+La demanda consiste en multiplicar la matriz de elasticidades de consumo por las variaciones de precio es decir LSElasticitiesxLSChangePrice.
+
+| ``LSConsumptionChange=LSElasticities(:,:,1)*LSChangePrice(:,1);``
+
+**3.3 Generación del Output**
 
 
 
