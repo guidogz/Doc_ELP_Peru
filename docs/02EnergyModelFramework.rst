@@ -518,13 +518,13 @@ La transferencia de datos incluye dos secciones, la primera relacionada a inform
 La población y el PBI (líneas 161 y 163):
 
 
-|``Population = xlsread('BAU.xlsx','General','C3:AL3');
-|GDP = xlsread('BAU.xlsx','General','C4:AL4');
-|La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)
-|DiscountFactor = xlsread('BAU.xlsx','Agriculture','N6');
-|AgricultureLandbyRegion = xlsread('BAU.xlsx','Agriculture','N4:T4');
-|Elasticities(:,:,1) = xlsread('BAU.xlsx','Agriculture','N21:AA34');
-|LSElasticities(:,:,1) = xlsread('BAU.xlsx','Livestock','L16:N18');``
+|``Population = xlsread('BAU.xlsx','General','C3:AL3');``
+|``GDP = xlsread('BAU.xlsx','General','C4:AL4');``
+|``La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)``
+|``DiscountFactor = xlsread('BAU.xlsx','Agriculture','N6');``
+|``AgricultureLandbyRegion = xlsread('BAU.xlsx','Agriculture','N4:T4');``
+|``Elasticities(:,:,1) = xlsread('BAU.xlsx','Agriculture','N21:AA34');``
+|``LSElasticities(:,:,1) = xlsread('BAU.xlsx','Livestock','L16:N18');``
 
 
 
