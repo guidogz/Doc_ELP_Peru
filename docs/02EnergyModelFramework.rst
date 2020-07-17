@@ -370,6 +370,7 @@ En el sector agrícola tenemos la siguiente categorización:
 
 
 *Tabla 1. Índices Correspondientes a Categorías de Cultivo*
+
 ================= ================================
 Valor del Índice   Categoría de Cultivo
 ================= ================================
@@ -392,19 +393,20 @@ número 14          Cereales y granos
 En el sector ganadero tenemos la siguiente categorización:
 
 *Tabla 2. Índices Correspondientes a Categorías Animal*
+
 ========== ============================
 número 1	Cabezas de ganado
 número 2	Cabezas de ganado lechero
 número 3	Aves
 ========== ============================
 
-4.3 La región
+**4.3 La región**
 Es denotado por j en el modelo. Para todo el modelo el total de regiones a analizar es 7: costa norte, costa centro, costa sur, sierra norte, sierra centro, sierra sur y selva. El número de regiones a analizar se define como: NumberRegions.
 
-4.4 El tiempo
+**4.4 El tiempo**
 El modelo hace un análisis que inicia con el año base en 2016 hasta el 2050; se tiene un total de 34 años de simulación y uno de base. El número de periodos se define como: NumberPeriods
 
-4.5 Variables
+**4.5 Variables**
 
 Para el sector agrícola tenemos:
 
@@ -412,9 +414,9 @@ Para el sector agrícola tenemos:
 
 
 *Tabla 3. Índices Correspondientes a Variables del Sector Agrícola*
+
 ========== ======================================================
-Indicadores de económicos
------------------------------------------------------------------ 
+                Indicadores de económicos
 ========== ======================================================
 número 1     Tierra
 número 2     Rendimiento
@@ -435,9 +437,7 @@ número 16    Valor de la producción
 número 17    Resultados de mercado internacional en producción
 número 18    Resultados de mercado internacional en valor
 ========== ======================================================
------------------------------------------------------------------ 
-         Emisiones
------------------------------------------------------------------ 
+                   Emisiones
 ========== ======================================================
 Número 19    Factor agregado de emisiones
 Número 20    Factor de emisiones de arrozales anegados
