@@ -400,13 +400,13 @@ número 2	Cabezas de ganado lechero
 número 3	Aves
 ========== ============================
 
-**4.3 La región**
+| **4.3 La región**
 Es denotado por j en el modelo. Para todo el modelo el total de regiones a analizar es 7: costa norte, costa centro, costa sur, sierra norte, sierra centro, sierra sur y selva. El número de regiones a analizar se define como: NumberRegions.
 
-**4.4 El tiempo**
+| **4.4 El tiempo**
 El modelo hace un análisis que inicia con el año base en 2016 hasta el 2050; se tiene un total de 34 años de simulación y uno de base. El número de periodos se define como: NumberPeriods
 
-**4.5 Variables**
+| **4.5 Variables**
 
 Para el sector agrícola tenemos:
 
@@ -477,14 +477,14 @@ número 11   Carga viva
 número 12   Capacidad natural para soportar una población
 ========== ================================================
 
-**4.6 Otros Inputs**
+| **4.6 Otros Inputs**
 El modelo requiere ciertos inputs complementarios para la simulación:
 
 - Población: La población se define en base a los resultados predictivos del modelo T21. En el programa consiste en un vector de dimensión 1x35. La variable población se denomina: Population.
 - PBI: El PBI se define en base a los resultados predictivos del modelo T21. En el programa consiste en un vector de dimensión 1x35. La variable PBI se denomina: GDP.
 - Distribución de la población: Se tiene una distribución de la población entre las 7 regiones. La variable de distribución de la población se llama PopDistribution.
 
-**4.7 Inputs generados**
+| **4.7 Inputs generados**
 
 Otras variables son elementos que ingresan al modelo pero que fueron calculados a partir de información que ingresada previamente. Tenemos:
 
@@ -494,7 +494,7 @@ Otras variables son elementos que ingresan al modelo pero que fueron calculados 
 - EnergyConsumption: Representa el consumo de energía por individuo de cada categoría de cultivo.
 - AggregatedEnergyConsumption: Es el consumo agregado de energía per cápita.
 
-**4.8 Diseño de la Simulación**
+| **4.8 Diseño de la Simulación**
 
 La simulación se divide en tres subniveles:
 
@@ -502,7 +502,7 @@ La simulación se divide en tres subniveles:
 2.	Tratamiento a la data (Solución del problema del problema de programación lineal y de la función logística).
 	3.	Generación de output.
 
-**4.8.1 Ingreso de información**
+| **4.8.1 Ingreso de información**
 
 La transferencia de datos incluye dos secciones, la primera relacionada a información que no se almacena en las variables Agridata ni LSddata. La segunda a información que se almacena en las dos variables principales. La siguientes variables de carácter general se incluyen en la transferencia de datos inicial que no pertenece a Agridata ni LSddata. Tenemos:
 
@@ -517,103 +517,284 @@ La transferencia de datos incluye dos secciones, la primera relacionada a inform
 
 La población y el PBI (líneas 161 y 163):
 
-
 | ``Population = xlsread('BAU.xlsx','General','C3:AL3');``
 | ``GDP = xlsread('BAU.xlsx','General','C4:AL4');``
-| ``La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)``
+
+La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)
+
 | ``DiscountFactor = xlsread('BAU.xlsx','Agriculture','N6');``
 | ``AgricultureLandbyRegion = xlsread('BAU.xlsx','Agriculture','N4:T4');``
 | ``Elasticities(:,:,1) = xlsread('BAU.xlsx','Agriculture','N21:AA34');``
-|``LSElasticities(:,:,1) = xlsread('BAU.xlsx','Livestock','L16:N18');``
+| ``LSElasticities(:,:,1) = xlsread('BAU.xlsx','Livestock','L16:N18');``
 
+En cuanto a la información que se destina a AgriData y LSData, esta ingresa al modelo mediante la función BAUTransferData. Esta función no tiene inputs de información agrícola o ganadera; sus únicos inputs están relacionados con la información general del modelo: número de regiones, número de periodos a simular, número de variables tanto para agricultura como para ganadería. Esta función simplemente se encarga de descargar toda la información de los file originales y la coloca en las variables principales AgriData y LSData. Por ello toda la información descargada aquí tiene la estructura apropiada para ser guardada dentro de variables estructuradas como (1).
 
+| ``%Transfers agiculture and livestock data from database to the code``
+| ``[AgriData, LSData]=BAUTransferData(AgriNumberCategories,LSNumberCategories,...``
+| ``NumberRegions,NumberPeriods,AgriNumberVariables,LSNumberVariables);``
 
+| **4.8.2 Tratamiento a la data**
 
+Una vez que la información ingresa al modelo, las variables AgriData y LSData están listas para recibir tratamiento y realizar cálculos.
 
+| **4.8.3 Cultivos Permanentes**
 
+En primer lugar, dado que existen categorías de cultivos permanentes, la tierra dedicada a estos cultivos estará dividida en porciones que estarán en distintas etapas (años) de su ciclo vegetativo. Para el modelo es necesario tener una variable que indique cuanta tierra está en cada etapa (año) para cada cultivo. Como ya se mencionó se tienen tres cultivos permanentes: frutas de consumo doméstico, frutas de exportación y café. Esta tierra se guarda, en detalle por año, en las variables:
 
+| ``AgriLandUseDomFruits``
+| ``AgriLandUseExpFruits``
+| ``AgriLandUseCandC``
 
+Como se mostró en la sección anterior para el primer año (2016) se asigna la tierra de manera manual; como un dato más del inicio de la simulación. Posteriormente se reasignará la tierra en cada simulación (para cada año) de tal forma que se pueda hacer una redistribución en base a los cambios agregados de la tierra. Esta tierra irá cambiando año a año de acuerdo a los resultados de la simulación. Consideremos un ejemplo, supongamos que un cultivo cualquiera tiene 1´216 ha divididas para cada año de su ciclo vegetativo, en el segundo año esta distribución varía porque la tierra que estaba en el último año vuelve a estar libre para usarse en otros cultivo; la tierra que estaba en el primer año, pasa a estar en su segundo año y así sucesivamente. La tierra nueva que se cultiva de los cultivos permanentes pasa a estar en su primer año. Para entender mejor esta dinámica podemos observar la tabla 5, a continuación: 
 
 
+*Tabla 5*
 
+======= ============== ============== ============== ==============
+                    Cultivo Permanente
+------------------------------------------------------------------- 
+          Simulación 	 Simulación 	Simulación 	   Simulación 
+           - Año 1        - Año 2        - Año 3        - Año 4    
+======= ============== ============== ============== ==============
+Año 1        100             132            140          98
+Año 2        100             100            132         140
+Año 3        100             100            100         132
+Año 4        100             100            100         100
+Año 5        100             100            100         100
+Año 6        100             100            100         100
+Año 7        100             100            100         100
+Año 8        100             100            100         100
+Año 9        100             100            100         100
+Año 10       100             100            100         100
+Año 11       102             100            100         100
+Año 12       114             102            100         100
+Total       1216            1234           1272        1270
+======= ============== ============== ============== ==============
 
 
 
+**4.8.4. Los precios internacionales**
 
+En cuanto a los precios internacionales que se importan de los resultados del modelo de equilibrio general COFFEE, lo que se hace antes de iniciar propiamente con la simulación, es importar la data para los cultivos del 5 al 14 (productos agrícolas internacionales). Esta información se coloca en AgriData(:,:,:,4). Es decir, en el segmento correspondiente al precio para todos los periodos.
 
+El ingreso de la información se realiza mediante la función IntPrices, cuyos inputs son el número de periodos y la propia matriz de precios a llenar (AgriData). Los datos de precios del modelo de COFFEE, ingresan como una matriz de 10x35 (diez productos y 35 años de resultados) y estos deben ser distribuidos en las 35 matrices que se generan dentro de AgriData. Por ejemplo AgriData(:,:,1,4) matriz que representa el año 2016, AgriData(:,:,2,4), matriz que representa el año 2017, …, AgriData(:,:,35,4), matriz que representa el año 2050.
 
+Ahora es importante mencionar que la data de precios internacionales no está distribuida por región (costa norte, sierra sur, etc.). Por ello, se realiza el siguiente procedimiento:
 
+1.	Primero, cuando se transfirió la data mediante BAUTransferData, se incluyó transferir los datos de precios regionalmente para cada producto de tal manera que AgriData(:,:,1,4) fue llenada.
+2.	Segundo la función IntPrices, toma los indicies de precios importados del modelo COFFEE y saca la variación para cada año desde el 2016 hasta el 2050.
+3.	El tercer paso consiste en usar el vector de las variaciones acumuladas previamente encontradas y multiplicarlo por la matriz de precios regional de tal manera que se consigue llenar el precio regionalmente para todos los años de simulación.
 
+A partir de este punto se genera un bucle, donde cada vuelta representa lo que sucede en un año, propiamente se podría decir que toda la dinámica que toma lugar dentro de este bucle representa toda la dinámica del modelo. Se realiza un tratamiento para cada sector; en el código la simulación de cada sector tiene un título en comentario que permite identificar la sección correspondiente.
 
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+|                          ``%Agriculture Simulation%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
 
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+|                           ``%Livestock Simulation%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
+| ``%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%``
 
+**4.8.5 Agricultura**
 
+El Valor Presente neto
 
+El primer paso para el problema de agricultura es hallar el valor presente para el sector agrícola. Esto se realiza mediante el uso de la función TotalNPV (ver línea 359), lo inputs de esta función son: los precios (AgriData(:,:,t,4)), los rendimientos, por región y categoría de cultivo (AgriData(:,:,t,2)), los costos, por región y categoría de cultivo (AgriData(:,:,t,3)), el factor de descuento (DiscountFactor), y una variable que indica en qué posición del arreglo están ubicados los cultivos permanentes (PermanentCrops).
 
+Propiamente la funciónTotalNPV utiliza a la función NPV para hallar el valor presente neto de cada categoría cultivo. La función NPV, usa como inputs los precios (AgriData(i,:,t,4)), los rendimientos, por región y categoría de cultivo (AgriData(i,:,t,2)), los costos, por región y categoría de cultivo (AgriData(i,:,t,3)), el factor de descuento (DiscountFactor), y un indicador de ser cultivo permanente o transitorio.
 
+La función NPV lo que hace es hallar la sumatoria de los beneficios netos de cada año para los siguientes 12 años.
 
+(DiscountFactor^t)*(AgriData(:,:,t,4).*(AgriData(:,:,t,2) - AgriData(:,:,t,3)))
 
+siendo que t toma valores para los 12 años. Los detalles de la programación se muestran a continuación:
 
+| ``function V = NPV(P,Y,C,d,e)``
+| `` %This function permit to find a category crop net present value``
+| ``%If e is equal to 1 then the crop is permanent``
 
+| ``if e==1``
+|       ``R=0;``
+|       ``for i=1:12``
+|             ``if i==1``
+|                   ``R = R - (d^(i-1))*C*3;``
+|             ``else``
+|                   ``R = R + (d^(i-1))*(P.*Y-C);``
+|             ``end``
+|       ``end``
+| ``end``
 
+| ``%If e is equal to 0 then the crop is transient``
+| ``if e==0``
+|       ``R=0;``
+|       ``for i=1:12``
+|             ``R = R + (d^(i-1))*(P.*Y-C);``
+|       ``end``
+| ``end``
 
+| ``%If e is different to 0 or 1 then an error is display``
+| ``if(e~=1) && (e~=0)``
+|        ``disp('error');``
+| ``end``
 
+| `` V = R;``
 
 
 
+El condicional que se coloca al inicio (e==1 o e==0) verifica si la posición dentro del vector corresponde a un cultivo permanente o a un transitorio. Cuando es 1, es permanente y 0 es transitorio. La forma de hallar el valor presente en ambos difiere un poco debido a las condiciones estructurales propias de cada tipo de cultivo.
 
+Por ejemplo por limitaciones de datos fue imposible obtener datos representativos de la inversión que requieren los cultivos permanentes. Por ese motivo se revisaron tesis sobre planes de negocio en el sector agrícola. Y se encontró que aproximadamente la inversión inicial era unas tres veces el valor del gasto corriente. 
 
+Debe notarse que en el programa el símbolo .* indica que se trata de un producto de matrices pero dato a dato. Por ejemplo:
 
+.. math::
 
+ \begin{equation}\left[\begin{array}{l}
+ 2 \\
+ 4
+ \end{array}\right] \cdot *\left[\begin{array}{l}
+ 1 \\
+ 2
+ \end{array}\right]=\left[\begin{array}{l}
+ 2 \\
+ 8
+ \end{array}\right]\end{equation}
 
+Se hacen los productos de esta forma porque se está sacando el valor presente para las 7 regiones de manera simultanea. 
 
+Como se puede observar, cuando la categoría de cultivo es permanente, el primer año automáticamente tiene un rendimiento igual a 0 y por tanto no hay ingresos, solo costos.
 
+**El LP y su solución**
 
+Una vez los valores presentes netos han sido hallados por región y por categoría de cultivo, entonces se puede proceder a hallar la solución del problema de programación lineal. Para este fin se utiliza la función Linprog, una función propia del MATLAB, cuya sintaxis que se describe así :
 
+.. math::
 
+ \begin{equation}\min _{0 \leq x \leq \infty} f(x)\left\{\begin{array}{c}
+ \text { A. } x<b \\
+ \text { Aeq. } x=\text { beq } \\
+ \text { lb }<x<u b
+ \end{array}\right.\end{equation}
 
+Tal como se observa, esta función minimiza una función lineal sujeta a restricciones de igualdad, y desigualdades lineales. La función se aplica de la siguiente forma:
 
+:math:`x = linprog(f, A, b, Aeq, beq, lb, ub)`
 
+•	Siendo f la función a optimizar
+•	A es la matriz de coeficientes de las ecuaciones que sirven como restricciones.
+•	La letra b denota a los valores que toman estas ecuaciones.
+•	Aeq es la matriz de coeficientes de las ecuaciones que sirven como restricciones.
+•	La letra beq denota a los valores que toman estas ecuaciones.
+•	El término lb denota las restricciones inferiores a las variables a optimizar.
+•	El término ub denota las restricciones superiores a las variables a optimizar.
 
+Primero se coloca la función a optimizar, posteriormente la matriz que representa las restricciones, después el valor de dichas restricciones. En el caso del sector agrícola en el POLYSYS se coloca lo siguiente (ver línea 379):
 
+|``AgriData(:,i,j+1,1)=linprog(-1*transpose(AgriData(:,i,j,15)),[],[],... ``
+|``AgriLandConstrains,AgricultureLandbyRegion(1,i),AgriData(:,i,j,10),AgriData(:,i,j,11));``
 
+En este caso los dos puntos que se ponen en la primera entrada de las variables hacen referencia a que se están tomando todos las categorías de cultivo al mismo tiempo; es decir un vector. La letra i denota región y la letra j el tiempo en este caso. Podemos, entonces, observar que AgriData(:,i,j+1,1), denota un vector. Por el valor 1 del índice que se utiliza en la cuarta entrada de la variable entonces AgriData(:,i,j+1,1) se refiere a la tierra cultivada y cosechada. Entonces AgriData(:,i,j+1,1) denota al vector de tierra que representa a todas las categorías de cultivo en la región i, en el periodo j+1.
 
+En este caso por observar que el vector AgriData(:,i,j+1,1) es igual al resultado de la función linprog; es decir estamos hallando la tierra en el periodo siguiente j+1. Ahora en cuanto al uso propio de la función tenemos que:
 
+•	La función f (función a optimizar) es -1*transpose(AgriData(:,i,j+1,15)). El negativo es porque lo que queremos es realizar una maximización, y como la función está diseñada para una minimización la forma de adaptarla es multiplicando todo por -1.  Para fines expositivos tenemos lo siguiente:
+-1*transpose(AgriData(:,1,1,15))=-1*[59499.12 6586.37 17519.52 -5877.41 40215.23 265877.10 58709.67 247895.73 -19838.60 -3823.85 44397.96 83.94 10013.21 -18568.92]
+Aquí se puede observar claramente que se tiene una vector de dimensiones 1x14, cada valor representaría el ponderador de cada incógnita en una función lineal dentro de un problema de optimización lineal.
+•	El problema no tiene restricciones de desigualdad por eso los valores que están por notación de la función deben estar ocupados por A y b son reemplazados por [].
+•	Las restricciones de igualdad son AgriLandConstrains=[1 1 … 1] que es igual a AgricultureLandbyRegion, el vector (1x14) de tierra que denota el total de tierra para cada región. Esto indica que la suma de la tierra cultivada de todas las categorías dentro de una misma región no puede ser mayor a la tierra disponible en la región.
+•	Luego tenemos las restricciones de cambio propias de cada categoría de cultivo AgriData(:,i,j+1,10) y AgriData(:,i,j+1,11). Esto lo que indica es que la tierra cultivada de cada categoría no puede ser mayor ni menor del valor de la tierra multiplicada por uno más su tasa de flexibilidad.
 
+Los resultados de la optimización son la tierra cultivada y cosechada en el periodo j+1.
 
+Finalmente aquí es importante mencionar la redistribución de tierra en el caso de los cultivos permanentes que mencionamos anteriormente en la sección 4.8.3.
 
 
+| ``%Land is re-allocated``
+| ``AgriLandUseDomFruits = AllocateLand(AgriLandUseDomFruits,AgriData(5,:,j+1,1));``
+    
+| ``AgriLandUseExpFruits = AllocateLand(AgriLandUseExpFruits,AgriData(7,:,j+1,1));``
 
+| ``AgriLandUseCandC = AllocateLand(AgriLandUseCandC,AgriData(9,:,j+1,1));``
 
+Se usa la función AllocateLand, la cual redistribuye la tierra entre los 12 años correspondientes y que serán input para la simulación del siguiente año. Esto sucede después de la optimización en la línea 395.
 
+En este punto también se definen los nuevos limites a los cambios de tierra que serán usados en el siguiente periodo a simular (líneas 409 y 427):
 
+| ``AgriData(:,:,j+1,10) = (1+AgriData(:,:,1,8)).*AgriData(:,:,j+1,1); %Down limit``
 
+| ``AgriData(:,:,j+1,11) = (1+AgriData(:,:,1,9)).*AgriData(:,:,j+1,1); %Up limit``
 
+Esto indica cuanto podrán crecer o disminuir las hectáreas asignadas a cada categoría cultivo en el siguiente periodo.
 
+**La oferta**
 
+Una vez la optimización ha sido realizada, se tienen los resultados de la tierra cosechada, la cual representa la oferta. Para hallar esto en términos de producción se utiliza la función AgriOuput de la siguiente manera:
 
 
 
 
+| ``AgriData(:,:,j+1,14)=AgriOutput(AgriData(:,:,j+1,1),AgriData(:,:,j+1,2),LandFirstYear(:,:,j));``
 
+Los inputs de la función son: 
 
+1.	La tierra total; es decir el resultado de LP (AgriData(:,i,j+1,1))
+2.	El rendimiento AgriData(:,i,j+1,2)
+3.	La tierra de los cultivos permanentes que están en su primer año LandFirstYear(:,:,j)
 
+La función AgriOuput (línea 442), encuentra el volumen de producción agrícola dada la cantidad total de tierra resultante del problema de optimización.
 
+:math:`AgriData(:,i,j+1,1).* AgriData(:,i,j+1,2)`
 
 
+En esencia lo que hace esta función es multiplicar término a término las matrices de tierra (por cultivo y región) con la matriz de rendimiento (por cultivo y región).
 
+La demanda
 
+Dado que las variables de oferta han sido halladas en este punto es necesario hacerla interactuar con la demanda para obtener el resultado de equilibrio en el mercado. La interacción con la demanda se da a través de la función BAUFindEquilibrium. Esta función toma las variaciones de la oferta de los cultivos que se transan únicamente de manera interna y toma los precios internacionales y adapta el precio en el caso del primero y la demanda en el caso del segundo. La función tiene la siguiente notación:
 
+| ``[VarQD, VarPD] = BAUFindEquilibrium(AgriData,Elasticities,0.3,Population,GDP,j+1)``
 
+Sus inputs son, la variable principal del sector agrícola, la matriz de elasticidades, la elasticidad ingreso (que toma el valor de 0.3), el vector de población, el vector de PBI y el periodo que se está simulando. Se puede ver el detalle a continuación:
 
+function [VarQD, VarPD] = BAUFindEquilibrium(a,e,m,Pop,GDP,j,q,r)
+%a is the agriculture data
+%e is the elasticities matrix
+%m is the incom elasticity
+%Pop is the population
+%GDP is the GDP
+%j is the current period
 
+VarP=zeros(14,1);
+b=a(:,:,j,14);
+b(12,1:3)=b(12,1:3)+q;
 
+c=a(:,:,j-1,14);
+c(12,1:3)=c(12,1:3)+r;
 
+VarQ = transpose(sum(transpose(b)))./transpose(sum(transpose(c)))-1;
 
+VarP(5:14,1)=a(5:14,1,j,4)./a(5:14,1,j-1,4)-1;
 
+CPop=Pop(1,j)/Pop(1,j-1)-1;
+CGDP=GDP(1,j)/GDP(1,j-1)-1;
 
+%Matrix for the domestic price determinated products
 
+A=e(1:4,5:14,j);
 
+VarNQ=VarQ(1:4,1);
+
+VarNQ = VarNQ-A*VarP(5:14,1)-CPop-m*CGDP;
+
+B=e(1:4,1:4,j);
+VarP(1:4,1) = linsolve(B,VarNQ);
+VarQD = e(:,:,j)*VarP + CPop + m*CGDP;
+VarPD = VarP;
+end
 
 
 
@@ -727,7 +908,3 @@ La población y el PBI (líneas 161 y 163):
 
 2.3 Resultados de los escenarios base
 +++++++++
-
-  
-
-  
