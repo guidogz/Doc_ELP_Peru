@@ -500,7 +500,7 @@ La simulación se divide en tres subniveles:
 
 1.	Ingreso de información (inputs)
 2.	Tratamiento a la data (Solución del problema del problema de programación lineal y de la función logística).
-3.	Generación de output.
+	3.	Generación de output.
 
 **4.8.1 Ingreso de información**
 
@@ -515,6 +515,16 @@ La transferencia de datos incluye dos secciones, la primera relacionada a inform
 •	LSElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías ganaderas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 3x3.
 
 
+La población y el PBI (líneas 161 y 163):
+
+
+``Population = xlsread('BAU.xlsx','General','C3:AL3');
+GDP = xlsread('BAU.xlsx','General','C4:AL4');
+La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)
+DiscountFactor = xlsread('BAU.xlsx','Agriculture','N6');
+AgricultureLandbyRegion = xlsread('BAU.xlsx','Agriculture','N4:T4');
+Elasticities(:,:,1) = xlsread('BAU.xlsx','Agriculture','N21:AA34');
+LSElasticities(:,:,1) = xlsread('BAU.xlsx','Livestock','L16:N18');``
 
 
 
