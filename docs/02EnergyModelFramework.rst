@@ -219,9 +219,7 @@ La Serie de Producción Agrícola Estadística (SEPA) es información recopilada
 
 .. _frenteweb: http://frenteweb.minagri.gob.pe/sisca/
 
-La Encuesta Nacional Agraria (ENA) es una encuesta con datos disponibles por año desde 2014 hasta 2018. Esta encuesta es realizada por el Instituto Nacional de Estadística e Informática. ENA incluye información por año sobre los costos agrícolas: pesticidas, semillas y fertilizantes. Los datos de ENA se recopilan anualmente, por lo tanto, los datos de inversión no están disponibles durante largos períodos de tiempo. En este sentido, los datos de ENA representan los gastos corrientes asociados al sector agrícola. Los datos de la ENA se pueden descargar del siguiente iinei_ .
-
-.. _iinei: http://iinei.inei.gob.pe/microdatos/.
+La Encuesta Nacional Agraria (ENA) es una encuesta con datos disponibles por año desde 2014 hasta 2018. Esta encuesta es realizada por el Instituto Nacional de Estadística e Informática. ENA incluye información por año sobre los costos agrícolas: pesticidas, semillas y fertilizantes. Los datos de ENA se recopilan anualmente, por lo tanto, los datos de inversión no están disponibles durante largos períodos de tiempo. En este sentido, los datos de ENA representan los gastos corrientes asociados al sector agrícola. Los datos de la ENA se pueden descargar del siguiente iinei_.
 
 El CENAGRO es un censo del sector agrícola peruano y la fuente de datos más confiable de la que se dispone, fué aplicado por el Instituto Nacional de Estadística e Informática en el 2012. Lamentablemente no han sido actualizados aún, por lo que los datos no son totalmente representativos de nuestro año base. Por otro lado, el CENAGRO carece de datos de costos, lo cual es esencial para el modelo de simulación POLYSYS. Se puede descargar en el siguiente iinei_.
 
@@ -277,36 +275,185 @@ A partir de ahora, el índice asociado a cada variable o constante caracterizar�
 
 Sobre el modelo propuesto en el capítulo 2 y sabiendo el total de divisiones regionales (7 regiones), de categoría de productos agrícolas (14 categorías) y de categorías de productos ganaderos (3 categorías) tenemos que la aplicación a la economía peruana implica que la oferta debe simular las decisiones de inversión agregada de los agricultores y ganaderos en cada región, como resultado estamos simulando las decisiones económicas de las 7 regiones en cada período de tiempo t. Intuitivamente, esto significa que en cada año una región decide cuántas tierras se dedican a cultivar cada cultivo, así como indicar cuanto ganado se sacrificará y en cuanto crecerá el total de cabezas de ganado. Esta decisión está limitada en dos sentidos: 
 
+1.	Primero la tierra total disponible en cada región, para agricultura y para ganadería:
+
+.. math::
+
+ \begin{equation}\begin{array}{l}
+ \sum_{i=1}^{14} L_{i, r, t}<\bar{L}_{r} \\
+ \sum_{j=1}^{2} L_{j, r, t}<\bar{L}_{r}
+ \end{array}\end{equation}
+
+2.	Segundo considera la limitación en el cambio del uso de la tierra agrícola de un período al siguiente:
+
+.. math::
+
+ \begin{equation}\left|L_{i, r, t}\right|<\left(1+\delta_{i, r, t}\right)\left|L_{i, r, t-1}\right|\end{equation}
+
+La tasa de cambio se determina de manera aproximada como un promedio de la tasa de variación del uso de la tierra de los últimos cinco años y posteriormente se ajusta de acuerdo a las necesidades que pueda requerir la simulación. Como ya se mencionó intuitivamente estas restricciones simulan la elasticidad de la oferta, ya que indica la capacidad de la oferta para sustituir un producto por otro. Por otro lado, suponemos que la capacidad de previsión de los agricultores es limitada, por lo cual basan sus decisiones en expectativas adaptativas donde el precio esperado para este período es el precio del período anterior. Es decir:
+
+.. math::
+
+ \begin{equation}E\left[P_{i, r, t}\right]=P_{i, r, t-1}\end{equation}
+
+
+En este punto resulta útil mencionar que los productos permanentes, en el problema de programación lineal que presentamos a continuación, debe considerar que el espacio temporal es distinto dependiendo el tipo de producto que se cultivará. En tal sentido las frutas de consumo doméstico, de exportación y la categoría de café y cacao son productos permanentes mientras el resto son considerados productos transitorios.
+Como simplificación el espacio temporal de los productos transitorios se considerará un año. De esta manera lo que, intuitivamente, estamos diciendo es que un agricultor decide cultivar un producto al inicio del año y al final del mismo lo cosecha y vende. En cambio, un producto permanente tiene un comportamiento más parecido al de una inversión de mediano y largo plazo, donde la decisión de cultivar un producto se toma en el presente, sin poder modificarla hasta que la planta haya cumplido todo su ciclo vegetativo.
+El cuestionamiento que surge de esto es saber cuál es el ciclo vegetativo correcto para los cultivos permanentes en el Perú. Sin embargo, cuando se hicieron indagaciones se encontró que los ciclos de cada cultivo eran muy diversos, y por tanto el ciclo para cada categoría era muy difícil de obtener. Por ejemplo, en el caso del café se encontraron distintos tipo de plantas de café, existiendo variedades que tenían un ciclo que rondaba entre los 20 y 25 años, sin embargo también se encontró que había otra variedad, que es la más utilizada hoy en día, y cuyo ciclo vegetativo rondaba los 10 años. Por lo tanto, debido a la fuerte heterogeneidad que existe entre los cultivos que componen cada categoría se decidió que el ciclo vegetativo de todos los cultivos permanentes sería de 12 años para la simulación.
+Otro aspecto a tener en cuenta es la rigidez de los cultivos permanentes después de ser cultivados. En tal sentido después que una región decide destinar cierta cantidad de tierra al cultivo de una categoría permanente, esta tierra no podrá ser dedicada a otro cultivo durante 12 años. Además, una vez que los cultivos permanentes, requieren de un tiempo mínimo durante el cual debe permanecer plantado, sin producir ningún retorno. Como simplificación se consideró que este tiempo, en el caso todos los cultivos permanentes, se reduce al primer año.
+La decisión de inversión resulta de una maximización de ganancias, que está representada por el siguiente problema lineal del programa:
+
+.. math::
+
+ \begin{equation}\begin{aligned}
+ &\max _{L_{i, r, t}}\left\{E\left[\Pi_{r}\right]=\sum_{t=1}^{12} \rho^{t} \sum_{i=1}^{14} L_{i, r, t}\left(Y_{i, r, t} E\left[P_{i, r, t}\right]-C_{i, r, t}\right)\right\}\\
+ &\text {s.a.} \quad\left|L_{i, r, t}\right|<\left(1+\delta_{i}\right)\left|L_{i, r, t-1}\right| \forall i \in\{1, \ldots, I\}\\
+ &\text {s.t.} \sum_{i=1}^{I} L_{i, r, t}<\bar{L}_{r, t}^{*} \forall i \in\{1, \ldots, I\}
+ \end{aligned}\end{equation}
+
+Esta optimización se aplica en cada período (año); además el total de tierra disponible depende también de cuántas hectáreas de cultivos permanentes se han cultivado en años anteriores. Esto se debe la restricción que existe una vez un cultivo permanente ha sido cultivado. Queda claro que una vez han pasado 12 años, la tierra destinadas a dichos cultivos permanente queda libre para poder asignarse a otros cultivos. 
+3.4.3 Contribuciones Nacionalmente Determinadas
+
+.. math::
+
+ \begin{equation}\begin{aligned}
+ \pi_{t, j}=& \sum_{i=1}^{15} T_{t, i}\left(Y_{t, i} P_{t-1, i}-C_{t-1, i}\right) \\
+ & \sum_{i=1}^{15}\left(1+\beta_{t, i}\right) T_{t, i} \leq \bar{T}
+ \end{aligned}\end{equation}
+
+Vamos a determinar el arroz como :math:`i ̂ y` el nuevo método de cultivo de arroz como :math:`i ̃,` luego para cualquier :math:`i∈ {1,2 ... 15} - {i ̂, i ̃}` tenemos:
+
+.. math::
+
+ \begin{equation}\begin{array}{c}
+ \left(1-\beta_{t, i}\right) T_{t-1, i} \leq T_{t, i} \leq\left(1+\beta_{t, i}\right) T_{t-1, i} \\
+ \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, \hat{i}}+T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, i}+\left(1+\beta_{t, i}\right) T_{t-1, i}
+ \end{array}\end{equation}
+
+
+
+.. math::
+
+ \begin{equation}\begin{array}{l}
+ \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, i}+\left(1+\beta_{t, i}\right) T_{t-1, i} \\
+ \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, \tilde{i}}<\left(1+\beta_{t, \hat{i}}\right) T_{t-1, \hat{\lambda}}+\left(1+\beta_{t, \bar{i}}\right) T_{t-1, \tilde{i}}
+ \end{array}\end{equation}
+
+
+| **4. Diseño del Programa**
+
+Este documento pretende ser una guía del código POLYSYS implementado en matlab. Antes de iniciar es importante hacer algunas menciones de forma:
+	Para todas las variables que se crean en el modelo, primero se generan como variables llenas de ceros; y después se llenan con los datos que se desea.
+	Por nomenclatura todas las variables referidas al sector agrícola tienen la palabra Agri al inicio y las variables referidas al sector ganadero tienen las letras LS.
+
+| **4.1 Variables Principales**
+
+Las dos variables principales son:
+	AgriData: La variable que contiene toda la información relevante (inputs y outputs) para el sector agrícola
+	LSData: La variable que contiene toda la información relevante (inputs y outputs) para el sector ganadero
+Ambas variables siguen un patrón claro de la presentación de los datos; ambas son un arreglo de dimensión 4 que sigue la siguiente estructura :
+Variable(i,j,t,x)…(1)
+Donde:
+	i representa la categoría de producto
+	j representa la región
+	t representa el año
+	x representa la variable a usar; por ejemplo, ha de tierra, producción, costos, cabezas de ganado, etc.
+	
+| **4.2 Categoría de producto**
+
+En los dos sectores que se analizan se tiene lo siguiente
+
+	AgriNumberCategories: Indica el número de categorías de cultivo que hay en el sector agricultura, en este caso son 14.
+	LSNumberCategories: Indica el número de categorías de cultivo que hay en el sector ganadería, en este caso son 3.
+
+En el sector agrícola tenemos la siguiente categorización:
+
+
+*Tabla 1. Índices Correspondientes a Categorías de Cultivo*
+================= ================================
+Valor del Índice   Categoría de Cultivo
+================= ================================
+número 1           Alfalfa
+número 2           Legumbres
+número 3           Maíz
+número 4           Tubérculos
+número 5           Frutas de consumo doméstico
+número 6           Vegetales de consumo doméstico
+número 7           Frutas de exportación
+número 8           Vegetales de exportación
+número 9           Cacao y café
+número 10          Maíz amarillo duro
+número 11          Caña de azúcar
+número 12          Arroz
+número 13          Algodón
+número 14          Cereales y granos
+================= ================================
+
+En el sector ganadero tenemos la siguiente categorización:
+
+*Tabla 2. Índices Correspondientes a Categorías Animal*
+========== ============================
+número 1	Cabezas de ganado
+número 2	Cabezas de ganado lechero
+número 3	Aves
+========== ============================
+
+4.3 La región
+Es denotado por j en el modelo. Para todo el modelo el total de regiones a analizar es 7: costa norte, costa centro, costa sur, sierra norte, sierra centro, sierra sur y selva. El número de regiones a analizar se define como: NumberRegions.
+
+4.4 El tiempo
+El modelo hace un análisis que inicia con el año base en 2016 hasta el 2050; se tiene un total de 34 años de simulación y uno de base. El número de periodos se define como: NumberPeriods
+
+4.5 Variables
+
+Para el sector agrícola tenemos:
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*Tabla 3. Índices Correspondientes a Variables del Sector Agrícola*
+========== ======================================================
+Indicadores de económicos
+----------------------------------------------------------------- 
+========== ======================================================
+número 1     Tierra
+número 2     Rendimiento
+número 3     Costo
+número 4     Precios
+número 5     Demanda o consumo
+número 6     Rendimiento
+número 7     Incremento en costo
+número 8     Tasa de variación de la tierra hacia abajo
+número 9     Tasa de variación de la tierra hacia arriba
+número 10    Tierra que acota la tierra hacia abajo
+número 11    Tierra que acota la tierra hacia arriba
+número 12    Consumo per cápita
+número 13    Calorías per cápita
+número 14    Producción agrícola
+número 15    Valor presente neto
+número 16    Valor de la producción
+número 17    Resultados de mercado internacional en producción
+número 18    Resultados de mercado internacional en valor
+========== ======================================================
+----------------------------------------------------------------- 
+         Emisiones
+----------------------------------------------------------------- 
+========== ======================================================
+Número 19    Factor agregado de emisiones
+Número 20    Factor de emisiones de arrozales anegados
+Número 21    Factor de emisiones de residuos de cosecha
+Número 22    Factor de emisiones de fertilizantes sintéticos
+Número 23    Factor de emisiones de fijadores
+Número 24    Factor de emisiones de quema de residuos
+Número 25    Factor de emisiones de fertilizantes indirectos
+Número 26    Total agregado de emisiones
+Número 27    Total de emisiones arrozales anegados
+Número 28    Total de emisiones de residuos de cosecha
+Número 29    Total de emisiones de fertilizantes sintéticos
+Número 30    Total de emisiones de fijadores
+Número 31    Total de emisiones de quema de residuos
+Número 32    Total de emisiones de fertilizantes indirectos
+========== ======================================================
 
 
 
