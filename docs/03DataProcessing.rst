@@ -26,7 +26,7 @@ La diversidad de la matriz energética en el Peru se muestra en una amplia canti
 de technologías y commodities, todo este conjunto de información para el sector 
 energía han sido tomadas de los informes hechos por el PROSEMER en los cuales su 
 principal objetivo es el desarrollo de un modelo para la optimización de la oferta 
-del sistema energético basados en modelos de optimización TIMES que fue desarrollado 
+del sistema energético basados en modelos de optimización TIMES_ que fue desarrollado 
 como parte del IEA-ETSAP's metodología usada para escenarios de energía para conducir 
 en un profundo análisis de la energía.
 
@@ -41,7 +41,6 @@ comodities de mayor calidad.
 
 .. ``bueno ya es hora de divertirse, como para poner lineas de código, esto se debe eliminar``
 
-Para mayor información del modelo TIMES_ 
 
 .. _TIMES: https://iea-etsap.org/index.php/etsap-tools/model-generators/times/
 
@@ -64,12 +63,11 @@ __ http://www.python.org/
 3.1.1.1 Procesos
 ---------
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una 
-entrada de commodities, sin embargo, siempre tienen una salida de commodities, las 
-principales tecnologías para el peru se muestran a continuación. Los procesos tienen 
-involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
+entrada de commodities, sin embargo, siempre tienen una salida de commodities, Los procesos 
+tienen involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
 costos examinados por capacidad para las plantas de gas y refinerías han sido estudiadas 
-para tener datos con los cuales poder suministrar al modelo. La proyeciones desde 2015 al 
-2055 de estos datos se han obtenido del Informe 9 del PROSEMER. 
+para tener datos con los cuales poder suministrar al modelo. Las principales tecnologías 
+para el peru se muestran a continuación.
 
 +--------------------+----------------------------------------------------------------------+
 |Producción          | La producción de commodities incluye extración, procesamiento,       |
@@ -252,19 +250,20 @@ TOTAL                        12,636.89
 
 ============================== ========================== =============
 POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019       
+
 ------------------- ---------------------------------------------------
 TIPO DE RECURSO ENERGÉTICO     POTENCIA EFECTIVA (MW)        (%)    
 ============================== ========================== =============
-AGUA                                  4,748.37               37.58 
-RENOVABLES                            1,041.01                8.24 
-GAS NATURAL DE CAMISEA                3,775.21               29.87 
-GAS NATURAL DE AGUAYTIA                 176.05                1.39 
-GAS NATURAL DE MALACAS                  343.61                2.72 
-DIESEL 2                              2,334.21               18.47 
-RESIDUAL                                 77.73                0.62 
-CARBÓN                                  140.71                1.11 
+  AGUA                                  4,748.37               37.58 
+  RENOVABLES                            1,041.01                8.24 
+  GAS NATURAL DE CAMISEA                3,775.21               29.87 
+  GAS NATURAL DE AGUAYTIA                 176.05                1.39 
+  GAS NATURAL DE MALACAS                  343.61                2.72 
+  DIESEL 2                              2,334.21               18.47 
+  RESIDUAL                                 77.73                0.62 
+  CARBÓN                                  140.71                1.11 
 ------------------------------ -------------------------- -------------
-TOTAL                                12,636.89              100.00     
+  TOTAL                                12,636.89              100.00     
 ============================== ========================== ============= 
 
 *Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
