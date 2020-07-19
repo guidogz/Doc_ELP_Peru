@@ -1033,7 +1033,7 @@ Donde:
 
 
 -𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
-                manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
+                   manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
 -𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
 -𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
 -𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
@@ -1080,7 +1080,16 @@ Donde:
 
 
 
-
+| Line blocks are useful for addresses,
+| verse, and adornment-free lists.
+|
+| Each new line begins with a
+| vertical bar ("|").
+|     Line breaks and initial indents
+|     are preserved.
+| Continuation lines are wrapped
+  portions of long lines; they begin
+  with spaces in place of vertical bars.
 
 
 
