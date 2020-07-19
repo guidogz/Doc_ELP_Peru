@@ -613,7 +613,308 @@ planificado al 2050 lograr la carbononeutralidad.
 
  
 
-3.1.2 Modelos de ajuste del sector energía
+
+3.1.2 Proyección de demanda - Ecuaciones para las proyecciones de las proyecciones de los sectores
+--------------
+
+**3.1.2.1 Ecuaciones generales para Residencial, Comercial, Publico y Sectores Productivos**
+
+
+ANTES DE LA INTEGRACIÓN
+
+Se consideran 7 divisiones.
+
+- k=1, (Residencial)
+- k=2, (Comercial 
+- k=3, (Público)
+- k=4, (Industrial manufacturera en general)
+- k=5, (Pesca)
+- k=6, (Agropecuaria)
+- k=7, (Minería y metalurgia)
+
+
+ DESPÚES DE LA INTEGRACIÓN
+
+Se consideran 6 divisiones.
+
+- k=1, (Residencial)
+- k=2, (Comercial y Público)
+- k=3, (Industrial manufacturera)
+- k=4, (Pesca)
+- k=5, (Agropecuaria)
+- k=6, (Minería y metalurgia)
+
+
+**proyección del consumo de energía neta de los macro sectores**
+
+Para obtener la proyección del consumo de energía neta de los macro sectores Edificaciones (re-sidencial y comercial, servicios y público) y Agropecuario/Industrial (industrial, pesquería, agro-pecuaria y minería) se plantea un modelo de regresión lineal, mediante el cual se estiman los coe-ficientes 𝛼𝑘, 𝛽𝑘, 𝛾𝑘, 𝜃𝑘 por el método Mínimos Cuadrados Ordinarios (MCO) para cada segmento:
+
+
+
+.. math::
+
+ \begin{equation}\ln \left(E_{t, k}\right)=\alpha_{k}+\beta_{k} \ln \left(E_{t-1, k}\right)+\gamma_{k} \ln \left(P I B_{t-1}\right)+\theta_{k} T e n d_{t}\end{equation}
+
+
+Donde:
+
+
+-𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
+                manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
+-𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
+-𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
+-𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
+-𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
+
+
+Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
+La proyección de la energía final anual se desagrega por commodity i para k=1,2,3 utilizando la ecuación:   
+
+.. math::
+
+ \begin{equation}d_{t, r, i, k}=E_{t, k} \times \varphi_{i, r, k}\end{equation}
+
+
+Donde:
+-i                Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
+                   o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
+                  Diesel, gasohol (sumado con gasolina) y queroseno si k =2,3; o utilizada por 
+                  el servicio energético n, o sea, i(n) para k>3.
+                  Los servicios energéticos son: n=1 para calor de proceso, n=2 para fuerza motriz 
+                  y n=3 para electricidad. Los datos provienen del BEU, 2013.
+-r               Índice de la región: Centro, Norte, Oriente, Sur
+-𝑑𝑡,𝑟,𝑖,𝑘         Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
+-𝜑𝑖,𝑟,𝑘           Fracción de la energía final del segmento k asociada a la commodity i y región 
+                  r. Valores provenientes del BEU 2013.
+
+
+La energía útil por commodity, utilizada por los sectores k=1 (residencial), k=2 (comercial), k=3 (público), considera también la eficiencia de conversión en cada caso.
+
+
+
+.. math::
+
+ \begin{equation}u_{t, r, i, k}=d_{t, r, i, k} \times \eta_{i, r, k}\end{equation}
+
+
+Donde:
+-𝜂𝑖,𝑟,𝑘            Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
+                    en la región r, segmento k (proveniente del BEU)
+-𝑢𝑡,𝑟,𝑖,𝑘          Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
+
+La energía útil por servicios energéticos, utilizada por los sectores industriales (k>3), se calcula con la fórmula abajo. Estos valores serán también utilizados por el modelo TIMES. El valor base de energía útil para la proyección es proveniente del BEU 2013 o del BNE 2013.
+
+.. math::
+
+ \begin{equation}u_{t, r, n, k}=\frac{E_{t, k}}{E_{t-1, k}} \times u_{t-1, r, n, k}\end{equation}
+
+
+-𝑢𝑡,𝑟,𝑛,𝑘         Energía útil del servicio energético 𝑛 para el segmento k, región r, año 𝑡.
+
+
+
+
+
+**3.1.2.2 Ecuaciones generales para Transporte**
+
+La proyección del consumo de energía del sector de transporte considera los modales de trans-porte de pasajero por carretera (privado y público) y de carga, el ferroviario (pasajero y carga), el marítimo, aéreo y metro, como indica la tabla abajo. Sigue un abordaje bottom up. La siguiente tabla muestra las variables que se proyectan.
+Esta modelación del sector transporte puede ser modificada con nuevos procesos o tecnologías y para ello el consorcio se compromete a apoyar al MINEM a partir del mes de mayo de 2018 a los efectos de implementar estos cambios. Más allá de ello, para la proyección de la oferta (Informe 9) se están considerando nuevas tecnologías “candidatas” en el sector transporte, por ejemplo, transporte eléctrico(vehículos).
+
+==== ==================== ======================= ==================== ======================
+m     Modal                  Pasajero                Uso                   Resultado
+==== ==================== ======================= ==================== ======================
+01    Por carretera          Pasajero público        Autobús               pkm
+02    Por carretera          Pasajero público        Microbús              pkm
+03    Por carretera          Pasajero público        Furgoneta             pkm
+04    Por carretera          Pasajero privado        Automotor +SW         pkm
+05    Por carretera          Pasajero privado        Motocicleta           pkm
+06    Por carretera          Pasajero privado        Camioneta             pkm
+07    Por carretera          Carga                   Camión L              tkm
+08    Por carretera          Carga                   Camión M              tkm
+09    Por carretera          Carga                   Camión P              tkm
+10    Por carretera          Carga                   Camioneta             tkm
+11    Por carretera          Carga                   Furgoneta             tkm
+12    Ferroviario            Pasajero                Líneas 1,2,3          pkm
+13    Ferroviario            Carga                   Líneas 1 e 2          tkm
+14    Naval                  Pasajero & Carga                              En. neta
+15    Aéreo                  Pasajero & Carga                              En. neta
+16    Metro                  Pasajero                                      En. neta
+17    Transporte masivo      Pasajero                                      pkm
+==== ==================== ======================= ==================== ======================
+
+   
+**3.1.2.2.1 Transporte de pasajeros y de carga por carretera**
+
+La metodología utilizada para proyectar el consumo de energía útil de transporte privado de pa-sajeros por carretera consiste en las siguientes etapas:
+
+1. Para la proyección de venta por tipo de modal m1 se plantea un modelo de regresión lineal por el método Mínimos Cuadrados Ordinarios (MCO), en función del PIB o de la Población según el tipo modal:
+
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P O B_{t}\right)\end{equation}
+
+*para m = 12*
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right)\end{equation}
+
+*para m = 13, 14 y 15*
+
+-𝑄𝑡,𝑚       Ventas de vehículos de la categoría m en el año 𝑡 o número de pasajeros / carga transportada para el modal m en el año t.
+-𝛼𝑚, 𝛽𝑚    Parámetros (𝛼12=-71.92, 𝛽12=5.01, 𝛼13=5.77, 𝛽13=0.78, 𝛼14=-4.43, 𝛽14=1.33, 𝛼15=-9.22, 𝛽15=1.27)
+-𝑃𝐼𝐵𝑡        PIB en el año 𝑡
+-𝑃𝑂𝐵𝑡       Población en el año 𝑡
+
+
+Para 12 < m < 15 𝑄𝑡,𝑚denota número de pasajeros o carga transportada en el año t, de acuerdo con el caso.
+
+
+**Cálculo de la flota circulante de vehículos para cada año:**
+
+.. math::
+
+ \begin{equation}F_{t, y, m}=\left(1-e^{-e^{-(\delta m+\gamma m(t-y))}}\right) \times Q_{y, m}\end{equation}
+
+*para m = 3,4,6 y 11*
+
+
+.. math::
+
+ \begin{equation}F_{t, y, m}=Q_{y, m} \times\left(1-\lambda_{t-y, m}\right)^{t-y}\end{equation}
+
+*para m = 5*
+
+.. math::
+
+ \begin{equation}F_{t, y, m}=\left(\frac{1}{1+e^{\left(\gamma m^{\left(t-y-t_{m}\right)}\right)}}+\frac{1}{\left.1+e^{\left(\gamma m^{\left.\left(t-y+t_{m}\right)\right)}\right.}\right)} \times Q_{y, m}\right.\end{equation}
+
+*para m = 1,2,7,8,9 y 10*
+
+Donde:
+
+-𝐹𝑡,𝑦,𝑚      Número de vehículos del tipo m fabricados en el año y en la flota del año t
+-𝛿𝑚,𝛾𝑚,𝑡𝑚   Parámetros (t1=t2=19.1; t6=15.3; t7=t8=t9=t10=17.0)
+-𝜆𝑡−𝑦,𝑚      6%, para t-y  5 años; 7%, para 6  t-y  10 años; 8%, para 10  t-y  15 años; 10%, para t-y >15  
+             años (ref. SINDIPEÇAS (2009))
+
+**Cálculo del kilometraje promedio anual recorrido por la flota:**
+
+.. math::
+
+ \begin{equation}L_{t, m}=\sum_{y=1991}^{t}\left[F_{t, y, m} \times l_{t-y, m}\right]\end{equation}
+
+Donde:
+
+-𝐿𝑡,𝑚             Distancia promedio recorrida por la flota de tipo m en el año t
+-𝑙𝑡−𝑦,𝑚           Distancia promedio recorrida por vehículos de tipo m con 𝑡−𝑦 años 
+                  (reducción de intensidad de uso aumento de la edad del vehículo)
+
+**Proyección de pasajeros kilómetro por carretera por región. Estos resultados serán utili-zados por el TIMES.**
+
+.. math::
+
+ \begin{equation}p k m_{m, t, r}=L_{t, m} \times N_{m} \times \phi_{r, m}\end{equation}
+
+
+.. math::
+
+ \begin{equation}t k m_{m, t, r}=L_{t, m} \times T_{m} \times \phi_{r, m}\end{equation}
+
+
+-𝑝𝑘𝑚𝑚,𝑡,𝑟        Proyección de pasajero-km (pkm) para modal m, año t y región r
+-𝑡𝑘𝑚𝑚,𝑡,𝑟        Proyección de carga-km (tkm) para modal m, año t y región r
+-𝑁𝑚             Pasajeros promedios transportados por vehículo del tipo m
+-𝑇𝑚              Toneladas promedio de carga transportadas por vehículo de tipo m
+-𝜙𝑟,𝑚            Fracción de pkm o tkm que ocurre en la región r (Σ𝜙𝑟,𝑚=1𝑟)
+
+**3.1.2.2.2 Transporte de pasajeros y de carga por ferrocarril**
+
+La metodología usada para proyectar el consumo de energía útil de transporte ferroviario de pa-sajero (m=12) y carga (m=13) consiste en las siguientes etapas:
+
+**Cálculo del kilómetro recorrido por vagón de pasajero, para cada empresa:**
+
+.. math::
+
+ \begin{equation}k m_{-} W_{m, l}=E W_{m, l} / \eta_{m, l, 1} / N_{m, l}\end{equation}
+
+Donde:
+
+-l                 Índice de la línea férrea (Central Andina; Perú Rail; Inca Rail)
+-𝑘𝑚_𝑊𝑚,𝑙          Distancia recorrida por vagón de pasajero o carga en 2013
+-𝐸𝑊𝑚,𝑙            Consumo de energía en MJ de la línea l (BEN,2013)
+-𝜂𝑚,𝑙,1            Rendimiento (MJ/km) de la línea l (BEU, 2013)
+-𝑁𝑚,𝑙              Número de vagones de la línea l de pasajeros (o carga) en 2013
+
+**Cálculo del número de pasajeros o carga por kilómetro por empresa:**
+
+
+
+-𝜔𝑚,𝑙             Pasajeros o toneladas de carga transportados por km
+-𝜂𝑚,𝑙,2            Rendimiento: energía (MJ/pasajero o MJ/t) (BEU, 2013)
+
+**Proyección del crecimiento del número de pasajeros o carga transportada por ferrovías como una función del crecimiento poblacional (ecuación 05-1) o PIB (ecuación 05-2).**
+
+
+**Aplicación de la tasa de crecimiento para proyectar el número de vagones de pasajeros o carga para las líneas férreas l (cuja región r es conocida).**
+
+.. math::
+
+ \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+**Cálculo de la proyección del número de pasajeros kilómetros:**
+
+
+.. math::
+
+ \begin{equation}p k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+
+
+Mediante el procedimiento arriba y los datos del BEU se obtiene el consumo de energía final por commodity a través del rendimiento de cada tipo de vehículo, porcentaje de la flota que consume determinado tipo de combustible y kilometraje promedio anual que la flota recurre:
+
+
+.. math::
+
+ \begin{equation}d_{t, m, i}=L_{t, m} \times \psi_{m, i} \times \eta_{m, i}\end{equation}
+
+Donde:
+
+-𝑑𝑡,𝑟,𝑖          Proyección de consumo por commodity i (ej. MJ de gasolina)
+-𝜓𝑚,𝑖           Fracción de la flota de 2013 del modal m que usa la commo-dity i
+-𝜂𝑚,𝑖           Rendimiento (PJ/km) del vehículo m con la commodity i (BEU)
+
+
+**3.1.2.2.3 Transporte naval y aéreo**
+
+La metodología utilizada para proyectar el consumo de energía final de transporte naval consiste en las siguientes etapas:
+1. Proyección de la carga naval o pasajeros transportados por avión por la ecuación (05-2).
+2. Cálculo de la proyección del consumo de energía final
+
+.. math::
+
+ \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+Donde:
+
+-𝐸𝑡,𝑚              Consumo de energía final en el año 𝑡 para el modal m.
+-𝑄𝑡,𝑚/𝑄𝑡−1,𝑚       Crecimiento del número de pasajeros/carga transportada para el modal m en el año t y t-1.
+
+A través del procedimiento arriba y de los datos del BEU se obtiene el consumo de energía final por commodity para el modal naval (gasolina, diésel y aceite combustible) y aéreo (queroseno)
+
+.. math::
+
+ \begin{equation}d_{t, m, i}=\psi_{m, i} \times E_{t, m}\end{equation}
+
+Donde:
+
+-𝑑𝑡,𝑚,𝑖            Consumo por commodity i del modal m (ej. MJ de gasolina)
+-𝜓𝑚,𝑖              Fracción de la flota de 2013 del modal m que usa la commodity i
+
+
+
+
+3.1.3 Modelos de ajuste del sector energía
 ---------
 
 Para determinar las proyecciones futuras de la demanda energética por sector de 
@@ -704,7 +1005,7 @@ Este modelo presenta un MAPE de :math:`=0.6%`.
  
  Time-Series Analysis and Forecasting
 
-3.1.3 Modelo de ajuste del sector eléctrico
+3.1.4 Modelo de ajuste del sector eléctrico
 ----------
  Data Structure and Elements of Electric System
   power..
@@ -764,7 +1065,7 @@ un MAPE de =0.54%.
  
  Emissions from Electricity Sector
 
-3.1.4 Modelo de ajuste del sector transporte
+3.1.5 Modelo de ajuste del sector transporte
 --------
 
  Data Structure and Elements of Transport System
@@ -988,110 +1289,4 @@ modelo presenta un MAPE de =0.91 %.
 *Figura 6 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
 
  *_______________________________________*
-
-3.3.3.3 Proyección de demanda
---------------
-
-**Ecuaciones para las proyecciones de las proyecciones de los sectores**
-
-ANTES DE LA INTEGRACIÓN
-
-Se consideran 7 divisiones.
-
-- k=1, (Residencial)
-- k=2, (Comercial 
-- k=3, (Público)
-- k=4, (Industrial manufacturera en general)
-- k=5, (Pesca)
-- k=6, (Agropecuaria)
-- k=7, (Minería y metalurgia)
-
-
-
-      DESPÚES DE LA INTEGRACIÓN
-
-- k=1, (Residencial)
-- k=2, (Comercial y Público)
-- k=3, (Industrial manufacturera)
-- k=4, (Pesca)
-- k=5, (Agropecuaria)
-- k=6, (Minería y metalurgia)
-
-
-**Ecuaciones generales para Residencial, Comercial, Publico y Sectores Productivos**
-
-Para obtener la proyección del consumo de energía neta de los macro sectores Edificaciones (re-sidencial y comercial, servicios y público) y Agropecuario/Industrial (industrial, pesquería, agro-pecuaria y minería) se plantea un modelo de regresión lineal, mediante el cual se estiman los coe-ficientes 𝛼𝑘, 𝛽𝑘, 𝛾𝑘, 𝜃𝑘 por el método Mínimos Cuadrados Ordinarios (MCO) para cada segmento:
-
-
-
-.. math::
-
- \begin{equation}\ln \left(E_{t, k}\right)=\alpha_{k}+\beta_{k} \ln \left(E_{t-1, k}\right)+\gamma_{k} \ln \left(P I B_{t-1}\right)+\theta_{k} T e n d_{t}\end{equation}
-
-
-Donde:
-
-
--𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
-                   manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
--𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
--𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
--𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
--𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
-
-
-Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
-La proyección de la energía final anual se desagrega por commodity i para k=1,2,3 utilizando la ecuación:   
-
-.. math::
-
- \begin{equation}d_{t, r, i, k}=E_{t, k} \times \varphi_{i, r, k}\end{equation}
-
-
-Donde:
-  i                Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
-                   o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
-                  Diesel, gasohol (sumado con gasolina) y queroseno si k =2,3; o utilizada por 
-                  el servicio energético n, o sea, i(n) para k>3.
-                  Los servicios energéticos son: n=1 para calor de proceso, n=2 para fuerza motriz 
-                  y n=3 para electricidad. Los datos provienen del BEU, 2013.
-  r               Índice de la región: Centro, Norte, Oriente, Sur
-  𝑑𝑡,𝑟,𝑖,𝑘         Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
-  𝜑𝑖,𝑟,𝑘           Fracción de la energía final del segmento k asociada a la commodity i y región 
-                   r. Valores provenientes del BEU 2013.
-
-
-La energía útil por commodity, utilizada por los sectores k=1 (residencial), k=2 (comercial), k=3 (público), considera también la eficiencia de conversión en cada caso.
-
-
-
-.. math::
-
- \begin{equation}u_{t, r, i, k}=d_{t, r, i, k} \times \eta_{i, r, k}\end{equation}
-
-
-Donde:
-  𝜂𝑖,𝑟,𝑘            Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
-                    en la región r, segmento k (proveniente del BEU)
-  𝑢𝑡,𝑟,𝑖,𝑘          Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
-
-
-
-
-
-
-| Line blocks are useful for addresses,
-| verse, and adornment-free lists.
-|
-| Each new line begins with a
-| vertical bar ("|").
-|     Line breaks and initial indents
-|     are preserved.
-| Continuation lines are wrapped
-  portions of long lines; they begin
-  with spaces in place of vertical bars.
-
-
-
-
 
