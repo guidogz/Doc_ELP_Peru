@@ -1032,13 +1032,13 @@ Para obtener la proyección del consumo de energía neta de los macro sectores E
 Donde:
 
 
-| 𝑘               Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
+|  𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
 |                 manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
 
-| 𝐸𝑡,𝑘            Consumo de Energía final del segmento k, año 𝑡
-| 𝑃𝐼𝐵𝑡            Producto Interno Bruto del año 𝑡
-| 𝑇𝑒𝑛𝑑𝑡           Variable de tendencia lineal, año t
-| 𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘     Parámetros por sector k
+|  𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
+|  𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
+|  𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
+|  𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
 
 
 Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
@@ -1050,15 +1050,15 @@ La proyección de la energía final anual se desagrega por commodity i para k=1,
 
 
 Donde:
-| i                 Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
-|                  o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
+|  i                Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
+|                   o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
 |                  Diesel, gasohol (sumado con gasolina) y queroseno si k =2,3; o utilizada por 
 |                  el servicio energético n, o sea, i(n) para k>3.
 |                  Los servicios energéticos son: n=1 para calor de proceso, n=2 para fuerza motriz 
 |                  y n=3 para electricidad. Los datos provienen del BEU, 2013.
-| r                Índice de la región: Centro, Norte, Oriente, Sur
-| 𝑑𝑡,𝑟,𝑖,𝑘          Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
-| 𝜑𝑖,𝑟,𝑘            Fracción de la energía final del segmento k asociada a la commodity i y región 
+|  r               Índice de la región: Centro, Norte, Oriente, Sur
+|  𝑑𝑡,𝑟,𝑖,𝑘         Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
+|  𝜑𝑖,𝑟,𝑘           Fracción de la energía final del segmento k asociada a la commodity i y región 
 |                   r. Valores provenientes del BEU 2013.
 
 
@@ -1072,9 +1072,9 @@ La energía útil por commodity, utilizada por los sectores k=1 (residencial), k
 
 
 Donde:
-|𝜂𝑖,𝑟,𝑘              Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
+|  𝜂𝑖,𝑟,𝑘            Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
 |                    en la región r, segmento k (proveniente del BEU)
-|𝑢𝑡,𝑟,𝑖,𝑘            Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
+|  𝑢𝑡,𝑟,𝑖,𝑘          Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
 
 
 
