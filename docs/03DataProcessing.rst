@@ -989,6 +989,95 @@ modelo presenta un MAPE de =0.91 %.
 
  *_______________________________________*
 
+3.3.3.3 Proyección de demanda
+--------------
+
+**Ecuaciones para las proyecciones de las proyecciones de los sectores**
+
+ANTES DE LA INTEGRACIÓN
+
+Se consideran 7 divisiones.
+
+- k=1, (Residencial)
+- k=2, (Comercial 
+- k=3, (Público)
+- k=4, (Industrial manufacturera en general)
+- k=5, (Pesca)
+- k=6, (Agropecuaria)
+- k=7, (Minería y metalurgia)
+
+
+
+      DESPÚES DE LA INTEGRACIÓN
+
+- k=1, (Residencial)
+- k=2, (Comercial y Público)
+- k=3, (Industrial manufacturera)
+- k=4, (Pesca)
+- k=5, (Agropecuaria)
+- k=6, (Minería y metalurgia)
+
+
+**Ecuaciones generales para Residencial, Comercial, Publico y Sectores Productivos**
+
+Para obtener la proyección del consumo de energía neta de los macro sectores Edificaciones (re-sidencial y comercial, servicios y público) y Agropecuario/Industrial (industrial, pesquería, agro-pecuaria y minería) se plantea un modelo de regresión lineal, mediante el cual se estiman los coe-ficientes 𝛼𝑘, 𝛽𝑘, 𝛾𝑘, 𝜃𝑘 por el método Mínimos Cuadrados Ordinarios (MCO) para cada segmento:
+
+
+
+.. math::
+
+ \begin{equation}\ln \left(E_{t, k}\right)=\alpha_{k}+\beta_{k} \ln \left(E_{t-1, k}\right)+\gamma_{k} \ln \left(P I B_{t-1}\right)+\theta_{k} T e n d_{t}\end{equation}
+
+
+Donde:
+
+
+| 𝑘               Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
+|                 manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
+
+| 𝐸𝑡,𝑘            Consumo de Energía final del segmento k, año 𝑡
+| 𝑃𝐼𝐵𝑡            Producto Interno Bruto del año 𝑡
+| 𝑇𝑒𝑛𝑑𝑡           Variable de tendencia lineal, año t
+| 𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘     Parámetros por sector k
+
+
+Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
+La proyección de la energía final anual se desagrega por commodity i para k=1,2,3 utilizando la ecuación:   
+
+.. math::
+
+ \begin{equation}d_{t, r, i, k}=E_{t, k} \times \varphi_{i, r, k}\end{equation}
+
+
+Donde:
+| i                 Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
+|                  o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
+|                  Diesel, gasohol (sumado con gasolina) y queroseno si k =2,3; o utilizada por 
+|                  el servicio energético n, o sea, i(n) para k>3.
+|                  Los servicios energéticos son: n=1 para calor de proceso, n=2 para fuerza motriz 
+|                  y n=3 para electricidad. Los datos provienen del BEU, 2013.
+| r                Índice de la región: Centro, Norte, Oriente, Sur
+| 𝑑𝑡,𝑟,𝑖,𝑘          Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
+| 𝜑𝑖,𝑟,𝑘            Fracción de la energía final del segmento k asociada a la commodity i y región 
+|                   r. Valores provenientes del BEU 2013.
+
+
+La energía útil por commodity, utilizada por los sectores k=1 (residencial), k=2 (comercial), k=3 (público), considera también la eficiencia de conversión en cada caso.
+
+
+
+.. math::
+
+ \begin{equation}u_{t, r, i, k}=d_{t, r, i, k} \times \eta_{i, r, k}\end{equation}
+
+
+Donde:
+|𝜂𝑖,𝑟,𝑘              Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
+|                    en la región r, segmento k (proveniente del BEU)
+|𝑢𝑡,𝑟,𝑖,𝑘            Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
+
+
+
 
 
 
