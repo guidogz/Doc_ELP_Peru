@@ -1032,13 +1032,12 @@ Para obtener la proyección del consumo de energía neta de los macro sectores E
 Donde:
 
 
-  𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
-                 manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
-
-  𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
-  𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
-  𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
-  𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
+𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
+               manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
+𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
+𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
+𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
+𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
 
 
 Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
