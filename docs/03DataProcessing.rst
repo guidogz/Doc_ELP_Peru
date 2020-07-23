@@ -407,8 +407,8 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 3.1.1.6 Refinerías 
 ---------
 
-Las refinerías en el Perú suman un total de 6, las cuales en conjunto tienen una 
-capacidad de producción de 215.8 miles de barriles diarios, con una disponibilidad 
+Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
+capacidad de producción de 229 miles de barriles diarios, con una disponibilidad 
 en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
 de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios.
 La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
@@ -416,19 +416,22 @@ de 91459.9 barriles, y tambien para el mismo año los costos operativos se valor
 492.6 MMUSD, en las siguinetes tablas se puedes apreciar estas cifras.
 
 
-=========== ============================ ===================================== ==========
-Refinería    Capacidad instalada (2018)  Tipo de combustible refinado          Región
------------ ---------------------------- ------------------------------------- ----------
+=========== ============================ ======================================= ==========
+Refinería    Capacidad instalada (2018)  Tipo de combustible refinado            Región
+----------- ---------------------------- --------------------------------------- ----------
 Nombre         Miles de barriles de
                petróleo día (MBPD)
-=========== ============================ ===================================== ==========
-Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina Norte
-Conchán       15.5                       Diesel, Fueloil, Gasolina             Centro
-Pampilla      117                        Diesel, Turbo, GLP, Fueloil, Gasolina Centro
-Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina      Oriente
-Pucallpa       3.3                       Diesel, Turbo, Gasolina               Oriente
-El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina      Norte
-=========== ============================ ===================================== ==========
+=========== ============================ ======================================= ==========
+Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina   Norte
+Conchán       15.5                       Diesel, Fueloil, Gasolina               Centro
+Pampilla      117                        Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
+Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina        Oriente
+Pucallpa       3.3                       Diesel, Turbo, Gasolina                 Oriente
+El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina        Norte
+Huayuri        4.0                       Crudo multiuso, Diesel, HFO, Nafta      Oriente
+Shiviyacu      5.2                       Crudo, Diesel, Nata, Residual, Multiuso Oriente
+Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual      Oriente
+=========== ============================ ======================================= ==========
 *Anexo 2 - informe 9 prosemer, página 91*
 
 
