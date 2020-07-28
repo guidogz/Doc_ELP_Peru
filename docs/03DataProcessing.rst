@@ -424,7 +424,7 @@ Nombre         Miles de barriles de
 =========== ============================ ======================================= ==========
 Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina   Norte
 Conchán       15.5                       Diesel, Fueloil, Gasolina               Centro
-Pampilla      117                        Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
+Pampilla      110-117                    Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
 Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina        Oriente
 Pucallpa       3.3                       Diesel, Turbo, Gasolina                 Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina        Norte
