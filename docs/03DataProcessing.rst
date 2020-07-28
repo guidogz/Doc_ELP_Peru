@@ -408,7 +408,7 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 ---------
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
-capacidad de producción de 229 miles de barriles diarios, con una disponibilidad 
+capacidad de producción de 220-229 miles de barriles diarios, con una disponibilidad 
 en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
 de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios.
 La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
@@ -432,7 +432,7 @@ Huayuri        4.0                       Crudo multiuso, Diesel, HFO, Nafta     
 Shiviyacu      5.2                       Crudo, Diesel, Nata, Residual, Multiuso Oriente
 Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual      Oriente
 =========== ============================ ======================================= ==========
-*Anexo 2 - informe 9 prosemer, página 91*
+*Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER*
 
 
 ========== ==========
