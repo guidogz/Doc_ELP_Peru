@@ -1100,7 +1100,7 @@ Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obte
 
  \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
 
-**Sector energético (sin transporte)**
+**Sector energético (escenario 2)**
      Para el sector energético se ha utilizado los valores históricos de demanda energética y PBI para poder realizar las proyecciones, en un inicio se estima la primera diferencia de PBI per cápita y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 14) de ambos, a continuación se halla el pronóstico (véase ecuación 17) para finalmente poder obtener el pronóstico final (véase ecuación 18), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
 
 +----------------+----------------------------+-----------------------+
