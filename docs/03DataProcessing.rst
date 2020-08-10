@@ -777,7 +777,11 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
 **Sector manufactura industrial**
-Para el sector manufactura industrial se han utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+     Para el sector manufactura industrial se han utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+
+
 
 
 +----------------+----------------------------+-----------------------+
@@ -825,9 +829,12 @@ Las medidas de error para el modelo fueron
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
-
 **Sector minería**
-Para el sector minería se ha utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+     Para el sector minería se ha utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+
+
 
 
 +----------------+----------------------------+-----------------------+
@@ -1037,3 +1044,103 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
 
+**Subdivisión transporte ferroviario pasajeros**
+    Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), (cantidad de vehículos en venta) con los valores de población, con este resultado se prosigue a calcular los valores de consumo de energía de las principales flotas de trenes en el país, a este valor  le multiplica por un peso que denota el ratio de pasajero por kilómetro, que se denota por  K. 
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P O B_{t}\right), \quad m=12\end{equation}
+
+.. math::
+
+ \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+.. math::
+
+ \begin{equation}p k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+
+
+
+**Subdivisión transporte ferroviario carga**
+    Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), (cantidad de vehículos en venta) con los valores de PBI, con este resultado se prosigue a calcular los valores de consumo de energía de las principales flotas de trenes en el país, a este valor  le multiplica por un peso que denota el ratio de pasajero por kilómetro, que se denota por  
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad \quad m=13\end{equation}
+
+.. math::
+
+ \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+.. math::
+
+ \begin{equation}t k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+
+
+**Subdivisión transporte naval**
+    Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), con los valores de PIB, ahora con los valores de la demanda anterior se calcula el nuevo valor con la ecuación 14. 
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad m=14\end{equation}
+
+.. math::
+
+ \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+
+Subdivisión transporte aéreo
+Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), con los valores de PIB, , ahora con los valores de la demanda anterior se calcula el nuevo valor con la ecuación 16
+
+.. math::
+
+ \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad \quad m=15\end{equation}
+
+.. math::
+
+ \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+**Sector energético (sin transporte)**
+     Para el sector energético se ha utilizado los valores históricos de demanda energética y PBI para poder realizar las proyecciones, en un inicio se estima la primera diferencia de PBI per cápita y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 14) de ambos, a continuación se halla el pronóstico (véase ecuación 17) para finalmente poder obtener el pronóstico final (véase ecuación 18), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
++----------------+----------------------------+-----------------------+
+|                | Demanda manufactura (DR)   | PBI manufactura       |
++----------------+----------------------------+-----------------------+
+| Delta Mínimo   | -38.115                    | -10731                |
++----------------+----------------------------+-----------------------+
+| Delta Máximo   | 51.255                     | 14088                 |
++----------------+----------------------------+-----------------------+
+                      
+.. math::
+
+ \begin{equation}\text { Pronostico }_{t}=\text { Pronostico }_{t}=a * \operatorname{nor}\left(E_{t-1}\right)+b * \operatorname{nor}\left(P B I_{t-1}\right)+c\end{equation}
+
+Donde:
+ 
+- a, b y c           Coeficiente obtenidos por optimización.
+- Mi(t-1)            Consumo de Energía minería en el año 𝑡-1.
+- nor(Mi(t-1))       Normalizado del Consumo de Energía minería en el año 𝑡-1.
+- PBI mine(t-1)      Producto Bruto Interno del sector minería en el año t-1.
+- nor(PBI mine(t-1)) Normalizado del Producto Bruto Interno del sector minería en el año t-1.
+
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| -0.34489406    | 0.51238552                 | 0.36684512            |
++----------------+----------------------------+-----------------------+
+
+.. math::
+
+ Pronostico, final $_{t}=$ Pronostico $_{t} *(D R m a x-D R m i n)+D R m i n+E_{t-1}$
+
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 10.52662931                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 3.1%                       |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
