@@ -159,7 +159,7 @@ al escenario suspuesto, con la finalidad de situarse y analizarlos, además los
 resulatdos estan desagregados en región, tipo de combustible, escenario, etc. 
 
 Por otra parte, los valores proyectados de las series de tiempo para lograr la 
-descarbonización del Perú al 2050 utiliza han sido construidos con modelos autoregresivos
+descarbonización del Perú al 2050 utilizados han sido construidos con modelos autoregresivos
 que tienen diferentes variables explicativas por sector, las proyecciones al 2050 de 
 la demanda para los sectores económicos se muestran la siguiente gráfica, en donde 
 la participacion de sector residencial y manufactura son predominantes.  
@@ -616,7 +616,8 @@ Los precios del carbono son una medida que ayuda a resolver este problema, hoy e
 3.1.2 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
 --------------
 
-**3.1.2.1 Ecuaciones generales para Sectores Productivos**
+3.1.2.1 Metodología general usada para la predicción de los Sectores Productivos
+---------
 
 Mediante el uso de modelos econométricos se ha proyectado las series de la demandas de los sectores productivos, tomando como variables exógenas: la población, el PBI por sectores, PBI per cápita, en algunos de estas se incluye la tendencia lineal, tambien se ha proyectado con las tazas de crecimiento constantes para el sector agropecuario y público; analizando las series de tiempo para los sectores como procesos autoregresivos (a excepto de agropecuario y público, transporte ferroviario, naval y aéreo) donde con las variables explicativas se ha podido proyectar las demandas de los múltiples sectores hasta el 2050.
 Los sectores analizados son los mismos que toma el PROSEMER, que a su vez son los mismos que toma del BEU 2013 (balance de energía útil); los sectores son:
@@ -652,652 +653,387 @@ Trans. carretero pas. privado PBI                           Cons=f(ConsTransCarr
 Trans. carretero pas. público PBI                           Cons=f(ConsTransCarrPubl(t-1),PIB(t-1))  pkm
 Trans. carretero carga        PBI                           Cons=f(ConsTransCarrCarg(t-1),PIB(t-1))  tkm
 Trans. ferroviario carga      PBI                           Cons=f(ConsTransFerrCarg(t-1),PIB(t-1))  tkm
-Trans. ferroviario pasajeros  Població (POB)                Cons=f(ConsTransFerrPas(t-1),POB(t-1))   pkm
+Trans. ferroviario pasajeros  Población (POB)               Cons=f(ConsTransFerrPas(t-1),POB(t-1))   pkm
 Trans. naval                  PBI                           Cons=f(ConsTransNav(t-1),PIB(t-1))       PJ
 Trans. éreo                   PBI                           Cons=f(ConsTransAereo(t-1),PIB(t-1))     PJ
 ============================= ============================= ======================================== =========
 
 
+3.1.2.2 Variables explicativas de las demanda por sectores productivos
+---------
+
+**PBI**
+
+
+**Población**
+
+
+3.1.2.3 Ecuaciones utilizados para los diferentes sectores
+---------
 
 
 
+**Sector residencial**
+     Para el sector residencial se ha utilizado los valores históricos de demanda energética y PBI per cápita para poder realizar las predicciones de la demanda, en un inicio se estima la primera diferencia de PBI per cápita y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+
++----------------+----------------------------+-----------------------+
+|                | Demanda residencial (DR)   | PBI per cápita        |
++----------------+----------------------------+-----------------------+
+| Delta Mínimo   | -29.675                    | -2.5                  |
++----------------+----------------------------+-----------------------+
+| Delta Máximo   | 76.2                       | 707.5                 |
++----------------+----------------------------+-----------------------+
+                      
 
 .. math::
 
- \begin{equation}\ln \left(E_{t, k}\right)=\alpha_{k}+\beta_{k} \ln \left(E_{t-1, k}\right)+\gamma_{k} \ln \left(P I B_{t-1}\right)+\theta_{k} T e n d_{t}\end{equation}
-
+ \begin{equation}\text { Pronostico }_{t}=a * \operatorname{nor}\left(R_{t-1}\right)+b * \operatorname{nor}\left(P B I_{t-1}\right)+c\end{equation}
 
 Donde:
 
+- a, b y c       Coeficiente obtenidos por optimización.
+- R(t-1)         Consumo de Energía residencial año 𝑡-1.
+- nor(R(t-1))    Normalizado del consumo de Energía residencial año 𝑡-1.
+- PBI(t-1)       Producto Bruto Interno per cápita en el año t-1.
+- nor(PBI(t-1))  Normalizado del Producto Bruto Interno per cápita en el año t-1.
 
--𝑘              Índice del segmento: 𝑘=1 residencial, 𝑘=2 comercial, 𝑘=3 público, 𝑘=4 In-dustrial 
-                manufacturera en general, 𝑘=5 pesca, 𝑘=6 agropecuaria y 𝑘=7 minería y metalurgia.
--𝐸𝑡,𝑘           Consumo de Energía final del segmento k, año 𝑡
--𝑃𝐼𝐵𝑡           Producto Interno Bruto del año 𝑡
--𝑇𝑒𝑛𝑑𝑡          Variable de tendencia lineal, año t
--𝛼𝑘,𝛽𝑘,𝛾𝑘,𝜃𝑘    Parámetros por sector k
-
-
-Luego, con los coeficientes de regresión estimados y las tasas de crecimiento de las variables ex-plicativas se procede a calcular las proyecciones.
-La proyección de la energía final anual se desagrega por commodity i para k=1,2,3 utilizando la ecuación:   
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| 0.13662361     | 0.09599035                 | 0.31028359            |
++----------------+----------------------------+-----------------------+
 
 .. math::
 
- \begin{equation}d_{t, r, i, k}=E_{t, k} \times \varphi_{i, r, k}\end{equation}
+ \begin{equation}\text { Pronostico, final }_{t}=\text { Pronostico }_{t} *(D R \max -D R \min )+D R \min +R_{t-1}\end{equation}
 
+
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 12.22                      |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 5.6 %                      |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
+
+
+
+
+**Sector comercial**
+     Para el sector comercial se ha utilizado los valores históricos de demanda energética y PBI sector terciario para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector terciario y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+
++----------------+----------------------------+-----------------------+
+|                | Demanda comercial (DR)     | PBI sector terciario  |
++----------------+----------------------------+-----------------------+
+| Delta Mínimo   | -39.8                      | 942.8                 |
++----------------+----------------------------+-----------------------+
+| Delta Máximo   | 55.1                       | 7830.38               |
++----------------+----------------------------+-----------------------+
+                      
+
+.. math::
+
+ \begin{equation}\text { Pronostico }_{t}=a * \operatorname{nor}\left(C_{t-1}\right)+b * \text { nor }\left(P B I \operatorname{ter}_{t-1}\right)+c\end{equation}
 
 Donde:
--i                Commodity: electricidad, gas de red, carbón vegetal, GLP y leña si k = 1,                   
-                   o electricidad, gas de red, carbón vegetal, GLP, leña (sumada con bosta y yareta),         
-                  Diesel, gasohol (sumado con gasolina) y queroseno si k =2,3; o utilizada por 
-                  el servicio energético n, o sea, i(n) para k>3.
-                  Los servicios energéticos son: n=1 para calor de proceso, n=2 para fuerza motriz 
-                  y n=3 para electricidad. Los datos provienen del BEU, 2013.
--r               Índice de la región: Centro, Norte, Oriente, Sur
--𝑑𝑡,𝑟,𝑖,𝑘         Energía final de la commodity 𝑖 para el segmento k, región r, año 𝑡
--𝜑𝑖,𝑟,𝑘           Fracción de la energía final del segmento k asociada a la commodity i y región 
-                  r. Valores provenientes del BEU 2013.
 
+- a, b y c             Coeficiente obtenidos por optimización.
+- C(t-1)               Consumo de Energía comercial año 𝑡-1.
+- nor(C(t-1))          Normalizado del consumo de Energía comercial año 𝑡-1.
+- PBI ter(t-1)         Producto Bruto Interno del sector terciario en el año t-1.
+- nor(PBI ter(t-1))    Normalizado del Producto Bruto Interno del sector terciario en el año t-1.
 
-La energía útil por commodity, utilizada por los sectores k=1 (residencial), k=2 (comercial), k=3 (público), considera también la eficiencia de conversión en cada caso.
-
-
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| -0.4123497     | 0.04998758                 | 0.60658334            |
++----------------+----------------------------+-----------------------+
 
 .. math::
 
- \begin{equation}u_{t, r, i, k}=d_{t, r, i, k} \times \eta_{i, r, k}\end{equation}
+ Pronostico, final $_{t}=$ Pronostico $_{t} *(D R m a x-D R m i n)+D R \min +C_{t-1}$
 
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 1.569757814                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 3.3%                       |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
+
+
+
+
+
+
+**Sector manufactura industrial**
+Para el sector manufactura industrial se han utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
+
+
++----------------+----------------------------+-----------------------+
+|                | Demanda manufactura (DR)   | PBI manufactura       |
++----------------+----------------------------+-----------------------+
+| Delta Mínimo   | -44.225                    | -2564.238             |
++----------------+----------------------------+-----------------------+
+| Delta Máximo   | 19.305                     | 2600.192              |
++----------------+----------------------------+-----------------------+
+                      
+
+.. math::
+
+ \text { Pronostico }_{t}=a * \operatorname{nor}\left(M_{t-1}\right)+b * \operatorname{nor}\left(P B I \operatorname{man} u_{t-1}\right)+c
 
 Donde:
--𝜂𝑖,𝑟,𝑘            Eficiencia promedio, en p.u., de los procesos que involucran la com-modity i 
-                    en la región r, segmento k (proveniente del BEU)
--𝑢𝑡,𝑟,𝑖,𝑘          Energía útil de la commodity 𝑖 para el segmento k, región r, año 𝑡
+ 
+- a, b y c           Coeficiente obtenidos por optimización.
+- M(t-1)             Consumo de Energía manufcatura en el año 𝑡-1.
+- nor(M(t-1))        Normalizado del consumo de Energía manufactura en el año 𝑡-1.
+- PBI manu(t-1)      Producto Bruto Interno del sector maunfactura en el año t-1.
+- nor(PBI manu(t-1)) Normalizado del Producto Bruto Interno del sector maunfactura en el año t-1.
 
-La energía útil por servicios energéticos, utilizada por los sectores industriales (k>3), se calcula con la fórmula abajo. Estos valores serán también utilizados por el modelo TIMES. El valor base de energía útil para la proyección es proveniente del BEU 2013 o del BNE 2013.
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| -0.48841885    | 0.29028287                 | 0.91878258            |
++----------------+----------------------------+-----------------------+
 
 .. math::
 
- \begin{equation}u_{t, r, n, k}=\frac{E_{t, k}}{E_{t-1, k}} \times u_{t-1, r, n, k}\end{equation}
+ \begin{equation}\text { Pronostico, final }_{t}=\text { Pronostico }_{t} *(D R \max -D R \min )+D R \min +M_{t-1}\end{equation}
 
 
--𝑢𝑡,𝑟,𝑛,𝑘         Energía útil del servicio energético 𝑛 para el segmento k, región r, año 𝑡.
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 5.757722853                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 6.5%                       |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
 
+**Sector minería**
+Para el sector minería se ha utilizado los valores históricos de demanda energética y PBI sector manufactura para poder realizar las predicciones, en un inicio se estima la primera diferencia de PBI sector manufactura y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 2) de ambos, a continuación se halla el pronóstico (véase ecuación 1) para finalmente poder obtener el pronóstico final (véase ecuación 2), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
 
 
-**3.1.2.2 Ecuaciones generales para Transporte**
++----------------+----------------------------+-----------------------+
+|                | Demanda manufactura (DR)   | PBI manufactura       |
++----------------+----------------------------+-----------------------+
+| Delta Mínimo   | -10.3625                   | -1618.73              |
++----------------+----------------------------+-----------------------+
+| Delta Máximo   | 14.562                     | 2390.94               |
++----------------+----------------------------+-----------------------+
+                      
 
-La proyección del consumo de energía del sector de transporte considera los modales de trans-porte de pasajero por carretera (privado y público) y de carga, el ferroviario (pasajero y carga), el marítimo, aéreo y metro, como indica la tabla abajo. Sigue un abordaje bottom up. La siguiente tabla muestra las variables que se proyectan.
-Esta modelación del sector transporte puede ser modificada con nuevos procesos o tecnologías y para ello el consorcio se compromete a apoyar al MINEM a partir del mes de mayo de 2018 a los efectos de implementar estos cambios. Más allá de ello, para la proyección de la oferta (Informe 9) se están considerando nuevas tecnologías “candidatas” en el sector transporte, por ejemplo, transporte eléctrico(vehículos).
+.. math::
+
+ \begin{equation}\text { Pronostico }_{t}=\text { Pronostico }_{t}=a * \operatorname{nor}\left(M i_{t-1}\right)+b * \operatorname{nor}\left(P B I \operatorname{mine}_{t-1}\right)+c\end{equation}
+
+Donde:
+ 
+- a, b y c           Coeficiente obtenidos por optimización.
+- Mi(t-1)            Consumo de Energía minería en el año 𝑡-1.
+- nor(Mi(t-1))       Normalizado del Consumo de Energía minería en el año 𝑡-1.
+- PBI mine(t-1)      Producto Bruto Interno del sector minería en el año t-1.
+- nor(PBI mine(t-1)) Normalizado del Producto Bruto Interno del sector minería en el año t-1.
+
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| -0.07251219    | 0.00932579                 | 0.49082724            |
++----------------+----------------------------+-----------------------+
+
+.. math::
+
+ \begin{equation}\text { Pronostico, } f \text { inal}_{t}=\text { Pronostico}_{t} *(D R m a x-D R m i n)+D R m i n+M i_{t-1}\end{equation}
+
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 5.757722853                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 6.5%                       |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
+
+
+**Sector agropecuario**
+     Para el sector agropecuario se ha tomado una tasa de crecimiento constante la cual se ha fijado en 1.5% anual para la proyección hasta el 2050.
+
+
+**Sector público**
+     Para el sector público se ha tomado una tasa de crecimiento constante la cual se ha fijado en 1% anual para la proyección hasta el 2050.
+
+
+
+**Sector pesca**
+     Para el sector pesca se ha utilizado los valores históricos de demanda energética y PBI producción para poder realizar las predicciones, en un inicio se hacen ajustes estadísticos del PBI sector pesca y de la demanda, luego con una regresión lineal se halla la tendencia del PBI (tendenciaPBI), para después incorporarla a la ecuación de autoregreción (vésase ecuación 9) .
+
+
++----------------+----------------------+---------------------+-----------------+
+| a              | b                    | c                   |  d              |
++----------------+----------------------+---------------------+-----------------+
+| -0.17783316    | 4.95E-01             | 0.28410597          | -6.63E-04       |
++----------------+----------------------+---------------------+-----------------+
+
+.. math::
+
+ \begin{equation}P_{t}=a+b * \ln \left(P_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)+e * \text { tendenciaPBI }\end{equation}
+
+Las medidas de error para el modelo fueron 
+
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 0.310465837                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 23.2 %                     |
++----------------+-----------------------+----------------------------+
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
+
+
+
+3.1.2.3 Ecuaciones utilizados para el sector transporte
+---------
+
+La proyección del consumo de energía del sector de transporte considera los modales de transporte de pasajero por carretera (privado y público) y de carga, el ferroviario (pasajero y carga), el marítimo, aéreo y metro.
+
 
 ==== ==================== ======================= ==================== ======================
 m     Modal                  Pasajero                Uso                   Resultado
 ==== ==================== ======================= ==================== ======================
-01    Por carretera          Pasajero público        Autobús               pkm
-02    Por carretera          Pasajero público        Microbús              pkm
-03    Por carretera          Pasajero público        Furgoneta             pkm
-04    Por carretera          Pasajero privado        Automotor +SW         pkm
-05    Por carretera          Pasajero privado        Motocicleta           pkm
-06    Por carretera          Pasajero privado        Camioneta             pkm
-07    Por carretera          Carga                   Camión L              tkm
-08    Por carretera          Carga                   Camión M              tkm
-09    Por carretera          Carga                   Camión P              tkm
-10    Por carretera          Carga                   Camioneta             tkm
-11    Por carretera          Carga                   Furgoneta             tkm
-12    Ferroviario            Pasajero                Líneas 1,2,3          pkm
-13    Ferroviario            Carga                   Líneas 1 e 2          tkm
-14    Naval                  Pasajero & Carga                              En. neta
-15    Aéreo                  Pasajero & Carga                              En. neta
-16    Metro                  Pasajero                                      En. neta
-17    Transporte masivo      Pasajero                                      pkm
+01    Por carretera          Pasajero público      Vehiculos públicos      pkm
+02    Por carretera          Pasajero privado      Vehículos privado       pkm
+03    Por carretera          Carga                 hehículos de carga      tkm
+04    Ferroviario            Pasajero              Líneas 1,2,3            pkm
+05    Ferroviario            Carga                 Líneas 1 e 2            tkm
+05    Naval                  Pasajero & Carga                              En. neta
+06    Aéreo                  Pasajero & Carga                              En. neta
+07    Metro                  Pasajero                                      En. neta
+08    Transporte masivo      Pasajero                                      pkm
 ==== ==================== ======================= ==================== ======================
 
    
-**3.1.2.2.1 Transporte de pasajeros y de carga por carretera**
+**Subdivisión transporte carretero privado**
 
-La metodología utilizada para proyectar el consumo de energía útil de transporte privado de pa-sajeros por carretera consiste en las siguientes etapas:
-
-1. Para la proyección de venta por tipo de modal m1 se plantea un modelo de regresión lineal por el método Mínimos Cuadrados Ordinarios (MCO), en función del PIB o de la Población según el tipo modal:
-
-
-.. math::
-
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P O B_{t}\right)\end{equation}
-
-*para m = 12*
-
-.. math::
-
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right)\end{equation}
-
-*para m = 13, 14 y 15*
-
--𝑄𝑡,𝑚       Ventas de vehículos de la categoría m en el año 𝑡 o número de pasajeros / carga transportada para el modal m en el año t.
--𝛼𝑚, 𝛽𝑚    Parámetros (𝛼12=-71.92, 𝛽12=5.01, 𝛼13=5.77, 𝛽13=0.78, 𝛼14=-4.43, 𝛽14=1.33, 𝛼15=-9.22, 𝛽15=1.27)
--𝑃𝐼𝐵𝑡        PIB en el año 𝑡
--𝑃𝑂𝐵𝑡       Población en el año 𝑡
-
-
-Para 12 < m < 15 𝑄𝑡,𝑚denota número de pasajeros o carga transportada en el año t, de acuerdo con el caso.
-
-
-**Cálculo de la flota circulante de vehículos para cada año:**
-
-.. math::
-
- \begin{equation}F_{t, y, m}=\left(1-e^{-e^{-(\delta m+\gamma m(t-y))}}\right) \times Q_{y, m}\end{equation}
-
-*para m = 3,4,6 y 11*
+Para la subdivisión del sector transporte se ha utilizado un modelo autoregresivo, para el cual primero se ha utilizado los valores del logaritmo del PBI y de la demanda del sector transporte para luego ajustar la ecuación del modelo, todo esto en la herramienta solver de Excel, se obtiene los coeficientes del modelo para finalmente poder hallar el pronóstico final.
+Como ya se ha mencionado anteriormente antes los resultados de estas proyecciones están en pkm.
 
 
 .. math::
 
- \begin{equation}F_{t, y, m}=Q_{y, m} \times\left(1-\lambda_{t-y, m}\right)^{t-y}\end{equation}
+ \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
 
-*para m = 5*
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| 0.84331819     | 0.1209881                  | 0.36183109            |
++----------------+----------------------------+-----------------------+
 
-.. math::
 
- \begin{equation}F_{t, y, m}=\left(\frac{1}{1+e^{\left(\gamma m^{\left(t-y-t_{m}\right)}\right)}}+\frac{1}{\left.1+e^{\left(\gamma m^{\left.\left(t-y+t_{m}\right)\right)}\right.}\right)} \times Q_{y, m}\right.\end{equation}
+- a, b y c          Coeficiente obtenidos por optimización.
+- T(t-1)            Consumo de Energía sector transporte privado en el año 𝑡-1.
+- PBI(t-1)          Producto Bruto Interno en el año t-1.
 
-*para m = 1,2,7,8,9 y 10*
+Las medidas de error para el modelo fueron 
 
-Donde:
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 138.8361788                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 0.08 %                     |
++----------------+-----------------------+----------------------------+
 
--𝐹𝑡,𝑦,𝑚      Número de vehículos del tipo m fabricados en el año y en la flota del año t
--𝛿𝑚,𝛾𝑚,𝑡𝑚   Parámetros (t1=t2=19.1; t6=15.3; t7=t8=t9=t10=17.0)
--𝜆𝑡−𝑦,𝑚      6%, para t-y  5 años; 7%, para 6  t-y  10 años; 8%, para 10  t-y  15 años; 10%, para t-y >15  
-             años (ref. SINDIPEÇAS (2009))
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
-**Cálculo del kilometraje promedio anual recorrido por la flota:**
+**Subdivisión transporte carretero público**
 
-.. math::
-
- \begin{equation}L_{t, m}=\sum_{y=1991}^{t}\left[F_{t, y, m} \times l_{t-y, m}\right]\end{equation}
-
-Donde:
-
--𝐿𝑡,𝑚             Distancia promedio recorrida por la flota de tipo m en el año t
--𝑙𝑡−𝑦,𝑚           Distancia promedio recorrida por vehículos de tipo m con 𝑡−𝑦 años 
-                  (reducción de intensidad de uso aumento de la edad del vehículo)
-
-**Proyección de pasajeros kilómetro por carretera por región. Estos resultados serán utili-zados por el TIMES.**
-
-.. math::
-
- \begin{equation}p k m_{m, t, r}=L_{t, m} \times N_{m} \times \phi_{r, m}\end{equation}
+Para la subdivisión del sector transporte público se ha utilizado un modelo autoregresivo, para el cual primero se ha utilizado los valores del logaritmo del PBI y de la demanda del sector transporte para luego ajustar la ecuación del modelo, todo esto en la herramienta solver de Excel, se obtiene los coeficientes del modelo para finalmente poder hallar el pronóstico final.
+Como ya se ha mencionado anteriormente antes los resultados de estas proyecciones están en pkm.
 
 
 .. math::
 
- \begin{equation}t k m_{m, t, r}=L_{t, m} \times T_{m} \times \phi_{r, m}\end{equation}
+ \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
+
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| 0.78746426     | 0.19176726                 | 0.24507861            |
++----------------+----------------------------+-----------------------+
 
 
--𝑝𝑘𝑚𝑚,𝑡,𝑟        Proyección de pasajero-km (pkm) para modal m, año t y región r
--𝑡𝑘𝑚𝑚,𝑡,𝑟        Proyección de carga-km (tkm) para modal m, año t y región r
--𝑁𝑚             Pasajeros promedios transportados por vehículo del tipo m
--𝑇𝑚              Toneladas promedio de carga transportadas por vehículo de tipo m
--𝜙𝑟,𝑚            Fracción de pkm o tkm que ocurre en la región r (Σ𝜙𝑟,𝑚=1𝑟)
+- a, b y c          Coeficiente obtenidos por optimización.
+- T(t-1)            Consumo de Energía sector transporte público en el año 𝑡-1.
+- PBI(t-1)          Producto Bruto Interno en el año t-1.
 
-**3.1.2.2.2 Transporte de pasajeros y de carga por ferrocarril**
+Las medidas de error para el modelo fueron 
 
-La metodología usada para proyectar el consumo de energía útil de transporte ferroviario de pa-sajero (m=12) y carga (m=13) consiste en las siguientes etapas:
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 1248.217912                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 0.37%                      |
++----------------+-----------------------+----------------------------+
 
-**Cálculo del kilómetro recorrido por vagón de pasajero, para cada empresa:**
-
-.. math::
-
- \begin{equation}k m_{-} W_{m, l}=E W_{m, l} / \eta_{m, l, 1} / N_{m, l}\end{equation}
-
-Donde:
-
--l                 Índice de la línea férrea (Central Andina; Perú Rail; Inca Rail)
--𝑘𝑚_𝑊𝑚,𝑙          Distancia recorrida por vagón de pasajero o carga en 2013
--𝐸𝑊𝑚,𝑙            Consumo de energía en MJ de la línea l (BEN,2013)
--𝜂𝑚,𝑙,1            Rendimiento (MJ/km) de la línea l (BEU, 2013)
--𝑁𝑚,𝑙              Número de vagones de la línea l de pasajeros (o carga) en 2013
-
-**Cálculo del número de pasajeros o carga por kilómetro por empresa:**
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
 
--𝜔𝑚,𝑙             Pasajeros o toneladas de carga transportados por km
--𝜂𝑚,𝑙,2            Rendimiento: energía (MJ/pasajero o MJ/t) (BEU, 2013)
-
-**Proyección del crecimiento del número de pasajeros o carga transportada por ferrovías como una función del crecimiento poblacional (ecuación 05-1) o PIB (ecuación 05-2).**
 
 
-**Aplicación de la tasa de crecimiento para proyectar el número de vagones de pasajeros o carga para las líneas férreas l (cuja región r es conocida).**
+**Subdivisión transporte carretero carga**
 
-.. math::
-
- \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
-
-**Cálculo de la proyección del número de pasajeros kilómetros:**
+Para la subdivisión del sector transporte público se ha utilizado un modelo autoregresivo, para el cual primero se ha utilizado los valores del logaritmo del PBI y de la demanda del sector transporte para luego ajustar la ecuación del modelo, todo esto en la herramienta solver de Excel, se obtiene los coeficientes del modelo para finalmente poder hallar el pronóstico final.
+Como ya se ha mencionado anteriormente antes los resultados de estas proyecciones están en pkm.
 
 
 .. math::
 
- \begin{equation}p k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+ \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
 
++----------------+----------------------------+-----------------------+
+| a              | b                          | c                     |
++----------------+----------------------------+-----------------------+
+| 0.82591532     | 0.16141611                 | 0.29490398            |
++----------------+----------------------------+-----------------------+
 
-Mediante el procedimiento arriba y los datos del BEU se obtiene el consumo de energía final por commodity a través del rendimiento de cada tipo de vehículo, porcentaje de la flota que consume determinado tipo de combustible y kilometraje promedio anual que la flota recurre:
 
+- a, b y c          Coeficiente obtenidos por optimización.
+- T(t-1)            Consumo de Energía sector transporte de carga en el año 𝑡-1.
+- PBI(t-1)          Producto Bruto Interno en el año t-1.
 
-.. math::
+Las medidas de error para el modelo fueron 
 
- \begin{equation}d_{t, m, i}=L_{t, m} \times \psi_{m, i} \times \eta_{m, i}\end{equation}
++----------------------------------------+----------------------------+
+| Tipo de error                          | Valoración                 |
++----------------------------------------+----------------------------+
+| RMSE (root mediun square error )       | 442.3843504                |
++----------------------------------------+----------------------------+
+| MAPE (mean absolute percentage error ) | 0.08%                      |
++----------------+-----------------------+----------------------------+
 
-Donde:
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
--𝑑𝑡,𝑟,𝑖          Proyección de consumo por commodity i (ej. MJ de gasolina)
--𝜓𝑚,𝑖           Fracción de la flota de 2013 del modal m que usa la commo-dity i
--𝜂𝑚,𝑖           Rendimiento (PJ/km) del vehículo m con la commodity i (BEU)
 
-
-**3.1.2.2.3 Transporte naval y aéreo**
-
-La metodología utilizada para proyectar el consumo de energía final de transporte naval consiste en las siguientes etapas:
-1. Proyección de la carga naval o pasajeros transportados por avión por la ecuación (05-2).
-2. Cálculo de la proyección del consumo de energía final
-
-.. math::
-
- \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
-
-Donde:
-
--𝐸𝑡,𝑚              Consumo de energía final en el año 𝑡 para el modal m.
--𝑄𝑡,𝑚/𝑄𝑡−1,𝑚       Crecimiento del número de pasajeros/carga transportada para el modal m en el año t y t-1.
-
-A través del procedimiento arriba y de los datos del BEU se obtiene el consumo de energía final por commodity para el modal naval (gasolina, diésel y aceite combustible) y aéreo (queroseno)
-
-.. math::
-
- \begin{equation}d_{t, m, i}=\psi_{m, i} \times E_{t, m}\end{equation}
-
-Donde:
-
--𝑑𝑡,𝑚,𝑖            Consumo por commodity i del modal m (ej. MJ de gasolina)
--𝜓𝑚,𝑖              Fracción de la flota de 2013 del modal m que usa la commodity i
-
-
-
-
-3.1.3 Modelos de ajuste del sector energía
----------
-
-Para determinar las proyecciones futuras de la demanda energética por sector de 
-se necesitan información acerca del PBI, consumo de energía por sector de periodos 
-pasados, parámetros propios de cada sector para poder hacer las proyecciones con 
-métodos autoregresivos. Los valores utilizados del PBI se han adquirido del Anexo 2 
-del Informe 9 del prosemer.
-    
-.. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
-      :align:   center
-      :width:   500 px
-*Figure 3.1: Proyección del crecimiento del PBI anual*
-
-Para los valores proyectados se utilizaron los valores proporcionados para el 
-periodo 2016-2026 por la consultora APOYO, los valores para el periodo 2027-2040 
-se tomaron de los escenarios proporcionados por el MINEM y para el periodo 
-2040-2055 se tomaron la proyección de la tendencia de los valores de los últimos 
-10 años anteriores al 2040. 
-
-**Las ecuaciones utilizadas para la proyección**
-
-
-Con base a la información obtenida del PROSEMER sobre las proyecciones de demanda 
-de energía por sectores, para los sectores Comercial, Publico, Agro, Pesca, Minero 
-e Industria Manofactura, se calculó la proyección demanda de energía total para estos
-sectores en PJ, *(Ecuación 1)*.
-
-.. math::
-
- Demanda Energia Total sectores $=$ Dem. S. Comercial $+$ Dem. S. Público $+$ Dem. S. Agro $+$ Dem. S. Pesca + Dem. S. Minero $+$ Dem. S. Industria Manofactura
- 
-Con esta nueva variable y con el Escenarios de crecimiento del PIB (% anual) Demanda
-Media se construyó un modelo regresivo, que permita obtener escenarios para la proyección 
-de la demanda total de energía a partir de las variaciones del PBI. La ecuación 2 
-presenta el modelo estimado para la demanda total de energía en PJ y el valor de los 
-coeficientes es presentado en la tabla 1. 
- 
-..  The area of a circle is :math:`A_\text{c} = (\pi/4) d^2`.  
-
-.. math::
-
- \text { Dem. E.Total }_{t}=\alpha * \text { Dem. E.Total}_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon
-
-*Tabla 1 – Coeficientes del modelo*
-
-+----------------+----------------------------+
-| Coeficiente    |  Valor                     |
-+----------------+----------------------------+
-| α              |  0.683612583511262         |
-+----------------+----------------------------+
-| β              |  3.98953737951962          |
-+----------------+----------------------------+
-| γ              |  -0.272134255254439        |
-+----------------+----------------------------+
-| ε              |  -0.009138684795543        |
-+----------------+----------------------------+ 
-
-Siendo que, para el uso eficiente del modelo, la demanda de energía total debe ser 
-previamente diferenciada y normalizada, la ecuación 3 presenta la normalización a 
-utilizar. Obtenido el valor de demanda con el modelo este debe desnormalizado e 
-integrado (proceso inverso) para obtener el valor real de demanda de energía total.
-
-.. math::
-
- $Y_{i}=\frac{X_{i}-0.75 \operatorname{Min}_{X}}{1.25 \operatorname{Max}_{X}-0.75 \operatorname{Min}_{X}}$
-
-
-Donde :math:`Y_i`  es el valor normalizado de la demanda, :math:`X_i` es un valor del vector de demandas
-correspondiente al año :math:`i`, :math:`〖Min〗_X` es el valor mínimo del vector de demanda 
-(5 para este caso) y :math:`〖Max〗_X` es el valor máximo del vector de demanda
-(14 para este caso). La figura 1 presenta la curva de la proyección demanda de energía 
-total para estos sectores en PJ y la curva de ajuste obtenida con el modelo regresivo. 
-Este modelo presenta un MAPE de :math:`=0.6%`.
-
-.. figure:: img/Proyeccion_de_la_demanda_total_del_modelo_de_ajuste.png
-   :align:   center
-   :width:   500 px
-*Figura 1 - Proyección demanda de energía total y modelo de ajuste de demanda*
-
-
-
-
-
-
-*____________________________________________________________________*
-
- Clustering and Representative Networks
- 
- Time-Series Analysis and Forecasting
-
-3.1.4 Modelo de ajuste del sector eléctrico
-----------
- Data Structure and Elements of Electric System
-  power..
-
-
-**Modelo para ajustar el Demanda de electricidad anual para un escenario base (PBI demanda media)(GW.h/año)**
-
-
-Con el pasado de la Demanda de electricidad anual y con el Escenarios de crecimiento 
-del PIB (% anual) Demanda Media se construyó un modelo regresivo, que permita obtener 
-escenarios para las proyecciones de la Demanda de electricidad anual a partir de las 
-variaciones del PBI. La ecuación 9 presenta el modelo estimado para la Demanda de electricidad 
-anual en GW.h/año y el valor de los coeficientes es presentado en la tabla 7. 
-
-.. math::
-
- Total TransPúbluco$_{t}=\alpha *$Total TransPúblico$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
-
-*Tabla 7 – Coeficientes del modelo*
-
-
- 
-+----------------+----------------------------+ 
-| Coeficiente    | Valor                      |
-+----------------+----------------------------+ 
-| α              | 0.890001711404907          |
-+----------------+----------------------------+ 
-| β              | 16.4520781345043           |
-+----------------+----------------------------+ 
-| γ              | -15.7613956384226          |
-+----------------+----------------------------+ 
-| ε              | 0.000200331856878383       |
-+----------------+----------------------------+ 
-
-
-Siendo que, para el uso eficiente del modelo, la Demanda de electricidad anual debe 
-ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
-a utilizar con valor mínimo de 394.949999999999 y valor máximo de 6201.25. Obtenido 
-el valor de la Demanda de electricidad anual con el modelo este debe desnormalizado 
-e integrado (proceso inverso) para obtener el valor real del total del transporte carretero 
-público.
-La figura 7 presenta la curva de la proyección de la Demanda de electricidad anual 
-en GW.h/año y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta 
-un MAPE de =0.54%.
-
-.. figure:: img/proyeccion_de_la_demanda_de_electrcidad_anual_para_un_escenario_base_modelo_de_ajuste.png
-   :align:   center
-   :width:   500 px
-*Figura 7 - Proyección de la Demanda de electricidad anual para un escenario base *(PBI demanda media)(GW.h/año) y modelo de ajuste*
-
-
-
-
-*____________________________________________________________________*
-
- Electricity Power Flow and Efficiency
- 
- Emissions from Electricity Sector
-
-3.1.5 Modelo de ajuste del sector transporte
---------
-
- Data Structure and Elements of Transport System
- Traffic Flow Analysis and Efficiency of the System
- Emissions and Air Pollution from Transport Sector
-
-**Modelo para ajustar el Total Transporte carretero BAU Privado (millones de pkm)**
-
-
-Con el pasado del total del transporte carretero privado y con el Escenarios de 
-crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
-permita obtener escenarios para las proyecciones del total del transporte carretero 
-privado a partir de las variaciones del PBI. La ecuación 4 presenta el modelo estimado 
-para el total del transporte carretero privado en pkm y el valor de los coeficientes 
-es presentado en la tabla 2. 
-
-.. math::
-
- Total TransPruvado$_{t}=\alpha *$Total TransPrivado$_{x-1}+\beta * P B I_{r}+\gamma * P B I_{t-1}+\varepsilon \mathfrak{d}$
-
-*Tabla 2 – Coeficientes del modelo*
-
-+----------------+----------------------------+ 
-| Coeficiente    | Valor                      |
-+----------------+----------------------------+ 
-| α              | 1.33896846210498           |
-+----------------+----------------------------+ 
-| β              | 0.731435263977805          |
-+----------------+----------------------------+ 
-| γ              | 2.49036074323663           |
-+----------------+----------------------------+ 
-| ε              | -0.16321268315623          |
-+----------------+----------------------------+ 
-
-Siendo que, para el uso eficiente del modelo, el total del transporte carretero privado  
-debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
-a utilizar con valor mínimo de 2793.75 y valor máximo de 5986.25. Obtenido el valor del 
-total del transporte carretero privado con el modelo este debe desnormalizado e integrado 
-(proceso inverso) para obtener el valor real del total del transporte carretero privado.
-La figura 2 presenta la curva de la proyección del total del transporte carretero privado 
-en millones de pkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo 
-presenta un MAPE de =0.12%.
-
-
-.. figure:: img/proyeccion_de_total_trasporte_carretero_BAU_privado_modelo_ajuste.png
-   :align:   center
-   :width:   700 px
-*Figura 2 - Proyección de Total Transporte carretero BAU Privado (millones de pkm) y modelo de ajuste*
-
-
-**Modelo para ajustar el Total Transporte carretero BAU Público (millones de pkm)**
-
-
-Con el pasado del total del transporte carretero público y con el Escenarios de 
-crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
-permita obtener escenarios para las proyecciones del total del transporte carretero 
-público a partir de las variaciones del PBI. La ecuación 5 presenta el modelo estimado 
-para el total del transporte carretero público en millones de pkm y el valor de los 
-coeficientes es presentado en la tabla 3. 
-
-.. math::
-
- Total TransPúbluco$_{t}=\alpha *$Total TransPúblico$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
-
-*Tabla 3 – Coeficientes del modelo*
-
-+----------------+----------------------------+
-| Coeficiente    | Valor                      | 
-+----------------+----------------------------+
-| α              | 1.02861287957132           |
-+----------------+----------------------------+
-| β              | 17.9849248681619           |
-+----------------+----------------------------+
-| γ              | -9.78122826729             |
-+----------------+----------------------------+
-| ε              | -0.287449588573921         |
-+----------------+----------------------------+
-
-Siendo que, para el uso eficiente del modelo, el total del transporte carretero público 
-debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
-a utilizar con valor mínimo de -1591.5 y valor máximo de 11445. Obtenido el valor del 
-total del transporte carretero público con el modelo este debe desnormalizado e integrado 
-(proceso inverso) para obtener el valor real del total del transporte carretero público. 
-La figura 3 presenta la curva de la proyección del total del transporte carretero público 
-en millones de pkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo 
-presenta un MAPE de =0.32 %.
-
-.. figure:: img/proyeccion_total_transporte_carretero_BAU_publico_modelo_ajuste.png
-   :align:   center
-   :width:   700 px
-*Figura 3 - Proyección de Total Transporte carretero BAU Público (millones de pkm) y modelo de ajuste*
-
-
-**Modelo para ajustar el Total Transporte Carga BAU (millones de tkm)**
-
-
-Con el pasado del Total Transporte Carga y con el Escenarios de crecimiento del PIB 
-(% anual) Demanda Media se construyó un modelo regresivo, que permita obtener escenarios 
-para las proyecciones del Total Transporte Carga a partir de las variaciones del PBI. 
-La ecuación 6 presenta el modelo estimado para el Total Transporte Carga en millones 
-de tkm y el valor de los coeficientes es presentado en la tabla 4. 
-
-.. math::
-
- Total Trans Carga$_{t}=\alpha *$Total TransCarga$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
-
-*Tabla 4 – Coeficientes del modelo*
-
-+----------------+----------------------------+
-| Coeficiente    | Valor                      |
-+----------------+----------------------------+
-| α              | 0.988472104474276          |
-+----------------+----------------------------+
-| β              | -0.680978873404703         |
-+----------------+----------------------------+
-| γ              | 2.44354241913634           |
-+----------------+----------------------------+
-| ε              | -0.0515638493334117        |
-+----------------+----------------------------+
-
-Siendo que, para el uso eficiente del modelo, el Total Transporte Carga debe ser 
-previamente diferenciado y normalizado, la ecuación 3 presenta la normalización a 
-utilizar con valor mínimo de 8703 y valor máximo de 26475. Obtenido el valor del 
-Total Transporte Carga con el modelo este debe desnormalizado e integrado (proceso inverso) 
-para obtener el valor real del Total Transporte Carga.
-La figura 3 presenta la curva de la proyección del Total Transporte Carga en millones de 
-tkm y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta un MAPE 
-de =0.089 %.
-
-.. figure:: img/proyeccion_total_transporte_carga_bau_y_modelo_de_ajuste.png
-   :align:   center
-   :width:   700 px
-*Figura 4 - Proyección de Total Transporte Carga BAU (millones de tkm) y modelo de ajuste*
-
-
-**Modelo para ajustar la Demanda de Todo el Sector Transporte (PJ)**
-
-
-Con el pasado de la Demanda de todo el sector transporte y con el Escenarios de 
-crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, que 
-permita obtener escenarios para las proyecciones de la Demanda de todo el sector 
-transporte a partir de las variaciones del PBI. La ecuación 7 presenta el modelo 
-estimado para la Demanda de todo el sector transporte en PJ y el valor de los 
-coeficientes es presentado en la tabla 5.
-
-.. math::
-
- DemandaTodo\widehat{SectorTransporte} _ { r } = \alpha * \text {DemandaTodoSectorTransporte} _ { r - 1 } + \beta * P B I _ { t } + \gamma * P B I _ { t - 1 } + \varepsilon
-
-
-*Tabla 5 – Coeficientes del modelo*
-
-+----------------+----------------------------+
-| Coeficiente    | Valor                      |
-+----------------+----------------------------+
-| α              | 0.864566772420374          |
-+----------------+----------------------------+
-| β              | 9.48914951322106           |
-+----------------+----------------------------+
-| γ              | -8.08298015317043          |
-+----------------+----------------------------+
-| ε              | 0.0000175341565728362      |
-+----------------+----------------------------+
-
-Siendo que, para el uso eficiente del modelo, la Demanda de todo el sector transporte 
-debe ser previamente diferenciado y normalizado, la ecuación 3 presenta la normalización 
-a utilizar con valor mínimo de 3.08423913043498  y valor máximo de 62.5. Obtenido el valor 
-de la Demanda de todo el sector transporte con el modelo este debe desnormalizado e 
-integrado (proceso inverso) para obtener el valor real de la Demanda de todo el sector transporte.
-La figura 5 presenta la curva de la proyección de la Demanda de todo el sector transporte 
-en PJ y la curva de ajuste obtenida con el modelo regresivo. Este modelo presenta un 
-MAPE de =0.87%.
-
-.. figure:: img/Proyeccion_de_la_demanda_total_del_transporte_publico_privado_de_carga_ajuste.png
-   :align:   center
-   :width:   700 px
-*Figura 5 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
-
-
-**Modelo para ajustar la Demanda Total Transporte Público, Privado y Carga (PJ)**
-
-
-Con el pasado de la Demanda total del transporte público, privado y de carga, y con el 
-Escenarios de crecimiento del PIB (% anual) Demanda Media se construyó un modelo regresivo, 
-que permita obtener escenarios para las proyecciones de la Demanda total del transporte 
-público, privado y de carga a partir de las variaciones del PBI. La ecuación 8 presenta 
-el modelo estimado para la Demanda total del transporte público, privado y de carga en 
-PJ y el valor de los coeficientes es presentado en la tabla 6. 
-
-.. math::
-
- DemandaTotal Públuco, prevado y Carga$_{t}=\alpha *$ DemandaTotal Público, privado y Carga$_{t-1}+\beta * P B I_{t}+\gamma * P B I_{t-1}+\varepsilon$
-
-*Tabla 6 – Coeficientes del modelo*
-
-+----------------+----------------------------+
-| Coeficiente    | Valor                      |
-+----------------+----------------------------+
-| α              | 0.865089399594506          |
-+----------------+----------------------------+
-| β              | -12.3555964907002          |
-+----------------+----------------------------+
-| γ              | 13.5364206205921           |
-+----------------+----------------------------+
-| ε              | 0.000212450663645337       |
-+----------------+----------------------------+
-
-Siendo que, para el uso eficiente del modelo, la Demanda total del transporte público, 
-privado y de carga debe ser previamente diferenciado y normalizado, la ecuación 3 
-presenta la normalización a utilizar con valor mínimo de 1.5 y valor máximo de 56.25. 
-Obtenido el valor de la Demanda total del transporte público, privado y de carga con 
-el modelo este debe desnormalizado e integrado (proceso inverso) para obtener el valor 
-real de la Demanda total del transporte público, privado y de carga.
-La figura 6 presenta la curva de la proyección de la Demanda total del transporte público, 
-privado y de carga en PJ y la curva de ajuste obtenida con el modelo regresivo. Este 
-modelo presenta un MAPE de =0.91 %.
-
-.. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_ajuste.png
-   :align:   center
-   :width:   700 px
-*Figura 6 - Proyección de la Demanda total del transporte público, privado y de carga y modelo de ajuste*
-
- *_______________________________________*
 
