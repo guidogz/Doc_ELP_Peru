@@ -618,10 +618,11 @@ Los precios del carbono son una medida que ayuda a resolver este problema, hoy e
 
 **3.1.2.1 Ecuaciones generales para Sectores Productivos**
 
+Mediante el uso de modelos econométricos se ha proyectado las series de la demandas de los sectores productivos, tomando como variables exógenas: la población, el PBI por sectores, PBI per cápita, en algunos de estas se incluye la tendencia lineal, tambien se ha proyectado con las tazas de crecimiento constantes para el sector agropecuario y público; analizando las series de tiempo para los sectores como procesos autoregresivos (a excepto de agropecuario y público, transporte ferroviario, naval y aéreo) donde con las variables explicativas se ha podido proyectar las demandas de los múltiples sectores hasta el 2050.
+Los sectores analizados son los mismos que toma el PROSEMER, que a su vez son los mismos que toma del BEU 2013 (balance de energía útil); los sectores son:
 
-ANTES DE LA INTEGRACIÓN
 
-Se consideran 7 divisiones.
+**Se consideran 7 sectores productivo**
 
 - k=1, (Residencial)
 - k=2, (Comercial 
@@ -631,10 +632,33 @@ Se consideran 7 divisiones.
 - k=6, (Agropecuaria)
 - k=7, (Minería y metalurgia)
 
+Para el caso de transporte se ha dividido para su análisis en macrogrupos como carretero, ferroviario, naval, aéreo, metro y transporte masivo, a su vez transporte carretero y ferroviario están subdivididos en pasajero y carga.   
 
-**proyección del consumo de energía neta de los macro sectores**
+Los resultados de los sectores están en diferentes unidades como se puede observar en la Tabla 1, los resultados de transporte carretero están en pkm  y tkm debido que se quiere representar la demanda como un servicio <<necesidad de un servicio>>, sin embargo, los resultados para los demás sectores las unidades están en PJ (energía neta).
 
-Para obtener la proyección del consumo de energía neta de los macro sectores Edificaciones (re-sidencial y comercial, servicios y público) y Agropecuario/Industrial (industrial, pesquería, agro-pecuaria y minería) se plantea un modelo de regresión lineal, mediante el cual se estiman los coe-ficientes 𝛼𝑘, 𝛽𝑘, 𝛾𝑘, 𝜃𝑘 por el método Mínimos Cuadrados Ordinarios (MCO) para cada segmento:
+
+============================= ============================= ======================================== =========
+Sector                        Variables explicativas               Uso                               Resultado
+============================= ============================= ======================================== =========
+Residencial                   PBI per cápita                Cons=f(ConsRes(t-1),PIBpc(t-1),tend(t))  PJ
+Comercial                     PBI sector terciario          Cons=f(ConsCom(t-1),PIBter(t-1),tend(t)) PJ
+Público                       Tasa de crecimiento constante                                          PJ
+Agropecuario                  Tasa de crecimiento constante                                          PJ
+Pesca                         Producción pesca y tendencia  Cons=f(ConsPesca(t-1),Prod(t-1),tend(t)) PJ
+Minería                       PBI minería                   Cons=f(ConsMin(t-1),PIBMin(t-1),tend(t)) PJ
+Manufactura insdustrial       PBI manufactura industrial    Cons=f(ConsMan(t-1),PIBMan(t-1),tend(t)) PJ
+Energía escenario 2           PBI                           Cons=f(ConsEnerg(t-1),PIB(t-1),tend(t))  PJ
+Trans. carretero pas. privado PBI                           Cons=f(ConsTransCarrPriv(t-1),PIB(t-1))  pkm
+Trans. carretero pas. público PBI                           Cons=f(ConsTransCarrPubl(t-1),PIB(t-1))  pkm
+Trans. carretero carga        PBI                           Cons=f(ConsTransCarrCarg(t-1),PIB(t-1))  tkm
+Trans. ferroviario carga      PBI                           Cons=f(ConsTransFerrCarg(t-1),PIB(t-1))  tkm
+Trans. ferroviario pasajeros  Població (POB)                Cons=f(ConsTransFerrPas(t-1),POB(t-1))   pkm
+Trans. naval                  PBI                           Cons=f(ConsTransNav(t-1),PIB(t-1))       PJ
+Trans. éreo                   PBI                           Cons=f(ConsTransAereo(t-1),PIB(t-1))     PJ
+============================= ============================= ======================================== =========
+
+
+
 
 
 
