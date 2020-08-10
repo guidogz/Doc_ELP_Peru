@@ -47,16 +47,16 @@ comodities de mayor calidad.
 
 
 
-Una oración que enlaza a Wikipedia_ y al `Linux kernel archive`_.
+.. Una oración que enlaza a Wikipedia_ y al `Linux kernel archive`_.
 
-.. _Wikipedia: http://www.wikipedia.org/
-.. _Linux kernel archive: http://www.kernel.org/
+.. .. _Wikipedia: http://www.wikipedia.org/
+.. .. _Linux kernel archive: http://www.kernel.org/
 
-Otra oración con un `enlace anónimo al sitio de Python`__.
+.. Otra oración con un `enlace anónimo al sitio de Python`__.
 
-__ http://www.python.org/
+.. __ http://www.python.org/
 
-`Python <http://www.python.org/>`_. 
+.. `Python <http://www.python.org/>`_. 
 
 
 
@@ -156,15 +156,18 @@ la necesidad de otros modelos de optimización dentro de la cadena de planifici�
 energética, como OPTGEN y TIMES, para luego ser parte de un bucle de optimización 
 con la integración del modelo TIMES-CGE. Los resulatdos obtenidos pueden variarse 
 al escenario suspuesto, con la finalidad de situarse y analizarlos, además los 
-resulatdos estan desagregados en región, tipo de combustible, escenario, etc. A modo 
-de resumen podemos poner en bruto las proyecciones al 2050 de la demanda para los 
-sectores económicos se muestran la siguiente gráfica, en donde la participacion de 
-sector agro es predominante.  
+resulatdos estan desagregados en región, tipo de combustible, escenario, etc. 
+
+Por otra parte, los valores proyectados de las series de tiempo para lograr la 
+descarbonización del Perú al 2050 utiliza han sido construidos con modelos autoregresivos
+que tienen diferentes variables explicativas por sector, las proyecciones al 2050 de 
+la demanda para los sectores económicos se muestran la siguiente gráfica, en donde 
+la participacion de sector residencial y manufactura son predominantes.  
 
 .. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
    :align:   center
    :width:   500 px
-*Figure 3.1: Proyección del crecimiento del PBI anual*
+*Figure 3.1: Predicciones de la demanda de energía por sector productivo*
 
 
 3.1.1.4 Plantas de generación 
@@ -250,7 +253,6 @@ TOTAL                        12,636.89
 
 ============================== ========================== =============
 POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019       
-
 ------------------- ---------------------------------------------------
 TIPO DE RECURSO ENERGÉTICO     POTENCIA EFECTIVA (MW)        (%)    
 ============================== ========================== =============
@@ -408,13 +410,13 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 ---------
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
-capacidad de producción de 220-229 miles de barriles diarios, con una disponibilidad 
+capacidad de producción de 221-228 miles de barriles diarios, el milagro ya no se considera
+como un refinería economicamente viablea partir del 2016, con una disponibilidad 
 en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
 de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios.
 La produción en PJ de energía en el año 2017 alcanzó un total de 350 con una producción  
 de 91459.9 barriles, y tambien para el mismo año los costos operativos se valorizaron en 
-492.6 MMUSD, en las siguinetes tablas se puedes apreciar estas cifras.
-
+492.6 MMUSD, en las siguinetes tablas se puedes apreciar estas cifras. 
 
 =========== ============================ ======================================= ==========
 Refinería    Capacidad instalada (2018)  Tipo de combustible refinado            Región
@@ -424,15 +426,15 @@ Nombre         Miles de barriles de
 =========== ============================ ======================================= ==========
 Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina   Norte
 Conchán       15.5                       Diesel, Fueloil, Gasolina               Centro
-Pampilla      110-117                    Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
-Iquitos       12.5                       Diesel, Turbo, Fueloil, Gasolina        Oriente
+Pampilla      110-(*117)                 Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
+Iquitos       12.0                       Diesel, Turbo, Fueloil, Gasolina        Oriente
 Pucallpa       3.3                       Diesel, Turbo, Gasolina                 Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina        Norte
 Huayuri        4.0                       Crudo multiuso, Diesel, HFO, Nafta      Oriente
 Shiviyacu      5.2                       Crudo, Diesel, Nata, Residual, Multiuso Oriente
 Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual      Oriente
 =========== ============================ ======================================= ==========
-*Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER*
+*Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER, OSINERGMIN*
 
 
 ========== ==========
@@ -464,18 +466,15 @@ REFINERIAS    TOTAL   492,6
 |
 
 
-
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
    :align:   center
    :width:   700 px
-
 
 *Figure 3.5: Proyección del precio promedio del crudo*
 
 Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
 incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
-
 
 
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
