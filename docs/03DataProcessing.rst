@@ -249,7 +249,7 @@ HYDRO PATAPO                      1.0
 -------------------------- ---------------------
 TOTAL                        12,636.89
 ========================== =====================
-*Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.3*
+*Fuente: Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.3*
 
 
 ============================== ========================== =============
@@ -269,7 +269,7 @@ TIPO DE RECURSO ENERGÉTICO     POTENCIA EFECTIVA (MW)        (%)
   TOTAL                                12,636.89              100.00     
 ============================== ========================== ============= 
 
-*Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
+*Fuente: Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.5*
 
 
 ====== =============== ============== ======= ======== ============
@@ -283,7 +283,7 @@ SUR        618.48         2,031.69     285.02            2,935.20
 ------ --------------- -------------- ------- -------- ------------
 TOTAL    5,067.66         6,908.75     285.02  375.46   12,636.89 
 ====== =============== ============== ======= ======== ============
-*Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.5*
+*Fuente: Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.5*
 
 
 ====== ================ ================ ====== ========== =========================== ==========
@@ -296,11 +296,11 @@ CENTRO   22,735.89        19,504.41              1,202.48                       
 SUR       4,061.99            50.59      761.73                                          4,874.31 
 TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05                52,949.19 
 ====== ================ ================ ====== ========== =========================== ==========
-*Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.7*
+*Fuente: Estadística Anual 2019, Capítulo 1 - Estadística relevante del SEIN, Cuadro 1.7*
 
 
 |
-|        **Las proyecciones de la demanda de energía anual al 2050 **
+|        **Las proyecciones de la demanda de energía anual al 2050**
 |
 
 Para la demanda de energía anual se ha desarrollado un modelo autoregresivo tomando como variables explicativa el PBI y la tendencia, Para las predicciones se va a considerar únicamente las zonas del país 
@@ -342,7 +342,7 @@ Pampa Melchorita          238            Licuefacción                    Centro
 ------------------- -------------------- ------------------------------- -------
 Total instalado          1333
 =================== ==================== =============================== =======    
-*Anexo 2 - informe 9 prosemer, página 101 *
+*Fuente: Anexo 2 - informe 9 prosemer, página 101 *
 
 ================== ================ =======
 Sector                Costo          2013
@@ -353,7 +353,7 @@ TRATAMIENTO - GAS   CAPEX
 ------------------ ---------------- -------
 TRATAMIENTO - GAS   TOTAL           4228,2
 ================== ================ =======
-*Imforme 9, página 303*
+*Fuente: Imforme 9, página 303*
 
 
 ========== =============
@@ -364,7 +364,7 @@ LGN           182
 ---------- -------------
 Total         639
 ========== =============
-*Informe 9 pag. 303*
+*Fuente: Informe 9 pag. 303*
 
 
 |
@@ -424,7 +424,7 @@ Huayuri        4.0                       Crudo multiuso, Diesel, HFO, Nafta     
 Shiviyacu      5.2                       Crudo, Diesel, Nata, Residual, Multiuso Oriente
 Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual      Oriente
 =========== ============================ ======================================= ==========
-*Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER, OSINERGMIN*
+*Fuente: Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER, OSINERGMIN*
 
 
 ========== ==========
@@ -438,7 +438,7 @@ Turbo        29,5
 ---------- ----------
 Total       350,5
 ========== ==========
-*Informe 9 PROSEMER, pag. 302* 
+*Fuente: Informe 9 PROSEMER, pag. 302* 
 
 
 ============ ======= ============
@@ -449,7 +449,7 @@ REFINERIAS    CAPEX    80,1
 ------------ ------- ------------ 
 REFINERIAS    TOTAL   492,6
 ============ ======= ============
-*Informe 9 PROSEMER, pag. 302*
+*Fuente: Informe 9 PROSEMER, pag. 302*
 
 |
 |                  **Las proyecciones del precio del crudo y cotos por capacidad**
@@ -502,7 +502,7 @@ Centro                 2.97
 ----------- ---------------------------
 Total                  5.08
 =========== ===========================
-
+*Fuente: Informe 9 PROSEMER, pag. 302* 
 
 ============ ======= ================
 Sector        Costo  2017 (MMUSD/PJa)
@@ -511,6 +511,7 @@ CARBONERAS    TOTAL     2.71
 ------------ ------- ----------------
 CARBONERAS    TOTAL     2.71
 ============ ======= ================
+*Fuente: Informe 9 PROSEMER, pag. 302* 
 
 |
 |                  **Las proyecciones del precio del crudo y cotos por capacidad**
@@ -528,18 +529,17 @@ son considerados e incluye  flete y otros costos de transporte, el carbón tiene
 un costo de internación  de 18.6 US$/ton.
 
 
-
-
-
 3.1.1.8 Distribución de energía
 ---------
+
+La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
 
 
 3.1.1.9 Importaciones 
 ---------
 
-
+Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que necesitamos lo importamos, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de mas reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
 
 
 3.1.1.10 Exportaciones
@@ -557,12 +557,25 @@ un costo de internación  de 18.6 US$/ton.
 3.1.1.12 Transporte de pasajeros y de carga
 ---------
 
+EL sector transporte es el sector productivo que más energía consume y lo hace principalmente a través de combustibles fósiles, con la finalidad de realizar una proyección del sector ha sido conveniente de dividirlo en subdivisiones para facilitar el desarrollo de los modelos que serán utilizados para realizar las predicciones de demanda, es importante aclarar que son demandas de energía expresadas en *pkm* o *tkm*, como un servicio en lugar de terminos de energía neta (PJ). A continuación se presentarán las subdivisiones realizadas.
+
+============ =================================
+Subdivisión  Tipo
+============ =================================
+Carretero    Pasajero publico y privado, Carga
+Ferroviario  Pasajero y Carga
+Naval        Energía neta
+Aéreo        Energía neta
+============ =================================
+*Fuente: Propia* 
+
+Las predicciones sobre la demanda historica de sector transporte específicamente en la subdivision Carretero han tomado como variable explicativa al PBI, sin embargo, no todas las subdivisiones del sector utilizan PBI como variable explicativa tanbien se utiliza la población y una tendecia.
+
 
 .. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_desarrollado.png
    :align:   center
    :width:   700 px
 *Figure 3.10: Proyección del sector transporte publico y privado.png.*
-
 
    
 .. figure:: img/proyeccion_total_transporte_carga_modelo_desarrollado.png
@@ -570,12 +583,12 @@ un costo de internación  de 18.6 US$/ton.
    :width:   700 px
 *Figure 3.12: Proyección del sector transporte.*
 
+Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
    :width:   700 px
 *Figure 3.13: Proyección del precio de vehiculos electricos.*
-
 
 
 
@@ -596,13 +609,14 @@ contaminación y la principal acción del sector energía y transportes es susti
 los insumos que podrucen contaminación, las políticas climáticas hoy en día han 
 planificado al 2050 lograr la carbononeutralidad.   
 
+Los precios del carbono son una medida que ayuda a resolver este problema, hoy en dia los precios de la tonelada de carbono en el mundo es aún bajo, sin embargo, hay países como suecia en donde los presios de la toenlada de carbono esta 126 US$/ton_CO2 (2016) y en proomedio de 10 US$/ton_CO2 para america latina, los precios de la tonelada de carbono en un escenario de descarbonización aumentarían.
  
 
 
-3.1.2 Proyección de demanda - Ecuaciones para las proyecciones de las proyecciones de los sectores
+3.1.2 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
 --------------
 
-**3.1.2.1 Ecuaciones generales para Residencial, Comercial, Publico y Sectores Productivos**
+**3.1.2.1 Ecuaciones generales para Sectores Productivos**
 
 
 ANTES DE LA INTEGRACIÓN
