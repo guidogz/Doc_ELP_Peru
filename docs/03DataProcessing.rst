@@ -176,11 +176,12 @@ Las empresas de generación en el Perú suman un total de 58 al 2018, las cuales
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
 2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
 demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
-participación de fue el agua con 37.58% seguido del gas natural de camisea 29.87%, la 
-potencia efectiva por tipo de generación que tuvo mayor partcipaión fueron las 
-termoeléctricas con un 54.67 %. A continuación se presentará las tablas de las empresas 
-con sus respectivas potencias efectivas, seguido del tipo de la participación por tipo de 
-recurso, tipo de generación y finalmente la energía ejecutada. 
+participación en la producción de energía fue el agua con 57.04% seguido de los combustibles 
+fósiles con un 38.41%, la potencia efectiva por tipo de generación que predominó fueron las 
+termoeléctricas con un 54.67 % y el recurso que que más capacidad efectiva disponia para la 
+producción de energías fue el agua con un 37.58 %. A continuación se presentará las tablas de 
+las empresas con sus respectivas potencias efectivas, seguido del tipo de la participación 
+por tipo de recurso, tipo de generación y finalmente la energía ejecutada. 
 
 
 ========================== =====================
@@ -299,25 +300,22 @@ TOTAL    30,168.43        20,312.83      761.73  1,646.16          60.05        
 
 
 |
-|        **Las proyecciones de la demanda de energía y máxima demanda eléctrica**
+|        **Las proyecciones de la demanda de energía anual al 2050 **
 |
 
+Para la demanda de energía anual se ha desarrollado un modelo autoregresivo tomando como variables explicativa el PBI y la tendencia, Para las predicciones se va a considerar únicamente las zonas del país 
+conectadas al SEIN. Iquitos no se incluye en el modelaje.  
 
-.. figure:: img/Proyeccion_de_la_maxima_demanda_de_electricidad_anual.png
-   :align:   center
-   :width:   700 px
-*Figure 3.8: Proyección de la maxima demanda de electricidad anual*
 
-.. figure:: img/Proyeccion_de_la_demanda_de_electricidad_anual.png
+.. figure:: img/proyeccion_de_la_demanda_de_electrcidad_anual_para_un_modelo_autoregresivo.png
    :align:   center
    :width:   700 px
 *Figure 3.9: Proyección de la demanda de electricidad anual*
 
-Para ambas tipos de proyecciones se va a considerar únicamente las zonas del país 
-conectadas al SEIN. Iquitos no se incluye en el modelaje.
 
 
 
+   
 3.1.1.5 Plantas de gas 
 ---------
 
@@ -336,13 +334,13 @@ Plantas de gas      Capacidad instalada   Tipo de tratamiento            Región
 Malvinas                  804            Procesamiento                   Sur
 Curimaná                   29            Procesamiento                   Oriente
 GMP-procesamiento          18            Procesamiento                   Norte
-GMP-fraccionamiento        5             Fraccionamiento                 Norte
-Pisco                      215           Fraccionamiento                 Sur
-Yarinacocha                8             Fraccionamiento                 Oriente
-Pariñas                   16             Procesamiento y Fraccionamiento Norte
+GMP-fraccionamiento         5            Fraccionamiento                 Norte
+Pisco                     215            Fraccionamiento                 Sur
+Yarinacocha                 8            Fraccionamiento                 Oriente
+Pariñas                    16            Procesamiento y Fraccionamiento Norte
 Pampa Melchorita          238            Licuefacción                    Centro
 ------------------- -------------------- ------------------------------- -------
-Total                    1333
+Total instalado          1333
 =================== ==================== =============================== =======    
 *Anexo 2 - informe 9 prosemer, página 101 *
 
@@ -372,7 +370,9 @@ Total         639
 |
 |          **Las proyecciones del precio del gas natural y cotos por capacidad**
 |
-
+Para estas proyecciones se han tomado los valores del los informes del PROSEMER y se han extendido 
+de forma lineal hasta el 2050. Para los precios de gas se han tomado los valores proyectados al 2050
+del HENRY HUB.
 
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
@@ -396,21 +396,11 @@ de gas y la actividad de las refinería que se encuentran en el informe 9 "Desar
 del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
 
-   
-
-
-
-
-
-
-
-
-
 3.1.1.6 Refinerías 
 ---------
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
-capacidad de producción de 221-228 miles de barriles diarios, el milagro ya no se considera
+capacidad de producción de 221-228 miles de barriles diarios, El Milagro ya no se considera
 como un refinería economicamente viablea partir del 2016, con una disponibilidad 
 en promedio del 90%, esta capacidad de procesamiento cambiará después de la modernización 
 de la refinería de talara, su capacidad será de 245.3 miles de barriles diarios.
@@ -464,6 +454,9 @@ REFINERIAS    TOTAL   492,6
 |
 |                  **Las proyecciones del precio del crudo y cotos por capacidad**
 |
+Para estas proyecciones se han tomado los valores del los informes del PROSEMER y se han extendido 
+de forma lineal hasta el 2050. Para los hodrocarburos se han tomado los valores proyectados al 2050
+del WTI.
 
 
 .. figure:: img/Proyeccion_del_precio_promedio_del_crudo.png
@@ -561,21 +554,22 @@ un costo de internación  de 18.6 US$/ton.
 
 
 
-3.1.1.12 Transporte de pasajeros 
+3.1.1.12 Transporte de pasajeros y de carga
 ---------
 
 
-.. figure:: img/proyecion_sector_transporte_publico_privado.png
+.. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_desarrollado.png
    :align:   center
    :width:   700 px
 *Figure 3.10: Proyección del sector transporte publico y privado.png.*
 
 
    
-.. figure:: img/proyecion_sector_transporte.png
+.. figure:: img/proyeccion_total_transporte_carga_modelo_desarrollado.png
    :align:   center
    :width:   700 px
 *Figure 3.12: Proyección del sector transporte.*
+
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
@@ -585,18 +579,7 @@ un costo de internación  de 18.6 US$/ton.
 
 
 
-
-3.1.1.13 Transporte de carga
----------
-
-.. figure:: img/proyecion_sector_transporte_carga.png
-   :align:   center
-   :width:   700 px
-*Figure 3.11: Proyección del sector transporte carga.png.*
-   
-
-
-3.1.1.14 Otros consumos energéticos 
+3.1.1.13 Otros consumos energéticos 
 ---------
 
 
@@ -604,7 +587,7 @@ un costo de internación  de 18.6 US$/ton.
 
 
 
-3.1.1.15 Emisiones
+3.1.1.14 Emisiones
 ---------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
@@ -633,18 +616,6 @@ Se consideran 7 divisiones.
 - k=5, (Pesca)
 - k=6, (Agropecuaria)
 - k=7, (Minería y metalurgia)
-
-
- DESPÚES DE LA INTEGRACIÓN
-
-Se consideran 6 divisiones.
-
-- k=1, (Residencial)
-- k=2, (Comercial y Público)
-- k=3, (Industrial manufacturera)
-- k=4, (Pesca)
-- k=5, (Agropecuaria)
-- k=6, (Minería y metalurgia)
 
 
 **proyección del consumo de energía neta de los macro sectores**
