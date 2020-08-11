@@ -676,8 +676,36 @@ Trans. éreo                   PBI                           Cons=f(ConsTransAer
 
 **PBI**
 
+La variable utilizada como varible expliativa en la mayoría de los modelos es el PBI (producto bruto interno), los valores de esta variable se han tomado del T21, estos resultados son de un estudio que se realizó con el objetivo de predecir el crecimiento del PBI al 2050, los valores tabulados de crecimiento del PBI se pueden encontrar en anexos de este documento, Anexos en A3 `PBI <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_. En las siguientes gráficas se puede observar los valores de PBI, el porcentaje de crecimiento PBI, el PBI per cápita, y la producción por sector energético. 
+
+
+.. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección del crecimiento del PBI anual, Fuente: Propia*
+
+.. figure:: img/PBI_peru_miles_millones.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección del PBI en miles de millones, Fuente: Propia*
+
+.. figure:: img/PBI_per_cápita.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección del PBI per cápita, Fuente: Propia*
+
+.. figure:: img/produccion_sectores.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección de la producción por sectores, Fuente: Propia*
 
 **Población**
+Los valores de población corresponden a los resultados del T21, los valores grafiados se pueden observar en los anexos en A4 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_. En las siguientes gráficas se puede observar el crecimiento de la población.
+
+.. figure:: img/población_peru_T21.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección de la población en el Perú, Fuente: Propia*
 
 
 3.1.2.3 Ecuaciones utilizados para los diferentes sectores
