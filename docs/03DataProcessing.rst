@@ -170,6 +170,11 @@ la participacion de sector residencial y manufactura son predominantes.
    :width:   500 px
 *Figure 3.1: Predicciones de la demanda de energía por sector productivo, Fuente: Propia*
 
+ Todas los valores de demanda, se puede ver a en Anexos demanda_.
+
+.. Hay que cambiar este hyperlink
+
+.. _demanda: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
 3.1.1.4 Plantas de generación 
 ---------
@@ -313,8 +318,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
    :width:   700 px
 *Figure 3.9: Proyección de la demanda de electricidad anual, Fuente: Propia*
 
-
-
+ Todos los valores de demanda anual se puede ver a en Anexos `demanda electrica <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
    
 3.1.1.5 Plantas de gas 
@@ -395,6 +399,8 @@ como las proyeciones del caso de referencia EIA .
 Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
 de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
 del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
+
+Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en Anexos en A7 y A12 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 3.1.1.6 Refinerías 
@@ -480,7 +486,7 @@ Los cálculos se hicieron con los datos de costos de capital, operación y varia
 plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
 "Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
-
+Todos los valores de los precios del WTI, CAPEX y OPEX  se puede ver en Anexos en A8 y A11 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 
@@ -528,6 +534,8 @@ Para la proyección de los precios del carbón se utliza las proyección del car
 australia del banco mundial (octubre del 2018), todos los costos de internación 
 son considerados e incluye  flete y otros costos de transporte, el carbón tiene 
 un costo de internación  de 18.6 US$/ton.
+
+Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precios <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 3.1.1.8 Distribución de energía
@@ -591,7 +599,7 @@ Las proyecciones del sector trasnporte conlleva un problema grave para el medio 
    :width:   700 px
 *Figure 3.13: Proyección del precio de vehiculos electricos, Fuente: Propia*
 
-
+Todos los valores de demanda de energía de transporte y proyecciones de de los precios de los vehículos de gas natural se puede ver en Anexos en A13 y A10 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 3.1.1.13 Otros consumos energéticos 
 ---------
@@ -617,10 +625,12 @@ Los precios del carbono son una medida que ayuda a resolver este problema, hoy e
 3.1.2 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
 --------------
 
+
+
 3.1.2.1 Metodología general usada para la predicción de los Sectores Productivos
 ---------
 
-Mediante el uso de modelos econométricos se ha proyectado las series de la demandas de los sectores productivos, tomando como variables exógenas: la población, el PBI por sectores, PBI per cápita, en algunos de estas se incluye la tendencia lineal, tambien se ha proyectado con las tazas de crecimiento constantes para el sector agropecuario y público; analizando las series de tiempo para los sectores como procesos autoregresivos (a excepto de agropecuario y público, transporte ferroviario, naval y aéreo) donde con las variables explicativas se ha podido proyectar las demandas de los múltiples sectores hasta el 2050.
+Mediante el uso de modelos econométricos se ha proyectado las series de la demandas de los sectores productivos, tomando como variables exógenas: la población, el PBI por sectores, PBI per cápita, etc, en algunos de estas se incluye la tendencia lineal, tambien se ha proyectado con las tazas de crecimiento constantes para el sector agropecuario y público; analizando las series de tiempo para los sectores como procesos autoregresivos (a excepto de agropecuario y público, transporte ferroviario, naval y aéreo) donde con las variables explicativas se ha podido proyectar las demandas de los múltiples sectores hasta el 2050.
 Los sectores analizados son los mismos que toma el PROSEMER, que a su vez son los mismos que toma del BEU 2013 (balance de energía útil); los sectores son:
 
 
@@ -723,8 +733,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 
@@ -775,11 +784,8 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
-
-
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 **Sector manufactura industrial**
@@ -834,8 +840,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Sector minería**
 
@@ -888,16 +893,18 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Sector agropecuario**
      Para el sector agropecuario se ha tomado una tasa de crecimiento constante la cual se ha fijado en 1.5% anual para la proyección hasta el 2050.
 
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Sector público**
      Para el sector público se ha tomado una tasa de crecimiento constante la cual se ha fijado en 1% anual para la proyección hasta el 2050.
 
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 **Sector pesca**
@@ -926,9 +933,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 3.1.2.3 Ecuaciones utilizados para el sector transporte
 ---------
@@ -983,7 +988,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Subdivisión transporte carretero público**
 
@@ -1017,8 +1022,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Subdivisión transporte carretero carga**
 
@@ -1052,9 +1056,7 @@ Las medidas de error para el modelo fueron
 +----------------+-----------------------+----------------------------+
 *Fuente: Propia*
 
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Subdivisión transporte ferroviario pasajeros**
     Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), (cantidad de vehículos en venta) con los valores de población, con este resultado se prosigue a calcular los valores de consumo de energía de las principales flotas de trenes en el país, a este valor  le multiplica por un peso que denota el ratio de pasajero por kilómetro, que se denota por  K. 
@@ -1071,7 +1073,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
  \begin{equation}p k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
 
-
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A16 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Subdivisión transporte ferroviario carga**
     Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), (cantidad de vehículos en venta) con los valores de PBI, con este resultado se prosigue a calcular los valores de consumo de energía de las principales flotas de trenes en el país, a este valor  le multiplica por un peso que denota el ratio de pasajero por kilómetro, que se denota por  
@@ -1088,6 +1090,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
  \begin{equation}t k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
 
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A16 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Subdivisión transporte naval**
     Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obtener la proyección, las cuales en un inicio calcula Q_(t,m), con los valores de PIB, ahora con los valores de la demanda anterior se calcula el nuevo valor con la ecuación 14. 
@@ -1111,6 +1114,8 @@ Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obte
 .. math::
 
  \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+
+Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 **Sector energético (escenario 2)**
      Para el sector energético se ha utilizado los valores históricos de demanda energética y PBI para poder realizar las proyecciones, en un inicio se estima la primera diferencia de PBI per cápita y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 14) de ambos, a continuación se halla el pronóstico (véase ecuación 17) para finalmente poder obtener el pronóstico final (véase ecuación 18), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
