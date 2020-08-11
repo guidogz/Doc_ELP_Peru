@@ -106,6 +106,7 @@ para el peru se muestran a continuación.
 |Agropecuario, Pesqu-| Estas tecnologías incluyen todos los procesos de ransformacion de    |
 |ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
 +--------------------+----------------------------------------------------------------------+
+*Fuente: Propia*
 
  Todas las tecnologías se puede ver a en Anexos Tecnologías_.
 
@@ -145,7 +146,7 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 | Productos de       | Actualmente se exporta una parte de hidrocarburos y gas natural.      |
 | Exportación        |                                                                       |
 +--------------------+-----------------------------------------------------------------------+
-
+*Fuente: Propia*
 
 
 3.1.1.3 Demandas
@@ -167,7 +168,7 @@ la participacion de sector residencial y manufactura son predominantes.
 .. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
    :align:   center
    :width:   500 px
-*Figure 3.1: Predicciones de la demanda de energía por sector productivo*
+*Figure 3.1: Predicciones de la demanda de energía por sector productivo, Fuente: Propia*
 
 
 3.1.1.4 Plantas de generación 
@@ -310,7 +311,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
 .. figure:: img/proyeccion_de_la_demanda_de_electrcidad_anual_para_un_modelo_autoregresivo.png
    :align:   center
    :width:   700 px
-*Figure 3.9: Proyección de la demanda de electricidad anual*
+*Figure 3.9: Proyección de la demanda de electricidad anual, Fuente: Propia*
 
 
 
@@ -371,14 +372,14 @@ Total         639
 |          **Las proyecciones del precio del gas natural y cotos por capacidad**
 |
 Para estas proyecciones se han tomado los valores del los informes del PROSEMER y se han extendido 
-de forma lineal hasta el 2050. Para los precios de gas se han tomado los valores proyectados al 2050
+de forma lineal hasta el 2050, cabe mencionar que los valores puestos son de inversiones corrinets. Para los precios de gas se han tomado los valores proyectados al 2050
 del HENRY HUB.
 
 .. figure:: img/Proyeccion_del_precio_del_gas_en_la_planta.png
    :align:   center
    :width:   700 px
 
-*Figure 3.4: Proyección del precio del gas en la planta*
+*Figure 3.4: Proyección del precio del gas en la planta, Fuente: PROSEMER*
 
 Los precios del gas han utilizado como base las proyeciones de "high oil and gas 
 resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y 
@@ -389,7 +390,7 @@ como las proyeciones del caso de referencia EIA .
    :align:   center
    :width:   700 px
 
-*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas*
+*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas, Fuente: Propia*
 
 Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
 de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
@@ -463,7 +464,7 @@ del WTI.
    :align:   center
    :width:   700 px
 
-*Figure 3.5: Proyección del precio promedio del crudo*
+*Figure 3.5: Proyección del precio promedio del crudo, Fuente: Propia*
 
 Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI que 
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
@@ -473,7 +474,7 @@ incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bb
 .. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
    :align:   center
    :width:   700 px
-*Figure 3.7: Proyecciones de los costos por capacidad de la refineria*
+*Figure 3.7: Proyecciones de los costos por capacidad de la refineria, Fuente: Propia*
 
 Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
 plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
@@ -521,7 +522,7 @@ CARBONERAS    TOTAL     2.71
    :align:   center
    :width:   700 px
 
-*Figure 3.3: Proyección del precio de carbon*
+*Figure 3.3: Proyección del precio de carbon, Fuente: Propia*
 
 Para la proyección de los precios del carbón se utliza las proyección del carbon 
 australia del banco mundial (octubre del 2018), todos los costos de internación 
@@ -575,20 +576,20 @@ Las predicciones sobre la demanda historica de sector transporte específicament
 .. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_desarrollado.png
    :align:   center
    :width:   700 px
-*Figure 3.10: Proyección del sector transporte publico y privado.png.*
+*Figure 3.10: Proyección del sector transporte publico y privado.png, Fuente: Propia*
 
    
 .. figure:: img/proyeccion_total_transporte_carga_modelo_desarrollado.png
    :align:   center
    :width:   700 px
-*Figure 3.12: Proyección del sector transporte.*
+*Figure 3.12: Proyección del sector transporte, Fuente: Propia*
 
 Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección del precio de vehiculos electricos.*
+*Figure 3.13: Proyección del precio de vehiculos electricos, Fuente: Propia*
 
 
 
@@ -658,6 +659,7 @@ Trans. naval                  PBI                           Cons=f(ConsTransNav(
 Trans. éreo                   PBI                           Cons=f(ConsTransAereo(t-1),PIB(t-1))     PJ
 ============================= ============================= ======================================== =========
 
+*Fuente: Propia*
 
 3.1.2.2 Variables explicativas de las demanda por sectores productivos
 ---------
@@ -684,7 +686,7 @@ Trans. éreo                   PBI                           Cons=f(ConsTransAer
 +----------------+----------------------------+-----------------------+
 | Delta Máximo   | 76.2                       | 707.5                 |
 +----------------+----------------------------+-----------------------+
-                      
+*Fuente: Propia*                     
 
 .. math::
 
@@ -703,6 +705,7 @@ Donde:
 +----------------+----------------------------+-----------------------+
 | 0.13662361     | 0.09599035                 | 0.31028359            |
 +----------------+----------------------------+-----------------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -718,6 +721,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 5.6 %                      |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -735,7 +739,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 +----------------+----------------------------+-----------------------+
 | Delta Máximo   | 55.1                       | 7830.38               |
 +----------------+----------------------------+-----------------------+
-                      
+*Fuente: Propia*                      
 
 .. math::
 
@@ -754,6 +758,7 @@ Donde:
 +----------------+----------------------------+-----------------------+
 | -0.4123497     | 0.04998758                 | 0.60658334            |
 +----------------+----------------------------+-----------------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -768,6 +773,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 3.3%                       |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -791,7 +797,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 +----------------+----------------------------+-----------------------+
 | Delta Máximo   | 19.305                     | 2600.192              |
 +----------------+----------------------------+-----------------------+
-                      
+*Fuente: Propia*            
 
 .. math::
 
@@ -810,6 +816,7 @@ Donde:
 +----------------+----------------------------+-----------------------+
 | -0.48841885    | 0.29028287                 | 0.91878258            |
 +----------------+----------------------------+-----------------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -825,6 +832,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 6.5%                       |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -844,7 +852,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 +----------------+----------------------------+-----------------------+
 | Delta Máximo   | 14.562                     | 2390.94               |
 +----------------+----------------------------+-----------------------+
-                      
+*Fuente: Propia*                      
 
 .. math::
 
@@ -863,6 +871,7 @@ Donde:
 +----------------+----------------------------+-----------------------+
 | -0.07251219    | 0.00932579                 | 0.49082724            |
 +----------------+----------------------------+-----------------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -877,6 +886,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 6.5%                       |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -899,6 +909,7 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 +----------------+----------------------+---------------------+-----------------+
 | -0.17783316    | 4.95E-01             | 0.28410597          | -6.63E-04       |
 +----------------+----------------------+---------------------+-----------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -913,6 +924,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 23.2 %                     |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -937,7 +949,7 @@ m     Modal                  Pasajero                Uso                   Resul
 07    Metro                  Pasajero                                      En. neta
 08    Transporte masivo      Pasajero                                      pkm
 ==== ==================== ======================= ==================== ======================
-
+*Fuente: Propia*
    
 **Subdivisión transporte carretero privado**
 
@@ -954,7 +966,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 +----------------+----------------------------+-----------------------+
 | 0.84331819     | 0.1209881                  | 0.36183109            |
 +----------------+----------------------------+-----------------------+
-
+*Fuente: Propia*
 
 - a, b y c          Coeficiente obtenidos por optimización.
 - T(t-1)            Consumo de Energía sector transporte privado en el año 𝑡-1.
@@ -969,6 +981,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 0.08 %                     |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -987,7 +1000,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 +----------------+----------------------------+-----------------------+
 | 0.78746426     | 0.19176726                 | 0.24507861            |
 +----------------+----------------------------+-----------------------+
-
+*Fuente: Propia*
 
 - a, b y c          Coeficiente obtenidos por optimización.
 - T(t-1)            Consumo de Energía sector transporte público en el año 𝑡-1.
@@ -1002,11 +1015,9 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 0.37%                      |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
-
-
-
 
 
 **Subdivisión transporte carretero carga**
@@ -1024,7 +1035,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 +----------------+----------------------------+-----------------------+
 | 0.82591532     | 0.16141611                 | 0.29490398            |
 +----------------+----------------------------+-----------------------+
-
+*Fuente: Propia*
 
 - a, b y c          Coeficiente obtenidos por optimización.
 - T(t-1)            Consumo de Energía sector transporte de carga en el año 𝑡-1.
@@ -1039,6 +1050,7 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 0.08%                      |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
@@ -1110,7 +1122,8 @@ Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obte
 +----------------+----------------------------+-----------------------+
 | Delta Máximo   | 51.255                     | 14088                 |
 +----------------+----------------------------+-----------------------+
-                      
+*Fuente: Propia*                      
+
 .. math::
 
  \begin{equation}\text { Pronostico }_{t}=\text { Pronostico }_{t}=a * \operatorname{nor}\left(E_{t-1}\right)+b * \operatorname{nor}\left(P B I_{t-1}\right)+c\end{equation}
@@ -1128,6 +1141,7 @@ Donde:
 +----------------+----------------------------+-----------------------+
 | -0.34489406    | 0.51238552                 | 0.36684512            |
 +----------------+----------------------------+-----------------------+
+*Fuente: Propia*
 
 .. math::
 
@@ -1142,5 +1156,6 @@ Las medidas de error para el modelo fueron
 +----------------------------------------+----------------------------+
 | MAPE (mean absolute percentage error ) | 3.1%                       |
 +----------------+-----------------------+----------------------------+
+*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
