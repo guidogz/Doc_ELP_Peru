@@ -349,15 +349,15 @@ Total instalado          1333
 =================== ==================== =============================== =======    
 *Fuente: Anexo 2 - informe 9 prosemer, página 101 *
 
-================== ================ =======
-Sector                Costo          2013
-================== ================ =======
+================== ================ ==========
+Sector                Costo         MUSD 2013
+================== ================ ==========
 TRATAMIENTO - GAS   OPEX VARIABLE    981,4
 TRATAMIENTO - GAS   OPEX FIJO       3246,7
 TRATAMIENTO - GAS   CAPEX 
------------------- ---------------- -------
+------------------ ---------------- ----------
 TRATAMIENTO - GAS   TOTAL           4228,2
-================== ================ =======
+================== ================ ==========
 *Fuente: Imforme 9, página 303*
 
 
@@ -449,12 +449,12 @@ Total       350,5
 
 
 ============ ======= ============
-Sector        Costo  2017 (MMUSD)
+Sector        Costo  2017 (MUSD)
 ============ ======= ============
-REFINERIAS    OPEX    412,4
+REFINERIAS    OPEX    4124
 REFINERIAS    CAPEX    80,1
 ------------ ------- ------------ 
-REFINERIAS    TOTAL   492,6
+REFINERIAS    TOTAL   4204,1
 ============ ======= ============
 *Fuente: Informe 9 PROSEMER, pag. 302*
 
