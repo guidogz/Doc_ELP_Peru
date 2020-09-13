@@ -178,7 +178,7 @@ la participacion de sector residencial y manufactura son predominantes.
 
 3.1.1.4 Plantas de generación 
 ---------
-Las empresas de generación en el Perú suman un total de 58 al 2018, las cuales en conjunto
+Las empresas de generación en el Perú suman un total de 58 al 2019, las cuales en conjunto
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
 2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
 demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
