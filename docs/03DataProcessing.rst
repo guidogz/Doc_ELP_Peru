@@ -551,14 +551,26 @@ La distribución de la energía en Perú se da a traves de diferentes medios, co
 Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que necesitamos lo importamos, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de mas reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
 
 
+
+
+
 3.1.1.10 Exportaciones
 ---------
 
 
 
 
+
+
+
+
+
 3.1.1.11 Producción
 ---------
+
+
+
+
 
 
 
