@@ -61,7 +61,7 @@ comodities de mayor calidad.
 
 
 3.1.1.1 Procesos
----------
+--------------
 Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una 
 entrada de commodities, sin embargo, siempre tienen una salida de commodities, Los procesos 
 tienen involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
@@ -117,7 +117,7 @@ para el peru se muestran a continuación.
 
 
 3.1.1.2 Comodities
----------
+--------------
 
 Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
 tecnología para ser transformados y procesados en otros comodities dentro de toda 
@@ -150,7 +150,7 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 
 
 3.1.1.3 Demanda en energía y transporte
----------
+--------------
 
 Las demandas energética en el Perú son actualmente proyectadas en base a premisas 
 macroeconómicas poblacionales y de eficiencia energética, los resultados atienden a 
@@ -177,7 +177,7 @@ la participacion de sector residencial y manufactura son predominantes.
 
 .. _demanda: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
-EL sector transporte es el sector productivo que más energía consume y lo hace principalmente a través de combustibles fósiles, con la finalidad de realizar una proyección del sector ha sido conveniente de dividirlo en subdivisiones para facilitar el desarrollo de los modelos que serán utilizados para realizar las predicciones de demanda, es importante aclarar que son demandas de energía expresadas en *pkm* o *tkm*, como un servicio en lugar de terminos de energía neta (PJ). A continuación se presentarán las subdivisiones realizadas.
+EL sector transporte es el sector productivo que más energía consume y lo hace principalmente a través de combustibles fósiles, con la finalidad de realizar una proyección del sector ha sido conveniente de dividirlo en subdivisiones para facilitar el desarrollo de los modelos que serán utilizados para realizar las predicciones de demanda, es importante aclarar que hay demandas de energía expresadas en *pkm* o *tkm*, que expresan un servicio en lugar de terminos de energía neta (PJ). A continuación se presentarán las subdivisiones realizadas. 
 
 ============ =================================
 Subdivisión  Tipo
@@ -214,6 +214,7 @@ Las predicciones sobre la demanda historica de sector transporte específicament
    :width:   700 px
 *Figure 3.12: Proyección del sector transporte, Naval y Aéreo. Fuente: Propia
 
+
 Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
 
 .. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
@@ -223,10 +224,11 @@ Las proyecciones del sector trasnporte conlleva un problema grave para el medio 
 
 Todos los valores de demanda de energía de transporte y proyecciones de de los precios de los vehículos de gas natural se puede ver en Anexos en A13 y A10 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
+3.1.1.4 Oferta de energía  
+--------------
 
 
-
-3.1.1.4 Plantas de generación 
+3.1.1.4.1 Plantas de generación 
 ---------
 Las empresas de generación en el Perú suman un total de 58 al 2019, las cuales en conjunto
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
@@ -371,7 +373,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  Todos los valores de demanda anual se puede ver a en Anexos `demanda electrica <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
    
-3.1.1.5 Plantas de gas 
+3.1.1.4.2 Plantas de gas 
 ---------
 
 Las plantas de gas en el peru suman 8 en las cuales tenemos que 3 son exclusivamente de 
@@ -453,7 +455,7 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en Anexos en A7 y A12 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
-3.1.1.6 Refinerías 
+3.1.1.4.3 Refinerías 
 ---------
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
@@ -540,7 +542,7 @@ Todos los valores de los precios del WTI, CAPEX y OPEX  se puede ver en Anexos e
 
 
 
-3.1.1.7 Carboneras 
+3.1.1.4.4 Carboneras 
 ---------
 Para el 2013 la capacidad instalada de procesamiento de carbon es de 5.08 PJ, 2.97 para 
 la región centro y 2.11 para la región norte, además se asume un costo de producción de 
@@ -588,49 +590,35 @@ un costo de internación  de 18.6 US$/ton.
 Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precios <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
-3.1.1.8 Distribución de energía
----------
+3.1.1.5 Distribución de energía
+--------------
 
-La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
+La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
 
+3.1.1.6 Importaciones 
+--------------
 
-3.1.1.9 Importaciones 
----------
-
-Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que necesitamos lo importamos, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de mas reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
-
+Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que se necesita se importa, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de más reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
 
 
 
-
-3.1.1.10 Exportaciones
----------
-
+3.1.1.7 Exportaciones
+--------------
 
 
 
+3.1.1.8 Producción
+--------------
+
+
+3.1.1.9 Otros consumos energéticos 
+--------------
 
 
 
-
-
-3.1.1.11 Producción
----------
-
-
-
-
-3.1.1.13 Otros consumos energéticos 
----------
-
-
-
-
-
-
-3.1.1.14 Emisiones
----------
+3.1.2 Emisiones de gases de efecto invernadero (GEI)
+-----------------------------------------------------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
 sino existencial, ahora nos embarcamos en una lucha por reducir los productos de 
@@ -642,13 +630,11 @@ Los precios del carbono son una medida que ayuda a resolver este problema, hoy e
  
 
 
-3.1.2 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
+3.1.3 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
+-----------------------------------------------------
+
+3.1.3.1 Metodología general usada para la predicción de los Sectores Productivos
 --------------
-
-
-
-3.1.2.1 Metodología general usada para la predicción de los Sectores Productivos
----------
 
 Mediante el uso de modelos econométricos se ha proyectado las series de la demandas de los sectores productivos, tomando como variables exógenas: la población, el PBI por sectores, PBI per cápita, etc, en algunos de estas se incluye la tendencia lineal, tambien se ha proyectado con las tazas de crecimiento constantes para el sector agropecuario y público; analizando las series de tiempo para los sectores como procesos autoregresivos (a excepto de agropecuario y público, transporte ferroviario, naval y aéreo) donde con las variables explicativas se ha podido proyectar las demandas de los múltiples sectores hasta el 2050.
 Los sectores analizados son los mismos que toma el PROSEMER, que a su vez son los mismos que toma del BEU 2013 (balance de energía útil); los sectores son:
@@ -691,8 +677,8 @@ Trans. éreo                   PBI                           Cons=f(ConsTransAer
 
 *Fuente: Propia*
 
-3.1.2.2 Variables explicativas de las demanda por sectores productivos
----------
+3.1.3.2 Variables explicativas de las demanda por sectores productivos
+--------------
 
 **PBI**
 
@@ -728,8 +714,8 @@ Los valores de población corresponden a los resultados del T21, los valores gra
 *Figure 3.13: Proyección de la población en el Perú, Fuente: Propia*
 
 
-3.1.2.3 Ecuaciones utilizados para los diferentes sectores
----------
+3.1.3.3 Ecuaciones utilizados para los diferentes sectores
+--------------
 
 
 
