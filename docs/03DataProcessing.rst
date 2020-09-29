@@ -98,7 +98,7 @@ para el peru se muestran a continuación.
 |energética          | la repartición de los productos.                                     |
 +--------------------+----------------------------------------------------------------------+
 |Transporte          | Transporte en el Perú  incluyen todos las formas de transporte tanto |
-|                    | aéreo, marítimo y terrestre, como privado, público y de carga.       |
+|                    | carretero (pasajero y carga), ferroviario, naval, aéreo.             |
 +--------------------+----------------------------------------------------------------------+
 |Residencial, comer- | Esta tecnología incluye todos los procesos de transformación de      |
 |cial y carga        | energía para los sectores residencial, comercial y carga.            |   
@@ -149,8 +149,9 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 *Fuente: Propia*
 
 
-3.1.1.3 Demandas
+3.1.1.3 Demanda en energía y transporte
 ---------
+
 Las demandas energética en el Perú son actualmente proyectadas en base a premisas 
 macroeconómicas poblacionales y de eficiencia energética, los resultados atienden a 
 la necesidad de otros modelos de optimización dentro de la cadena de planifición 
@@ -165,16 +166,65 @@ que tienen diferentes variables explicativas por sector, las proyecciones al 205
 la demanda para los sectores económicos se muestran la siguiente gráfica, en donde 
 la participacion de sector residencial y manufactura son predominantes.  
 
-.. figure:: img/Proyeccion_demanda_energia_por_sector_económico.png
+.. figure:: img/proyecciones_demanda_sectores.png
    :align:   center
    :width:   500 px
-*Figure 3.1: Predicciones de la demanda de energía por sector productivo, Fuente: Propia*
+*Figure 3.1: Predicciones de la demanda de energía por sector productivo. Fuente: Propia*
 
  Todas los valores de demanda, se puede ver a en Anexos demanda_.
 
 .. Hay que cambiar este hyperlink
 
 .. _demanda: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
+
+EL sector transporte es el sector productivo que más energía consume y lo hace principalmente a través de combustibles fósiles, con la finalidad de realizar una proyección del sector ha sido conveniente de dividirlo en subdivisiones para facilitar el desarrollo de los modelos que serán utilizados para realizar las predicciones de demanda, es importante aclarar que son demandas de energía expresadas en *pkm* o *tkm*, como un servicio en lugar de terminos de energía neta (PJ). A continuación se presentarán las subdivisiones realizadas.
+
+============ =================================
+Subdivisión  Tipo
+============ =================================
+Carretero    Pasajero publico y privado, Carga
+Ferroviario  Pasajero y Carga
+Naval        Energía neta
+Aéreo        Energía neta
+============ =================================
+*Fuente: Propia* 
+
+Las predicciones sobre la demanda historica de sector transporte específicamente en la subdivision Carretero han tomado como variable explicativa al PBI, sin embargo, no todas las subdivisiones del sector utilizan PBI como variable explicativa tanbien se utiliza la población y una tendecia.
+
+
+.. figure:: img/proyecciones_demanda_transporte_carretero_pasajero.png
+   :align:   center
+   :width:   700 px
+*Figure 3.10: Proyección del sector transporte, carretero público y privado. Fuente: Propia*
+   
+.. figure:: img/proyecciones_demanda_transporte_carretero_carga.png
+   :width:   700 px
+*Figure 3.12: Proyección del sector transporte, carretero de carga. Fuente: Propia
+
+.. figure:: img/proyecciones_demanda_transporte_ferroviario.png
+   :align:   center
+   :width:   700 px
+*Figure 3.10: Proyección del sector transporte, ferroviario de pasajeros. Fuente: Propia*
+  
+.. figure:: img/proyecciones_demanda_transporte_ferroviario_carga.png
+   :width:   700 px
+*Figure 3.12: Proyección del sector transporte, ferroviario de carga. Fuente: Propia
+
+.. figure:: img/proyecciones_demanda_transporte_ferroviario_carga.png
+   :width:   700 px
+*Figure 3.12: Proyección del sector transporte, Naval y Aéreo. Fuente: Propia
+
+Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
+
+.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
+   :align:   center
+   :width:   700 px
+*Figure 3.13: Proyección del precio de vehiculos electricos, Fuente: Propia*
+
+Todos los valores de demanda de energía de transporte y proyecciones de de los precios de los vehículos de gas natural se puede ver en Anexos en A13 y A10 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
+
+
+
 
 3.1.1.4 Plantas de generación 
 ---------
@@ -570,48 +620,6 @@ Las importaciones de energía en el Perú son actualmente significativas, mas de
 
 
 
-
-
-
-
-
-3.1.1.12 Transporte de pasajeros y de carga
----------
-
-EL sector transporte es el sector productivo que más energía consume y lo hace principalmente a través de combustibles fósiles, con la finalidad de realizar una proyección del sector ha sido conveniente de dividirlo en subdivisiones para facilitar el desarrollo de los modelos que serán utilizados para realizar las predicciones de demanda, es importante aclarar que son demandas de energía expresadas en *pkm* o *tkm*, como un servicio en lugar de terminos de energía neta (PJ). A continuación se presentarán las subdivisiones realizadas.
-
-============ =================================
-Subdivisión  Tipo
-============ =================================
-Carretero    Pasajero publico y privado, Carga
-Ferroviario  Pasajero y Carga
-Naval        Energía neta
-Aéreo        Energía neta
-============ =================================
-*Fuente: Propia* 
-
-Las predicciones sobre la demanda historica de sector transporte específicamente en la subdivision Carretero han tomado como variable explicativa al PBI, sin embargo, no todas las subdivisiones del sector utilizan PBI como variable explicativa tanbien se utiliza la población y una tendecia.
-
-
-.. figure:: img/proyeccion_de_la_demanda_total_transporte_publico_privado_y_carga_modelo_desarrollado.png
-   :align:   center
-   :width:   700 px
-*Figure 3.10: Proyección del sector transporte publico y privado.png, Fuente: Propia*
-
-   
-.. figure:: img/proyeccion_total_transporte_carga_modelo_desarrollado.png
-   :align:   center
-   :width:   700 px
-*Figure 3.12: Proyección del sector transporte, Fuente: Propia*
-
-Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
-
-.. figure:: img/Proyeccion_del_precio_de_vehiculos_electricos.png
-   :align:   center
-   :width:   700 px
-*Figure 3.13: Proyección del precio de vehiculos electricos, Fuente: Propia*
-
-Todos los valores de demanda de energía de transporte y proyecciones de de los precios de los vehículos de gas natural se puede ver en Anexos en A13 y A10 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 3.1.1.13 Otros consumos energéticos 
 ---------
