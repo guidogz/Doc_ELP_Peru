@@ -394,7 +394,7 @@ GMP-procesamiento          18              80 [MMPCD]   Procesamiento (separaci�
 GMP-fraccionamiento         5               3  [MBPD]   Fraccionamiento                 Norte
 Pisco                     215              85  [MBPD]   Fraccionamiento                 Sur
 Yarinacocha                 8               4.4[MBPD]   Fraccionamiento                 Oriente
-Pariñas                    16               9.7[MBPD]   Procesamiento y Fraccionamiento Norte
+Pariñas                    16              61 [MMPCD]   Procesamiento y Fraccionamiento Norte
 Pampa Melchorita          238                           Licuefacción                    Centro
 ------------------- ------------------- --------------- ------------------------------- -------
 Total instalado          1333                                                                 
@@ -594,10 +594,32 @@ Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precio
 
 La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
+3.1.1.5.3 Transmisión y distribución del Sistema interconectado nacional 
+---------
+
+El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV.  
+
+.. figure:: img/Lineas ExistentesCOES_Dic2019-SEIN - copia-1.jpg
+   :align:   center
+   :width:   700 px
+
+*Figure 3.3: Sistema interconectado nacional. Fuente: Propia*
+
+
+3.1.1.5.3 Distribución de derivados del petróleo 
+---------
+
+La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el norte y oriente de nuestro país.
+
+3.1.1.5.3 Distribución de gas natural
+---------
+
+
 
 
 3.1.1.6 Importaciones 
 --------------
+
 
 Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que se necesita se importa, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de más reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
 
