@@ -385,9 +385,9 @@ actividad de 639 PJ. En las siguientes tablas se muestra la información.
 
 
 =================== =================== =============== =============================== =======
-Plantas de gas      Capacidad instalada Capacidad de    Tipo de tratamiento            Región
+Plantas de gas      Capacidad instalada Capacidad de     Tipo de tratamiento            Región
                          PJ (2018)      Procesamiento 
-=================== =================== =============== =============================== =======         
+=================== =================== =============== =============================== =======
 Malvinas                  804            1160 [MMPCD]   Procesamiento (separación)      Sur
 Curimaná                   29              65 [MMPCD]   Procesamiento (separación)      Oriente
 GMP-procesamiento          18              80 [MMPCD]   Procesamiento (separación)      Norte
@@ -397,19 +397,19 @@ Yarinacocha                 8               4.4[MBPD]   Fraccionamiento         
 Pariñas                    16               9.7[MBPD]   Procesamiento y Fraccionamiento Norte
 Pampa Melchorita          238                           Licuefacción                    Centro
 ------------------- ------------------- --------------- ------------------------------- -------
-Total instalado          1333
-=================== =================== =============== =============================== =======    
+Total instalado          1333                                                                 
+=================== =================== =============== =============================== =======
 *Fuente: Anexo 2 - informe 9 PROSEMER, página 101. OSINERGMIN 2020*
 
 
 ================== ================ ==========
 Sector                Costo         MUSD 2013
 ================== ================ ==========
-TRATAMIENTO - GAS   OPEX VARIABLE    981,4
-TRATAMIENTO - GAS   OPEX FIJO       3246,7
+TRATAMIENTO - GAS   OPEX VARIABLE    981.4
+TRATAMIENTO - GAS   OPEX FIJO       3246.7
 TRATAMIENTO - GAS   CAPEX 
 ------------------ ---------------- ----------
-TRATAMIENTO - GAS   TOTAL           4228,2
+TRATAMIENTO - GAS   TOTAL           4228.2
 ================== ================ ==========
 *Fuente: Imforme 9 PROSEMER, página 303*
 
@@ -490,10 +490,10 @@ Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual     
 ============ ======= ============
 Sector        Costo  2017 (MUSD)
 ============ ======= ============
-REFINERIAS    OPEX    4124
-REFINERIAS    CAPEX    80,1
+REFINERIAS    OPEX    412.4
+REFINERIAS    CAPEX    80.1
 ------------ ------- ------------ 
-REFINERIAS    TOTAL   4204,1
+REFINERIAS    TOTAL   4204.1
 ============ ======= ============
 *Fuente: Informe 9 PROSEMER, pag. 302*
 
@@ -505,7 +505,7 @@ Total       300.78   304.153   356.426    337.547
 ========== ========= ========= ========= =========
 Producto     [MBLS]    [MBLS]    [MBLS]    [MBLS]
 ========== ========= ========= ========= =========
-           73,773.6   79,515   91,007.70 87,144.80
+            73773.6   79515    91007.70   87144.80
 ========== ========= ========= ========= =========
 
 
