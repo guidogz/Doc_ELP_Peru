@@ -230,14 +230,14 @@ Todos los valores de demanda de energía de transporte y proyecciones de de los 
 
 3.1.1.4.1 Plantas de generación 
 ---------
-Las empresas de generación en el Perú suman un total de 58 al 2019, las cuales en conjunto
+La capacidad instalada en el Perú ha crecido con el pasar de los años, ha pasado de ser 10,150.0 MW el año 2015 a 13,179.53 MW el año 2019 (COES), y la matriz energética se ha diversificado, sin embargo, la participación de las energías renovables no convecionales en la producción de energía eléctrica aún es pequeña en comparación con la energía eléctrica generada en las plantas de energías renovables convencionales y no renovables. Las empresas de generación en el 2019 han sido un total de 58, las cuales en conjunto
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
 2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
 demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo la mayor 
 participación en la producción de energía fue el agua con 57.04% seguido de los combustibles 
 fósiles con un 38.41%, la potencia efectiva por tipo de generación que predominó fueron las 
 termoeléctricas con un 54.67 % y el recurso que que más capacidad efectiva disponia para la 
-producción de energías fue el agua con un 37.58 %. A continuación se presentará las tablas de 
+producción de energías fue el agua con un 37.58 %. A continuación se enlista en tablas a 
 las empresas con sus respectivas potencias efectivas, seguido del tipo de la participación 
 por tipo de recurso, tipo de generación y finalmente la energía ejecutada. 
 
@@ -377,29 +377,30 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
 ---------
 
 Las plantas de gas en el peru suman 8 en las cuales tenemos que 3 son exclusivamente de 
-procesamiento, 3 son únicamente de fraccionamiento, 1 de procesamiento y fracionamiento y 
+procesamiento (separación), 3 son únicamente de fraccionamiento, 1 de procesamiento y fracionamiento y 
 finalmente 1 de licuación, en conjunto suman una capacidad instalada de 1333 PJ con una 
 disponibilidad promedio de 92% y un factor de capacidad promedio de 48%. Los costos de 
 tratamiento de gas en las plantas se valorizan en 4228.2 MMUSD en el 2013 y tuvo una 
 actividad de 639 PJ. En las siguientes tablas se muestra la información.
 
 
-=================== ==================== =============================== =======
-Plantas de gas      Capacidad instalada   Tipo de tratamiento            Región
-                         PJ (2018)   
-=================== ==================== =============================== =======         
-Malvinas                  804            Procesamiento                   Sur
-Curimaná                   29            Procesamiento                   Oriente
-GMP-procesamiento          18            Procesamiento                   Norte
-GMP-fraccionamiento         5            Fraccionamiento                 Norte
-Pisco                     215            Fraccionamiento                 Sur
-Yarinacocha                 8            Fraccionamiento                 Oriente
-Pariñas                    16            Procesamiento y Fraccionamiento Norte
-Pampa Melchorita          238            Licuefacción                    Centro
-------------------- -------------------- ------------------------------- -------
+=================== =================== =============== =============================== =======
+Plantas de gas      Capacidad instalada Capacidad de    Tipo de tratamiento            Región
+                         PJ (2018)      Procesamiento 
+=================== =================== =============== =============================== =======         
+Malvinas                  804            1160 [MMPCD]   Procesamiento (separación)      Sur
+Curimaná                   29              65 [MMPCD]   Procesamiento (separación)      Oriente
+GMP-procesamiento          18              80 [MMPCD]   Procesamiento (separación)      Norte
+GMP-fraccionamiento         5               3  [MBPD]   Fraccionamiento                 Norte
+Pisco                     215              85  [MBPD]   Fraccionamiento                 Sur
+Yarinacocha                 8               4.4[MBPD]   Fraccionamiento                 Oriente
+Pariñas                    16               9.7[MBPD]   Procesamiento y Fraccionamiento Norte
+Pampa Melchorita          238                           Licuefacción                    Centro
+------------------- ------------------- --------------- ------------------------------- -------
 Total instalado          1333
-=================== ==================== =============================== =======    
-*Fuente: Anexo 2 - informe 9 prosemer, página 101 *
+=================== =================== =============== =============================== =======    
+*Fuente: Anexo 2 - informe 9 PROSEMER, página 101. OSINERGMIN 2020*
+
 
 ================== ================ ==========
 Sector                Costo         MUSD 2013
@@ -410,18 +411,18 @@ TRATAMIENTO - GAS   CAPEX
 ------------------ ---------------- ----------
 TRATAMIENTO - GAS   TOTAL           4228,2
 ================== ================ ==========
-*Fuente: Imforme 9, página 303*
+*Fuente: Imforme 9 PROSEMER, página 303*
 
 
-========== =============
-Producto    PJ (2013)
-========== =============
-Gas seco**    457
-LGN           182
----------- -------------
-Total         639
-========== =============
-*Fuente: Informe 9 pag. 303*
+========== ========= ========= ========= ========= ========= =========
+Producto   2013 [PJ] 2014 [PJ] 2015 [PJ] 2016 [PJ] 2017 [PJ] 2018 [PJ]
+========== ========= ========= ========= ========= ========= =========
+Gas seco**    457                 513      571       547      537     
+LGN           182                 146      148       134      126     
+---------- --------- --------- --------- --------- --------- ---------
+Total         639                 659      719       681       663    
+========== ========= ========= ========= ========= ========= =========
+*Fuente: Informe 9 PROSEMER, pag. 303. Balances Nacional de Energía*
 
 
 |
@@ -473,9 +474,9 @@ Refinería    Capacidad instalada (2018)  Tipo de combustible refinado          
 Nombre         Miles de barriles de
                petróleo día (MBPD)
 =========== ============================ ======================================= ==========
-Talara        65-95                      Diesel, Turbo, GLP, Fueloil, Gasolina   Norte
+Talara        65-95*                     Diesel, Turbo, GLP, Fueloil, Gasolina   Norte
 Conchán       15.5                       Diesel, Fueloil, Gasolina               Centro
-Pampilla      110-(*117)                 Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
+Pampilla      117                        Diesel, Turbo, GLP, Fueloil, Gasolina   Centro
 Iquitos       12.0                       Diesel, Turbo, Fueloil, Gasolina        Oriente
 Pucallpa       3.3                       Diesel, Turbo, Gasolina                 Oriente
 El Milagro      2                        Diesel, Turbo, Fueloil, Gasolina        Norte
@@ -484,20 +485,6 @@ Shiviyacu      5.2                       Crudo, Diesel, Nata, Residual, Multiuso
 Yacimiento     4.0                       Crudo, Diesel, HFO, Nafta/Residual      Oriente
 =========== ============================ ======================================= ==========
 *Fuente: Anexo 2 - informe 9 PROSEMER, informe 7 PROSEMER, OSINERGMIN*
-
-
-========== ==========
-Producto    2017 (PJ)
-========== ==========
-Diesel      103,9
-Fueloil     119,0
-Gasolina     88,6
-GLP           9,4
-Turbo        29,5
----------- ----------
-Total       350,5
-========== ==========
-*Fuente: Informe 9 PROSEMER, pag. 302* 
 
 
 ============ ======= ============
@@ -510,8 +497,20 @@ REFINERIAS    TOTAL   4204,1
 ============ ======= ============
 *Fuente: Informe 9 PROSEMER, pag. 302*
 
+
+========== ========= ========= ========= =========
+Producto   2015 [PJ] 2016 [PJ] 2017 [PJ] 2018 [PJ]
+========== ========= ========= ========= =========
+Total       300.78   304.153   356.426    337.547
+========== ========= ========= ========= =========
+Producto     [MBLS]    [MBLS]    [MBLS]    [MBLS]
+========== ========= ========= ========= =========
+           73,773.6   79,515   91,007.70 87,144.80
+========== ========= ========= ========= =========
+
+
 |
-|                  **Las proyecciones del precio del crudo y cotos por capacidad**
+|                  **Las proyecciones del precio del crudo y costos por capacidad**
 |
 Para estas proyecciones se han tomado los valores del los informes del PROSEMER y se han extendido 
 de forma lineal hasta el 2050. Para los hodrocarburos se han tomado los valores proyectados al 2050
@@ -594,6 +593,7 @@ Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precio
 --------------
 
 La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
+
 
 
 3.1.1.6 Importaciones 
