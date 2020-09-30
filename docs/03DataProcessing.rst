@@ -426,7 +426,7 @@ Total         639                 659      719       681       663
 
 
 |
-|          **Las proyecciones del precio del gas natural y cotos por capacidad**
+|          **Las proyecciones del precio del gas natural y costos por capacidad**
 |
 Para estas proyecciones se han tomado los valores del los informes del PROSEMER y se han extendido 
 de forma lineal hasta el 2050, cabe mencionar que los valores puestos son de inversiones corrinets. Para los precios de gas se han tomado los valores proyectados al 2050
@@ -507,8 +507,7 @@ REFINERIAS    TOTAL   4204.1
 --------- --------- --------- ---------
 73773.6   79515     91007.70  87144.80
 ========= ========= ========= =========
-
-
+*Fuente: Producción de las diferentes refinerías en Peta-Joule y en miles de barriles, *
 |
 |                  **Las proyecciones del precio del crudo y costos por capacidad**
 |
@@ -599,7 +598,7 @@ La distribución de la energía en Perú se da a traves de diferentes medios, co
 
 El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV.  
 
-.. figure:: img/Lineas ExistentesCOES_Dic2019-SEIN - copia-1.jpg
+.. figure:: img/Lineas_ExistentesCOES_Dic2019-SEIN_copia-1.jpg
    :align:   center
    :width:   700 px
 
