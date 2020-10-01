@@ -312,7 +312,7 @@ TOTAL                        12,636.89
 
 ============================== ========================== =============
 POTENCIA EFECTIVA POR TIPO DE RECURSO ENERGÉTICO 2019       
------------------------------------------------------------------------
+----------------------------------------------------------------------- 
 TIPO DE RECURSO ENERGÉTICO     POTENCIA EFECTIVA (MW)        (%)    
 ============================== ========================== =============
   AGUA                                  4,748.37               37.58 
@@ -499,6 +499,8 @@ REFINERIAS    TOTAL   4204.1
 
 
 ========= ========= ========= =========
+Producción total en las refinerías 
+--------- --------- --------- ---------
 2015 [PJ] 2016 [PJ] 2017 [PJ] 2018 [PJ]
 ========= ========= ========= =========
 300.78    304.153   356.426   337.547
@@ -507,7 +509,8 @@ REFINERIAS    TOTAL   4204.1
 --------- --------- --------- ---------
 73773.6   79515     91007.70  87144.80
 ========= ========= ========= =========
-*Fuente: Producción de las diferentes refinerías en Peta-Joule y en miles de barriles, *
+*Fuente: Producción total de energia en miles de barriles equivalentes de petróloe y en Peta-Joule*
+
 |
 |                  **Las proyecciones del precio del crudo y costos por capacidad**
 |
@@ -596,23 +599,39 @@ La distribución de la energía en Perú se da a traves de diferentes medios, co
 3.1.1.5.3 Transmisión y distribución del Sistema interconectado nacional 
 ---------
 
-El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV.  
+El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV. El SEIN está integrado por 4 categorías de instalaciones, el sistema garantizado de transmisión (SGT), el sistema complementario de transmisión (SCT), el sistema principal de transmisión (SPT) y el sistema secundario de transmisión (SST). En el 2019 se instalaron un total de 966.4 km de líneas de transmisión, en la siguinete tabla se puede observar el total de líneas de transmisión que hay en el Perú en el sistema principal de transmisión y sistema secundario de transmisión al 2019.
+
+================================= ========= ========= ========= =========
+         Longitud de las líneas de transmisión del SEIN (km)
+--------------------------------- --------- --------- --------- ---------       
+Líneas                             500 kV    220 kV    138 kv    >75 kV
+================================= ========= ========= ========= =========
+Sistema primario de transmisión     2735.9   6774.54    552.27     0.0
+Sistema secundario de transmisión   142.76   6856.84   4361.88   8571.41
+--------------------------------- --------- --------- --------- ---------
+Total                              2878.66  13631.38   4914.15   8571.41
+================================= ========= ========= ========= =========
+*Fuente: Estadistica anual 2019, COES*
+
 
 .. figure:: img/Lineas_ExistentesCOES_Dic2019-SEIN_copia-1.jpg
    :align:   center
    :width:   700 px
 
-*Figure 3.3: Sistema interconectado nacional. Fuente: Propia*
+*Figure 3.3: Sistema interconectado nacional. Fuente: COES*
 
 
-3.1.1.5.3 Distribución de derivados del petróleo 
+3.1.1.5.3 Distribución de crudo y derivados del petróleo 
 ---------
 
-La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el norte y oriente de nuestro país.
+La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el noroeste y la selva de nuestro país, sin embargo para su distribución se hace uso de redes virtuales. El oleoducto norperuano tiene una longitud aproximada de 1100 km y una capacidadf de 200 MMBD
+
+
 
 3.1.1.5.3 Distribución de gas natural
 ---------
 
+Actualmente se explota gas natural en los lotes 56, 88, por pluspetrol y el lote 57 por repsol, el lote 58 comenzará a explotarse el año 2023 por la empresa CNPC. En camisea se extrae gas natural que es procesado para su separación en líquidos de gas natural y gas seco que son enviados a través del poliducto hasta la planta de fraccionamiento de Pisco, el gas seco que no es reinyectado es transportado a través del TGP hasta el City Gate en Lurín, la empresa caliodad es reponsable de su distribvución en lima y callao.  
 
 
 
@@ -620,21 +639,66 @@ La distribución del crudo se hace a través de oleoductos, el crudo es llevado 
 --------------
 
 
-Las importaciones de energía en el Perú son actualmente significativas, mas de la mitad de crudo que se necesita se importa, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de más reservas de gas. En el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
+Las importaciones de energía en el Perú son actualmente significativas, más de la mitad de crudo que se necesita se importa, aunque el Perú es autosuficiente con el gas natural hasta la fecha no se han hecho estudios de más reservas de gas, en el sector eléctrico realizamos importaciones del ecuador dependienos del costo marginal de la electricidad.
+
+Las importaciones según el "Anuario estadístico sectorial de hidrocarburos 2018" el 2018 fueron de un total aproximado de 316 (PJ), para crudo, GLP, gasolina y carbón, que representan un valor de 3819.72 MMUSD.
+
+
+================================= ========= ========= ========= =========
+        Importaciones de hidrocarburos 
+--------------------------------- --------- --------- --------- ---------       
+Producto                            2015       2016     2017      2018
+================================= ========= ========= ========= =========
+Crudo                              31326.81  38489.18  45735.96  41117.13
+GLP/butano/propano                  1119.18   1816.05   2491.53   4240.30
+Gasolina                            5063.36   6979.09   7776.87   8428.90
+================================= ========= ========= ========= =========
+*Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
+
+
+================================= ========= ========= ========= =========
+        Importaciones de hidrocarburos 
+--------------------------------- --------- --------- --------- ---------       
+Producto                            2015       2016     2017      2018
+================================= ========= ========= ========= =========
+Crudo                             1642254.8 1600634.4 2458799.2 2853824.6
+GLP/butano/propano                 40171.64  60123.61 109991.91 208664.13
+Gasolina                          380893.66 423613.28 559352.13 716835.44
+================================= ========= ========= ========= =========
+*Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
 
 
 
 3.1.1.7 Exportaciones
 --------------
 
+Las importaciones según el "Anuario estadístico sectorial de hidrocarburos 2018" el 2018 fueron de un total aproximado de 316 (PJ), para crudo, GLP, gasolina y carbón, que representan un valor de 3819.72 MMUSD.
 
 
-3.1.1.8 Producción
---------------
+================================= ========= ========= ========= =========
+        Importaciones de hidrocarburos 
+--------------------------------- --------- --------- --------- ---------       
+Producto                            2015       2016     2017      2018
+================================= ========= ========= ========= =========
+Crudo                               2906.63    845.25    572.58   2367.23
+Gas Natura                         50898.88  60314.94  51808.68  51399.36
+GLP/propano/butano                  1075.67   1460.97    607.97     66.17
+Gasolinas                          16707.74  18678.92  19961.24  17803.36      
+================================= ========= ========= ========= =========
+*Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
 
 
-3.1.1.9 Otros consumos energéticos 
---------------
+================================= ========= ========= ========= =========
+        Importaciones de hidrocarburos 
+--------------------------------- --------- --------- --------- ---------       
+Producto                            2015       2016     2017      2018
+================================= ========= ========= ========= =========
+Crudo                             120071.32  24015.81  25644.31 138873.88
+Gas Natura                        449075.22 522171.53 747859.38 998645.90
+GLP/propano/butano                 34427.77  32047.07  31875.49   4192.79
+Gasolinas                         860197.63 789710.14 1091366.4 1182051.6  
+================================= ========= ========= ========= =========
+*Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
 
 
 
