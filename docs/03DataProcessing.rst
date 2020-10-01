@@ -670,6 +670,19 @@ Gasolina                          380893.66 423613.28 559352.13 716835.44
 *Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
 
 
+.. figure:: img/importaciones_PJ.jpg
+   :align:   center
+   :width:   700 px
+
+*Figure 3.3: Importaciones de energía*
+
+.. figure:: img/importaciones_MMUSD.jpg
+   :align:   center
+   :width:   700 px
+
+*Figure 3.3: Importaciones de energía*
+
+
 
 3.1.1.7 Exportaciones
 --------------
@@ -703,6 +716,19 @@ Gasolinas                         860197.63 789710.14 1091366.4 1182051.6
 ================================= ========= ========= ========= =========
 
 *Fuente: Anuario estadístico sectorial de hidrocarburos 2018 DGH, pag. 73*
+
+.. figure:: img/exportaciones_PJ.jpg
+   :align:   center
+   :width:   700 px
+
+
+*Figure 3.3: Exportaciones de energía*
+
+.. figure:: img/exportaciones_MMUSD.jpg
+   :align:   center
+   :width:   700 px
+
+*Figure 3.3: EXportaciones de energía*
 
 
 
