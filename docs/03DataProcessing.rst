@@ -766,13 +766,11 @@ El precio social del carbono es una medida que captura el valor de los daños qu
 El precio social del carbono en Perú tiene un valor de 7.17 us$/ton-CO2 para el año 2016.
 
 
-=========== =======================
-Parámetro         us$/ton-CO2
-=========== =======================
-Precio
-social del           7.17    
-carbono                  
-=========== =======================
+=============================== =======================
+Parámetro                             us$/ton-CO2
+=============================== =======================
+Precio social del carbono                 7.17
+=============================== =======================
 *Fuente: CIUP, 2016*
 
 
