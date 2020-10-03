@@ -214,6 +214,8 @@ Las predicciones sobre la demanda historica de sector transporte específicament
    :width:   700 px
 *Figure 3.12: Proyección del sector transporte, Naval y Aéreo. Fuente: Propia
 
+Los valores de las proyecciones de demanda de enegía para los sectores productivos y transporte se pueden observar en los anexos de este documento, `Proyecciones de demanda <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
+
 
 Las proyecciones del sector trasnporte conlleva un problema grave para el medio ambiente, el uso de los combustibles fósiles para el transporte son un problema importante hoy, por eso, es importante mencionar los precios de los vehículos eléctricos, se han utilizado las proyecciones del precio de los vehículos eléctricos del PROSEMER al 2050.
 
@@ -456,6 +458,8 @@ del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".
 Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en Anexos en A7 y A12 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
+
+
 3.1.1.4.3 Refinerías 
 ---------
 
@@ -596,7 +600,7 @@ Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precio
 
 La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
-3.1.1.5.3 Transmisión y distribución del Sistema interconectado nacional 
+3.1.1.5.1 Transmisión y distribución del Sistema interconectado nacional 
 ---------
 
 El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV. El SEIN está integrado por 4 categorías de instalaciones, el sistema garantizado de transmisión (SGT), el sistema complementario de transmisión (SCT), el sistema principal de transmisión (SPT) y el sistema secundario de transmisión (SST). En el 2019 se instalaron un total de 966.4 km de líneas de transmisión, en la siguinete tabla se puede observar el total de líneas de transmisión que hay en el Perú en el sistema principal de transmisión y sistema secundario de transmisión al 2019.
@@ -621,7 +625,7 @@ Total                              2878.66  13631.38   4914.15   8571.41
 *Figure 3.3: Sistema interconectado nacional. Fuente: COES*
 
 
-3.1.1.5.3 Distribución de crudo y derivados del petróleo 
+3.1.1.5.2 Distribución de crudo y derivados del petróleo 
 ---------
 
 La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el noroeste y la selva de nuestro país, sin embargo para su distribución se hace uso de redes virtuales. El oleoducto norperuano tiene una longitud aproximada de 1100 km y una capacidadf de 200 MMBD
@@ -683,6 +687,7 @@ Gasolina                          380893.66 423613.28 559352.13 716835.44
 *Figure 3.3: Importaciones de energía*
 
 
+.. _Proyecciones de importaciones: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
 3.1.1.7 Exportaciones
 --------------
@@ -730,19 +735,46 @@ Gasolinas                         860197.63 789710.14 1091366.4 1182051.6
 
 *Figure 3.3: EXportaciones de energía*
 
+.. _Proyecciones de exportaciones: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
 
-3.1.2 Emisiones de gases de efecto invernadero (GEI)
+3.1.2 Emisiones de gases de efecto invernadero (GEI), precio social del carbono.
 -----------------------------------------------------
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
 sino existencial, ahora nos embarcamos en una lucha por reducir los productos de 
 contaminación y la principal acción del sector energía y transportes es sustituir
 los insumos que podrucen contaminación, las políticas climáticas hoy en día han 
-planificado al 2050 lograr la carbononeutralidad.   
+planificado al 2050 lograr la carbononeutralidad. En la siguiente tabla se muestra el consumo de energía en PJ, las emisiones en Mega-ton CO2e y razón que hay de cada una por sector en el 2018. Además, se puede observar que los sectores que más Mton CO2e generan por unidad de PJ es el sector transporte seguido del sector industrial.
 
-Los precios del carbono son una medida que ayuda a resolver este problema, hoy en dia los precios de la tonelada de carbono en el mundo es aún bajo, sin embargo, hay países como suecia en donde los presios de la toenlada de carbono esta 126 US$/ton_CO2 (2016) y en proomedio de 10 US$/ton_CO2 para america latina, los precios de la tonelada de carbono en un escenario de descarbonización aumentarían.
- 
+
+==================== ========= ========= ========= ========= =========== ========== ========== 
+                       Energía consumida y emisones por sector (MMUSD)
+--------------------------------------------------------------------------------------------- 
+2018                  Pesca    Agro      Público    Minero  Residencial Industrial Transporte
+                                                            y Comercial   
+==================== ========= ========= ========= ========= =========== ========== ========== 
+Energía [PJ]          3.075     6.388    12.176    75.847     210.704    163.819   359.798  
+Emisiones [MtonCO2e]  0.123     0.139     0.326     1.281       4.4        7.006    24.94
+Razón [MtonCO2e/PJ]   0.04      0.0218    0.0268    0.0169      0.0209     0.0428    0.0693
+==================== ========= ========= ========= ========= =========== ========== ========== 
+*Fuente: Balance nacional de energía 2018*
+
+
+El precio social del carbono es una medida que captura el valor de los daños que causa la emisión de CO2, ayuda a devolver la responsabilidad de los daños a quienes lo causan y ellos puedan evitar eso, hoy en dia los precios de la tonelada de carbono en el mundo es aún bajo, sin embargo, hay países como suecia en donde los presios de la tonelada de carbono esta 126 US$/ton_CO2 (2016) y en proomedio de 10 US$/ton_CO2 para america latina, los precios de la tonelada de carbono en un escenario de descarbonización aumentarían. 
+
+El precio social del carbono en Perú tiene un valor de 7.17 us$/ton-CO2 para el año 2016.
+
+
+=========== =======================
+Parámetro         us$/ton-CO2
+=========== =======================
+Precio
+social del           7.17    
+carbono                  
+=========== =======================
+*Fuente: CIUP, 2016*
+
 
 
 3.1.3 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
