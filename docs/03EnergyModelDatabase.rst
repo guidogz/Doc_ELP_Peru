@@ -1,11 +1,8 @@
-3. OSeMOSYS-Peru
-=======================================
-
-3.1 Estructura
-+++++++++
 
 
-3.2 Datos e información
+
+
+3.2 Characterization of Energy Sectors
 +++++++++
 
 
@@ -13,11 +10,65 @@
    :align:   center
    :width:   700 px
 
+Como ya se ha mencionado en "Data Processing", el modelo OSeMOSYS de energía y transporte está compuesto por diferentes comodities y fuels que son propios de cada país o sistema. Ahora trataremos la configuración del modelo OSeMOSYS, esta se da a través de los siguientes items:
 
+ - *Sets*
+ - *Parameters*
+ - *Variables*
+ - *Obejetive functions*
+ - *Constraints*
+
+Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, por el momento debido a las necesidades, en el modelo OSeMOSYS Perú. Cada item está compuesto por un conjunto de items y sus valores son particulares del sistema a modelar, a continuación mostaremos todos estos para la cnfiguración de un modelo simple, lo cual sisgnifica que nuestra función objetivo de costo es corta. 
+
+
+================== ============================ ==================================== ========= ======================================== 
+                                       Items de configuración para un modelo simple
+---------------------------------------------------------------------------------------------------------------------------------------  
+      Sets          Parameters                   Variables                           Ojective          Constraints
+                    ("Insumos")                  ("salidas")                         functions
+================== ============================ ==================================== ========= ========================================   
+EMISSION           AccumulatedAnnualDemand      AccumulatedNewCapacity               OFS_Cost  Acc1_FuelProductionByTechnology
+FUEL               AnnualEmissionLimit          AnnualEmissions                                Acc2_FuelUseByTechnology
+MODE OF OPERATION  AnnualExogenousEmission      AnnualFixedOperatingCost                       Acc3_AverageAnnualRateOfActivity
+REGION             AvailabilityFactor           AnnualTechnologyEmission                       CAa1_TotalNewCapacity
+STORAGE            CapacityFactor               AnnualTechnologyEmissionByMode                 CAa2_TotalAnnualCapacity                        
+REGION             CapacityOfOneTechnologyUnit  AnnualVariableOperatingCost                    CAa5_TotalNewCapacity        
+TECHNOLOG          CapacityToActivityUnit       CapitalInvestment                              CC1_UndiscountedCapitalInvestment        
+TIMESLICE          CapitalCost                  Demand                                         E2_AnnualEmissionProduction            
+YEAR               CapitalCostStorage           DiscountedSalvageValue                         EBa10_EnergyBalanceEachTS4            
+                   DepreciationMethod           DiscountedTechnologyEmissionsPenalty           EBa1_RateOfFuelProduction1                          
+                   DiscountRate                 NewCapacity                                    EBa2_RateOfFuelProduction2              
+                   EmissionActivityRatio        NewStorageCapacity                             EBa4_RateOfFuelUse1            
+                   EmissionsPenalty             NumberOfNewTechnologyUnits                     EBa5_RateOfFuelUse2           
+                   FixedCost                    ProductionByTechnology                         NCC1_TotalAnnualMaxNewCapacityConstraint              
+                   InputActivityRatio           ProductionByTechnologyAnnual                   NCC2_TotalAnnualMinNewCapacityConstraint          
+                   ModelPeriodEmissionLimit     RateOfActivity                                 OC1_OperatingCostsVariable             
+                   ModelPeriodExogenousEmission RateOfProductionByTechnology                   OC2_OperatingCostsFixedAnnual            
+                   OperationalLife              RateOfProductionByTechnologyByMode             SI6_SalvageValueStorageAtEndOfPeriod1                 
+                   OperationalLifeStorage       RateOfUseByTechnology                          SV3_SalvageValueAtEndOfPeriod3      
+                   OutputActivityRatio          RateOfUseByTechnologyByMode                    SV4_SalvageValueDiscountedToStartYear            
+                   REMinProductionTarget        SalvageValue                                   TAC1_TotalModelHorizonTechnologyActivity      
+                   RETagFuel                    SalvageValueStorage                            Short_Code_Equations                               
+                   RETagTechnology              TotalAnnualTechnologyActivityByMode                            
+                   ReserveMargin                TotalCapacityAnnual                                                   
+                   ReserveMarginTagFuel         TotalTechnologyAnnualActivity                                    
+                   ReserveMarginTagTechnology   TotalTechnologyModelPeriodActivity                                    
+                   ResidualCapacity             Trade                                                    
+                   SpecifiedAnnualDemand        UseByTechnology                                                  
+                   SpecifiedDemandProfile                                                                              
+                   TradeRoute                                                                                        
+                   VariableCost                                                                                             
+                   YearSplit                                        
+================== ============================ ==================================== ========= ======================================== 
+*Fuente: Propia*
+ 
+No todos estos items han sido insertados en el modelo, debido que se ha trabajado un modelo que se acomoda más a las necesidades del Perú, ahora se pueden encontrar todos los valores de corespondiente a todos los item de configuración en `Items <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
 3.2.1 Sets
 ---------
+
+
 
 Los sets son el conjunto de configuraciones que son establecidos para el modelo, estos 
 son particulares por país y región, para su configuración se debe tener un análisis 
@@ -32,23 +83,196 @@ del sistema a modelar, los sets se muestrana contiuación.
  - *Mode of operation*
 
 
+3.2.1.1 Región
+---------
+Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo times se considera 4 regiones, centro, norte, oriente, y sur.
 
+========== ===============
+región(es)   Perú
+========== ===============
+*Fuente: Propia*
 
-
-3.2.1 Procesos
+3.2.1.2 Year
 ---------
 
-3.2.1 Comodities
+Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de nuestro estudio para el modelo de energía y transporte.
+
+========== =============== ============
+            Inicio          Final              
+---------- --------------- ------------
+Año         2015            2050
+========== =============== ============
+*Fuente: Propia*
+
+
+3.2.1.3 Timeslices
+---------
+En el modelo de OSeMOSYSY Perú se han tomado una fraccion anual de 2 para un escenario alto y de 4 para un escenario medio y bajo.
+
+========== ===============
+Timeslice    Perú
+---------- ---------------
+An_alto      0.5
+An_bajo      0.25
+An_medio     0.25
+========== ===============
+*Fuente: Propia*
+
+
+
+3.2.1.4 Emissions
 ---------
 
-3.2.1 Costos 
+Para las emisiones se han considerado todos los tipos de gases de efecto invernadero (GEI) que son resultado de la actividad de los procesos, como CO2, CH4 y N2O, todos estos son transformado en CO2 euivalentes, en la tabla a continuación se puede observar estos factores de equivalencia.
+
+========== ============ ============ ============
+                CO2          CH4          N2O              
+---------- ------------ ------------ ------------
+Factor           1           21           310
+========== ============ ============ ============
+*Fuente: Anexo 2 del informe 9 del PROSEMER*
+
+
+
+3.2.1.5 Commodities
 ---------
 
-3.2.1 Emisiones
+Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
+tecnología para ser transformados y procesados en otros comodities dentro de toda 
+la cadena energética, en el Perú contamos con una gran variedad de commodities desde
+insumos primarios como bosta y yesta para producción de carbón hasta la electricidad 
+generada por cada tecnología eléctrica y los combustibles consumidos por el sector
+transporte, las etiquetas para cada commodity considerados se muestran a continuación.
+Los commodities se pueden encontrar en Anexos Fuels_. 
+
+.. _Fuels: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
+
+
++--------------------+-----------------------------------------------------------------------+
+| Combustibles       | Los combustibles fósiles son residuos de materia orgánica obtenidos   |
+| Fósiles            | de forma extrativas, estas son hidrocarburos, gas natural y carbón.   |
++--------------------+-----------------------------------------------------------------------+
+| Biocombustibles    | Son los combustibles que son sintetizados a partir de materia organica|
+|                    | tales como la cañade azucar, oleaginosas y microalgas                 |
++--------------------+-----------------------------------------------------------------------+
+| Electricidad       | La electricidad como commodity, es un producto de la generación de    |
+|                    | diferentes tipos de tecnología como la combustión, fotovoltaico.      |
++--------------------+-----------------------------------------------------------------------+
+| Demandas de        | Para las demandas de trasnporte puede ser de pasajeros públicos y     |
+| Transporte         | privados y carga, falta aún poner esta parte.                         |
++--------------------+-----------------------------------------------------------------------+
+| Productos de       | Actualmente se exporta una parte de hidrocarburos y gas natural.      |
+| Exportación        |                                                                       |
++--------------------+-----------------------------------------------------------------------+
+*Fuente: Propia*
+
+
+3.2.1.6 Technologies
+---------
+
+Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una 
+entrada de commodities, sin embargo, siempre tienen una salida de commodities, Los procesos 
+tienen involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
+costos examinados por capacidad para las plantas de gas y refinerías han sido estudiadas 
+para tener datos con los cuales poder suministrar al modelo. Las principales tecnologías 
+para el peru se muestran a continuación.
+
++--------------------+----------------------------------------------------------------------+
+|Producción          | La producción de commodities incluye extración, procesamiento,       |
+|                    | transformación de materia primaría hasta llegar a ser commodity.     |
++--------------------+----------------------------------------------------------------------+
+|Importaciones       | Importaciones incluyen todos los procesos y acciones comerciales para|
+|                    | lograr el suministro de commodities al país.                         |
++--------------------+----------------------------------------------------------------------+
+|Refinería           | Refinería incluye todo el procesamiento de crudo para la obtención   |
+|                    | de los subproductos como la gasolina o el diesel.                    |
++--------------------+----------------------------------------------------------------------+
+|Carboneras          | Carboneras incluye el proceso de extracción de una mina carbón       |
+|                    | mineral y trasnformación de en carbon vegetal.                       |
++--------------------+----------------------------------------------------------------------+
+|Planta de gas       | Las plantas de gas incluye la licuación, transporte de gas           |
+|                    |                                                                      |
++--------------------+----------------------------------------------------------------------+
+|Plantas eléctricas  | En las plantas eléctricas se incluye todos las plantas de diversos   |
+|                    | tipos de tecnologías como las hidroelectricas, termoelectricas, etc. |
++--------------------+----------------------------------------------------------------------+
+|Transmisión         | La transmisión eléctrica incluye todos las formas de transmision en  |
+|eléctrica           | alta y media tensión.                                                |
++--------------------+----------------------------------------------------------------------+
+|Distribución        | La distribución eléctrica incluye distribución en baja tensión       |
+|eléctrica           | hasta el usario final.                                               |
++--------------------+----------------------------------------------------------------------+
+|Distribución        | La distribución energética incluye todos los medios y procesos para  |
+|energética          | la repartición de los productos.                                     |
++--------------------+----------------------------------------------------------------------+
+|Transporte          | Transporte en el Perú  incluyen todos las formas de transporte tanto |
+|                    | carretero (pasajero y carga), ferroviario, naval, aéreo.             |
++--------------------+----------------------------------------------------------------------+
+|Residencial, comer- | Esta tecnología incluye todos los procesos de transformación de      |
+|cial y carga        | energía para los sectores residencial, comercial y carga.            |   
++--------------------+----------------------------------------------------------------------+
+|Agropecuario, Pesqu-| Estas tecnologías incluyen todos los procesos de ransformacion de    |
+|ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
++--------------------+----------------------------------------------------------------------+
+*Fuente: Propia*
+
+ Todas las tecnologías se puede ver a en Anexos Tecnologías_.
+
+.. Hay que cambiar este hyperlink
+
+.. _Tecnologías: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
+
+
+
+3.2.1.7 Mode of operation
 ---------
 
 
-3.2 Consideraciones del modelo 
+
+
+3.2.2 Parameters
+---------
+
+
+
+
+3.2.2.1 Capacity To Activity Unit 
+---------
+
+
+3.2.2.2 Availability Factor
+---------
+
+
+3.2.2.3 Capacity Factor
+---------
+
+
+3.2.2.4 Operational Life
+---------
+
+
+
+3.2.2.5 Capital Cost
+---------
+
+
+3.2.2.6 Fixed Cost
+---------
+
+
+3.2.2.7 Variable Costor
+---------
+
+
+3.2.2.8 Emission Activity Ratio
+---------
+
+
+
+
+
+3.3 Consideraciones del modelo 
 +++++++++
 .. figure:: img/Proyección_Demanda_Total-Modelo_de_ajuste_con_PBI.png
    :align:   center
@@ -56,16 +280,16 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 
 
-3.2.1 Construcción de scenarios 
+
+
+
+3.3.1 Narrativas
 ---------
 
-3.2.2 Narrativas
----------
-
-3.2.3 Síntesis cuantitativa de escenarios
+3.3.2 Síntesis cuantitativa de escenarios
 ---------
 
 
-3.3 Resultados de los escenarios base
+3.4 Resultados de los escenarios base
 +++++++++
 

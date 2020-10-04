@@ -5,10 +5,11 @@
 3.1 Energy System Modeling: Data Analysis
 =======================================
 
-3.1.1 Characterization of Energy Sectors
+
+3.1.1 Datos e información
 -----------------------------------------------------
  Fitter Data and Outlier Correction
-  blaa... 
+
   
 
 .. figure:: img/RES_Energia.png
@@ -60,96 +61,7 @@ comodities de mayor calidad.
 
 
 
-3.1.1.1 Procesos
---------------
-Los procesos o tecnologías son representados en forma de bloque y pueden tener o no una 
-entrada de commodities, sin embargo, siempre tienen una salida de commodities, Los procesos 
-tienen involucrados costos como CAPEX(Capital Expenditure), OPEX (Operacional Expenditure), los 
-costos examinados por capacidad para las plantas de gas y refinerías han sido estudiadas 
-para tener datos con los cuales poder suministrar al modelo. Las principales tecnologías 
-para el peru se muestran a continuación.
-
-+--------------------+----------------------------------------------------------------------+
-|Producción          | La producción de commodities incluye extración, procesamiento,       |
-|                    | transformación de materia primaría hasta llegar a ser commodity.     |
-+--------------------+----------------------------------------------------------------------+
-|Importaciones       | Importaciones incluyen todos los procesos y acciones comerciales para|
-|                    | lograr el suministro de commodities al país.                         |
-+--------------------+----------------------------------------------------------------------+
-|Refinería           | Refinería incluye todo el procesamiento de crudo para la obtención   |
-|                    | de los subproductos como la gasolina o el diesel.                    |
-+--------------------+----------------------------------------------------------------------+
-|Carboneras          | Carboneras incluye el proceso de extracción de una mina carbón       |
-|                    | mineral y trasnformación de en carbon vegetal.                       |
-+--------------------+----------------------------------------------------------------------+
-|Planta de gas       | Las plantas de gas incluye la licuación, transporte de gas           |
-|                    |                                                                      |
-+--------------------+----------------------------------------------------------------------+
-|Plantas eléctricas  | En las plantas eléctricas se incluye todos las plantas de diversos   |
-|                    | tipos de tecnologías como las hidroelectricas, termoelectricas, etc. |
-+--------------------+----------------------------------------------------------------------+
-|Transmisión         | La transmisión eléctrica incluye todos las formas de transmision en  |
-|eléctrica           | alta y media tensión.                                                |
-+--------------------+----------------------------------------------------------------------+
-|Distribución        | La distribución eléctrica incluye distribución en baja tensión       |
-|eléctrica           | hasta el usario final.                                               |
-+--------------------+----------------------------------------------------------------------+
-|Distribución        | La distribución energética incluye todos los medios y procesos para  |
-|energética          | la repartición de los productos.                                     |
-+--------------------+----------------------------------------------------------------------+
-|Transporte          | Transporte en el Perú  incluyen todos las formas de transporte tanto |
-|                    | carretero (pasajero y carga), ferroviario, naval, aéreo.             |
-+--------------------+----------------------------------------------------------------------+
-|Residencial, comer- | Esta tecnología incluye todos los procesos de transformación de      |
-|cial y carga        | energía para los sectores residencial, comercial y carga.            |   
-+--------------------+----------------------------------------------------------------------+
-|Agropecuario, Pesqu-| Estas tecnologías incluyen todos los procesos de ransformacion de    |
-|ero, industría      |  energía  para los sectores agropecuarios, minero e industría.       |
-+--------------------+----------------------------------------------------------------------+
-*Fuente: Propia*
-
- Todas las tecnologías se puede ver a en Anexos Tecnologías_.
-
-.. Hay que cambiar este hyperlink
-
-.. _Tecnologías: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
-
-
-
-3.1.1.2 Comodities
---------------
-
-Los commodities son los bienes, insumos, productos, etc. Estos ingresan a cada 
-tecnología para ser transformados y procesados en otros comodities dentro de toda 
-la cadena energética, en el Perú contamos con una gran variedad de commodities desde
-insumos primarios como bosta y yesta para producción de carbón hasta la electricidad 
-generada por cada tecnología eléctrica y los combustibles consumidos por el sector
-transporte, las etiquetas para cada commodity considerados se muestran a continuación.
-Los commodities se pueden encontrar en Anexos Fuels_. 
-
-.. _Fuels: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/
-
-
-+--------------------+-----------------------------------------------------------------------+
-| Combustibles       | Los combustibles fósiles son residuos de materia orgánica obtenidos   |
-| Fósiles            | de forma extrativas, estas son hidrocarburos, gas natural y carbón.   |
-+--------------------+-----------------------------------------------------------------------+
-| Biocombustibles    | Son los combustibles que son sintetizados a partir de materia organica|
-|                    | tales como la cañade azucar, oleaginosas y microalgas                 |
-+--------------------+-----------------------------------------------------------------------+
-| Electricidad       | La electricidad como commodity, es un producto de la generación de    |
-|                    | diferentes tipos de tecnología como la combustión, fotovoltaico.      |
-+--------------------+-----------------------------------------------------------------------+
-| Demandas de        | Para las demandas de trasnporte puede ser de pasajeros públicos y     |
-| Transporte         | privados y carga, falta aún poner esta parte.                         |
-+--------------------+-----------------------------------------------------------------------+
-| Productos de       | Actualmente se exporta una parte de hidrocarburos y gas natural.      |
-| Exportación        |                                                                       |
-+--------------------+-----------------------------------------------------------------------+
-*Fuente: Propia*
-
-
-3.1.1.3 Demanda en energía y transporte
+3.1.1.1 Demanda en energía y transporte
 --------------
 
 Las demandas energética en el Perú son actualmente proyectadas en base a premisas 
@@ -226,11 +138,11 @@ Las proyecciones del sector trasnporte conlleva un problema grave para el medio 
 
 Todos los valores de demanda de energía de transporte y proyecciones de de los precios de los vehículos de gas natural se puede ver en Anexos en A13 y A10 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
-3.1.1.4 Oferta de energía  
+3.1.1.2 Oferta de energía  
 --------------
 
 
-3.1.1.4.1 Plantas de generación 
+3.1.1.2.1 Plantas de generación 
 ---------
 La capacidad instalada en el Perú ha crecido con el pasar de los años, ha pasado de ser 10,150.0 MW el año 2015 a 13,179.53 MW el año 2019 (COES), y la matriz energética se ha diversificado, sin embargo, la participación de las energías renovables no convecionales en la producción de energía eléctrica aún es pequeña en comparación con la energía eléctrica generada en las plantas de energías renovables convencionales y no renovables. Las empresas de generación en el 2019 han sido un total de 58, las cuales en conjunto
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
@@ -239,77 +151,9 @@ demanda ejecutada fue de 7017.57 MW en el mes de diciembre. El recurso que tuvo 
 participación en la producción de energía fue el agua con 57.04% seguido de los combustibles 
 fósiles con un 38.41%, la potencia efectiva por tipo de generación que predominó fueron las 
 termoeléctricas con un 54.67 % y el recurso que que más capacidad efectiva disponia para la 
-producción de energías fue el agua con un 37.58 %. A continuación se enlista en tablas a 
-las empresas con sus respectivas potencias efectivas, seguido del tipo de la participación 
+producción de energías fue el agua con un 37.58 %. A continuación se enlista en tablas  del tipo de la participación 
 por tipo de recurso, tipo de generación y finalmente la energía ejecutada. 
 
-
-========================== =====================
-EMPRESAS                     "POTENCIA EFECTIVA 
-                                   (MW)"
-========================== =====================
-ENGIE                         2,484.8
-KALLPA GENERACIÓN             1,615.8
-ENEL GENERACIÓN PERÚ          1,481.6
-ELECTROPERÚ                     914.7
-SAMAY I                         708.3
-FÉNIX POWER                     567.2
-HUALLAGA                        476.7
-STATKRAFT                       448.0
-ORAZUL ENERGY PERÚ              375.8
-ENEL GENERACIÓN PIURA           343.6
-TERMOCHILCA                     303.3
-ENEL GREEN POWER PERÚ           276.8
-PLANTA RF ETEN                  223.9
-EGASA                           223.3
-CELEPSA                         222.5
-CHINANGO                        195.5
-MINERA CERRO VERDE              178.0
-TERMOSELVA                      176.0
-EGEMSA                          168.8
-SAN GABÁN                       115.7
-ENERGÍA EÓLICA                  114.0
-HUANZA                           98.3
-TRES HERMANAS                    97.2
-INLAND ENERGY                    89.8
-EGEJUNÍN                         73.1
-SHOUGESA                         62.4
-IYEPSA                           58.5
-EGESUR                           55.1
-MARCONA                          32.0
-SINERSA                          29.6
-SDF ENERGÍA                      28.4
-GENERACIÓN ANDINA                27.4
-GEPSA                            27.0
-AGROAURORA                       20.4
-ANDEAN POWER                     20.4
-AGUA AZUL                        20.2
-GTS MAJES                        20.0
-GTS REPARTICIÓN                  20.0
-PANAMERICANA                     20.0
-RÍO BAÑOS                        20.0
-TACNA SOLAR                      20.0
-CELEPSA RENOVABLES               19.9
-HUANCHOR                         19.8
-SANTA ANA                        19.6
-RÍO DOBLE                        19.2
-MOQUEGUA FV                      16.0
-HUAURA POWER                     15.0
-ELECTRO ZAÑA                     13.2
-AIPSA                            12.7
-BIOENERGÍA DEL CHIRA             12.0
-PETRAMÁS                          9.3
-AGROINDUSTRIAS SAN JACINTO        6.8
-EGECSAC                           5.2
-HIDROCAÑETE                       4.0
-ELÉCTRICA YANAPAMPA               3.9
-MAJA ENERGÍA                      3.5
-ATRIA ENERGÍA                     1.7
-HYDRO PATAPO                      1.0
--------------------------- ---------------------
-TOTAL                        12,636.89
-========================== =====================
-*Fuente: Estadística Anual 2019, Capítulo 2 - Estado actual de la infraestructura del SEIN, Cuadro 2.3*
 
 
 ============================== ========================== =============
@@ -375,7 +219,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
  Todos los valores de demanda anual se puede ver a en Anexos `demanda electrica <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
    
-3.1.1.4.2 Plantas de gas 
+3.1.1.2.2 Plantas de gas 
 ---------
 
 Las plantas de gas en el peru suman 8 en las cuales tenemos que 3 son exclusivamente de 
@@ -460,7 +304,7 @@ Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en A
 
 
 
-3.1.1.4.3 Refinerías 
+3.1.1.2.3 Refinerías 
 ---------
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
@@ -547,7 +391,7 @@ Todos los valores de los precios del WTI, CAPEX y OPEX  se puede ver en Anexos e
 
 
 
-3.1.1.4.4 Carboneras 
+3.1.1.2.4 Carboneras 
 ---------
 Para el 2013 la capacidad instalada de procesamiento de carbon es de 5.08 PJ, 2.97 para 
 la región centro y 2.11 para la región norte, además se asume un costo de producción de 
@@ -595,12 +439,12 @@ un costo de internación  de 18.6 US$/ton.
 Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precios <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
-3.1.1.5 Distribución de energía
+3.1.1.3 Distribución de energía
 --------------
 
 La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
-3.1.1.5.1 Transmisión y distribución del Sistema interconectado nacional 
+3.1.1.3.1 Transmisión y distribución del Sistema interconectado nacional 
 ---------
 
 El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV. El SEIN está integrado por 4 categorías de instalaciones, el sistema garantizado de transmisión (SGT), el sistema complementario de transmisión (SCT), el sistema principal de transmisión (SPT) y el sistema secundario de transmisión (SST). En el 2019 se instalaron un total de 966.4 km de líneas de transmisión, en la siguinete tabla se puede observar el total de líneas de transmisión que hay en el Perú en el sistema principal de transmisión y sistema secundario de transmisión al 2019.
@@ -625,21 +469,21 @@ Total                              2878.66  13631.38   4914.15   8571.41
 *Figure 3.3: Sistema interconectado nacional. Fuente: COES*
 
 
-3.1.1.5.2 Distribución de crudo y derivados del petróleo 
+3.1.1.3.2 Distribución de crudo y derivados del petróleo 
 ---------
 
 La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el noroeste y la selva de nuestro país, sin embargo para su distribución se hace uso de redes virtuales. El oleoducto norperuano tiene una longitud aproximada de 1100 km y una capacidadf de 200 MMBD
 
 
 
-3.1.1.5.3 Distribución de gas natural
+3.1.1.3.3 Distribución de gas natural
 ---------
 
 Actualmente se explota gas natural en los lotes 56, 88, por pluspetrol y el lote 57 por repsol, el lote 58 comenzará a explotarse el año 2023 por la empresa CNPC. En camisea se extrae gas natural que es procesado para su separación en líquidos de gas natural y gas seco que son enviados a través del poliducto hasta la planta de fraccionamiento de Pisco, el gas seco que no es reinyectado es transportado a través del TGP hasta el City Gate en Lurín, la empresa caliodad es reponsable de su distribvución en lima y callao.  
 
 
 
-3.1.1.6 Importaciones 
+3.1.1.4 Importaciones 
 --------------
 
 
@@ -689,7 +533,7 @@ Gasolina                          380893.66 423613.28 559352.13 716835.44
 
 .. _Proyecciones de importaciones: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
-3.1.1.7 Exportaciones
+3.1.1.5 Exportaciones
 --------------
 
 Las importaciones según el "Anuario estadístico sectorial de hidrocarburos 2018" el 2018 fueron de un total aproximado de 316 (PJ), para crudo, GLP, gasolina y carbón, que representan un valor de 3819.72 MMUSD.
@@ -857,6 +701,9 @@ Los valores de población corresponden a los resultados del T21, los valores gra
    :align:   center
    :width:   700 px
 *Figure 3.13: Proyección de la población en el Perú, Fuente: Propia*
+
+3. OSeMOSYS-Peru
+=======================================
 
 
 3.1.3.3 Ecuaciones utilizados para los diferentes sectores
