@@ -101,11 +101,11 @@ Para El Perú se ha hipotetizado una sola región para poder simplificar el aná
 
 Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de horizonte de estudio para el modelo de energía y transporte.
 
-========== ========= =========
+=========== ========== ===========
 Parámetro   Inicio      Final        
----------- --------- ---------
+----------- ---------- -----------
 Año         2015        2050
-========== ========= =========
+=========== ========== ===========
 *Fuente: Propia*
 
 
@@ -113,15 +113,17 @@ Año         2015        2050
 
 3.2.1.3 Timeslices
 ---------
+
 En el modelo de OSeMOSYSY Perú se han tomado una fraccion anual de 2 para un escenario alto y de 4 para un escenario medio y bajo.
 
-========== ===============
-Timeslice    Perú
----------- ---------------
-An_alto      0.5
-An_bajo      0.25
-An_medio     0.25
-========== ===============
+
+============== ===============
+Timeslice        Perú
+-------------- ---------------
+An_alto          0.5
+An_bajo          0.25
+An_medio         0.25
+============== ===============
 *Fuente: Propia*
 
 
