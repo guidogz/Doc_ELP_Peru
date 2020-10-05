@@ -609,7 +609,7 @@ Los gases de efecto invernadero considerados son el CO2, NH4 y N2O, además tene
 
 ========== ============ ============ ============
                 CO2          CH4          N2O              
-------------------------------------------------- 
+---------- ------------ ------------ ------------ 
 Factor           1           21           310
 ========== ============ ============ ============
 *Fuente: Anexo 2 del informe 9 del PROSEMER*
