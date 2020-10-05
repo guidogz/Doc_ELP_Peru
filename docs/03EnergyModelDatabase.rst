@@ -139,7 +139,7 @@ An_medio     0.25
 Para las emisiones se han considerado todos los tipos de gases de efecto invernadero (GEI) que son resultado de la actividad de los procesos, como CO2, CH4 y N2O, todos estos son transformado en CO2 euivalentes, en la tabla a continuación se puede observar estos factores de equivalencia.
 
 ========== ============ ============ ============
-                CO2          CH4          N2O              
+Parámetro       CO2          CH4          N2O              
 ---------- ------------ ------------ ------------
 Factor           1           21           310
 ========== ============ ============ ============
