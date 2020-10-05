@@ -247,38 +247,60 @@ Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir 
 Los parámetros son los insumos del modelo, han sido completados con información obtenida de las diferentes fuentes de información, como publicaciones oficiles de los diferentes ministerios, publicaciones de entidades internacionales, papers científicos publicados, etc.  
 
 
-
-3.2.2.1 YearSplit
----------
-
-
-
-
-
 3.2.2.1 Accumulated Annual Demand
 ---------
 
 El Accumulated Anual Demand es la demanda anual de energía en el Perú, esta comprende la demanda de energía primaría y secundaría en sus diferentes formas como crudo, leña, bagazo, bosta y yareta para la energía primaria; y en derivados de petróloe, gas natural, GLP, biocombustibles, y mexcla de estos como Diesel-B5, gasohol, etc. También comprende las demandas finales de energía de los diferentes sectores, como transporte, comercial, público, residencial, minero, agro y pesca; tambien exportaciones de energía, todos los valores han sido tomados de los balances nacionales de energía y se han hecho las prediciones en baso a variaables exógenas como PBI, la población y la tendencia. A continuación se presenta una tabla con los valores de demanda correspondientes a las demandas de los todos los fuels correspondientes s la energía primaria, secundaria, neta y exportaciones.
 
-=================================== ======== ======= ======= =========
-Tecnologías                          2015     2016    2017    2018
-=================================== ======== ======= ======= =========
-Refinerías                           0.776   0.777   0.834   0.80
-Plantas de gas                       0.659   0.659   0.659   0.659
-Plantas de generación con biofuels   0.755   0.672   0.858   0.764
-Plantas térmica de gas natural       0.62    0.62    0.54    0.52
-Plantas generación hidráulica        0.65    0.57    0.61    0.6
-Planats de generación solar PV       0.28    0.29    0.27    0.28
-Plantas de generación eólica         0.48    0.51    0.5     0.46
-Plantas térmica de diesel o fueloil  0.1     0.1     0.1     0.1
-G_PGDV_02                            0.17    0.17    0.17    0.17
-=================================== ======== ======= ======= =========
-*Fuente: Informes PROSEMER, Estadística anual de hidrocarburos 2018, Balances nacionales de energía, IRENA, COES*
+
+========================================= ========== ========== ========== ==========
+                      Damanda de energía en el Perú (PJ)
+------------------------------------------------------------------------------------- 
+Codificación                                 2015     2016       2017       2018
+========================================= ========== ========== ========== ==========
+Energía primaria Bagazo                     20.79     18.25      19.61      19.46
+Energía primaria Carbón mineral             32.81     33.69      29.26      26.22
+Energía primaria Gas natural húmedo        659.43     719.32     681.08     662.92
+Energía primaria Petró                     300.10     304.12     350.87     337.55
+Energía primaria Bosta, Yareta y Leña       87.60     113.19     108.97     109.55
+Energía secundaria Carbón vegetal            1.65     4.62       5.32       5.25
+Energía secundaria Coke                      1.07     1.39       2.11       2.10
+Energía secundaria Diesel                  222.54     227.52     223.98     230.33
+Energía secundaria Derivados NE             12.76     11.23      12.33      12.12
+Energía secundaria Fueloil                   9.71     9.31       10.07      2.91
+Energía secundaria Gas licuado              75.00     79.35      82.80      88.50
+Energía secundaria Gasohol                  64.15     71.98      74.49      77.77
+Energía secundaria Gasolina                 10.53     11.70      12.63      13.44
+Energía secundaria Gas refinería            80.50     81.46      87.26      96.26
+Energía secundaria Turbo                    39.19     43.45      44.22      16.14
+Electriciad Para transmisión               233.65     240.79     246.79     254.10
+Demanda de energía Comercial-público        54.6      56.7       56.9       57.6
+Demanda de energía PAMI                    230.4      236.5      244.0      250.2
+Demanda de energía Residencial             153.3      152.9      153.6      154.5
+Demanda de Transporte pasajero público    154443.0    154420.5   158914.5   163322.1
+Demanda de Transporte pasajero privado    71873.0     76093.5    80411.2    84662.7
+Demanda de Transporte de carga            288037.0    299041.4   311398.8   324147.7
+Exportaciones de Gas natural               194.0      232.8      221.2      231.4
+========================================= ========== ========== ========== ==========
+*Fuente: Balances nacional de enegía* 
 
 
 
 
 
+3.2.2.1 YearSplit
+---------
+
+Duración de una parte del tiempo modelado expresado com una fracción del año, la suma de cada entrada del modelo debe sumar 1.
+
+=========== ========
+TIMESLICE    Año
+=========== ========
+An_alto       0.5
+An_bajo       0.25
+An_medio      0.25
+=========== ========
+*Fuente: Propia*
 
 
 3.2.2.1 Capacity To Activity Unit 
@@ -369,6 +391,7 @@ G_PGDV_02                              25
 3.2.2.5 Capital Cost
 ---------
 
+Capital Cost son los costos de capital 
 
 
 3.2.2.6 Fixed Cost
