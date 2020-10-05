@@ -88,9 +88,9 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo TIMES se considera 4 regiones, centro, norte, oriente y sur.
 
-========== ===============
-región(es)   Perú
-========== ===============
++==========+===============+
+|región(es)|   Perú        |
++==========+===============+
 *Fuente: Propia*
 
 
