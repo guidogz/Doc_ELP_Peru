@@ -119,7 +119,7 @@ En el modelo de OSeMOSYSY Perú se han tomado una fraccion anual de 2 para un es
 
 ============== ===============
 Timeslice        Perú
--------------- ---------------
+============== ===============
 An_alto          0.5
 An_bajo          0.25
 An_medio         0.25
