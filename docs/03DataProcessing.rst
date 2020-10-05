@@ -595,8 +595,8 @@ planificado al 2050 lograr la carbononeutralidad. En la siguiente tabla se muest
 ==================== ========= ========= ========= ========= =========== ========== ========== 
                        Energía consumida y emisones por sector (MMUSD)
 --------------------------------------------------------------------------------------------- 
-2018                  Pesca    Agro      Público    Minero  Residencial Industrial Transporte
-                                                            y Comercial   
+2018                  Pesca    Agro      Público    Minero   Residencial Industrial Transporte
+                                                             y Comercial   
 ==================== ========= ========= ========= ========= =========== ========== ========== 
 Energía [PJ]          3.075     6.388    12.176    75.847     210.704    163.819   359.798  
 Emisiones [MtonCO2e]  0.123     0.139     0.326     1.281       4.4        7.006    24.94
