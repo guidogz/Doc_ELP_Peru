@@ -607,11 +607,11 @@ Razón [MtonCO2e/PJ]   0.04      0.0218    0.0268    0.0169      0.0209     0.04
 Los gases de efecto invernadero considerados son el CO2, NH4 y N2O, además tenemos que estos son tomados en su valor equivalente en CO2e, estos valores son tomados del IPCC 2006, a continuación se mostrarán.
 
 
-========== ============ ============ ============
-                CO2          CH4          N2O              
----------- ------------ ------------ ------------ 
-Factor           1           21           310
-========== ============ ============ ============
++==========+============+============+============+
+|          |      CO2   |       CH4  |     N2O    |         
++----------+------------+------------+------------+
+|Factor    |       1    |       21   |     310    |
++==========+============+============+============+
 *Fuente: Anexo 2 del informe 9 del PROSEMER*
 
 Para los valores correspondientes a las tecnología de producción de energía eléctrica, que relacionan las emisones de GEI, en forma de CO2e, con la Produccióin de energía, se han encontrado en bibliografía los valores o rangos de valores de estos.
