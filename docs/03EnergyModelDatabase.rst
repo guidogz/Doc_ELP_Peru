@@ -96,10 +96,10 @@ región(es)   Perú
 3.2.1.2 Year
 ---------
 
-Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de nuestro estudio para el modelo de energía y transporte.
+Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de horizonte de estudio para el modelo de energía y transporte.
 
 ========== =============== ============
-parámetro   Inicio          Final              
+parámetro   Inicio          Final        
 ---------- --------------- ------------
 Año         2015            2050
 ========== =============== ============
