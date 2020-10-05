@@ -85,7 +85,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 3.2.1.1 Región
 ---------
-Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo times se considera 4 regiones, centro, norte, oriente, y sur.
+Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo TIMES se considera 4 regiones, centro, norte, oriente y sur.
 
 ========== ===============
 región(es)   Perú
@@ -150,7 +150,7 @@ Los commodities se pueden encontrar en Anexos Fuels_.
 
 +--------------------+-----------------------------------------------------------------------+
 | Combustibles       | Los combustibles fósiles son residuos de materia orgánica obtenidos   |
-| Fósiles            | de forma extrativas, estas son hidrocarburos, gas natural y carbón.   |
+| Fósiles            | de forma extrativas, estas son crudo, gas natural y carbón.           |
 +--------------------+-----------------------------------------------------------------------+
 | Biocombustibles    | Son los combustibles que son sintetizados a partir de materia organica|
 |                    | tales como la cañade azucar, oleaginosas y microalgas                 |
@@ -227,7 +227,7 @@ para el peru se muestran a continuación.
 3.2.1.7 Mode of operation
 ---------
 
-Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir que por cada inpt solo obtenemos un solo tipo de output.
+Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir que por cada inpt solo obtenemos un tipo de output.
 
 
 
@@ -237,6 +237,41 @@ Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir 
 ---------
 
 Los parámetros son los insumos del modelo, han sido completados con información obtenida de las diferentes fuentes de información, como publicaciones oficiles de los diferentes ministerios, publicaciones de entidades internacionales, papers científicos publicados, etc.  
+
+
+
+3.2.2.1 YearSplit
+---------
+
+
+
+
+
+3.2.2.1 Accumulated Annual Demand
+---------
+
+El Accumulated Anual Demand es la demanda anual de energía en el Perú, esta comprende la demanda de energía primaría y secundaría en sus diferentes formas como crudo, leña, bagazo, bosta y yareta para la energía primaria; y en derivados de petróloe, gas natural, GLP, biocombustibles, y mexcla de estos como Diesel-B5, gasohol, etc. También comprende las demandas finales de energía de los diferentes sectores, como transporte, comercial, público, residencial, minero, agro y pesca; tambien exportaciones de energía, todos los valores han sido tomados de los balances nacionales de energía y se han hecho las prediciones en baso a variaables exógenas como PBI, la población y la tendencia. A continuación se presenta una tabla con los valores de demanda correspondientes a las demandas de los todos los fuels correspondientes s la energía primaria, secundaria, neta y exportaciones.
+
+=================================== ======== ======= ======= =========
+Tecnologías                          2015     2016    2017    2018
+=================================== ======== ======= ======= =========
+Refinerías                           0.776   0.777   0.834   0.80
+Plantas de gas                       0.659   0.659   0.659   0.659
+Plantas de generación con biofuels   0.755   0.672   0.858   0.764
+Plantas térmica de gas natural       0.62    0.62    0.54    0.52
+Plantas generación hidráulica        0.65    0.57    0.61    0.6
+Planats de generación solar PV       0.28    0.29    0.27    0.28
+Plantas de generación eólica         0.48    0.51    0.5     0.46
+Plantas térmica de diesel o fueloil  0.1     0.1     0.1     0.1
+G_PGDV_02                            0.17    0.17    0.17    0.17
+=================================== ======== ======= ======= =========
+*Fuente: Informes PROSEMER, Estadística anual de hidrocarburos 2018, Balances nacionales de energía, IRENA, COES*
+
+
+
+
+
+
 
 3.2.2.1 Capacity To Activity Unit 
 ---------
@@ -250,25 +285,25 @@ Los parámetros son los insumos del modelo, han sido completados con informació
 
 El factor de disponibilidad, es la fracción de la capacidad instalada que esta disponible durante un año, este valor es de 0 a 1 y ve reflejada las salidas de operación programadas y fortuitas del sistema. El factor de disponibilidad para las refinerías, plantas de gas y carbón se ha tomado de los informes del PROSEMER, los valores de las plantas de generación eléctrica se han obtenido de bibliografia internacional, solo para el caso de las energías renovables no convecionales se tiene que los valores de factores de disponibilidad se han extraido de bibliografía web.
 
-================================== =======================
-Tecnologías                        Availability factor
-================================== =======================
-Producción                          	1
-Importaciones                    	    1
-REfinerías	                           0.9
+=================================== =======================
+Tecnologías                         Availability factor
+=================================== =======================
+Producción                              1
+Importaciones                           1
+REfinerías                             0.9
 Carboneras                             0.9
-Plantas de gas natural	               0.92
-Plantas de generación con biofuels	   0.9
-Plantas térmica de gas natural	       0.9
+Plantas de gas natural                 0.92
+Plantas de generación con biofuels     0.9
+Plantas térmica de gas natural         0.9
 Plantas generación hidráulica          0.9
 Planats de generación solar PV         0.94
-Plantas de generación eólica	       0.95
+Plantas de generación eólica           0.95
 Plantas térmica de diesel o fueloil    0.9
-G_PGDV_02	                           0.9
-G_PGGTH_02	                           0.8	
-H_STDE_01	                            1
-H_STDE_02	                            1
-================================== =======================
+G_PGDV_02                              0.9
+G_PGGTH_02                             0.8
+H_STDE_01                                1
+H_STDE_02                                1
+=================================== =======================
 *Feunte: Propia*
 
 
@@ -278,24 +313,61 @@ H_STDE_02	                            1
 3.2.2.3 Capacity Factor
 ---------
 
-El factor de capacidad es la capacidad disponible de la capacidad anual de cada tecnología para cada timeslice. El factor de capacidad de las refinerías, plantas de gas y carboneras han sido calculados a partir del anuario estadístico de hidrocarburos de la dirección general de hidrocarburos (DGH) y los balances nacionales de energía, para las demás tecnologías se ha utilizado valores de referencia del IRENA y   
+El factor de capacidad es la capacidad disponible de la capacidad anual, si hubiera trabajado a plena carga, de cada tecnología y para cada timeslice. El factor de capacidad de las refinerías, plantas de gas y carboneras han sido calculados a partir del anuario estadístico de hidrocarburos de la dirección general de hidrocarburos (DGH) y los balances nacionales de energía, para las demás tecnologías se ha utilizado valores de referencia del IRENA y calculos de los factores de planta de las plantas de generación que publica el COES. A continuación se mostrará los factores de planta para las distintas tecnologías en los años 2015, 2016, 2017 y 2018.    
+
+
+=================================== ======== ======= ======= =========
+Tecnologías                          2015     2016    2017    2018
+=================================== ======== ======= ======= =========
+Refinerías                           0.776   0.777   0.834   0.80
+Plantas de gas                       0.659   0.659   0.659   0.659
+Plantas de generación con biofuels   0.755   0.672   0.858   0.764
+Plantas térmica de gas natural       0.62    0.62    0.54    0.52
+Plantas generación hidráulica        0.65    0.57    0.61    0.6
+Planats de generación solar PV       0.28    0.29    0.27    0.28
+Plantas de generación eólica         0.48    0.51    0.5     0.46
+Plantas térmica de diesel o fueloil  0.1     0.1     0.1     0.1
+G_PGDV_02                            0.17    0.17    0.17    0.17
+=================================== ======== ======= ======= =========
+*Fuente: Informes PROSEMER, Estadística anual de hidrocarburos 2018, Balances nacionales de energía, IRENA, COES*
 
 
 
 3.2.2.4 Operational Life
 ---------
 
+El Operation Life es la vida de operacional de las tecnologías, generalmente estan diseñados para largos periodos de tiempo, estas pueden variar, debido a que las plantas reciben actualizaciones, modificaciones, o simplemente se acaba la materia prima para hacerlas funcionar. Los valores de Operational Life se han obtenido de fuentes bibliográficas como LAZARD’S y National Renewable Energy Laboraqtory (NREL).
+
+
+=================================== ==========================
+Tecnologías                         Operational Life (Años)
+=================================== ==========================
+Producción                              -
+Importaciones                           -
+REfinerías                             40
+Carboneras                              -
+Plantas de gas natural                 20
+Plantas de generación con biofuels     30
+Plantas térmica de gas natural         30
+Plantas generación hidráulica          30
+Planats de generación solar PV         30
+Plantas de generación eólica           20
+Plantas térmica de diesel o fueloil    20
+G_PGDV_02                              25
+=================================== ==========================
+*Feunte: LAZARD’S y National Renewable Energy Laboraqtory (NREL)*
 
 
 3.2.2.5 Capital Cost
 ---------
 
 
+
 3.2.2.6 Fixed Cost
 ---------
 
 
-3.2.2.7 Variable Costor
+3.2.2.7 Variable Costs
 ---------
 
 
