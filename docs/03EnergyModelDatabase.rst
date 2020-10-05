@@ -92,17 +92,19 @@ región(es)   Perú
 ========== ===============
 *Fuente: Propia*
 
+
 3.2.1.2 Year
 ---------
 
 Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de nuestro estudio para el modelo de energía y transporte.
 
 ========== =============== ============
-            Inicio          Final              
+parámetro   Inicio          Final              
 ---------- --------------- ------------
 Año         2015            2050
 ========== =============== ============
 *Fuente: Propia*
+
 
 
 3.2.1.3 Timeslices
