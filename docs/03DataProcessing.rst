@@ -604,6 +604,37 @@ Razón [MtonCO2e/PJ]   0.04      0.0218    0.0268    0.0169      0.0209     0.04
 ==================== ========= ========= ========= ========= =========== ========== ========== 
 *Fuente: Balance nacional de energía 2018*
 
+Los gases de efecto invernadero considerados son el CO2, NH4 y N2O, además tenemos que estos son tomados en su valor equivalente en CO2e, estos valores son tomados del IPCC 2006, a continuación se mostrarán.
+
+
+========== ============ ============ ============
+                CO2          CH4          N2O              
+---------- ------------ ------------ ------------
+Factor           1           21           310
+========== ============ ============ ============
+*Fuente: Anexo 2 del informe 9 del PROSEMER*
+
+Para los valores correspondientes a las tecnología de producción de energía eléctrica, que relacionan las emisones de GEI, en forma de CO2e, con la Produccióin de energía, se han encontrado en bibliografía los valores o rangos de valores de estos.
+
+========================== ================ ================ =================
+Tecnología                  Rango            Media            Unidades 
+========================== ================ ================ =================
+Refinerías                 949 to 1280             854.5    gCO2e/kWh 
+Carboneras                 519 to 1190             1114.5   gCO2e/kWh 
+Plantas de gas natural                                      gCO2e/kWh 
+Plantas de biodiesel                               68.4     gCO2e/kWh           
+Plantas térmicas de gas    485 to 991              738      gCO2e/kWh 
+Plantas hidraúlicas          3 to 27                 15     gCO2e/kWh   
+Plantas Photovoltáicas      79 to --                 79     gCO2e/kWh                       
+Planta eólicas               14 to 21              17.5     gCO2e/kWh  
+Plantas térmicas de diesel  519 to 1190            880      gCO2e/kWh    
+========================== ================ ================ =================
+                                  
+*Fuente: GREENHOUSE GAS EMISSIONS FROM ENERGY SYSTEMS: COMPARISON AND OVERVIEW (R. Dones, T. Heck, S. Hirschberg)*
+
+
+
+
 
 El precio social del carbono es una medida que captura el valor de los daños que causa la emisión de CO2, ayuda a devolver la responsabilidad de los daños a quienes lo causan y ellos puedan evitar eso, hoy en dia los precios de la tonelada de carbono en el mundo es aún bajo, sin embargo, hay países como suecia en donde los presios de la tonelada de carbono esta 126 US$/ton_CO2 (2016) y en proomedio de 10 US$/ton_CO2 para america latina, los precios de la tonelada de carbono en un escenario de descarbonización aumentarían. 
 

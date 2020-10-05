@@ -227,25 +227,59 @@ para el peru se muestran a continuación.
 3.2.1.7 Mode of operation
 ---------
 
+Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir que por cada inpt solo obtenemos un solo tipo de output.
+
+
 
 
 
 3.2.2 Parameters
 ---------
 
-
-
+Los parámetros son los insumos del modelo, han sido completados con información obtenida de las diferentes fuentes de información, como publicaciones oficiles de los diferentes ministerios, publicaciones de entidades internacionales, papers científicos publicados, etc.  
 
 3.2.2.1 Capacity To Activity Unit 
 ---------
+
+"Capacity To Activity Unit" es la actividad generada por la capacidad de las diferentes tecnologías, esta es diferentes para cada una las tecnologías existentes y además es constante.
+
 
 
 3.2.2.2 Availability Factor
 ---------
 
+El factor de disponibilidad, es la fracción de la capacidad instalada que esta disponible durante un año, este valor es de 0 a 1 y ve reflejada las salidas de operación programadas y fortuitas del sistema. El factor de disponibilidad para las refinerías, plantas de gas y carbón se ha tomado de los informes del PROSEMER, los valores de las plantas de generación eléctrica se han obtenido de bibliografia internacional, solo para el caso de las energías renovables no convecionales se tiene que los valores de factores de disponibilidad se han extraido de bibliografía web.
+
+================================== =======================
+Tecnologías                        Availability factor
+================================== =======================
+Producción                          	1
+Importaciones                    	    1
+REfinerías	                           0.9
+Carboneras                             0.9
+Plantas de gas natural	               0.92
+Plantas de generación con biofuels	   0.9
+Plantas térmica de gas natural	       0.9
+Plantas generación hidráulica          0.9
+Planats de generación solar PV         0.94
+Plantas de generación eólica	       0.95
+Plantas térmica de diesel o fueloil    0.9
+G_PGDV_02	                           0.9
+G_PGGTH_02	                           0.8	
+H_STDE_01	                            1
+H_STDE_02	                            1
+================================== =======================
+*Feunte: Propia*
+
+
+*El diesel tambiém se puede encontrar como gasóleo.   
+
 
 3.2.2.3 Capacity Factor
 ---------
+
+El factor de capacidad es la capacidad disponible de la capacidad anual de cada tecnología para cada timeslice. El factor de capacidad de las refinerías, plantas de gas y carboneras han sido calculados a partir del anuario estadístico de hidrocarburos de la dirección general de hidrocarburos (DGH) y los balances nacionales de energía, para las demás tecnologías se ha utilizado valores de referencia del IRENA y   
+
 
 
 3.2.2.4 Operational Life
