@@ -103,7 +103,7 @@ Los años de análisis se consideran desde el 2015 hasta el 2050, este es el mar
 
 =========== ========== ===========
 Parámetro   Inicio      Final        
------------ ---------- -----------
+=========== ========== ===========
 Año         2015        2050
 =========== ========== ===========
 *Fuente: Propia*
@@ -135,7 +135,7 @@ Para las emisiones se han considerado todos los tipos de gases de efecto inverna
 
 ========== ============ ============ ============
 Parámetro       CO2          CH4          N2O              
----------- ------------ ------------ ------------
+========== ============ ============ ============
 Factor           1           21           310
 ========== ============ ============ ============
 *Fuente: Anexo 2 del informe 9 del PROSEMER*
