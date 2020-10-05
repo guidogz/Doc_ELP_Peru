@@ -619,15 +619,15 @@ Para los valores correspondientes a las tecnología de producción de energía e
 ========================== ================ ================ =================
 Tecnología                  Rango            Media            Unidades 
 ========================== ================ ================ =================
-Refinerías                 949 to 1280             854.5    gCO2e/kWh 
-Carboneras                 519 to 1190             1114.5   gCO2e/kWh 
-Plantas de gas natural                                      gCO2e/kWh 
-Plantas de biodiesel                               68.4     gCO2e/kWh           
-Plantas térmicas de gas    485 to 991              738      gCO2e/kWh 
-Plantas hidraúlicas          3 to 27                 15     gCO2e/kWh   
-Plantas Photovoltáicas      79 to --                 79     gCO2e/kWh                       
-Planta eólicas               14 to 21              17.5     gCO2e/kWh  
-Plantas térmicas de diesel  519 to 1190            880      gCO2e/kWh    
+Refinerías                  949 to 1280             854.5      gCO2e/kWh 
+Carboneras                  519 to 1190             1114.5     gCO2e/kWh 
+Plantas de gas natural                                         gCO2e/kWh 
+Plantas de biodiesel                                68.4       gCO2e/kWh           
+Plantas térmicas de gas     485 to 991              738        gCO2e/kWh 
+Plantas hidraúlicas           3 to 27                 15       gCO2e/kWh   
+Plantas Photovoltáicas       79 to --                 79       gCO2e/kWh                       
+Planta eólicas                14 to 21              17.5       gCO2e/kWh  
+Plantas térmicas de diesel   519 to 1190            880        gCO2e/kWh    
 ========================== ================ ================ =================
                                   
 *Fuente: GREENHOUSE GAS EMISSIONS FROM ENERGY SYSTEMS: COMPARISON AND OVERVIEW (R. Dones, T. Heck, S. Hirschberg)*
