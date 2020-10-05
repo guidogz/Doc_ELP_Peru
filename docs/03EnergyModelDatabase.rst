@@ -94,7 +94,7 @@ región(es)   Perú
 *Fuente: Propia*
 
 
-3.2.1.3 Año
+3.2.1.2 Año
 ---------
 
 
