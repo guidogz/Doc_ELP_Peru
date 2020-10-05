@@ -85,6 +85,7 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 3.2.1.1 Región
 ---------
+
 Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo TIMES se considera 4 regiones, centro, norte, oriente y sur.
 
 ========== ===============
@@ -93,8 +94,9 @@ región(es)   Perú
 *Fuente: Propia*
 
 
-3.2.1.2 Year
+3.2.1.3 Year
 ---------
+
 
 Los años de análisis se consideran desde el 2015 hasta el 2050, este es el marco de tiempo de horizonte de estudio para el modelo de energía y transporte.
 
