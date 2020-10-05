@@ -88,16 +88,12 @@ del sistema a modelar, los sets se muestrana contiuación.
 
 Para El Perú se ha hipotetizado una sola región para poder simplificar el análisis de nuestro sistema, se puede mencionar que el modelo TIMES se considera 4 regiones, centro, norte, oriente y sur.
 
-+==========+===============+
++----------+---------------+
 |región(es)|   Perú        |
-+==========+===============+
++----------+---------------+
 *Fuente: Propia*
 
 
-
-
-3.2.1.6 Technologies
----------
 
 3.2.1.2 Año
 ---------
@@ -129,9 +125,6 @@ An_medio     0.25
 *Fuente: Propia*
 
 
-
-3.2.1.6 Technologies
----------
 
 3.2.1.4 Emissions
 ---------
