@@ -949,7 +949,7 @@ Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
 Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
-
+                     (kUSD/b/d)              (MMUSD/PJa)   (USD/KW)    (USD/KW)    (USD/KW)     USD/KW      (USD/KW)   (USD/KW)     (USD/KW)
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 2015                      18.74                 3.76         2591.81   1300.00    1452.07       1299.35      1111.55    950.00       0.031
 2016                      30.84                 3.76         2175.08   926.64	  1839.24	    1262.64	     1092.32    947.56       0.030
@@ -999,6 +999,7 @@ Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
 Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
+        (MM USD/PJ)  (MM USD/PJ) (MM USD/PJ) (MM USD/PJ)  (MM USD/PJ) (MM USD/PJ) (MM USD/PJ) (MM USD/PJ)  (MM USD/PJ) (MM USD/PJ) (MM USD/PJ)
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 2015     9.383         2.383       2.710       4.923        3.551       0.428         3.918     7.022         4.167      0.658
 2016     9.542         2.517       2.710       4.514        3.551       0.427         3.918     6.485         4.133      0.658
@@ -1093,7 +1094,7 @@ A14. Emission Activity Ratio
 +++++++++
 
 ================== ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
-Emisión activity    Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Emisión activity    Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
    ratio                                    gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
 ================== ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
     gCO2e/kWh           854.5       1114.5        738         68.4         1637.5     15          79           17.5        880
