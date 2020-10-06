@@ -2,7 +2,7 @@
 
 
 
-3.2 Characterization of Energy Sectors
+3.2 Datos e información
 +++++++++
 
 
@@ -334,7 +334,9 @@ G_PGGTH_02                             0.8
 H_STDE_01                                1
 H_STDE_02                                1
 =================================== =======================
-*Feunte: Propia*
+*Fuente*
+*Anexo 2 -Informe 9 PROSEMER*
+*Availability factor of a PV power plant: evaluation based on generation and inverter running periods*
 
 
 *El diesel tambiém se puede encontrar como gasóleo.   
@@ -359,7 +361,15 @@ Plantas de generación eólica         0.48    0.51    0.5     0.46
 Plantas térmica de diesel o fueloil  0.1     0.1     0.1     0.1
 G_PGDV_02                            0.17    0.17    0.17    0.17
 =================================== ======== ======= ======= =========
-*Fuente: Informes PROSEMER, Estadística anual de hidrocarburos 2018, Balances nacionales de energía, IRENA, COES*
+*Fuente*
+*Calculados del anuario de estadisticas de hidrocarburos DGH 2016-2018*
+*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+*IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
+*Calculados de las estadísticas anuales del 2019- COES*
+*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+*2019 Annual Technology Baseline- NREL*
+
+
 
 
 
@@ -374,7 +384,7 @@ Tecnologías                         Operational Life (Años)
 =================================== ==========================
 Producción                              -
 Importaciones                           -
-REfinerías                             40
+Refinerías                             40
 Carboneras                              -
 Plantas de gas natural                 20
 Plantas de generación con biofuels     30
@@ -385,28 +395,122 @@ Plantas de generación eólica           20
 Plantas térmica de diesel o fueloil    20
 G_PGDV_02                              25
 =================================== ==========================
-*Feunte: LAZARD’S y National Renewable Energy Laboraqtory (NREL)*
+*Fuente*
+*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+*2019 Annual Technology Baseline- NREL
 
 
 3.2.2.5 Capital Cost
 ---------
 
-Capital Cost son los costos de capital 
+Capital Cost son los costos de capital por capaciad instalada, los costos generalmente estan en dolares americanos y la capacidad está expresado en unidades de potencia. Los costos de capital para las tecnologías que estan en desarrollo tienen a disminuir con el timepo en sus proyecciones, sin embargo, las tecnologías que ya estan maduras como las de tratamiento y refinación de gas o de refinación de crudo sus valores con el tiempo no disminuyen, sino que se mantienen en el tiempo. Acontinuación se mostrará los valores de Capital Costs para el año 2018. 
+
+=================================== ============= =============
+Tecnologías (2018)                  Capital Costs  Unidades
+=================================== ============= =============
+Producción                              -                 
+Importaciones                           -                   
+Refinerías                             15.93      kUSD/b/d                    
+Carboneras                              -                     
+Plantas de gas natural                 3.76       MMUSD/PJ/año             
+Plantas de generación con biofuels     1693.37    USD/KW                    
+Plantas térmica de gas natural         1290.76    USD/KW                 
+Plantas generación hidráulica          1455.86    USD/KW                    
+Planats de generación solar PV         1200       USD/KW          
+Plantas de generación eólica           1053.86    USD/KW
+Plantas térmica de diesel o fueloil    947.56     USD/KW                                        
+=================================== ============= =============
+*Fuente*
+*Costos normalizados de  IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
+*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+*Evolución futura de costos de las energías renovables y almacenamiento en América Latina, Banco interamericano de desarrollo, división energía*
+*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+
+
 
 
 3.2.2.6 Fixed Cost
 ---------
 
+Los costos fijos son gastos que tienen las diferentes tecnologías por operación y mantenimiento en un periodo anual, los gatos fijos son menores en tecnologías que tienen altos costos variables, como es el caso de las tacnologías de generación térmica. Las fuentes bibliográficas consultadas para estos valores has sido los informes del PROSEMER, el IRENA y LAZARD’S. Acontinuación se mostrará los valores de Capital Costs para los años 2015, 2016, 2017 y 2018. Acontinuación se mostrará los valores de Capital Costs para el año 2018. 
+
+
+=================================== ============= =============
+Tecnologías (2018)                  Fixed Costs    Unidades
+=================================== ============= =============
+Producción                              -             
+Importaciones                          12.079      MM USD/PJ  
+Refinerías                             2.339       MM USD/PJ   
+Carboneras                             2.71        MM USD/PJ   
+Plantas de gas natural                 4.898       MM USD/PJ    
+Plantas de generación con biofuels     3.55        MM USD/PJ  
+Plantas térmica de gas natural         0.424       MM USD/PJ     
+Plantas generación hidráulica          3.92        MM USD/PJ    
+Planats de generación solar PV         4.68        MM USD/PJ   
+Plantas de generación eólica           4.07        MM USD/PJ 
+Plantas térmica de diesel o fueloil    0.658       MM USD/PJ     
+=================================== ============= =============
+*Fuente*
+*Calculados a partir del Balance nacional de energía 2018, anuario estadístico de hidrocarburos 2018, y bibliografía internacional*
+*Anexo 2 -Informe 9 del PROSEMER pag 111*
+*2019 Annual Technology Baseline- NREL*
+*Renewables Power Generation Costs in 2018, IRENA,pag. 82*
+*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+*2019 Annual Technology Baseline- NREL*
+
 
 3.2.2.7 Variable Costs
 ---------
+
+Variable Costs son los costos de operación y mantenimiento que son variables en el tiempo para las diferentes tecnologías en un modo de operación, estos costos son significativos para las tecnologías térmicas, debido a que incluyen el precio de de los conbustibles. En las tecnologías solar fotovoltáica y eólica el valor de costos varibles es cero. Las fuentes bibliográficas consultadas son las mismas que las de costos fijos de operación y mantenimiento. Acontinuación se mostrará los valores de Capital Costs para el año 2018. 
+
+
+=================================== ============== =============
+Tecnologías (2018                   Variable Costs  Unidades
+=================================== ============== =============
+Producción                              -                 
+Importaciones                           -                   
+Refinerías                              -                          
+Carboneras                              -                     
+Plantas de gas natural                 1.536       MM USD/PJ             
+Plantas de generación con biofuels     0.006       USD/kW-h                  
+Plantas térmica de gas natural         0.0085      USD/kW-h               
+Plantas generación hidráulica           -                          
+Planats de generación solar PV          -                
+Plantas de generación eólica            -      
+Plantas térmica de diesel o fueloil    0.1813      USD/kW-h                                       
+=================================== ============== =============
+*Fuente*
+*Boletìn anual 2015-2018, Operación del sector eléctrico*
+*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+*Renewables Power Generation Costs in 2018, pag. 81*
+*2019 Annual Technology Baseline- NREL*
 
 
 3.2.2.8 Emission Activity Ratio
 ---------
 
+Las razones de emisiones de CO2e por actividad son particulares para cada tipo de tecnología y constantes en el tiempo, estas han sido tomadas de un estudio para este tipo de tecnlogías hecho en europa. 
 
 
+
+=================================== ======================= ==============
+Tecnologías                         Emission Activity Ratio   Unidades
+=================================== ======================= ==============
+Producción                              -                    gCO2e/kWh
+Importaciones                           -                    gCO2e/kWh         
+Refinerías                             854.5                 gCO2e/kWh              
+Carboneras                             1114.5                gCO2e/kWh                 
+Plantas de gas natural                 738                   gCO2e/kWh                 
+Plantas de generación con biofuels     68.4                  gCO2e/kWh                     
+Plantas térmica de gas natural         738                   gCO2e/kWh                   
+Plantas generación hidráulica          15                    gCO2e/kWh                     
+Planats de generación solar PV         79                    gCO2e/kWh                     
+Plantas de generación eólica           17.5                  gCO2e/kWh                      
+Plantas térmica de diesel o fueloil    880                   gCO2e/kWh                 
+=================================== ======================== ==============
+*Fuente*
+*GREENHOUSE GAS EMISSIONS FROM ENERGY SYSTEMS: COMPARISON AND OVERVIEW (R. Dones, T. Heck, S. Hirschberg)*
 
 
 3.3 Consideraciones del modelo 
