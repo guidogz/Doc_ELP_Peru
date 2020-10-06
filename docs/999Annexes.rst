@@ -885,7 +885,7 @@ A14. factores de capacidad
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
-Años   Importación   Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 2015        1.00        0.78        0.66        0.75        0.62        0.65        0.28        0.48        0.10        0.89        1.00
