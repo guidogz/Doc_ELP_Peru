@@ -932,7 +932,7 @@ A14. Operational Life
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
-Tiempo Importación   Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Tiempo Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 Años       -         40           -                       30            20         30             30           20           20      25      
@@ -947,7 +947,7 @@ A14. Capital costs
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
-Años   Importación   Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -997,7 +997,7 @@ A14. Fixed costs
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
-Años   Importación   Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 2015     9.383         2.383       2.710       4.923        3.551       0.428         3.918     7.022         4.167      0.658
@@ -1045,9 +1045,9 @@ A14. Variable costs
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 Tiempo                           Tecnologías
 ------ ----------------------------------------------------------------------------------------------------------------------------------------
-Años   Importación   Refinerías Carboneras   Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
+Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta tér   Genreación  Solar        Eólica     Planta tér   Sistema de 
                                              gas natural  biofuels    mica gas     hidraúlica fotovoltaica             mica diesel  Trasmisión
-                                             MM USD/PJ    USD/kW-h    USD/kW-h     USD/kW-h    USD/kW-h     USD/kW-h   USD/kW-h	
+                                             (MM USD/PJ)  (USD/kW-h)  (USD/kW-h)   (USD/kW-h)  (USD/kW-h)  (USD/kW-h)  (USD/kW-h)	
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 2015                                            1.5358        0.0060     0.0115      0.0000      0.0000       0.0000    0.2184
 2016                                            1.5358        0.0060     0.0097      0.0000      0.0000       0.0000    0.1703
