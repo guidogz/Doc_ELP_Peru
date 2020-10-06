@@ -260,7 +260,7 @@ Codificación                                 2015     2016       2017       201
 ========================================= ========== ========== ========== ==========
 Energía primaria Bagazo                     20.79     18.25      19.61      19.46
 Energía primaria Carbón mineral             32.81     33.69      29.26      26.22
-Energía primaria Gas natural húmedo        659.43     719.32     681.08     662.92
+Energía primaria Gas natural y LGN         659.43     719.32     681.08     662.92
 Energía primaria Petró                     300.10     304.12     350.87     337.55
 Energía primaria Bosta, Yareta y Leña       87.60     113.19     108.97     109.55
 Energía secundaria Carbón vegetal            1.65     4.62       5.32       5.25
@@ -335,11 +335,10 @@ H_STDE_01                                1
 H_STDE_02                                1
 =================================== =======================
 *Fuente*
-*Anexo 2 -Informe 9 PROSEMER*
-*Availability factor of a PV power plant: evaluation based on generation and inverter running periods*
+ - *Anexo 2 -Informe 9 PROSEMER*
+ - *Availability factor of a PV power plant: evaluation based on generation and inverter running periods*
 
 
-*El diesel tambiém se puede encontrar como gasóleo.   
 
 
 3.2.2.3 Capacity Factor
@@ -362,12 +361,12 @@ Plantas térmica de diesel o fueloil  0.1     0.1     0.1     0.1
 G_PGDV_02                            0.17    0.17    0.17    0.17
 =================================== ======== ======= ======= =========
 *Fuente*
-*Calculados del anuario de estadisticas de hidrocarburos DGH 2016-2018*
-*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
-*IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
-*Calculados de las estadísticas anuales del 2019- COES*
-*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
-*2019 Annual Technology Baseline- NREL*
+ -*Calculados del anuario de estadisticas de hidrocarburos DGH 2016-2018*
+ -*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+ -*IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
+ -*Calculados de las estadísticas anuales del 2019- COES*
+ -*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+ -*2019 Annual Technology Baseline- NREL*
 
 
 
@@ -396,8 +395,8 @@ Plantas térmica de diesel o fueloil    20
 G_PGDV_02                              25
 =================================== ==========================
 *Fuente*
-*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
-*2019 Annual Technology Baseline- NREL
+ -*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+ -*2019 Annual Technology Baseline- NREL
 
 
 3.2.2.5 Capital Cost
@@ -421,10 +420,10 @@ Plantas de generación eólica           1053.86    USD/KW
 Plantas térmica de diesel o fueloil    947.56     USD/KW                                        
 =================================== ============= =============
 *Fuente*
-*Costos normalizados de  IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
-*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
-*Evolución futura de costos de las energías renovables y almacenamiento en América Latina, Banco interamericano de desarrollo, división energía*
-*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+ -*Costos normalizados de  IRENA (2020), Renewable Power Generation Costs in 2019, International Renewable Energy Agency*
+ -*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+ -*Evolución futura de costos de las energías renovables y almacenamiento en América Latina, Banco interamericano de desarrollo, división energía*
+ -*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
 
 
 
@@ -451,12 +450,12 @@ Plantas de generación eólica           4.07        MM USD/PJ
 Plantas térmica de diesel o fueloil    0.658       MM USD/PJ     
 =================================== ============= =============
 *Fuente*
-*Calculados a partir del Balance nacional de energía 2018, anuario estadístico de hidrocarburos 2018, y bibliografía internacional*
-*Anexo 2 -Informe 9 del PROSEMER pag 111*
-*2019 Annual Technology Baseline- NREL*
-*Renewables Power Generation Costs in 2018, IRENA,pag. 82*
-*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
-*2019 Annual Technology Baseline- NREL*
+ -*Calculados a partir del Balance nacional de energía 2018, anuario estadístico de hidrocarburos 2018, y bibliografía internacional*
+ -*Anexo 2 -Informe 9 del PROSEMER pag 111*
+ -*2019 Annual Technology Baseline- NREL*
+ -*Renewables Power Generation Costs in 2018, IRENA,pag. 82*
+ -*LAZARD’S LEVELIZED COST OF ENERGY ANALYSIS VERSION 13.0*
+ -*2019 Annual Technology Baseline- NREL*
 
 
 3.2.2.7 Variable Costs
@@ -481,10 +480,10 @@ Plantas de generación eólica            -
 Plantas térmica de diesel o fueloil    0.1813      USD/kW-h                                       
 =================================== ============== =============
 *Fuente*
-*Boletìn anual 2015-2018, Operación del sector eléctrico*
-*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
-*Renewables Power Generation Costs in 2018, pag. 81*
-*2019 Annual Technology Baseline- NREL*
+ -*Boletìn anual 2015-2018, Operación del sector eléctrico*
+ -*Calculados a partir, Anexo 2 -Informe 9 PROSEMER*
+ -*Renewables Power Generation Costs in 2018, pag. 81*
+ -*2019 Annual Technology Baseline- NREL*
 
 
 3.2.2.8 Emission Activity Ratio
@@ -510,7 +509,7 @@ Plantas de generación eólica           17.5                  gCO2e/kWh
 Plantas térmica de diesel o fueloil    880                   gCO2e/kWh                 
 =================================== ======================== ==============
 *Fuente*
-*GREENHOUSE GAS EMISSIONS FROM ENERGY SYSTEMS: COMPARISON AND OVERVIEW (R. Dones, T. Heck, S. Hirschberg)*
+ -*GREENHOUSE GAS EMISSIONS FROM ENERGY SYSTEMS: COMPARISON AND OVERVIEW (R. Dones, T. Heck, S. Hirschberg)*
 
 
 3.3 Consideraciones del modelo 
