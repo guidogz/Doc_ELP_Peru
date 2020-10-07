@@ -1,9 +1,8 @@
 
 
 
-
 3.2 Datos e información
-+++++++++
+=================
 
 
 .. figure:: img/RES_Energia.png
@@ -66,7 +65,7 @@ No todos estos items han sido insertados en el modelo, debido que se ha trabajad
 
 
 3.2.1 Sets
----------
+++++++++++++
 
 
 
@@ -242,7 +241,7 @@ Para los procesos se ha hipotetizado un modo de operación, lo que quiere decir 
 
 
 3.2.2 Parameters
----------
+++++++++++++
 
 Los parámetros son los insumos del modelo, han sido completados con información obtenida de las diferentes fuentes de información, como publicaciones oficiles de los diferentes ministerios, publicaciones de entidades internacionales, papers científicos publicados, etc.  
 
