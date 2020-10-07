@@ -328,7 +328,7 @@ Años    Personas
 *Fuente: T21*
 
 
-A6. Sector eléctrico
+A5. Sector eléctrico
 +++++++++
 
 
@@ -378,7 +378,7 @@ Años        Medio
 
 *Fuente: Propia*
 
-A7. Gas Natural en planta
+A6. Gas Natural en planta
 +++++++++
 
 ====== ======= ========
@@ -429,7 +429,7 @@ Años   Refere.   Alta
 
 *Fuente: Informes PROSEMER*
 
-A8. Precios WTI ( West Texas Intermediate)
+A7. Precios WTI ( West Texas Intermediate)
 +++++++++
 
 ====== ======= =======
@@ -478,7 +478,7 @@ Años   Refere.  Alta
 
 *Fuente: Informes PROSEMER*
 
-A9. Precios Carbón 
+A8. Precios Carbón 
 +++++++++
 
 ====== ======= =======
@@ -528,7 +528,7 @@ Años   Refere.  Alta
 
 *Fuente: Informes PROSEMER*
 
-A10. Precios vehículos eléctricos 
+A9. Precios vehículos eléctricos 
 +++++++++
 
 ====== ======= ======= ================
@@ -578,7 +578,7 @@ Años   Privado Público Participación(%)
 *Fuente: Informes PROSEMER*
 
 
-A14. Demanda por sectores
+A10. Demanda por sectores
 +++++++++
 
 
@@ -628,12 +628,12 @@ Años    Residencial  Pesca      Manufactura  Minero      Público    Comercial 
 *Fuente: Propia*
 
 
-A16. Proyecciones de demanda total de energía para sector transporte 
+A11. Proyecciones de demanda total de energía para sector transporte 
 +++++++++
 
-====== =========== =========== =========== =========== ============
+====== =========== =========== =========== =========== ============ =========== ============
 Tiempo   Modelo elaborado   
------- ------------------------------------------------------------
+------ -------------------------------------------------------------------------------------
        Transporte  Transporte  Transporte  Trasnporte  Transporte   Transporte  Trasnporte
 Años    Carretero   Carretero   Carretro   ferroviario ferroviario   naval       aéreo
         Carga        Privado    Público       carga       pasajero    
@@ -678,7 +678,7 @@ Años    Carretero   Carretero   Carretro   ferroviario ferroviario   naval     
 *Fuente: Propia*
 
 
-A14. Demanda de energía primaria
+A12. Demanda de energía primaria
 +++++++++
 
 
@@ -731,7 +731,7 @@ Años      Bagazo      Carbón    Gas natural  Petróleo   Bosta yareta
 
 
 
-A14. Demanda por fuels
+A13. Demanda por fuels
 +++++++++
 
 
@@ -784,7 +784,7 @@ Años      Carbón       Coke       Diesel    Derivados no  Fueloil    Gas licua
 
 
 
-A16. YearSplit
+A14. YearSplit
 +++++++++
 
 ========== ======== ======== =========
@@ -830,7 +830,7 @@ TIMESLICE  An_alto  An_bajo  An_medio
 
 
 
-A14. factores de disponibilidad
+A15. factores de disponibilidad
 +++++++++
 
 
@@ -879,7 +879,7 @@ Años     Refinerías Carboneras  Plantas de   Generación  Planta tér   Genrea
 ====== ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 *Fuente: Propia*
 
-A14. factores de capacidad
+A16. factores de capacidad
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -928,7 +928,7 @@ Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta
 *Fuente: Propia*
 
 
-A14. Operational Life
+A17. Operational Life
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -941,7 +941,7 @@ Años       -         40           -                       30            20     
 
 
 
-A14. Capital costs
+A18. Capital costs
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -991,7 +991,7 @@ Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta
 *Fuente: Propia*
 
 
-A14. Fixed costs
+A19. Fixed costs
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -1040,7 +1040,7 @@ Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
 *Fuente: Propia*
 
-A14. Variable costs
+A20. Variable costs
 +++++++++
 
 ====== ============ ============ =========== =========== ============ =========== =========== ============ =========== =========== ============
@@ -1090,7 +1090,7 @@ Años   Importación   Refinerías  Carboneras  Plantas de   Generación  Planta
 *Fuente: Propia*
 
 
-A14. Emission Activity Ratio
+A21. Emission Activity Ratio
 +++++++++
 
 ================== ============ =========== =========== ============ =========== =========== ============ =========== =========== ============

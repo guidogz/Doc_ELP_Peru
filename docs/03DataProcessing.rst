@@ -1,5 +1,8 @@
    .. _docgen:
 
+=======================================
+3. OSeMOSYS-Peru
+=======================================
 
 
 3.1 Energy System Modeling: Data Analysis
@@ -7,7 +10,7 @@
 
 
 3.1.1 Characterization of Energy Sectors
------------------------------------------------------
+++++++++++++++++++++++
  Fitter Data and Outlier Correction
 
   
@@ -143,7 +146,7 @@ Todos los valores de demanda de energía de transporte y proyecciones de de los 
 
 
 3.1.1.2.1 Plantas de generación 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 La capacidad instalada en el Perú ha crecido con el pasar de los años, ha pasado de ser 10,150.0 MW el año 2015 a 13,179.53 MW el año 2019 (COES), y la matriz energética se ha diversificado, sin embargo, la participación de las energías renovables no convecionales en la producción de energía eléctrica aún es pequeña en comparación con la energía eléctrica generada en las plantas de energías renovables convencionales y no renovables. Las empresas de generación en el 2019 han sido un total de 58, las cuales en conjunto
 tienen una capacidad instalada de 13179.53 MW y capacidad efectiva de 12636.89 MW, en el 
 2019 la producción de energía anual ejecutada se valoró en 52949.19 GW.h  y la máxima 
@@ -220,7 +223,7 @@ conectadas al SEIN. Iquitos no se incluye en el modelaje.
 
    
 3.1.1.2.2 Plantas de gas 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Las plantas de gas en el peru suman 8 en las cuales tenemos que 3 son exclusivamente de 
 procesamiento (separación), 3 son únicamente de fraccionamiento, 1 de procesamiento y fracionamiento y 
@@ -305,7 +308,7 @@ Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en A
 
 
 3.1.1.2.3 Refinerías 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Las refinerías en el Perú suman un total de 9, las cuales en conjunto tienen una 
 capacidad de producción de 221-228 miles de barriles diarios, El Milagro ya no se considera
@@ -392,7 +395,7 @@ Todos los valores de los precios del WTI, CAPEX y OPEX  se puede ver en Anexos e
 
 
 3.1.1.2.4 Carboneras 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 Para el 2013 la capacidad instalada de procesamiento de carbon es de 5.08 PJ, 2.97 para 
 la región centro y 2.11 para la región norte, además se asume un costo de producción de 
 2.71 MMUSD/PJ que incluye todos lo contos de extración, mina, transporte y acopio. Tambien
@@ -445,7 +448,7 @@ Todos los valores de los precios de carbón se puede ver en Anexos en A9 `precio
 La distribución de la energía en Perú se da a traves de diferentes medios, como la distribución eléctrica a traves de líneas eléctricas de transmisión y distribución, el gas natural a traves de gaseoductos o redes virtuales, las refinerías a traves de redes virtuales y oleoductos, etc.
 
 3.1.1.3.1 Transmisión y distribución del Sistema interconectado nacional 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 El sistema interconectado nacional está constituido por redes de trasmisión y distribución eléctrica, las redes de transmisión se encuentran constituidas por líneas de transmisión de 500, 220, 138, 66, 60, 50 y 33 kV. El SEIN está integrado por 4 categorías de instalaciones, el sistema garantizado de transmisión (SGT), el sistema complementario de transmisión (SCT), el sistema principal de transmisión (SPT) y el sistema secundario de transmisión (SST). En el 2019 se instalaron un total de 966.4 km de líneas de transmisión, en la siguinete tabla se puede observar el total de líneas de transmisión que hay en el Perú en el sistema principal de transmisión y sistema secundario de transmisión al 2019.
 
@@ -470,14 +473,14 @@ Total                              2878.66  13631.38   4914.15   8571.41
 
 
 3.1.1.3.2 Distribución de crudo y derivados del petróleo 
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 La distribución del crudo se hace a través de oleoductos, el crudo es llevado hacia las plantas de refinación como sucede en el noroeste y la selva de nuestro país, sin embargo para su distribución se hace uso de redes virtuales. El oleoducto norperuano tiene una longitud aproximada de 1100 km y una capacidadf de 200 MMBD
 
 
 
 3.1.1.3.3 Distribución de gas natural
----------
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Actualmente se explota gas natural en los lotes 56, 88, por pluspetrol y el lote 57 por repsol, el lote 58 comenzará a explotarse el año 2023 por la empresa CNPC. En camisea se extrae gas natural que es procesado para su separación en líquidos de gas natural y gas seco que son enviados a través del poliducto hasta la planta de fraccionamiento de Pisco, el gas seco que no es reinyectado es transportado a través del TGP hasta el City Gate en Lurín, la empresa caliodad es reponsable de su distribvución en lima y callao.  
 
@@ -583,7 +586,7 @@ Gasolinas                         860197.63 789710.14 1091366.4 1182051.6
 
 
 3.1.2 Emisiones de gases de efecto invernadero (GEI), precio social del carbono.
------------------------------------------------------
+++++++++++++++++++++++
 
 Las emisiones en un futuro cercanos se volveran un serio problema, no sólo medioambiental
 sino existencial, ahora nos embarcamos en una lucha por reducir los productos de 
@@ -651,7 +654,7 @@ Precio social del carbono                 7.17
 
 
 3.1.3 Proyección de demanda - Ecuaciones de predicción de los sectores productivos
------------------------------------------------------
+++++++++++++++++++++++
 
 3.1.3.1 Metodología general usada para la predicción de los Sectores Productivos
 --------------
@@ -732,9 +735,6 @@ Los valores de población corresponden a los resultados del T21, los valores gra
    :align:   center
    :width:   700 px
 *Figure 3.13: Proyección de la población en el Perú, Fuente: Propia*
-
-3. OSeMOSYS-Peru
-=======================================
 
 
 3.1.3.3 Ecuaciones utilizados para los diferentes sectores
