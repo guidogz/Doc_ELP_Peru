@@ -2,12 +2,9 @@
 
 
 3.2 Datos e información
-=================
+=======================================
 
 
-.. figure:: img/RES_Energia.png
-   :align:   center
-   :width:   700 px
 
 Como ya se ha mencionado en "Data Processing", el modelo OSeMOSYS de energía y transporte está compuesto por diferentes comodities y fuels que son propios de cada país o sistema. Ahora trataremos la configuración del modelo OSeMOSYS, esta se da a través de los siguientes items:
 
