@@ -914,7 +914,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 
 .. math::
 
- \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
+ \text { T}_{t} = a * \operatorname{ln}\left(T_{t-1}\right) + b * \operatorname{ln}\left(PBI_{t-1}\right)+c
 
 +----------------+----------------------------+-----------------------+
 | a              | b                          | c                     |
@@ -927,16 +927,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 - T(t-1)            Consumo de Energía sector transporte privado en el año 𝑡-1.
 - PBI(t-1)          Producto Bruto Interno en el año t-1.
 
-Las medidas de error para el modelo fueron 
 
-+----------------------------------------+----------------------------+
-| Tipo de error                          | Valoración                 |
-+----------------------------------------+----------------------------+
-| RMSE (root mediun square error )       | 138.8361788                |
-+----------------------------------------+----------------------------+
-| MAPE (mean absolute percentage error ) | 0.08 %                     |
-+----------------+-----------------------+----------------------------+
-*Fuente: Propia*
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
@@ -948,7 +939,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 
 .. math::
 
- \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
+ \text { T}_{t} = a * \operatorname{ln}\left(T_{t-1}\right) + b * \operatorname{ln}\left(PBI_{t-1}\right)+c
 
 +----------------+----------------------------+-----------------------+
 | a              | b                          | c                     |
@@ -982,7 +973,7 @@ Como ya se ha mencionado anteriormente antes los resultados de estas proyeccione
 
 .. math::
 
- \begin{equation}T_{t}=a+b * \ln \left(T_{t-1}\right)+c * \ln \left(P B I_{t-1}\right)\end{equation}
+ \text { T}_{t} = a * \operatorname{ln}\left(T_{t-1}\right) + b * \operatorname{ln}\left(PBI_{t-1}\right)+c
 
 +----------------+----------------------------+-----------------------+
 | a              | b                          | c                     |
@@ -1013,15 +1004,15 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, e
 
 .. math::
 
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P O B_{t}\right), \quad m=12\end{equation}
+  \operatorname{ln}\left(Q_{t,m}\right) =\alpha_{m} *+ \beta_{m}  * \operatorname{ln}\left(POB_{t}\right)
 
 .. math::
 
- \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+ W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}
 
 .. math::
 
- \begin{equation}p k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+ pkm_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A16 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
@@ -1030,15 +1021,15 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, e
 
 .. math::
 
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad \quad m=13\end{equation}
+  \operatorname{ln}\left(Q_{t,m}\right) =\alpha_{m} *+ \beta_{m}  * \operatorname{ln}\left(PBI_{t}\right)
 
 .. math::
 
- \begin{equation}W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+ W_{t, m, l}=W_{t-1, m, l} \times \frac{Q_{t, m}}{Q_{t-1, m}}
 
 .. math::
 
- \begin{equation}t k m_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)\end{equation}
+ pkm_{m, t, r}=\sum_{l}\left(W_{t, m, l} \times k m_{-} W_{m, l} \times \omega_{m, l}\right)
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A16 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
@@ -1047,11 +1038,11 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, e
 
 .. math::
 
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad m=14\end{equation}
+ \operatorname{ln}\left(Q_{t,m}\right) =\alpha_{m} *+ \beta_{m}  * \operatorname{ln}\left(PBI_{t}\right)
 
 .. math::
 
- \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+ E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}
 
 
 Subdivisión transporte aéreo
@@ -1059,61 +1050,15 @@ Para esta subdivisón se ha utilizados las ecuaciones del modelo TIMES para obte
 
 .. math::
 
- \begin{equation}\ln \left(Q_{t, m}\right)=\alpha_{m}+\beta_{m} \ln \left(P I B_{t}\right), \quad \quad m=15\end{equation}
+ \operatorname{ln}\left(Q_{t,m}\right) =\alpha_{m} *+ \beta_{m}  * \operatorname{ln}\left(PBI_{t}\right)
 
 .. math::
 
- \begin{equation}E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}\end{equation}
+ E_{t, m}=E_{t-1, m} \times \frac{Q_{t, m}}{Q_{t-1, m}}
 
 Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, en Anexos en A14 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
-**Sector energético (escenario 2)**
-     Para el sector energético se ha utilizado los valores históricos de demanda energética y PBI para poder realizar las proyecciones, en un inicio se estima la primera diferencia de PBI per cápita y de la demanda, luego se normalizan con los valores mínimos y máximos de las diferencias (véase Tabla 14) de ambos, a continuación se halla el pronóstico (véase ecuación 17) para finalmente poder obtener el pronóstico final (véase ecuación 18), los coeficientes se calculan mediante regresión con ajuste, se realizó con la herramienta solver de excel.
 
-+----------------+----------------------------+-----------------------+
-|                | Demanda manufactura (DR)   | PBI manufactura       |
-+----------------+----------------------------+-----------------------+
-| Delta Mínimo   | -38.115                    | -10731                |
-+----------------+----------------------------+-----------------------+
-| Delta Máximo   | 51.255                     | 14088                 |
-+----------------+----------------------------+-----------------------+
-*Fuente: Propia*                      
-
-.. math::
-
- \begin{equation}\text { Pronostico }_{t}=\text { Pronostico }_{t}=a * \operatorname{nor}\left(E_{t-1}\right)+b * \operatorname{nor}\left(P B I_{t-1}\right)+c\end{equation}
-
-Donde:
- 
-- a, b y c           Coeficiente obtenidos por optimización.
-- Mi(t-1)            Consumo de Energía minería en el año 𝑡-1.
-- nor(Mi(t-1))       Normalizado del Consumo de Energía minería en el año 𝑡-1.
-- PBI mine(t-1)      Producto Bruto Interno del sector minería en el año t-1.
-- nor(PBI mine(t-1)) Normalizado del Producto Bruto Interno del sector minería en el año t-1.
-
-+----------------+----------------------------+-----------------------+
-| a              | b                          | c                     |
-+----------------+----------------------------+-----------------------+
-| -0.34489406    | 0.51238552                 | 0.36684512            |
-+----------------+----------------------------+-----------------------+
-*Fuente: Propia*
-
-.. math::
-
- Pronostico, final $_{t}=$ Pronostico $_{t} *(D R m a x-D R m i n)+D R m i n+E_{t-1}$
-
-Las medidas de error para el modelo fueron 
-
-+----------------------------------------+----------------------------+
-| Tipo de error                          | Valoración                 |
-+----------------------------------------+----------------------------+
-| RMSE (root mediun square error )       | 10.52662931                |
-+----------------------------------------+----------------------------+
-| MAPE (mean absolute percentage error ) | 3.1%                       |
-+----------------+-----------------------+----------------------------+
-*Fuente: Propia*
-
-Los valores tabulados al 2050 se pueden encontrar en anexos de este documento.
 
 
 3.2 Datos e información
