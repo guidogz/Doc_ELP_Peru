@@ -1061,10 +1061,10 @@ Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, 
 
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                                      Items de configuración para un modelo simple                                                         |
-+-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |     Sets        | Parameters                 | Variables                          |Ojective  |       Constraints                          |
 |                 | ("Insumos")                | ("salidas")                        |functions |                                            |
-+-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |EMISSION         | AccumulatedAnnualDemand    | AccumulatedNewCapacity             | OFS_Cost |Acc1_FuelProductionByTechnology             |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |FUEL             | AnnualEmissionLimit        | AnnualEmissions                    |          |Acc2_FuelUseByTechnology                    |
@@ -1091,9 +1091,9 @@ Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, 
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                 | EmissionsPenalty           | NumberOfNewTechnologyUnits         |          |EBa5_RateOfFuelUse2                         |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
-|                 |FixedCost                   |ProductionByTechnology              |          |NCC1_TotalAnnualMaxNewCapacityConstraint    |        
+|                 |FixedCost                   |ProductionByTechnology              |          |NCC1_TotalAnnualMaxNewCapacityConstraint    |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
-|                 | InputActivityRatio         | ProductionByTechnologyAnnual       |          |NCC2_TotalAnnualMinNewCapacityConstraint    |    
+|                 | InputActivityRatio         | ProductionByTechnologyAnnual       |          |NCC2_TotalAnnualMinNewCapacityConstraint    |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                 | ModelPeriodEmissionLimit   | RateOfActivity                     |          |OC1_OperatingCostsVariable                  |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
@@ -1103,10 +1103,11 @@ Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, 
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                 | OperationalLifeStorage     | RateOfUseByTechnology              |          |SV3_SalvageValueAtEndOfPeriod3              |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
-|                 | OutputActivityRatio        | RateOfUseByTechnologyByMode        |          |SV4_SalvageValueDiscountedToStartYear       |+-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
-|                 | REMinProductionTarget      | SalvageValue                       |          |TAC1_TotalModelHorizonTechnologyActivity    | 
+|                 | OutputActivityRatio        | RateOfUseByTechnologyByMode        |          |SV4_SalvageValueDiscountedToStartYear       |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
-|                 | RETagFuel                  | SalvageValueStorage                |          |Short_Code_Equations                        |      
+|                 | REMinProductionTarget      | SalvageValue                       |          |TAC1_TotalModelHorizonTechnologyActivity    |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | RETagFuel                  | SalvageValueStorage                |          |Short_Code_Equations                        |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                 | RETagTechnology            | TotalAnnualTechnologyActivityByMode|          |                                            |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
@@ -1127,7 +1128,7 @@ Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, 
 |                 | VariableCost               |                                    |          |                                            |
 +-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 |                 | YearSplit                  |                                    |          |                                            |
-+-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
 *Fuente: Propia*
  
 No todos estos items han sido insertados en el modelo, debido que se ha trabajado un modelo que se acomoda más a las necesidades del Perú, ahora se pueden encontrar todos los valores de corespondiente a todos los item de configuración en `Items <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
