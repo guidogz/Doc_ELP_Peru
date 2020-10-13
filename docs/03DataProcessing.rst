@@ -271,7 +271,7 @@ LGN           182                 146      148       134      126
 ---------- --------- --------- --------- --------- --------- ---------
 Total         639                 659      719       681       663    
 ========== ========= ========= ========= ========= ========= =========
-*Fuente: Informe 9 PROSEMER, pag. 303. Balances Nacional de Energía*
+*Fuente: Informe 9 PROSEMER, pag. 303. Balances Nacionales de Energía*
 
 
 |
@@ -525,13 +525,13 @@ Gasolina                          380893.66 423613.28 559352.13 716835.44
    :align:   center
    :width:   700 px
 
-*Figure 3.3: Importaciones de energía*
+*Figure 3.3: Importaciones de energía en PJ. Fuente: propia*
 
 .. figure:: img/importaciones_MMUSD.jpg
    :align:   center
    :width:   700 px
 
-*Figure 3.3: Importaciones de energía*
+*Figure 3.3: Importaciones de energía en MMUSD. Fuente: propia*
 
 
 .. _Proyecciones de importaciones: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
@@ -574,13 +574,13 @@ Gasolinas                         860197.63 789710.14 1091366.4 1182051.6
    :width:   700 px
 
 
-*Figure 3.3: Exportaciones de energía*
+*Figure 3.3: Exportaciones de energía en PJ. Fuente: propia*
 
 .. figure:: img/exportaciones_MMUSD.jpg
    :align:   center
    :width:   700 px
 
-*Figure 3.3: EXportaciones de energía*
+*Figure 3.3: EXportaciones de energía en MMUSD. Fuente: propia*
 
 .. _Proyecciones de exportaciones: https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/ 
 
@@ -711,22 +711,22 @@ La variable utilizada como varible expliativa en la mayoría de los modelos es e
 .. figure:: img/Proyeccion_del_crecimiento_del_PBI_anual.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección del crecimiento del PBI anual, Fuente: Propia*
+*Figure 3.13: Proyección del crecimiento del PBI anual, Fuente: T21*
 
 .. figure:: img/PBI_peru_miles_millones.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección del PBI en miles de millones, Fuente: Propia*
+*Figure 3.13: Proyección del PBI en miles de millones, Fuente: T21*
 
 .. figure:: img/PBI_per_cápita.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección del PBI per cápita, Fuente: Propia*
+*Figure 3.13: Proyección del PBI per cápita, Fuente: T21*
 
 .. figure:: img/produccion_sectores.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección de la producción por sectores, Fuente: Propia*
+*Figure 3.13: Proyección de la producción por sectores, Fuente: T21*
 
 **Población**
 Los valores de población corresponden a los resultados del T21, los valores grafiados se pueden observar en los anexos en A4 respectivamente `demandas <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_. En las siguientes gráficas se puede observar el crecimiento de la población.
@@ -734,7 +734,7 @@ Los valores de población corresponden a los resultados del T21, los valores gra
 .. figure:: img/población_peru_T21.png
    :align:   center
    :width:   700 px
-*Figure 3.13: Proyección de la población en el Perú, Fuente: Propia*
+*Figure 3.13: Proyección de la población en el Perú, Fuente: T21*
 
 
 3.1.3.3 Ecuaciones utilizados para los diferentes sectores
@@ -762,7 +762,7 @@ Donde:
 
 .. math::
 
- \operatorname{Log}\left(Demanda_{t}\right) = a + b * \operatorname{Log}\left(Demanda_{t-1}\right) + c * \operatorname{Log}\left(PBI \operatorname{per cápita}_{t-1}\right) + d * \text { Tendencia PBI per cápita }
+ \operatorname{Log}\left(Demanda_{t}\right) = a + b * \operatorname{Log}\left(Demanda_{t-1}\right) + c * \operatorname{Log}\left(PBI \operatorname{per capita}_{t-1}\right) + d * \text { Tendencia PBI per capita }
 
 
 
@@ -805,7 +805,8 @@ Los valores tabulados al 2050 se pueden encontrar en anexos de este documento, e
 
 .. math::
 
- \text { Pronostico }_{t}=a * \operatorname{Log}\left(M_{t-1}\right)+b * \operatorname{Log}\left(PBI \operatorname{manu}_{t-1}\right)+c
+ \operatorname{Log}\left(Demanda_{t}\right) = a + b * \operatorname{Log}\left(Demanda_{t-1}\right) + c * \operatorname{Log}\left(PBI \operatorname{sector manufactura}_{t-1}\right) + d * \text {Tendencia PBI manufactura}
+
 
 Donde:
  
@@ -1077,45 +1078,75 @@ Como ya se ha mencionado en "Data Processing", el modelo OSeMOSYS de energía y 
 Nosotros trataremos con un modelo simple, el cual es la vesión más manejable, por el momento debido a las necesidades, en el modelo OSeMOSYS Perú. Cada item está compuesto por un conjunto de items y sus valores son particulares del sistema a modelar, a continuación mostaremos todos estos para la cnfiguración de un modelo simple, lo cual sisgnifica que nuestra función objetivo de costo es corta. 
 
 
-================== ============================ ==================================== ========= ======================================== 
-                                       Items de configuración para un modelo simple
----------------------------------------------------------------------------------------------------------------------------------------  
-      Sets          Parameters                   Variables                           Ojective          Constraints
-                    ("Insumos")                  ("salidas")                         functions
-================== ============================ ==================================== ========= ========================================   
-EMISSION           AccumulatedAnnualDemand      AccumulatedNewCapacity               OFS_Cost  Acc1_FuelProductionByTechnology
-FUEL               AnnualEmissionLimit          AnnualEmissions                                Acc2_FuelUseByTechnology
-MODE OF OPERATION  AnnualExogenousEmission      AnnualFixedOperatingCost                       Acc3_AverageAnnualRateOfActivity
-REGION             AvailabilityFactor           AnnualTechnologyEmission                       CAa1_TotalNewCapacity
-STORAGE            CapacityFactor               AnnualTechnologyEmissionByMode                 CAa2_TotalAnnualCapacity                        
-REGION             CapacityOfOneTechnologyUnit  AnnualVariableOperatingCost                    CAa5_TotalNewCapacity        
-TECHNOLOG          CapacityToActivityUnit       CapitalInvestment                              CC1_UndiscountedCapitalInvestment        
-TIMESLICE          CapitalCost                  Demand                                         E2_AnnualEmissionProduction            
-YEAR               CapitalCostStorage           DiscountedSalvageValue                         EBa10_EnergyBalanceEachTS4            
-                   DepreciationMethod           DiscountedTechnologyEmissionsPenalty           EBa1_RateOfFuelProduction1                          
-                   DiscountRate                 NewCapacity                                    EBa2_RateOfFuelProduction2              
-                   EmissionActivityRatio        NewStorageCapacity                             EBa4_RateOfFuelUse1            
-                   EmissionsPenalty             NumberOfNewTechnologyUnits                     EBa5_RateOfFuelUse2           
-                   FixedCost                    ProductionByTechnology                         NCC1_TotalAnnualMaxNewCapacityConstraint              
-                   InputActivityRatio           ProductionByTechnologyAnnual                   NCC2_TotalAnnualMinNewCapacityConstraint          
-                   ModelPeriodEmissionLimit     RateOfActivity                                 OC1_OperatingCostsVariable             
-                   ModelPeriodExogenousEmission RateOfProductionByTechnology                   OC2_OperatingCostsFixedAnnual            
-                   OperationalLife              RateOfProductionByTechnologyByMode             SI6_SalvageValueStorageAtEndOfPeriod1                 
-                   OperationalLifeStorage       RateOfUseByTechnology                          SV3_SalvageValueAtEndOfPeriod3      
-                   OutputActivityRatio          RateOfUseByTechnologyByMode                    SV4_SalvageValueDiscountedToStartYear            
-                   REMinProductionTarget        SalvageValue                                   TAC1_TotalModelHorizonTechnologyActivity      
-                   RETagFuel                    SalvageValueStorage                            Short_Code_Equations                               
-                   RETagTechnology              TotalAnnualTechnologyActivityByMode                            
-                   ReserveMargin                TotalCapacityAnnual                                                   
-                   ReserveMarginTagFuel         TotalTechnologyAnnualActivity                                    
-                   ReserveMarginTagTechnology   TotalTechnologyModelPeriodActivity                                    
-                   ResidualCapacity             Trade                                                    
-                   SpecifiedAnnualDemand        UseByTechnology                                                  
-                   SpecifiedDemandProfile                                                                              
-                   TradeRoute                                                                                        
-                   VariableCost                                                                                             
-                   YearSplit                                        
-================== ============================ ==================================== ========= ======================================== 
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                                      Items de configuración para un modelo simple                                                         |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
+|     Sets        | Parameters                 | Variables                          |Ojective  |       Constraints                          |
+|                 | ("Insumos")                | ("salidas")                        |functions |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
+|EMISSION         | AccumulatedAnnualDemand    | AccumulatedNewCapacity             | OFS_Cost |Acc1_FuelProductionByTechnology             |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|FUEL             | AnnualEmissionLimit        | AnnualEmissions                    |          |Acc2_FuelUseByTechnology                    |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|MODE OF OPERATION| AnnualExogenousEmission    | AnnualFixedOperatingCost           |          |Acc3_AverageAnnualRateOfActivity            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|REGION           | AvailabilityFactor         | AnnualTechnologyEmission           |          |CAa1_TotalNewCapacity                       |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|STORAGE          | CapacityFactor             | AnnualTechnologyEmissionByMode     |          |CAa2_TotalAnnualCapacity                    |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|REGION           | CapacityOfOneTechnologyUnit| AnnualVariableOperatingCost        |          |CAa5_TotalNewCapacity                       |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|TECHNOLOG        | CapacityToActivityUnit     | CapitalInvestment                  |          |CC1_UndiscountedCapitalInvestment           |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|TIMESLICE        | CapitalCost                | Demand                             |          |E2_AnnualEmissionProduction                 |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|YEAR             | CapitalCostStorage         | DiscountedSalvageValue             |          |EBa10_EnergyBalanceEachTS4                  |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | DepreciationMethod         |DiscountedTechnologyEmissionsPenalty|          |EBa1_RateOfFuelProduction1                  |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | DiscountRate               | NewCapacity                        |          |EBa2_RateOfFuelProduction2                  |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | EmissionActivityRatio      | NewStorageCapacity                 |          |EBa4_RateOfFuelUse1                         |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | EmissionsPenalty           | NumberOfNewTechnologyUnits         |          |EBa5_RateOfFuelUse2                         |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 |FixedCost                   |ProductionByTechnology              |          |NCC1_TotalAnnualMaxNewCapacityConstraint    |        
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | InputActivityRatio         | ProductionByTechnologyAnnual       |          |NCC2_TotalAnnualMinNewCapacityConstraint    |    
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | ModelPeriodEmissionLimit   | RateOfActivity                     |          |OC1_OperatingCostsVariable                  |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 |ModelPeriodExogenousEmission| RateOfProductionByTechnology       |          |OC2_OperatingCostsFixedAnnual               |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 |OperationalLife             |RateOfProductionByTechnologyByMode  |          |SI6_SalvageValueStorageAtEndOfPeriod1       |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | OperationalLifeStorage     | RateOfUseByTechnology              |          |SV3_SalvageValueAtEndOfPeriod3              |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | OutputActivityRatio        | RateOfUseByTechnologyByMode        |          |SV4_SalvageValueDiscountedToStartYear       |+-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | REMinProductionTarget      | SalvageValue                       |          |TAC1_TotalModelHorizonTechnologyActivity    | 
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | RETagFuel                  | SalvageValueStorage                |          |Short_Code_Equations                        |      
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | RETagTechnology            | TotalAnnualTechnologyActivityByMode|          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | ReserveMargin              | TotalCapacityAnnual                |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | ReserveMarginTagFuel       | TotalTechnologyAnnualActivity      |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | ReserveMarginTagTechnology |TotalTechnologyModelPeriodActivity  |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | ResidualCapacity           | Trade                              |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | SpecifiedAnnualDemand      | UseByTechnology                    |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | SpecifiedDemandProfile     |                                    |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | TradeRoute                 |                                    |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | VariableCost               |                                    |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+
+|                 | YearSplit                  |                                    |          |                                            |
++-----------------+----------------------------+------------------------------------+----------+--------------------------------------------+ 
 *Fuente: Propia*
  
 No todos estos items han sido insertados en el modelo, debido que se ha trabajado un modelo que se acomoda más a las necesidades del Perú, ahora se pueden encontrar todos los valores de corespondiente a todos los item de configuración en `Items <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
