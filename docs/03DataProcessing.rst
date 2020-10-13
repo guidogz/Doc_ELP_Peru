@@ -18,7 +18,7 @@
 .. figure:: img/RES_Energia.png
    :align:   center
    :width:   700 px
-*Figure 3.1: Diagrama de referencía*
+*Figure 3.1: Diagrama de referencía. Fuente: Propia*
 
 
 El sector de energía Peruano se divide ampliamente en los macrobloques de demanda
@@ -292,16 +292,6 @@ resource and technology" (HRT) del EIA que han sido proyectadas hasta el 2050, y
 como las proyeciones del caso de referencia EIA . 
 
 
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_la_planta_de_gas.png
-   :align:   center
-   :width:   700 px
-
-*Figure 3.6: Proyecciones de los costos por capacidad de la planta de gas, Fuente: Propia*
-
-Los cálculos se hicieron con los datos de costos de capital y operación de plantas 
-de gas y la actividad de las refinería que se encuentran en el informe 9 "Desarrollo 
-del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
-
 Todos los valores de los precios de gas natural, CAPEX y OPEX  se puede ver en Anexos en A7 y A12 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
 
@@ -380,15 +370,6 @@ Para la proyección del precio del crudo se ha utilizado las proyecciones de WTI
 se estabblecen en dos escenarios uno es el de referencia y el otro es el alto, se 
 incluyen todos los costos, el crudo tienen un costos de integración de 5 US$/bbl.
 
-
-.. figure:: img/Proyeccione_de_precio_por_capacidad_de_refineria.png
-   :align:   center
-   :width:   700 px
-*Figure 3.7: Proyecciones de los costos por capacidad de la refineria, Fuente: Propia*
-
-Los cálculos se hicieron con los datos de costos de capital, operación y variación de 
-plantas de refinación y la actividad de las refinería que se encuentran en el informe 9 
-"Desarrollo del Plan Energético a Nivel de Grupos de Regiones y Acompañamiento".  
 
 Todos los valores de los precios del WTI, CAPEX y OPEX  se puede ver en Anexos en A8 y A11 respectivamente `precios y costos <https://github.com/guidogz/Doc_ELP_Peru/blob/master/docs/999Annexes.rst/>`_.
 
