@@ -1,4 +1,8 @@
+=======================================
 2. POLYSYS-Peru
+=======================================
+
+2.1 Introducción
 =======================================
 
 El cambio climático. constituye la mayor amenaza medioambiental a la que se enfrenta la humanidad; en ese contexto representa un desafío para los diversos sectores de la sociedad (academia, gobiernos, empresas, etc.) y por tanto es primordial comprender que si se continua por la senda actual el estilo de vida de las personas cambiará, forzosamente, hacia menores niveles de vida. Para evitar llegar a un estado de daño irreparable, a mediano plazo, el objetivo imprescindible es alcanzar la meta de "no incrementar la temperatura global en más de 1.5 ºC" . Arribar satisfactoriamente a esta meta es imperante toda vez que se traducirá en evidentes beneficios para la conservación de los ecosistemas naturales. Sin embargo, para conseguirlo es necesaria una cooperación internacional donde los intereses particulares de las naciones pasen a un segundo plano y sea posible priorizar el análisis de la problemática medioambiental en colectivo, en efecto, sobre los líderes del mundo la responsabilidad de tomar las medidas pertinentes para evitar una catástrofe irremediable.
@@ -61,7 +65,7 @@ La dinámica del POLYSYS consiste en utilizar funciones de oferta constantes en 
 
 .. math::
 
- \begin{equation}\pi=\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{t, b} \ldots(1)\end{equation}
+ \pi=\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{t, b} \ldots(1)
 
 Donde :math:`P_(t,a)` representa el precio del cultivo a, :math:`R_(t,a)` representa el rendimiento (número de kg producidos en una hectárea del producto a), :math:`C_(t,a)` representa el costo por hectárea de cultivar el producto a y :math:`H_(t,a)` representa el total de hectáreas cultivadas del producto a. El caso para el producto b es análogo, y como se puede observar el beneficio del agricultor se constituye por la venta de los dos cultivos disponibles. Claramente el total de tierra del que dispone el agricultor es la suma :math:`H_(t,a)+H_(t,b)` y no podrá cultivar más allá de este nivel. En todos los casos el subíndice t representa el tiempo y está indicando que nos encontramos en el periodo actual t.
 
@@ -78,16 +82,20 @@ Para solucionar el problema de los resultados de esquina es necesario incluir re
 
 .. math::
 
- \begin{equation}\max _{H_{a} H_{b}}\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{b t} \ldots(2)\end{equation}
+ \max _{H_{a}, H_{b}}\left(P_{t, a} R_{t, a}-C_{t, a}\right) H_{t, a}+\left(P_{t, b} R_{t, b}-C_{t, b}\right) H_{b t} \ldots(2)
 
 sujeto a
 
 .. math::
 
- \begin{equation}\begin{array}{l}
- \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a} \\
+ \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a}
+
+.. math::
+
  \left(1-\delta_{b}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{b}\right) H_{t-1, a}
- \end{array}\end{equation}	
+
+
+
 
 
 Se puede observar que las restricciones de tierra están determinadas por valores de asignaciones previas de la tierra. Intuitivamente estas restricciones lo que muestran es que una región tiene cierto grado de capacidad de cambio en la asignación de cultivos de un periodo a otro, indirectamente lo que se está modelando es una flexibilidad de oferta en la cual una variación en el precio, y por ende en la rentabilidad, genera una variación en la producción.
@@ -98,16 +106,18 @@ Existen muchas formas de considerar los precios esperados, usualmente se toma un
 
 .. math::
 
- \begin{equation}\max _{H_{a}, H_{b}}\left(E\left[P_{t, a}\right] R_{t, a}-C_{t, a}\right) H_{t, a}+\left(E\left[P_{t, b}\right] R_{t, b}-C_{t, b}\right) H_{b t} \ldots(3)\end{equation}
+ \max _{H_{a} H_{b}}\left(E\left[P_{t, a}\right] R_{t, a}-C_{t, a}\right) H_{t, a}+\left(E\left[P_{t, b}\right] R_{t, b}-C_{t, b}\right) H_{b t} \ldots(3)
 
 sujeto a
 
+
 .. math::
 
- \begin{equation}\begin{array}{l}
- \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a} \\
+ \left(1-\delta_{a}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{a}\right) H_{t-1, a}
+
+.. math::
+
  \left(1-\delta_{b}\right) H_{t-1, a}<H_{t, a}<\left(1+\delta_{b}\right) H_{t-1, a}
- \end{array}\end{equation}
 
 
 Finalmente los resultados para cada región permiten determinar la asignación de tierra entre la canasta de 	cultivos y por ende se puede determinar la oferta de los productos. En este sentido es posible hallar como varían las ofertas de los distintos cultivos, estas se denotan como :math:`∆%Q_(t,a)^S` y :math:`∆%Q_(t,b)^S`.
@@ -121,25 +131,25 @@ Para entender mejor esto regresemos sobre el ejemplo de la sección previa donde
 
 .. math::
 
- \begin{equation}E=\left(\begin{array}{ll}
+ E=\left(\begin{array}{ll}
  \varepsilon_{a a} & \varepsilon_{a b} \\
  \varepsilon_{b a} & \varepsilon_{b b}
- \end{array}\right)\end{equation}
+ \end{array}\right)
 
 Luego se puede generar la siguiente ecuación de variaciones en la demanda:
 
 .. math::
 
- \begin{equation}\left(\begin{array}{cc}
+ \left(\begin{array}{l}
  \Delta \% Q_{t, a}^{D} \\
  \Delta \% Q_{t, b}^{D}
- \end{array}\right)=\left(\begin{array}{cc}
+ \end{array}\right)=\left(\begin{array}{ll}
  \varepsilon_{a a} & \varepsilon_{a b} \\
  \varepsilon_{b a} & \varepsilon_{b b}
- \end{array}\right)\left(\begin{array}{c}
+ \end{array}\right)\left(\begin{array}{l}
  \Delta \% P_{t, a} \\
  \Delta \% P_{t, b}
- \end{array}\right) \ldots(4)\end{equation}
+ \end{array}\right) \ldots(4)
 
 Donde el vector del lado izquierdo de la ecuación representa cambios porcentuales de la cantidad demandada de los productos a y b. Como se puede observar, las variaciones porcentuales en la demanda dependen de las variaciones porcentuales en los precios ajustadas por las elasticidades.
 
@@ -149,7 +159,7 @@ El equilibrio en este mercado toma lugar cuando se intersectan la oferta y la de
 
 .. math::
 
- \begin{equation}\Delta \% Q_{t, a}^{S}=\Delta \% Q_{t, a}^{D}\end{equation}
+ \Delta \% Q_{t, a}^{S}=\Delta \% Q_{t, a}^{D}
 
 
 Por lo tanto, en cada iteración, cuando el agricultor decida la asignación de tierra, está decidiendo cuanto va a producir lo cual al mismo tiempo está indicando cuanto se va a demandar y consumir.
@@ -165,7 +175,59 @@ Cuando un bien es transable, entonces, poder determinar cuanto se va a consumir,
 
 La simulación del sector ganadero se realiza considerando una función logística que permita simular una tendencia general de la población ganadera en la región. Sin embargo, dado que el valor que toma población en este sector se ve afectada por otras variables de índole, principalmente, económico la función logística aquí propuesta incorpora shocks de estas variables. Para comprender mejor esto, supongamos que en una región cualquiera se quiere analizar la población ganadera, luego se tiene la siguiente función logística:
 
+.. math::
+
+ X_{t}=X_{t-1}+r X_{t-1}\left(1-\frac{X_{t-1}}{\bar{X}}\right) \ldots
+
+Donde X_t representa el total de cabezas de ganado en el momento t. Es decir, el stock de ganado en el presente depende del stock de ganado en el periodo anterior X_(t-1), de una tasa de reproducción natural r y de una capacidad máxima de soporte poblacional X ̅. Aunque la función (5) permite generar una guía tendencial de cómo se comporta la población de ganado, lo cierto es que no permite observar posibles fluctuaciones de corto plazo, en ese sentido se realiza un ajuste de tal forma que se obtiene el siguiente modelo:
+
+
+.. math::
+
+ X_{t}=X_{t-1}+r X_{t-1}\left(1-\frac{X_{t-1}}{\bar{X}}\right)+\sum_{i}^{N} \beta_{i} P_{t, i}+\mu \ldots(6)
+
+
+Donde el elemento de la sumatoria en el lado derecho de la ecuación (6) representa los efectos de los distintos shocks sobre la población bajo estudio. Estos shocks son diversos, por ejemplo precios de insumos, precios de los animales vivos, etc.
+
+
+| **2.6 La demanda Ganadera**
+
+La dinámica de la demanda en el sector ganadero es similar a la previamente expuesta en el sector agrícola. Supongamos que solo hay dos especies criadas en una región, x y y, luego se considera la siguiente matriz de elasticidades:
+
+.. math::
+
+ Z=\left(\begin{array}{ll}
+ \varepsilon_{x x} & \varepsilon_{x y} \\
+ \varepsilon_{y x} & \varepsilon_{y y}
+ \end{array}\right)
+
+
+
+Luego se puede generar la siguiente ecuación de variaciones en la demanda:
+
+.. math::
+
+ \left(\begin{array}{l}
+ \Delta \% Q_{t, x}^{D} \\
+ \Delta \% Q_{t, x}^{D}
+ \end{array}\right)=\left(\begin{array}{ll}
+ \varepsilon_{x x} & \varepsilon_{x y} \\
+ \varepsilon_{y x} & \varepsilon_{y y}
+ \end{array}\right)\left(\begin{array}{l}
+ \Delta \% P_{t, x} \\
+ \Delta \% P_{t, y}
+ \end{array}\right) \ldots(7)
+
+
+
+A diferencia de la sección agrícola donde se podía calcular precios locales en el caso de los productos no transables.Para el caso de las carnes el Perú requiere importar carnes de todo tipo y por tanto el precio internacional tiene una alta importancia sobre las decisiones de consumo locales, por ello, se cuenta con una serie que indica como se moverán los precios internacionales y con ellas poder hacer los cálculos para el consumo de bienes en el sector ganadería.
+
+
+
+
+
 | **3. POLYSYS-Perú**
+
 En el capítulo anterior se presentaron las formalidades matemáticas del modelo POLYSYS. En este capítulo, se explicarán en cambio, explicaremos los detalles metodológicos, especificando los arreglos que se hicieron en la data disponible así como indicaremos las fuentes de información necesarias para poder aplicar el modelo expuesto en el capítulo 2.
 
 | **3.1 Categorización: Regional, Agrícola y Ganadera**
@@ -250,23 +312,22 @@ Finalmente es importante mencionar que el objetivo de la simulación es realizar
 | **3.4.1 Notación General**
 
 Para esta sección, se ha decidido utilizar la siguiente notación:
-	El subíndice :math:`i` denota una categoría agrícola, como se tienen 14 categorías distintas entonces 
-	:math:`i∈{1,2,…,14}`.
-	El subíndice :math:`j` denota una categoría de ganado, como se tienen 3 categorías distintas entonces 
-	:math:`j∈{1,2,3}`.
-	El subíndice :math:`r` denota una región, como se tienen 7 categorías distintas entonces :math:`r∈{1,2,…,7}`.
-	El subíndice :math:`t` denota el tiempo, dado que se hará una simulación hasta el año 2050, y el punto de partida es el 2016, entonces :math:`t∈{1,2,…,50}`.
-	La constante :math:`δ` denota la tasa de cambio de uso de la tierra agrícola.
-	La constante :math:`ρ` denota el factor de descuento, que toma el valor de 0.91
-	La variable :math:`H` denota tierra 
-	La variable :math:`G` denota ganado vacuno 
-	La variable :math:`L` denota ganado lechero. 
-	La variable :math:`A` denota aves
-	La variable :math:`C` denota costo por hectárea agrícola
-	La variable :math:`P` denota precios de los cultivos. 
-	La variable :math:`Y` denota el rendimiento de la tierra. 
-	Las variables de tierra con una barra superior indican el total de tierra cultivable disponible. 
-	Las variables de tierra con dos sobre la barra indican el pasto total disponible.
+
+-El subíndice :math:`i` denota una categoría agrícola, como se tienen 14 categorías distintas entonces :math:`i∈{1,2,…,14}`.
+-El subíndice :math:`j` denota una categoría de ganado, como se tienen 3 categorías distintas entonces :math:`j∈{1,2,3}`.
+-El subíndice :math:`r` denota una región, como se tienen 7 categorías distintas entonces :math:`r∈{1,2,…,7}`.
+-El subíndice :math:`t` denota el tiempo, dado que se hará una simulación hasta el año 2050, y el punto de partida es el 2016, entonces :math: t∈{1,2,…,50}`.
+-La constante :math:`δ` denota la tasa de cambio de uso de la tierra agrícola.
+-La constante :math:`ρ` denota el factor de descuento, que toma el valor de 0.91
+-La variable :math:`H` denota tierra 
+-La variable :math:`G` denota ganado vacuno 
+-La variable :math:`L` denota ganado lechero. 
+-La variable :math:`A` denota aves
+-La variable :math:`C` denota costo por hectárea agrícola
+-La variable :math:`P` denota precios de los cultivos. 
+-La variable :math:`Y` denota el rendimiento de la tierra. 
+-Las variables de tierra con una barra superior indican el total de tierra cultivable disponible. 
+-Las variables de tierra con dos sobre la barra indican el pasto total disponible.
 
 A partir de ahora, el índice asociado a cada variable o constante caracterizará las cualidades que queremos expresar . 
 
@@ -279,22 +340,24 @@ Sobre el modelo propuesto en el capítulo 2 y sabiendo el total de divisiones re
 
 .. math::
 
- \begin{equation}\begin{array}{l}
- \sum_{i=1}^{14} L_{i, r, t}<\bar{L}_{r} \\
- \sum_{j=1}^{2} L_{j, r, t}<\bar{L}_{r}
- \end{array}\end{equation}
+ \sum_{i=1}^{14} L_{i, r, t}<\bar{L}_{r}
+
+
+.. math::
+
+ \sum_{j=1}^{3} L_{j, r, t}<\overline{\bar{L}_{r}}
 
 2.	Segundo considera la limitación en el cambio del uso de la tierra agrícola de un período al siguiente:
 
 .. math::
 
- \begin{equation}\left|L_{i, r, t}\right|<\left(1+\delta_{i, r, t}\right)\left|L_{i, r, t-1}\right|\end{equation}
+ \left|L_{i, r, t}\right|<\left(1+\delta_{i, r, t}\right)\left|L_{i, r, t-1}\right|
 
 La tasa de cambio se determina de manera aproximada como un promedio de la tasa de variación del uso de la tierra de los últimos cinco años y posteriormente se ajusta de acuerdo a las necesidades que pueda requerir la simulación. Como ya se mencionó intuitivamente estas restricciones simulan la elasticidad de la oferta, ya que indica la capacidad de la oferta para sustituir un producto por otro. Por otro lado, suponemos que la capacidad de previsión de los agricultores es limitada, por lo cual basan sus decisiones en expectativas adaptativas donde el precio esperado para este período es el precio del período anterior. Es decir:
 
 .. math::
 
- \begin{equation}E\left[P_{i, r, t}\right]=P_{i, r, t-1}\end{equation}
+ E\left[P_{i, r, t}\right]=P_{i, r, t-1}
 
 
 En este punto resulta útil mencionar que los productos permanentes, en el problema de programación lineal que presentamos a continuación, debe considerar que el espacio temporal es distinto dependiendo el tipo de producto que se cultivará. En tal sentido las frutas de consumo doméstico, de exportación y la categoría de café y cacao son productos permanentes mientras el resto son considerados productos transitorios.
