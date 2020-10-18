@@ -837,9 +837,9 @@ Una vez la optimización ha sido realizada, se tienen los resultados de la tierr
 
 Los inputs de la función son: 
 
-1.	La tierra total; es decir el resultado de LP (AgriData(:,i,j+1,1))
-2.	El rendimiento AgriData(:,i,j+1,2)
-3.	La tierra de los cultivos permanentes que están en su primer año LandFirstYear(:,:,j)
+1.La tierra total; es decir el resultado de LP (AgriData(:,i,j+1,1))
+2.El rendimiento AgriData(:,i,j+1,2)
+3.La tierra de los cultivos permanentes que están en su primer año LandFirstYear(:,:,j)
 
 La función AgriOuput (línea 442), encuentra el volumen de producción agrícola dada la cantidad total de tierra resultante del problema de optimización.
 
@@ -894,16 +894,16 @@ Sus inputs son, la variable principal del sector agrícola, la matriz de elastic
 
 El detalle de lo que hace la función se presenta a continuación:
 
-1.	De la optimización y aplicación de la función AgriOuput sabemos cuánto es la producción de cada región. Dentro de esta función se agrega toda la producción por categoría de cultivo y posteriormente se obtiene cuanto ha sido la variación para el presente periodo.
-2.	Luego se encuentran los efectos (elasticidad multiplicada por variación de precio) que las variaciones de los precios internacionales generan sobre la demanda de los productos cuyos precios se determinan domésticamente.
+1.De la optimización y aplicación de la función AgriOuput sabemos cuánto es la producción de cada región. Dentro de esta función se agrega toda la producción por categoría de cultivo y posteriormente se obtiene cuanto ha sido la variación para el presente periodo.
+2.Luego se encuentran los efectos (elasticidad multiplicada por variación de precio) que las variaciones de los precios internacionales generan sobre la demanda de los productos cuyos precios se determinan domésticamente.
 
 | ``VarNQ = VarNQ-A*VarP(5:14,1)-CPop-m*CGDP;``
 
-3.	Como se tiene la información de la variación de la oferta (producción) y del efecto de los precios internacional (que vendrían a ser constantes en esta sección) entonces se genera un sistema de ecuaciones a partir del cual se puede encontrar cuanto tienen que variar los precios para realizar el ajuste doméstico:
+3.Como se tiene la información de la variación de la oferta (producción) y del efecto de los precios internacional (que vendrían a ser constantes en esta sección) entonces se genera un sistema de ecuaciones a partir del cual se puede encontrar cuanto tienen que variar los precios para realizar el ajuste doméstico:
 
 | ``VarP(1:4,1) = linsolve(B,VarNQ);``
 
-4.	Una vez las variaciones de los precios domésticos se han encontrado, entonces es posible encontrar la variación de la demanda de productos transables. Esto se hace simplemente sumando la multiplicación de las elasticidades por las variaciones porcentuales de precios.
+4.Una vez las variaciones de los precios domésticos se han encontrado, entonces es posible encontrar la variación de la demanda de productos transables. Esto se hace simplemente sumando la multiplicación de las elasticidades por las variaciones porcentuales de precios.
 
 | ``VarQD = e(:,:,j)*VarP + CPop + m*CGDP;``
 
@@ -915,7 +915,7 @@ Una vez se ha hallado los resultados de producción y consumo entonces se proced
 
 Estos resultados se guardan en AgriOuput(:,:,t,14). Propiamente es una resta simple de matrices. El resultado se interpreta como exportaciones si el resultado es positivo y como importaciones si el resultado es negativo.
 
-Emisiones
+**Emisiones**
 
 Finalmente, en cuando a las emisiones se creó la función FindEmissions, la cual recibe como inputs la variable principal AgriData. Esta función multiplica los factores de emisión por la cantidad de tierra en cada año. Toma la siguiente sintaxis:
 
@@ -930,7 +930,7 @@ Los resultados se guardan en AgriData, en las variables del 26 al 31.
 
 **3.2.2 Ganadería**
 
-Para la ganadería se utiliza el modelo mencionado en la sección teórica basado en una función de crecimiento poblacional logístico. Este modelo es ajustado por los pecios y costos del sctor de tal manera que se genera una senda de crecimiento poblacional con fluctuaciones dependiendo de los cambios en precios y costos.
+Para la ganadería se utiliza el modelo mencionado en la sección teórica basado en una función de crecimiento poblacional logístico. Este modelo es ajustado por los pecios y costos del sector de tal manera que se genera una senda de crecimiento poblacional con fluctuaciones dependiendo de los cambios en precios y costos.
 
 **Determinantes de las Fluctuaciones**
 
