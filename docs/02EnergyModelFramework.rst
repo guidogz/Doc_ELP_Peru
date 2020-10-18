@@ -623,7 +623,7 @@ La tierra correspondiente a cada región (líneas 206, 239, 249 y 251)
 
 En cuanto a la información que se destina a AgriData y LSData, esta ingresa al modelo mediante la función BAUTransferData. Esta función no tiene inputs de información agrícola o ganadera; sus únicos inputs están relacionados con la información general del modelo: número de regiones, número de periodos a simular, número de variables tanto para agricultura como para ganadería. Esta función simplemente se encarga de descargar toda la información de los file originales y la coloca en las variables principales AgriData y LSData. Por ello toda la información descargada aquí tiene la estructura apropiada para ser guardada dentro de variables estructuradas como (1).
 
-| ``%Transfers agiculture and livestock data from database to the code``
+| ``Transfers agiculture and livestock data from database to the code``
 | ``[AgriData, LSData]=BAUTransferData(AgriNumberCategories,LSNumberCategories,...``
 | ``NumberRegions,NumberPeriods,AgriNumberVariables,LSNumberVariables);``
 
@@ -664,6 +664,10 @@ Año 11       102             100            100         100
 Año 12       114             102            100         100
 Total       1216            1234           1272        1270
 ======= ============== ============== ============== ==============
+
+
+Los datos ficticios aquí ayudan a observar la dinámica de cambio. Primero se tiene las 114 ha que el primer año de simulación estaban en su último año de ciclo vegetativo vuelven a estar libres, de tal forma que se pueden utilizar en el mismo cultivo o en uno distinto. Luego todas las ha avanzan un año en el ciclo vegetativo, las 102 ha del año 11 pasan al año 12, las 100 que estaban en el año 10, pasan al 11 y así sucesivamente. De la simulación se ha decidido el agregado de tierra que se destinará al cultivo permanente, de esta forma si se ha decidido que el total de tierra del cultivo permanente se incremente entonces la tierra nueva será mayor a la tierra que se dejó de usar en el cultivo permanente. Por ejemplo en nuestro ejemplo 114 ha se dejan de usar en el primer año de simulación pero se agregan 132, de esta forma en agregado se ha incrementado 18 ha. Asimismo en el ejemplo se puede observar que para el año 4 de la simulación el total de tierra ha disminuido, esto quiere decir que la tierra que se agrega es menor que la tierra que queda libre para otros cultivos.
+
 
 
 
@@ -708,8 +712,8 @@ La función NPV lo que hace es hallar la sumatoria de los beneficios netos de ca
 siendo que t toma valores para los 12 años. Los detalles de la programación se muestran a continuación:
 
 | ``function V = NPV(P,Y,C,d,e)``
-| `` %This function permit to find a category crop net present value``
-| ``%If e is equal to 1 then the crop is permanent``
+| ``This function permit to find a category crop net present value``
+| ``If e is equal to 1 then the crop is permanent``
 
 | ``if e==1``
 |       ``R=0;``
@@ -734,8 +738,7 @@ siendo que t toma valores para los 12 años. Los detalles de la programación se
 | ``if(e~=1) && (e~=0)``
 |        ``disp('error');``
 | ``end``
-
-| `` V = R;``
+| ``V = R;``
 
 
 
@@ -747,7 +750,7 @@ Debe notarse que en el programa el símbolo .* indica que se trata de un product
 
 .. math::
 
- \begin{equation}\left[\begin{array}{l}
+ \left[\begin{array}{l}
  2 \\
  4
  \end{array}\right] \cdot *\left[\begin{array}{l}
@@ -756,7 +759,7 @@ Debe notarse que en el programa el símbolo .* indica que se trata de un product
  \end{array}\right]=\left[\begin{array}{l}
  2 \\
  8
- \end{array}\right]\end{equation}
+ \end{array}\right]
 
 Se hacen los productos de esta forma porque se está sacando el valor presente para las 7 regiones de manera simultanea. 
 
@@ -768,11 +771,11 @@ Una vez los valores presentes netos han sido hallados por región y por categor�
 
 .. math::
 
- \begin{equation}\min _{0 \leq x \leq \infty} f(x)\left\{\begin{array}{c}
- \text { A. } x<b \\
- \text { Aeq. } x=\text { beq } \\
- \text { lb }<x<u b
- \end{array}\right.\end{equation}
+ \min _{0 \leq x \leq \infty} f(x)\left\{\begin{array}{c}
+ A . x<b \\
+ A e q \cdot x=b e q \\
+ l b<x<u b
+ \end{array}\right.
 
 Tal como se observa, esta función minimiza una función lineal sujeta a restricciones de igualdad, y desigualdades lineales. La función se aplica de la siguiente forma:
 
@@ -788,7 +791,7 @@ Tal como se observa, esta función minimiza una función lineal sujeta a restric
 
 Primero se coloca la función a optimizar, posteriormente la matriz que representa las restricciones, después el valor de dichas restricciones. En el caso del sector agrícola en el POLYSYS se coloca lo siguiente (ver línea 379):
 
-|``AgriData(:,i,j+1,1)=linprog(-1*transpose(AgriData(:,i,j,15)),[],[],... ``
+|``AgriData(:,i,j+1,1)=linprog(-1*transpose(AgriData(:,i,j,15)),[],[],...``
 |``AgriLandConstrains,AgricultureLandbyRegion(1,i),AgriData(:,i,j,10),AgriData(:,i,j,11));``
 
 En este caso los dos puntos que se ponen en la primera entrada de las variables hacen referencia a que se están tomando todos las categorías de cultivo al mismo tiempo; es decir un vector. La letra i denota región y la letra j el tiempo en este caso. Podemos, entonces, observar que AgriData(:,i,j+1,1), denota un vector. Por el valor 1 del índice que se utiliza en la cuarta entrada de la variable entonces AgriData(:,i,j+1,1) se refiere a la tierra cultivada y cosechada. Entonces AgriData(:,i,j+1,1) denota al vector de tierra que representa a todas las categorías de cultivo en la región i, en el periodo j+1.
@@ -811,10 +814,8 @@ Finalmente aquí es importante mencionar la redistribución de tierra en el caso
 
 
 | ``%Land is re-allocated``
-| ``AgriLandUseDomFruits = AllocateLand(AgriLandUseDomFruits,AgriData(5,:,j+1,1));``
-    
+| ``AgriLandUseDomFruits = AllocateLand(AgriLandUseDomFruits,AgriData(5,:,j+1,1));``    
 | ``AgriLandUseExpFruits = AllocateLand(AgriLandUseExpFruits,AgriData(7,:,j+1,1));``
-
 | ``AgriLandUseCandC = AllocateLand(AgriLandUseCandC,AgriData(9,:,j+1,1));``
 
 Se usa la función AllocateLand, la cual redistribuye la tierra entre los 12 años correspondientes y que serán input para la simulación del siguiente año. Esto sucede después de la optimización en la línea 395.
@@ -822,7 +823,6 @@ Se usa la función AllocateLand, la cual redistribuye la tierra entre los 12 añ
 En este punto también se definen los nuevos limites a los cambios de tierra que serán usados en el siguiente periodo a simular (líneas 409 y 427):
 
 | ``AgriData(:,:,j+1,10) = (1+AgriData(:,:,1,8)).*AgriData(:,:,j+1,1); %Down limit``
-
 | ``AgriData(:,:,j+1,11) = (1+AgriData(:,:,1,9)).*AgriData(:,:,j+1,1); %Up limit``
 
 Esto indica cuanto podrán crecer o disminuir las hectáreas asignadas a cada categoría cultivo en el siguiente periodo.
@@ -830,7 +830,6 @@ Esto indica cuanto podrán crecer o disminuir las hectáreas asignadas a cada ca
 **La oferta**
 
 Una vez la optimización ha sido realizada, se tienen los resultados de la tierra cosechada, la cual representa la oferta. Para hallar esto en términos de producción se utiliza la función AgriOuput de la siguiente manera:
-
 
 
 
