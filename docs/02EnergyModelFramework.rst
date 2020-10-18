@@ -368,39 +368,58 @@ La decisión de inversión resulta de una maximización de ganancias, que está 
 
 .. math::
 
- \begin{equation}\begin{aligned}
- &\max _{L_{i, r, t}}\left\{E\left[\Pi_{r}\right]=\sum_{t=1}^{12} \rho^{t} \sum_{i=1}^{14} L_{i, r, t}\left(Y_{i, r, t} E\left[P_{i, r, t}\right]-C_{i, r, t}\right)\right\}\\
- &\text {s.a.} \quad\left|L_{i, r, t}\right|<\left(1+\delta_{i}\right)\left|L_{i, r, t-1}\right| \forall i \in\{1, \ldots, I\}\\
- &\text {s.t.} \sum_{i=1}^{I} L_{i, r, t}<\bar{L}_{r, t}^{*} \forall i \in\{1, \ldots, I\}
- \end{aligned}\end{equation}
+ \max _{L_{i, t}}\left\{E\left[\Pi_{r}\right]=\sum_{t=1}^{12} \rho^{t} \sum_{i=1}^{14} L_{i, r, t}\left(Y_{i, r, t} E\left[P_{i, r, t}\right]-C_{i, r, t}\right)\right\}
 
-Esta optimización se aplica en cada período (año); además el total de tierra disponible depende también de cuántas hectáreas de cultivos permanentes se han cultivado en años anteriores. Esto se debe la restricción que existe una vez un cultivo permanente ha sido cultivado. Queda claro que una vez han pasado 12 años, la tierra destinadas a dichos cultivos permanente queda libre para poder asignarse a otros cultivos. 
-3.4.3 Contribuciones Nacionalmente Determinadas
 
 .. math::
 
- \begin{equation}\begin{aligned}
- \pi_{t, j}=& \sum_{i=1}^{15} T_{t, i}\left(Y_{t, i} P_{t-1, i}-C_{t-1, i}\right) \\
- & \sum_{i=1}^{15}\left(1+\beta_{t, i}\right) T_{t, i} \leq \bar{T}
- \end{aligned}\end{equation}
+ \text { s. a. } \quad\left|L_{i, r, t}\right|<\left(1+\delta_{i}\right)\left|L_{i, r, t-1}\right| \forall i \in\{1, \ldots, I\}
+
+
+.. math::
+
+ \text {s.t. } \sum_{i=1}^{I} L_{i, r, t}<\bar{L}_{r, s}^{+} \forall i \in\{1, \ldots, I\}
+
+
+Esta optimización se aplica en cada período (año); además el total de tierra disponible depende también de cuántas hectáreas de cultivos permanentes se han cultivado en años anteriores. Esto se debe la restricción que existe una vez un cultivo permanente ha sido cultivado. Queda claro que una vez han pasado 12 años, la tierra destinadas a dichos cultivos permanente queda libre para poder asignarse a otros cultivos. 
+
+
+**3.4.3 Contribuciones Nacionalmente Determinadas**
+
+.. math::
+
+ \pi_{t, j}=\sum_{i=1}^{15} T_{t, i}\left(Y_{t, i} P_{t-1, i}-C_{t-1, i}\right)
+
+.. math::
+
+ \sum_{i=1}^{15}\left(1+\beta_{t, i}\right) T_{t, i} \leq \bar{T}
 
 Vamos a determinar el arroz como :math:`i ̂ y` el nuevo método de cultivo de arroz como :math:`i ̃,` luego para cualquier :math:`i∈ {1,2 ... 15} - {i ̂, i ̃}` tenemos:
 
 .. math::
 
- \begin{equation}\begin{array}{c}
- \left(1-\beta_{t, i}\right) T_{t-1, i} \leq T_{t, i} \leq\left(1+\beta_{t, i}\right) T_{t-1, i} \\
- \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, \hat{i}}+T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, i}+\left(1+\beta_{t, i}\right) T_{t-1, i}
- \end{array}\end{equation}
-
+ \left(1-\beta_{t, i}\right) T_{t-1, i} \leq T_{t, i} \leq\left(1+\beta_{t, i}\right) T_{t-1 . i} 	
 
 
 .. math::
 
- \begin{equation}\begin{array}{l}
- \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, i}+\left(1+\beta_{t, i}\right) T_{t-1, i} \\
- \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, \tilde{i}}<\left(1+\beta_{t, \hat{i}}\right) T_{t-1, \hat{\lambda}}+\left(1+\beta_{t, \bar{i}}\right) T_{t-1, \tilde{i}}
- \end{array}\end{equation}
+ \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, i}+T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, i}+\left(1+\beta_{t, i}\right) T_{t-1, i}
+ 
+.. math::
+
+ \left(1-\beta_{t, \hat{i}}\right) T_{t-1, \hat{\imath}}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, \hat{i}}<\left(1+\beta_{t, i}\right) T_{t-1, \hat{\imath}}+\left(1+\beta_{t, \tilde{i}}\right) T_{t-1, i}
+ 
+
+
+.. math::
+
+ \left(1-\beta_{t, i}\right) T_{t-1, i}+\left(1-\beta_{t, i}\right) T_{t-1, i}<T_{t, i}<\left(1+\beta_{t, i}\right) T_{t-1, \hat{\imath}}+\left(1+\beta_{t, i}\right) T_{t-1, i}
+ 
+
+
+
+**3.4.4 Descarbonización Profunda**
+
 
 
 | **4. Diseño del Programa**
@@ -412,22 +431,34 @@ Este documento pretende ser una guía del código POLYSYS implementado en matlab
 | **4.1 Variables Principales**
 
 Las dos variables principales son:
-	AgriData: La variable que contiene toda la información relevante (inputs y outputs) para el sector agrícola
-	LSData: La variable que contiene toda la información relevante (inputs y outputs) para el sector ganadero
+
+
+1.	AgriData: La variable que contiene toda la información relevante (inputs y outputs) para el sector agrícola
+2.	LSData: La variable que contiene toda la información relevante (inputs y outputs) para el sector ganadero
+
+
 Ambas variables siguen un patrón claro de la presentación de los datos; ambas son un arreglo de dimensión 4 que sigue la siguiente estructura :
-Variable(i,j,t,x)…(1)
+
+
+.. math::
+
+ \text { Variable }(i, j, t, x) \ldots \text { (1) }
+ 
+
+
 Donde:
-	i representa la categoría de producto
-	j representa la región
-	t representa el año
-	x representa la variable a usar; por ejemplo, ha de tierra, producción, costos, cabezas de ganado, etc.
+
+- i representa la categoría de producto
+- j representa la región
+- t representa el año
+- x representa la variable a usar; por ejemplo, ha de tierra, producción, costos, cabezas de ganado, etc.
 	
 | **4.2 Categoría de producto**
 
 En los dos sectores que se analizan se tiene lo siguiente
 
-	AgriNumberCategories: Indica el número de categorías de cultivo que hay en el sector agricultura, en este caso son 14.
-	LSNumberCategories: Indica el número de categorías de cultivo que hay en el sector ganadería, en este caso son 3.
+1. AgriNumberCategories: Indica el número de categorías de cultivo que hay en el sector agricultura, en este caso son 14.
+2. LSNumberCategories: Indica el número de categorías de cultivo que hay en el sector ganadería, en este caso son 3.
 
 En el sector agrícola tenemos la siguiente categorización:
 
@@ -563,19 +594,19 @@ La simulación se divide en tres subniveles:
 
 1.	Ingreso de información (inputs)
 2.	Tratamiento a la data (Solución del problema del problema de programación lineal y de la función logística).
-	3.	Generación de output.
+3.	Generación de output.
 
 | **4.8.1 Ingreso de información**
 
 La transferencia de datos incluye dos secciones, la primera relacionada a información que no se almacena en las variables Agridata ni LSddata. La segunda a información que se almacena en las dos variables principales. La siguientes variables de carácter general se incluyen en la transferencia de datos inicial que no pertenece a Agridata ni LSddata. Tenemos:
 
-•	Population: La población proyectada hasta el 2050 del modelo T21.
-•	GDP: El PBI proyectado hasta el 2050 del modelo T21.
-•	DiscountFactor: El factor de descuento para traer a valor presente cualquier valor dentro del modelo. Este es estático y toma el valor de 0.92, siendo un input del modelo.
-•	AgriLandUseDomFruits, AgriLandUseExpFruits y AgriLandUseCandC: Estas variables indican la distribución de la tierra destinada a cultivos permanentes entre los 12 años del ciclo vegetativo. De esta forma se incorpora cuanta tierra está en su primer año, en su segundo año y así sucesivamente.  
-•	AgricultureLandbyRegion: Denota el máximo de tierra disponible para fines de agricultura para cada región
-•	AgriElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías agrícolas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 14x14.
-•	LSElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías ganaderas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 3x3.
+- Population: La población proyectada hasta el 2050 del modelo T21.
+- GDP: El PBI proyectado hasta el 2050 del modelo T21.
+- DiscountFactor: El factor de descuento para traer a valor presente cualquier valor dentro del modelo. Este es estático y toma el valor de 0.92, siendo un input del modelo.
+- AgriLandUseDomFruits, AgriLandUseExpFruits y AgriLandUseCandC: Estas variables indican la distribución de la tierra destinada a cultivos permanentes entre los 12 años del ciclo vegetativo. De esta forma se incorpora cuanta tierra está en su primer año, en su segundo año y así sucesivamente.  
+- AgricultureLandbyRegion: Denota el máximo de tierra disponible para fines de agricultura para cada región
+- AgriElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías agrícolas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 14x14.
+- LSElasticities: Se genera como un arreglo de tres dimensiones, en el cual el primer y segundo elemento representa las categorías ganaderas, el tercer elemento denota al tiempo. Se puede entender como un grupo de 35 matrices de dimensión 3x3.
 
 
 La población y el PBI (líneas 161 y 163):
