@@ -1034,6 +1034,10 @@ Los detalles de la programación se pueden ver a continuación:
 
 En esta sección se evalúa los cambios de uso de suelo. El modelo consiste en un manejo de inventarios de stock de suelos de bosque primario, bosque secundario, tierra agrícola, pasturas, tierra para minería, asentamientos humanos y caminos, y otras tierras. Esto significa que las fuentes de deforestación de bosque reducen el stock de bosque, pero incrementan los stocks de otras tierras. No obstante, la información satelital no diferencia claramente la deforestación a causa de tala (madera y leña) y cualquier residual se reparte a tierra agrícola y ganadera. El diagrama a continuación ilustra las relaciones entre flujos y stocks. 
 
+.. figure:: img/relaciones_de_modelacion_de_causas_de_deforestacion.png
+   :align:   center
+   :width:   700 px
+*Relaciones de modelación de causas de deforestación. Fuente:propia*
 
 4.1.1  Modelamiento de causas de la deforestación
 ++++++++++++++++++++++
@@ -1076,6 +1080,7 @@ La función es un mínimo porque no se permite el concepto de una deforestación
 
 ================ =================================================
 Causa            Parámetro
+================ =================================================
 Cultivo          Población rural
 Cultivo          Ingreso agrario neto promedio
 Cultivo          Ingreso forestal neto promedio rezagado 1 período
