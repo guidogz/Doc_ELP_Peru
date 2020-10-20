@@ -1602,3 +1602,17 @@ Plantas térmica de diesel o fueloil    880                   gCO2e/kWh
 3.4 Resultados de los escenarios base
 +++++++++
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+

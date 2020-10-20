@@ -1024,69 +1024,364 @@ Los detalles de la programación se pueden ver a continuación:
 
 
 
+=======================================
+4. USCUSS
+=======================================
+
+
+4.1 Modelamiento de flujos y stocks del bosque
+=======================================
+
+En esta sección se evalúa los cambios de uso de suelo. El modelo consiste en un manejo de inventarios de stock de suelos de bosque primario, bosque secundario, tierra agrícola, pasturas, tierra para minería, asentamientos humanos y caminos, y otras tierras. Esto significa que las fuentes de deforestación de bosque reducen el stock de bosque, pero incrementan los stocks de otras tierras. No obstante, la información satelital no diferencia claramente la deforestación a causa de tala (madera y leña) y cualquier residual se reparte a tierra agrícola y ganadera. El diagrama a continuación ilustra las relaciones entre flujos y stocks. 
+
+
+4.1.1  Modelamiento de causas de la deforestación
+++++++++++++++++++++++
+
+
+Como se mencionó el bosque primario, es el stock de bosque primario menos la deforestación. No se considera crecimiento de bosque primario.
+
+.. math::
+
+ \text { (1) PRIMARIO }_{i}=\text { PRIMARIO}_{1}-D E F_{i}
+
+-PRIMARIO, stock de bosque primario (hectáreas) en el año i.
+-PRIMARIO1, stock de bosque primario (hectáreas) en el año i.
+-DEF, flujo de deforestación (hectáreas) en el año i.
+
+.. math::
+
+ \text { (2) } DEF_{i}=FOAR_{i}+FOMI_{i}+FOCR_{i}+FOGR_{i}+FOOT_{i}
+
+
+-FOAR, flujo neto de cambio de tierras (Ha.) de bosque primario a asentamientos en el año i.
+-FOMI, flujo neto de cambio de tierras (Ha.) de bosque primario a minas en el año i.
+-FOCR, flujo neto de cambio de tierras (Ha.) de bosque primario a cultivos en el año i.
+-FOGR, flujo neto de cambio de tierras (Ha.) de bosque primario a pasturas en el año i.
+-FOOT, flujo neto de cambio de tierras (Ha.) de bosque primario a otros en el año i.
+
+
+Se llama flujo neto porque cada flujo de deforestación tiene la posibilidad de ser reducida por las políticas NDC y DPP. En general, la reducción de deforestación se concentra en agricultura y, en menor medida, en minería y pasturas. Por ejemplo, en el caso de agricultura como causa, la deforestación neta sigue la siguiente forma:
+
+.. math::
+
+ \text { (3) } FOCR_{i}=\min \left(FCR_{i_{i}}+T_{j} * \text { Polic } y_{j}, 0\right)
+
+-FOCR, flujo neto de cambio de tierras (Ha.) de bosque primario a cultivos en el año i.
+-T, es el activador de la política j (diferenciado por escenario NDC y DPP). Toma valores 0 y 1.
+-Policy, es el efecto de la política j en reducir la deforestación (Ha.) en la causa i.
+
+La función es un mínimo porque no se permite el concepto de una deforestación negativa. Cada fuente de deforestación, con excepción de otras tierras es modelado mediante mínimos cuadrados ordinarios que consideran las siguientes variables: 
+
+
+================ =================================================
+Causa            Parámetro
+Cultivo          Población rural
+Cultivo          Ingreso agrario neto promedio
+Cultivo          Ingreso forestal neto promedio rezagado 1 período
+Cultivo          Total de caminos pavimentados
+Pastura          Ingreso forestal neto promedio 
+Pastura          Cabezas de ganado vacuno rezagado 1 período
+Pastura          Caminos nacionales no pavimentados
+Asentamiento     Constante
+Asentamiento     Total de caminos pavimentados rezagado 1 período
+Minería          Constante
+Minería          Precio internacional del oro
+================ =================================================
+*tabla 1: Parámetros de causas de deforestación*
+
+
+Por último, los demás stocks de tierra son acumulados de la siguiente manera:
+
+
+.. math::
+
+ \text { (4) } ART_{i}=ART_{1}+FOAR_{i}
+
+-ART, asentamientos (Ha.) en el año i.
+-ART1, asentamientos (Ha.) en el año 1.
+
+La excepción son tierras de cultivos y ganaderas, las cuales interactúan entre si y con bosques secundarios. Esto se detalla en la siguiente sección. 
+
+
+4.1.2 Modelación de barbecho
+++++++++++++++++++++++
+
+
+Los cultivos se dejan descansar y pasan a ser bosques secundarios o pasturas, y viceversa. Lamentablemente, la literatura no indica una práctica estándar en términos de tiempos. Se ha aplicado una proporción fija promedio del stock de tierras que pasan a las demás categorías. 
+
+.. math::
+
+ \text { (5) } \mathrm{CROP}_{i}=\mathrm{CROP}_{1}+\mathrm{FOCR}_{i}+\mathrm{GROWCRO}_{i}
+
+-CROP, cultivos (Ha.) en el año i.
+-CROP1, cultivos (Ha.) en el año 1.
+-GROWCRO, crecimiento neto de cultivos (Ha.) en el año i.
+
+.. math::
+
+ \text { (6) } GRAS_{i}=GRAS_{1}+FOGR_{i}+GROWGRA_{i}
+
+-GRAS, pasturas (Ha.) en el año i.
+-GRAS1, pasturas (Ha.) en el año 1.
+-GROWGRA, crecimiento neto de pasturas (Ha.) en el año i.
+
+Los crecimientos netos se definen como:
+
+.. math::
+
+ \text { (7) GROWCRO }_{i}=FOCR_{i}-\text {CROSE}_{i}+\operatorname{SECRO}_{i}-\text {CROGRA}_{i}+\text {GRACRO}_{i}
+
+-GROWCRO, crecimiento neto de cultivos (Ha.) en el año i.
+-CROSE, flujo de tierras (Ha.) de cultivos a bosque secundario en el año i.
+-SECRO, flujo de tierras (Ha.) de bosque secundario a cultivos en el año i.
+-CROGRA, flujo de tierras (Ha.) de cultivos a pasturas en el año i.
+-GRACO, flujo de tierras (Ha.) de pasturas a cultivos en el año i.
+
+.. math::
+
+ \text { (8) GROWGRA }_{i}=FOGR_{i}-GRASE_{i}+SEGRA_{i}+CROGRA_{i}-GRACRO_{i}
+
+-GROWGRA, crecimiento neto de pasturas (Ha.) en el año i.
+-CROGRA, flujo de tierras (Ha.) de cultivos a pasturas en el año i.
+-GRASE, flujo de tierras (Ha.) de cultivos a bosque secundario en el año i.
+-SEGRA, flujo de tierras (Ha.) de bosque secundario a cultivos en el año i.
+-GRACO, flujo de tierras (Ha.) de pasturas a cultivos en el año i.
+
+
+Como se mencionó, la proporción de tierras que se transfieren es una proporción fija del stock. Esta proporción fija se calcula con el promedio histórico. Por ejemplo:
+
+
+.. math::
+
+ \text { (9) } \operatorname{CROGRA}_{i}=\beta_{1} \mathrm{CROP}_{i}
 
 
 
+4.1.3 Modelación de bosque secundario
+++++++++++++++++++++++
+
+El suelo deforestado que se recupera se considera como bosque secundario. No obstante, las tierras mineras, asentamientos y otras tierras no son incluidos porque su aporte histórico es mínimo. 
+
+.. math::
+
+ \text { (10) } SECOND_{i}=SECOND_{1}+GRASE_{i}+CROSE_{i}-SEGRA_{i}-SECRO_{i}
+
+-SECOND, bosque secundario (Ha.) en el año i.
+-SECOND1, bosque secundario (Ha.) en el año 1.
+-GRASE, flujo de tierras (Ha.) de cultivos a bosque secundario en el año i.
+-CROSE, flujo de tierras (Ha.) de cultivos a bosque secundario en el año i.
+-SEGRA, flujo de tierras (Ha.) de bosque secundario a cultivos en el año i.
+-SECRO, flujo de tierras (Ha.) de bosque secundario a cultivos en el año i.
 
 
 
+4.1.4 Supuestos
+++++++++++++++++++++++
 
 
 
+-Sólo un 25% de los bosques deforestados para cultivos son aprovechados. El resto es desperdiciado. 
+-Algunas variables explicativas no fueron incluidas porque no resultaron significativas (como ingreso ganadero).
+-El precio internacional del oro hacia 2050 se calcula indirectamente empleado data futura de demanda de petróleo, precio de petróleo e índice de precios del dólar estadounidense. 
+-No se incluye efecto de operativo Madre de Dios.
+-La deforestación por otros usos se calcula a través de la media móvil de los últimos cinco años.
+-Una fracción de deforestación por bosques secundarios va a agricultura.
+-Las ganancias forestales son fijas en el BAU.
+-El “rankeo” de cultivos en selva representa la transición de cultivos. Esto se trabaja en el modelo agrícola.
+-Las obras de pavimentación de caminos no pavimentados terminan en 2027 pues el Gobierno ha impulsado tal meta en la última década (se continua con la tendencia histórica).
+
+
+4.2 Modelamiento de flujos y stocks del bosque
+=======================================
+
+Los productos del bosque considerados son maderas provenientes de concesiones y plantaciones forestales y leña. En el caso de la leña, se utiliza la estimación futura de coeficientes de consumo per cápita estimado por CEPLAN. 
+
+.. math::
+
+ \text { (11) Firewood }_{i}=\beta \cdot POP_{i}
+
+
+-Firewood, leña (m3/ año) en el año i.
+-POP, población en el año i.
+-B, beta calculado por CEPLAN. 
+
+En el caso concesiones forestales, se busca obtener el ingreso neto de la actividad maderera. Se resume en la siguiente ecuación:
+
+
+.. math::
+
+ \text { (12) INGFOR }_{i}=\left(\frac{\operatorname{COFLAND}_{i}}{FRAC}\right) \cdot \operatorname{PRODY} \cdot\left(Z_{j}\right) \cdot \operatorname{SAWN} \cdot\left(P_{i}-C\right)
+
+-INGFOR, ingreso maderero de concesiones forestales (dólares) en el año i.
+-COFLAND, concesiones forestales (Ha.) en el año i.
+-FRAC, fracción de tierras activas.  
+-PRODY, productividad (m3) por hectárea. 
+-Z, vector de incremento de productividad bajo la política j (diferenciado por escenario NDC y DPP).
+-SAWN, proporción promedio de transformación de madera rolliza a aserrada. 
+-P, precio de la madera (dólares/m3) en el año i.
+-C, costo de la madera (dólares/m3).
+
+Análogamente, las plantaciones forestales comerciales también generan ingresos. Se trabajan con matrices pues las nuevas plantaciones no están listas para cosechar (toman 10 años en crecer).
+
+.. math::
+
+ \text { (13) INGPLA }_{i}=\left(\frac{p_{LALAND_{i}}}{ACT_{i}}\right) \cdot PROPY_{i} \cdot SAWN \cdot\left(P_{i}-C_{i}\right)
+
+
+-INGFOR, ingreso maderero de concesiones forestales (dólares) en el año i.
+-PLALAND, matriz de plantaciones forestales (Ha.) en el año i.
+-ACT, año de cosecha.  
+-PROPY, matriz de productividad (m3) por hectárea de plantación en el año i.
+-SAWN, proporción promedio de transformación de madera rolliza a aserrada. 
+-P, matriz de precios de la madera (dólares/m3) en el año i.
+-C, matriz de costos de la madera (dólares/m3) en el año i.
+
+
+4.1.1 Supuestos
+++++++++++++++++++++++
+
+
+-El valor de la madera se construye con un promedio ponderado de los valores ponderados. Su valor futuro se construye sobre la base de la proyección de índice de precios de productos madereros. 
+-Los períodos de concesión se renuevan automáticamente.
+-Se asume un período de concesión promedio de 20 años.
+-En el escenario BAU se asume que la producción en concesiones maderables regresa a la máxima producción histórica entre el periodo 1990 y 2016.
+-Densidad de bosque tomada de INGEI 2012 para efectos del cálculo de emisiones de GEI.
+-Plantaciones forestales se dan en tierras eriazas.
+-La cosecha de plantaciones forestales son respuestas el mismo año (las tierras no quedan abandonadas. 
+-Las plantaciones forestales consideran una especie de maduración de 10 años. 
+-También se calculan las reforestaciones no comerciales. Estas solo acumulan los flujos de plantaciones del programa Agrorural. 
+-Hay diferencias entre la estimación de leña de CEPLAN y la realizada por MINAM en el Inventario Nacional 2012. Se agregó un factor de ajuste de 0.5 para que la producción se asemeje a la reportada por MINAM. 
+
+4.3  Cálculo de deforestación por categoría de bosque
+=======================================
+
+La proyección de deforestación total en el escenario BAU se reparte de acuerdo a la participación en deforestación (del último año) en 17 categorías de suelo: áreas naturales protegidas, conservación regional, conservación privada, bosque campesino, bosque de comunidades nativas, reservas territoriales, concesiones de madera, concesión de madera de alto rendimiento, reforestación comercial, concesión de conservación, concesiones de turismo, concesiones de fauna, concesiones de madera sin otorgar, bosque rural, humedales, concesiones de otros productos y sin categoría. Además, se han creado las siguientes categorías para efectos de las políticas: tierras eriazas, comunidades nativas eficientes y comunidades nativas con incentivos. 
+Esta proyección de deforestación por categoría se expresa como proporción del año anterior de tal manera que la deforestación se expresa de la siguiente manera: 
+
+.. math::
+
+ \text { (14) Stock }_{k i}=\min \left(S \text { tock }_{k i-1}-\alpha_{k i}\left(1-T_{j} \cdot \operatorname{Red}_{i k}\right) \cdot\left(\text {Stock}_{k i-1}-T_{j} \sum_{1}^{m} \text { Stocki}_{m}\right)+T_{j} \cdot \operatorname{CAMB}_{i}, 0\right)
+
+
+-Stock, stock de bosque (Ha) de la categoría k en el año i.
+-∝, tasa de deforestación de la categoría k en el año i.
+-T, es el activador de la política j (diferenciado por escenario NDC y DPP). Toma valores 0 y 1.
+-Red, reducción de la tasa de deforestación de la categoría k en el año i.
+-Stocki, sumatoria de hectáreas de tierras que son transferidas de la categoría k a la categoría m. 
+-CAMB, aumento o reducción directo de hectáreas en el año i.
+
+Todas las variables vinculadas a políticas no aplican a todas las categorías.  La reducción de stock por transferencia de tierras :math:`\left(\sum_{1}^{m} S t o c k i_{m}\right)` aplica a las políticas de otorgación de derechos, incremento de tierras de concesión forestal de alto rendimiento y transferencia de comunidades nativas y eficientes. La reducción en la tasa de deforestación (〖Red〗_ik) aplica para las políticas de comunidades nativas. La variación directa en el stock se toma en cuenta para plantaciones forestales y áreas naturales protegidas. 
+Finalmente, se suman los stocks en cada año y se compara con el stock de bosque total de BAU. Esa variación es la variable Policy de la ecuación 3. Es necesario mencionar que esta sección no incluye la reducción adicional de deforestación proveniente de la mejora de ingresos forestales.
+
+
+4.4  Cálculo de deforestación por categoría de bosque
+=======================================
+
+Las emisiones son calculadas con la metodología y parámetros propuestos por Inventario Nacional de Emisiones de GEI (Minam, 2012). A continuación, se lista que resultados del modelo son empleados para el cálculo de emisiones:
+
+
+-Crecimiento de la biomasa del bosque secundario.
+-Crecimiento de la biomasa de los cultivos. 
+-Cosecha de cultivos como pérdida de reservas de carbono.
+-Transformación de bosque primario y secundario a cultivos. 
+-Pérdida de carbono por remoción de tierras a causa de cultivos. 
+-Pérdida de humedales a causa de cultivos. 
+-Transformación de bosque primario y secundario a pasturas. 
+-Pérdida de carbono por remoción de tierras a causa del ganado. 
+-Pérdida de humedales a causa del ganado. 
+-Transformación de bosque primario a asentamientos y caminos. 
+-Transformación de bosque primario a tierras mineras.
+-Transformación de bosque primario a otras tierras.
+-Quema de bosques para obtención y/o fertilización de tierras de cultivos y pasturas.
+-Extracción de madera y leña.
+-Crecimiento de plantaciones forestales.
+
+Si bien el inventario incluye los parámetros del crecimiento inherente de bosque primario, no se incluye en el reporte del inventario 2012.
+
+**Bibliografía**
+GGGI. (2015). Interpretacion de la dinámica de la deforestación en el Perú y lecciones aprendidas para reducirla. Lima.
+Minam. (2012). Inventario Nacional de Gases de Efecto Invernadero. Lima.
 
 
 
+4.5  Anexos
+=======================================
+
+================================ ===================================================== ===========  
+Categoria                         Parámetro                                             Valor
+================================ ===================================================== ===========  
+Cultivo                           Población rural                                       0.046236
+Cultivo                           Ingreso agrario neto promedio                         2.9868
+Cultivo                           Ingreso forestal neto promedio rezagado 1 período     -1.09119
+Cultivo                           Total de caminos pavimentados                         28.8979
+Pastura                           Ingreso forestal neto promedio                        -0.67113
+Pastura                           Cabezas de ganado vacuno rezagado 1 período           0.01817
+Pastura                           Caminos nacionales no pavimentados                    30.7302
+Asentamiento                      Constante                                             -2804.3
+Asentamiento                      Total de caminos pavimentados rezagado 1 período      0.435591
+Minería                           Constante                                             1222.39
+Minería                           Precio internacional del oro                          2.09236
+Cultivo                           Tasa de cultivos a pasturas                           0.004375
+Pastura                           Tasa de pasturas a cultivos                           0.002111
+Bosque secundario                 Tasa de secundario a cultivos                         0.01253
+Bosque secundario                 Tasa de secundario a pasturas                         0.002632
+Cultivo                           Tasa de cultivos a secundario                         0.07
+Pastura                           Tasa de pasturas a secundario                         0.008
+Comunidades nativas (CCNN)        Reducción de deforestación en CCNN                    0.3
+Áreas Naturales Protegidas (ANP)  reducción de deforestación en ANP                     0.5
+Concesión maderable               Rendimiento BAU bajo rendimiento (m3/Ha.)             3.9
+Concesión maderable               Rendimiento BAU alto rendimiento (m3/Ha.)             5.7
+Concesión maderable               Rendimiento máximo en NDC o DPP (m3/Ha.)              8
+Concesión maderable               Periodo de concesión (años)                           20
+Concesión maderable               Área de reforestación activa (1/Período de concesión) 0.05
+Reforestación comercial           Tiempo en cosechar (periodo)                          1
+Reforestación comercial           Área de reforestación activa (%)                      0.125
+Reforestación comercial           Rendimiento (m3/Ha.)                                  40
+Leña                              Coeficiente población                                 2.778
+Producción madera                 Tasa de conversión de madera rolliza a aserrada       0.47
+================================ ===================================================== ===========  
+*fuente: Valores de principales parámetros*
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+============================================================ ====================== =====================
+Variable                                                      Unit                      Value
+============================================================ ====================== =====================
+Conversión en GG Ton CO2                                      GG Ton CO2                0.0037
+Conversión CH4                                                DMML                      21.0
+Conversión NO2                                                DMML                      310.0
+Crecimiento biomasa en secundario                             TMS/HA                    11.80
+Crecimiento de biomasa cultivos                               TMS/HA                    2.60
+Materia seca                                                  DMML                      0.5
+Reservas carbono suelos                                       TC/HA/YEAR                21
+Carbono removido por cultivos                                 TC/HA                     -126.77
+Carbono removido por pasturas                                 TC/HA                     -134.81
+Carbono removido por otros                                    TC/HA                     -293.5
+Stock de carbono en bosque secundario                         TC/HA                     -71
+Stock de carbono en cultivos                                  TC/HA                     5
+Stock de carbono en pasturas                                  TC/HA                     8.1
+Periodo de inventatio                                         YEAR                      20
+Carbono inicial en tierra AAA                                 TC/HA                     65
+Carbono inicial en tierra ABA                                 TC/HA                     47
+Perdidaa de carbono en tierra AAA por cultivos                TC/HA                     46.56
+Perdidaa de carbono en tierra AAA por cultivos                TC/HA                     46.56
+Perdidaa de carbono en tierra ABA por cultivos                TC/HA                     33.67
+Perdidaa de carbono en humdeales por cultivos                 TC/HA                     -20
+Perdidaa de carbono en tierra AAA por pasturas                TC/HA                     63.05
+Perdidaa de carbono en tierra ABA por pasturas                TC/HA                     45.59
+Perdidaa de carbono en humdeales por pasturas                 TC/HA                     -5
+Factor de biomasa quemada                                     DMML                      0.5
+Masa de bosque primario 1                                     DMML/HA                   208,643.00
+Masa de bosque primario 2                                     DMML/HA                   222,819.00
+Masa de bosque secundario                                     DMML/HA                   100,000.00
+NO2 factor                                                    DMML                      0.11
+CH4 factor                                                    DMML                      9
+Incremento medio anual de biomasa aérea                       t m.s. ha-1 año-1         13
+Factor de conversión Raíz/Tallo apropiado a los incrementos   DMML                      0.32
+Emision de lenia                                                                        3.4
+Emision de extracción de madera                                                         1.67
+============================================================ ====================== =====================
+*Valores de principales parámetros de cálculo de emisiones*
 
 
 
