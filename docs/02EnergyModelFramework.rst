@@ -1243,7 +1243,7 @@ Análogamente, las plantaciones forestales comerciales también generan ingresos
 - C, matriz de costos de la madera (dólares/m3) en el año i.
 
 
-4.1.1 Supuestos
+4.2.1 Supuestos
 ++++++++++++++++++++++
 
 
@@ -1313,39 +1313,39 @@ Minam. (2012). Inventario Nacional de Gases de Efecto Invernadero. Lima.
 4.5  Anexos
 =======================================
 
-================================ ===================================================== ===========  
-Categoria                         Parámetro                                             Valor
-================================ ===================================================== ===========  
-Cultivo                           Población rural                                       0.046236
-Cultivo                           Ingreso agrario neto promedio                         2.9868
-Cultivo                           Ingreso forestal neto promedio rezagado 1 período     -1.09119
-Cultivo                           Total de caminos pavimentados                         28.8979
-Pastura                           Ingreso forestal neto promedio                        -0.67113
-Pastura                           Cabezas de ganado vacuno rezagado 1 período           0.01817
-Pastura                           Caminos nacionales no pavimentados                    30.7302
-Asentamiento                      Constante                                             -2804.3
-Asentamiento                      Total de caminos pavimentados rezagado 1 período      0.435591
-Minería                           Constante                                             1222.39
-Minería                           Precio internacional del oro                          2.09236
-Cultivo                           Tasa de cultivos a pasturas                           0.004375
-Pastura                           Tasa de pasturas a cultivos                           0.002111
-Bosque secundario                 Tasa de secundario a cultivos                         0.01253
-Bosque secundario                 Tasa de secundario a pasturas                         0.002632
-Cultivo                           Tasa de cultivos a secundario                         0.07
-Pastura                           Tasa de pasturas a secundario                         0.008
-Comunidades nativas (CCNN)        Reducción de deforestación en CCNN                    0.3
-Áreas Naturales Protegidas (ANP)  reducción de deforestación en ANP                     0.5
-Concesión maderable               Rendimiento BAU bajo rendimiento (m3/Ha.)             3.9
-Concesión maderable               Rendimiento BAU alto rendimiento (m3/Ha.)             5.7
-Concesión maderable               Rendimiento máximo en NDC o DPP (m3/Ha.)              8
-Concesión maderable               Periodo de concesión (años)                           20
-Concesión maderable               Área de reforestación activa (1/Período de concesión) 0.05
-Reforestación comercial           Tiempo en cosechar (periodo)                          1
-Reforestación comercial           Área de reforestación activa (%)                      0.125
-Reforestación comercial           Rendimiento (m3/Ha.)                                  40
-Leña                              Coeficiente población                                 2.778
-Producción madera                 Tasa de conversión de madera rolliza a aserrada       0.47
-================================ ===================================================== ===========  
+================================ ======================================================= ===========  
+Categoria                         Parámetro                                               Valor
+================================ ======================================================= ===========  
+Cultivo                           Población rural                                         0.046236
+Cultivo                           Ingreso agrario neto promedio                           2.9868
+Cultivo                           Ingreso forestal neto promedio rezagado 1 período       -1.09119
+Cultivo                           Total de caminos pavimentados                           28.8979
+Pastura                           Ingreso forestal neto promedio                          -0.67113
+Pastura                           Cabezas de ganado vacuno rezagado 1 período             0.01817
+Pastura                           Caminos nacionales no pavimentados                      30.7302
+Asentamiento                      Constante                                               -2804.3
+Asentamiento                      Total de caminos pavimentados rezagado 1 período        0.435591
+Minería                           Constante                                               1222.39
+Minería                           Precio internacional del oro                            2.09236
+Cultivo                           Tasa de cultivos a pasturas                             0.004375
+Pastura                           Tasa de pasturas a cultivos                             0.002111
+Bosque secundario                 Tasa de secundario a cultivos                           0.01253
+Bosque secundario                 Tasa de secundario a pasturas                           0.002632
+Cultivo                           Tasa de cultivos a secundario                           0.07
+Pastura                           Tasa de pasturas a secundario                           0.008
+Comunidades nativas (CCNN)        Reducción de deforestación en CCNN                      0.3
+Áreas Naturales Protegidas (ANP)  reducción de deforestación en ANP                       0.5
+Concesión maderable               Rendimiento BAU bajo rendimiento (m3/Ha.)               3.9
+Concesión maderable               Rendimiento BAU alto rendimiento (m3/Ha.)               5.7
+Concesión maderable               Rendimiento máximo en NDC o DPP (m3/Ha.)                8
+Concesión maderable               Periodo de concesión (años)                             20
+Concesión maderable               Área de reforestación activa (1/Período de concesión)   0.05
+Reforestación comercial           Tiempo en cosechar (periodo)                            1
+Reforestación comercial           Área de reforestación activa (%)                        0.125
+Reforestación comercial           Rendimiento (m3/Ha.)                                    40
+Leña                              Coeficiente población                                   2.778
+Producción madera                 Tasa de conversión de madera rolliza a aserrada         0.47
+================================ ======================================================= ===========  
 *fuente: Valores de principales parámetros*
 
 
